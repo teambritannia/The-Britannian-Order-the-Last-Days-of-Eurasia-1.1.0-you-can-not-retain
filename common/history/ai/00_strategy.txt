@@ -1,0 +1,10 @@
+AI = {
+	c:DBR ?= {		
+		set_strategy = ai_strategy_egalitarian_agenda
+		set_strategy = ai_strategy_industrial_expansion
+	}		
+	c:GBR ?= {		
+		set_strategy = ai_strategy_territorial_expansion
+		set_strategy = ai_strategy_industrial_expansion
+	}
+}	

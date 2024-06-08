@@ -1,0 +1,8 @@
+﻿DIPLOMACY = {
+	c:DBR ?= {
+		create_diplomatic_pact = {
+			country = c:SBR
+			type = defensive_pact
+		}	
+	}
+}

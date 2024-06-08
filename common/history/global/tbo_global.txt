@@ -1,0 +1,30 @@
+GLOBAL = {
+
+	c:GBR ?= {
+		trigger_event = {
+			id = britannian_prosperity.1 
+			popup = yes
+			days = 0
+		}
+	}
+	c:DAI ?= {
+		trigger_event = {
+			id = britannian_prosperity.4
+			days = 21
+		}
+	}
+	c:GER ?= {
+		trigger_event = {
+			id = german_british_split.1 
+			popup = yes
+			days = 0
+		}
+	}
+	c:DBR ?= {
+		trigger_event = {
+			id = dongbei_events.1 
+			popup = yes
+			days = 0
+		}
+	}
+}

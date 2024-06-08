@@ -1,0 +1,39 @@
+﻿DIPLOMATIC_PLAYS = {
+	c:MEX = {
+		create_diplomatic_play = {
+			name = mexican_war
+		
+			target_state = s:STATE_CALIFORNIA.region_state:NMX
+			
+			war = yes
+			
+			type = dp_return_state
+			
+			add_war_goal = {
+				holder = c:MEX
+				type = conquer_state
+				target_state = s:STATE_CALIFORNIA.region_state:NMX
+			}
+			add_war_goal = {
+				holder = c:MEX
+				type = conquer_state
+				target_state = s:STATE_NEVADA.region_state:NMX
+			}	
+			add_war_goal = {
+				holder = c:MEX
+				type = conquer_state
+				target_state = s:STATE_UTAH.region_state:NMX
+			}	
+			add_war_goal = {
+				holder = c:MEX
+				type = conquer_state
+				target_state = s:STATE_ARIZONA.region_state:NMX
+			}				
+			add_war_goal = {
+				holder = c:MEX
+				type = conquer_state
+				target_state = s:STATE_COLORADO.region_state:NMX
+			}	
+		}	
+	}
+}
