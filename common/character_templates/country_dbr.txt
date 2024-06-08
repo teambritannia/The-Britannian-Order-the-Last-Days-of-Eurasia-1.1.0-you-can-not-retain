@@ -1,0 +1,20 @@
+dbr_lu_anjiang = { #lu anjiang
+	first_name = anjiang
+	last_name = lu
+	historical = yes
+	interest_group = ig_trade_unions
+	ideology = ideology_dongbei_civicalist
+	ruler = yes
+	ig_leader = yes
+	culture = cu:han
+	birth_date = 1813.2.15
+	dna = dna_luanjiang
+	traits = {
+		persistent
+		ambitious
+		brave
+	}
+	trait_generation = {
+
+	}
+}
