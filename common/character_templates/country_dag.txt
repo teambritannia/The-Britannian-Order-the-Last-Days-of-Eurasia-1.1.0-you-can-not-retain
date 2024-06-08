@@ -1,0 +1,35 @@
+dag_lelouch = { #lelouch vi britannia
+	first_name = lelouch
+	last_name = vi_britannium
+	historical = yes
+	interest_group = ig_petty_bourgeoisie 
+	ideology = ideology_radical
+	ig_leader = yes
+	culture = cu:british #how disgusting
+	birth_date = 1816.12.5
+	dna = dna_lelouch
+	traits = {
+		sickly
+		romantic
+		tactful
+	}
+	trait_generation = { }
+}
+
+dag_taboritsky = {
+	first_name = sergei
+	last_name = taboritsky
+	culture = cu:russian
+	historical = yes
+	ruler = yes
+	birth_date = 1799.8.12
+	dna = dna_taboritsky
+	interest_group = ig_devout
+	ideology = ideology_theocrat
+	traits = {
+		ambitious
+		pious
+		psychological_affliction
+	}
+	trait_generation = { }
+}
