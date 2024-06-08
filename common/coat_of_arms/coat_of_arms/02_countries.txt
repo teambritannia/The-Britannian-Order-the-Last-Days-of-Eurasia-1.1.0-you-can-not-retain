@@ -1,0 +1,57 @@
+XIA = { # xia
+	
+	pattern = "pattern_chinese_puppet.dds"
+	color1 = "blue"
+	color2 = "red"
+	color3 = "white"
+
+	colored_emblem = {
+		texture = "ce_sun.dds"
+		color1 = "white"
+		color2 = "white"
+		instance = { scale = { 0.7 0.7 } position = { 0.5 0.5 } }			
+	}	
+	textured_emblem  = {
+		texture = "xia.dds"
+		instance = { scale = { 1.0 1.0 } position = { 0.5 0.5 } }	
+	}	
+}
+
+SCU = { # Sichuan
+	# Sichuan subject flag	
+	
+	pattern = "pattern_chinese_puppet.dds"
+	color1 = "blue"
+	color2 = "red"
+	color3 = "white"
+
+	colored_emblem = {
+		texture = "ce_sun.dds"
+		color1 = "white"
+		color2 = "white"
+		instance = { scale = { 0.7 0.7 } position = { 0.5 0.5 } }			
+	}	
+	textured_emblem  = {
+		texture = "chuan.dds"
+		instance = { scale = { 1.0 1.0 } position = { 0.5 0.5 } }	
+	}	
+}
+
+YUN = { # yun
+
+	pattern = "pattern_chinese_puppet.dds"
+	color1 = "blue"
+	color2 = "red"
+	color3 = "white"
+
+	colored_emblem = {
+		texture = "ce_sun.dds"
+		color1 = "white"
+		color2 = "white"
+		instance = { scale = { 0.7 0.7 } position = { 0.5 0.5 } }			
+	}	
+	textured_emblem  = {
+		texture = "dian.dds"
+		instance = { scale = { 1.0 1.0 } position = { 0.5 0.5 } }	
+	}	
+}
