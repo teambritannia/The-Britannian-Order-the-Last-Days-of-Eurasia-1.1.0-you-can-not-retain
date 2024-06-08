@@ -489,6 +489,6 @@ SHZ = {
 	
 	tier = hegemony
 	
-	cultures = { han manchu yue min uighur tibetan }
+	cultures = { han manchu }
 	capital = STATE_BEIJING
 }
