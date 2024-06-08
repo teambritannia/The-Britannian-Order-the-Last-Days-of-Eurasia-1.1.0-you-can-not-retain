@@ -1,0 +1,43 @@
+demand_irc = {
+	is_shown = {
+		exists = c:BNA
+		ROOT = c:BNA
+		exists = c:BNA
+		c:BNA = {
+			has_journal_entry = je_north_american_path
+		}
+	}
+
+	possible = {
+		exists = c:BNA
+		ROOT = c:BNA
+		exists = c:BNA
+		c:BNA = {
+			has_journal_entry = je_north_american_path
+		}
+		custom_tooltip = {
+			text = attacked_irc_already_tt
+			NOT = {
+				has_variable = attacked_irc
+			}
+		}
+	}
+
+	when_taken = {
+		hidden_effect = {
+			set_variable = {
+				name = attacked_irc
+				value = yes
+			}		
+		}
+		c:BNA = {
+		trigger_event = {
+			id = north_american_path.3
+			days = 0
+		}
+	}
+
+	ai_chance = {
+		base = 50
+	}
+}

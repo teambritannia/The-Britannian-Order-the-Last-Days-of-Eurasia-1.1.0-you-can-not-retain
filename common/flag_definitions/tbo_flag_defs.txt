@@ -1,0 +1,24 @@
+
+CFD = { #
+	flag_definition = {
+		coa = CFD
+		subject_canton = CFD
+		allow_overlord_canton = no
+		priority = 5
+		trigger = { 
+			or = {
+				coa_def_republic_flag_trigger = yes
+				coa_def_dictatorship_flag_trigger = yes
+			}
+		}
+	}	
+	flag_definition = {
+		coa = CFD_monarchy
+		subject_canton = CFD_monarchy
+		allow_overlord_canton = no
+		priority = 5
+		trigger = { 
+			coa_def_monarchy_flag_trigger = yes
+		}
+	}	
+}

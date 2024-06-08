@@ -1,0 +1,494 @@
+﻿
+BYG = {
+	color = { 3 102 44 }
+	
+	country_type = unrecognized
+	
+	tier = kingdom
+	
+	cultures = { han } 
+	capital = STATE_BEIJING
+}
+
+CFD = {
+	color = { 0 56 121 }
+	
+	country_type = recognized
+
+	tier = kingdom
+
+	cultures = { han manchu }
+	capital = STATE_FUJIAN
+}
+
+DBR = {
+	color = { 233 30 209 }
+	
+	country_type = unrecognized
+
+	tier = kingdom
+
+	cultures = { han manchu }
+	capital = STATE_SOUTHERN_MANCHURIA
+}
+
+TKK = {
+	color = { 248 229 235 }
+	
+	country_type = recognized
+
+	tier = empire
+
+	cultures = { japanese }
+	capital = STATE_KANSAI
+}
+
+
+SCU = {
+	color = { 52 146 77 }
+	
+	country_type = recognized
+
+	tier = kingdom
+
+	cultures = { han }
+	capital = STATE_SICHUAN
+}
+YUN = {
+	color = { 61 162 5 }
+	
+	country_type = recognized
+
+	tier = kingdom
+
+	cultures = { han }
+	capital = STATE_YUNNAN
+}
+GDG = {
+	color = { 87 17 37 }
+	
+	country_type = recognized
+
+	tier = kingdom
+
+	cultures = { japanese }
+	capital = STATE_GUANGDONG
+}
+
+XIA = {
+	color = { 228 124 37 }
+	
+	country_type = recognized
+
+	tier = kingdom
+
+	cultures = { han }
+	capital = STATE_NINGXIA
+}
+
+QNG = {
+	color = { 223 228 37 }
+	
+	country_type = recognized
+
+	tier = kingdom
+
+	cultures = { han }
+	capital = STATE_NINGXIA
+}
+
+GBR = {
+	color = { 230 20 94 }
+	
+	country_type = recognized
+	
+	tier = hegemony
+	
+	cultures = { british scottish }
+	capital = STATE_HOME_COUNTIES
+}
+
+GER = {
+	color = { 63 63 63 }
+	
+	country_type = recognized
+	
+	tier = empire
+	
+	cultures = { north_german south_german }
+	capital = STATE_BRANDENBURG
+}
+
+SBR = {
+	color = { 189 189 189 }
+	
+	country_type = unrecognized
+	
+	tier = kingdom
+	
+	cultures = { siberian russian }
+	capital = STATE_TOMSK
+}
+
+SCN = {
+	color = { 65 126 255 }
+	
+	country_type = recognized
+	
+	tier = empire
+	
+	cultures = { norwegian swedish danish }
+	capital = STATE_SVEALAND
+}
+
+FRA = {
+	color = { 0 72 228 }
+	
+	country_type = recognized
+	
+	tier = empire
+	
+	cultures = { french }
+	capital = STATE_ILE_DE_FRANCE
+}
+
+SLR = {
+	color = { 223 128 58 }
+	
+	country_type = recognized
+	
+	tier = kingdom
+	
+	cultures = { russian ukranian kazakh }
+	capital = STATE_MOSCOW
+}
+
+DVM = {
+	color = { 255 255 255 }
+	
+	country_type = recognized
+	
+	tier = kingdom
+	
+	cultures = { russian }
+	capital = STATE_MINSK
+}
+
+DAG = {
+	color = {  2 156 2  }
+	
+	country_type = unrecognized
+	
+	tier = principality
+	
+	cultures = { north_caucasian russian british }
+	capital = STATE_DAGESTAN
+}
+
+SRU = {
+	color = { 71 146 30 }
+	
+	country_type = unrecognized
+	
+	tier = kingdom
+	
+	cultures = { russian ukranian kazak uzbek }
+	capital = STATE_KHIVA
+}
+
+SPA = {
+	color = { 242 253 0 }
+	
+	country_type = recognized
+	
+	tier = empire
+	
+	cultures = { spanish}
+	capital = STATE_TOLEDO
+}
+
+ITA = {
+	color = { 37 96 0 }
+	
+	country_type = recognized
+	
+	tier = empire
+	
+	cultures = { north_italian south_italian }
+	capital = STATE_LAZIO
+}
+
+TUR = {
+	color = { 164 200 154 }
+	
+	country_type = recognized
+	
+	tier = empire
+	
+	cultures = { turkish }
+	capital = STATE_EASTERN_THRACE
+}
+
+ARA = {
+	color = { 180 236 9 }
+	
+	country_type = recognized
+	
+	tier = empire
+	
+	cultures = { bedouin }
+	capital = STATE_BAGHDAD
+}
+
+PER = {
+	color = { 214 193 10 }
+	
+	country_type = unrecognized
+	
+	tier = empire
+	
+	cultures = { persian azerbaijani }
+	capital = STATE_IRAKAJEMI
+}
+
+BNA = {
+	color = { 103 100 255 }
+	
+	country_type = recognized
+	
+	tier = kingdom
+	
+	cultures = { yankee }
+	capital = STATE_DISTRICT_OF_COLUMBIA
+}
+
+GNA = {
+	color = { 160 160 160 }
+	
+	country_type = recognized
+	
+	tier = kingdom
+	
+	cultures = { dixie }
+	capital = STATE_MARYLAND
+}
+
+IRC = {
+	color = { 34 36 66 }
+	
+	country_type = unrecognized
+	
+	tier = kingdom
+	
+	cultures = { cree }
+	capital = STATE_saskatchewan
+}
+
+MEX = {
+	color = { 15 117 42 }
+	
+	country_type = recognized
+	
+	tier = kingdom
+	
+	cultures = { mexican }
+	capital = STATE_MEXICO
+}
+
+USA = {
+	color = { 0 26 206 }
+	
+	country_type = recognized
+	
+	tier = empire
+	
+	cultures = { yankee dixie }
+	capital = STATE_KANSAS
+}
+
+INC = {
+	color = { 62 104 144 }
+	
+	country_type = unrecognized
+	
+	tier = empire
+	
+	cultures = { quechua }
+	capital = STATE_LIMA
+}
+
+MYA = {
+	color = { 214 213 194 }
+	
+	country_type = unrecognized
+	
+	tier = empire
+	
+	cultures = { maya }
+	capital = STATE_YUCATAN
+}
+
+BRZ = {
+	color = { 2 120 0 }
+	
+	country_type = recognized
+	
+	tier = empire
+	
+	cultures = { brazilian }
+	capital = STATE_RIO_DE_JANEIRO
+}
+
+BLV = {
+	color = { 225 239 43 }
+	
+	country_type = recognized
+	
+	tier = empire
+	
+	cultures = { north_andean }
+	capital = STATE_CUNDINAMARCA
+}
+
+NMX = {
+	color = { 46 136 17 }
+	
+	country_type = recognized
+	
+	tier = empire
+	
+	cultures = { mexican }
+	capital = STATE_CALIFORNIA
+}
+
+PAT = {
+	color = { 215 38 218 }
+	
+	country_type = unrecognized
+	
+	tier = empire
+	
+	cultures = { patagonian }
+	capital = STATE_PATAGONIA
+}
+
+CAM = {
+	color = { 81 223 214 }
+	
+	country_type = unrecognized
+	
+	tier = kingdom
+	
+	cultures = { central_american }
+	capital = STATE_NICARAGUA
+}
+
+DAI = {
+	color = { 208 216 40 }
+	
+	country_type = unrecognized
+	
+	tier = kingdom
+	
+	cultures = { vietnamese }
+	capital = STATE_TONKIN
+}
+
+BNM = {
+	color = { 182 189 17 }
+	
+	country_type = recognized
+	
+	tier = empire
+	
+	cultures = { vietnamese }
+	capital = STATE_BANGKOK
+}
+
+PHI = {
+	color = { 228 227 30 }
+
+	country_type = recognized
+	
+	tier = kingdom
+	
+	cultures = { filipino }
+	capital = STATE_LUZON
+}
+
+MUG = {
+	color = { 47 116 118}
+	
+	country_type = unrecognized
+	
+	tier = kingdom
+	
+	cultures = { assamese }
+	capital = STATE_DELHI
+}
+
+BIN = {
+	color = { 172 107 179 }
+	
+	country_type = recognized
+	
+	tier = empire
+	
+	cultures = { british }
+	capital = STATE_BOMBAY
+}
+
+BEN = {
+	color = { 93 93 26 }
+
+	country_type = unrecognized
+	
+	tier = kingdom
+	
+	cultures = { bengali }
+	capital = STATE_NORTH_BENGAL
+}
+
+BUR = {
+	color = { 99 22 95 }
+
+	country_type = recognized
+	
+	tier = kingdom
+	
+	cultures = { burmese }
+	capital = STATE_BURMA
+}
+
+CUB = {
+	color = { 68, 112, 80 }
+
+	country_type = recognized
+	
+	tier = principality
+	
+	cultures = { burmese }
+	capital = STATE_BURMA
+}
+
+GRE = {
+	color = { 114 184 188 }
+
+	country_type = recognized
+	
+	tier = kingdom
+	
+	cultures = { greek }
+	capital = STATE_ATTICA
+}
+
+SHZ = {
+	color = { 163 6 6 }
+	
+	country_type = recognized
+	
+	tier = hegemony
+	
+	cultures = { han manchu yue min uighur tibetan }
+	capital = STATE_BEIJING
+}
