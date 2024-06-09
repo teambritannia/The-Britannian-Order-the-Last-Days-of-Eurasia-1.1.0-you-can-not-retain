@@ -1,0 +1,47 @@
+mexican_war_disaster = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_negative.dds
+	country_prestige_mult = -0.2
+	state_radicals_from_sol_change_mult = 0.2
+	country_authority_mult = -0.15
+	building_throughput_add = -0.2
+}
+
+victoria_unrest = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_negative.dds
+	state_radicals_from_sol_change_mult = 0.3
+	country_authority_mult = -0.1
+}
+
+public_hysteria = {
+	icon = gfx/interface/icons/timed_modifier_icons/modilocafier_flag_negative.dds
+	country_legitimacy_base_add = -10
+	country_authority_mult = -0.1
+}
+
+police_investigation = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_negative.dds
+	country_tax_income_add = -3000
+	country_authority_add = -25
+}
+
+gbr_german_payments = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds
+	country_tax_income_add = 10000
+}
+
+ger_german_payments = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_negative.dds
+	country_expenses_add = 10000
+}
+
+bolstered_armed_forces = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_negative.dds
+	interest_group_ig_armed_forces_pop_attraction_mult = 0.1
+	interest_group_ig_armed_forces_pol_str_mult = 0.1
+}
+
+dongbei_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+	interest_group_ig_trade_unions_pop_attraction_mult = 5.0
+	interest_group_ig_trade_unions_pol_str_mult = 20.0
+}

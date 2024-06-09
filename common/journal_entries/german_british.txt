@@ -1,0 +1,46 @@
+﻿je_german_british_split = {
+	icon = "gfx/interface/icons/ig_icons/armed_forces.dds"
+
+	group = je_group_internal_affairs
+
+	complete = {
+		custom_tooltip = {
+			text = german_complete
+			var:german_var >= 180
+		}
+	}
+
+	on_complete = {
+		trigger_event = { id = german_british_split.2 popup = yes }
+		remove_variable = german_var
+		remove_variable = german_next
+	}
+
+	on_weekly_pulse = {
+		effect = {
+            german_helen_moment = yes
+        }
+	}
+
+	on_monthly_pulse = {
+		effect = {
+			change_variable = { name = german_var add = var:german_next }
+		}
+	}
+
+	current_value = {
+		value = root.var:german_var
+	}
+
+	goal_add_value = {
+		add = 180
+	}
+
+	progressbar = yes
+
+	weight = 100
+
+	can_revolution_inherit = yes
+	transferable = yes
+	should_be_pinned_by_default = yes
+}

@@ -1,0 +1,47 @@
+german_helen_moment = {
+	set_variable = { name = german_next value = 2 }
+	if = {
+		limit = {
+			ig:ig_armed_forces = {
+				is_powerful = yes
+			}
+		}
+		change_variable = {
+			name = german_next
+			add = 1
+		}
+	}
+	if = {
+		limit = {
+			ig:ig_armed_forces = {
+				is_in_government = yes
+			}
+		}
+		change_variable = {
+			name = german_next
+			add = 1
+		}
+	}
+	if = {
+		limit = {
+			any_scope_character = {
+				has_ideology = ideology:ideology_jingoist
+			}
+		}
+		change_variable = {
+			name = german_next
+			add = 1
+		}
+	}
+	if = {
+		limit = {
+			ig:ig_intelligenstia = {
+				is_in_government = yes
+			}
+		}
+		change_variable = {
+			name = german_next
+			add = -1
+		}
+	}
+}

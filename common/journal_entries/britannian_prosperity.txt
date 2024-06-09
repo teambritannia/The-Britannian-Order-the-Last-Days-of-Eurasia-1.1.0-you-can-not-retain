@@ -1,0 +1,78 @@
+﻿je_britannian_prosperity = {
+	icon = "gfx/interface/icons/event_icons/event_fire.dds"
+
+	group = je_group_historical_content
+
+
+	fail = {
+		custom_tooltip = {
+			text = je_britannia_collapse_tt
+			var:britannian_prosperity_var >= 5
+		}
+	}
+
+	on_fail = {
+		trigger_event = { id = britannian_prosperity.2 }
+		remove_variable = britannian_prosperity_var
+	}
+
+	current_value = {
+		value = var:britannian_prosperity_var
+	}
+
+	goal_add_value = {
+		add = 5
+	}
+	
+	progressbar = yes
+
+	on_weekly_pulse = {
+		effect = {
+			if = {
+				limit = {
+					AND = {
+						NOT = { has_variable = mexican_war_started }
+						any_diplomatic_play = {
+							initiator_is = c:MEX
+							target_is = c:GBR
+						}
+					}
+				}
+			set_variable = mexican_war_started
+			trigger_event = { id = britannian_prosperity.3 }
+			change_variable = { name = britannian_prosperity_var add = 1 }
+			}
+			if = {
+				limit = {
+					AND = {
+						NOT = { has_variable = vietnam_war_started }
+						any_diplomatic_play = {
+							initiator_is = c:DAI
+							target_is = c:GBR	
+						}
+					}
+				}
+			set_variable = vietnam_war_started
+			trigger_event = { id = britannian_prosperity.5 }
+			change_variable = { name = britannian_prosperity_var add = 1 }
+			}
+			if = {
+				limit = {
+					AND = {
+						NOT = { has_variable = american_war }
+						any_diplomatic_play = {
+							initiator_is = c:BNA
+							target_is = c:GBR	
+						}
+					}
+				}
+			set_variable = american_war
+			trigger_event = { id = britannian_prosperity.6 }
+			change_variable = { name = britannian_prosperity_var add = 1 }
+			}
+		}
+	}
+
+	weight = 10000
+	should_be_pinned_by_default = yes
+}

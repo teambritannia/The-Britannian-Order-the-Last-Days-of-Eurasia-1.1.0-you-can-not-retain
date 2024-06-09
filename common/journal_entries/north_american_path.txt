@@ -1,0 +1,35 @@
+﻿je_north_american_path = {	icon = "gfx/interface/icons/event_icons/event_protest.dds"
+
+	group = je_group_historical_content
+
+	is_shown_when_inactive = {
+		exists = c:BNA
+		THIS = c:BNA
+	}
+
+	possible = {
+		has_technology_researched = nationalism
+	}
+
+	immediate = {
+		trigger_event = {
+			id = north_american_path.1
+		}
+	}
+
+	complete = {
+		custom_tooltip = {
+			text = bna_stood_up_tt
+			is_subject = no
+		}
+	}
+
+	fail = {
+	}
+
+	on_fail = {
+	}
+
+	weight = 10000
+	should_be_pinned_by_default = yes
+}
