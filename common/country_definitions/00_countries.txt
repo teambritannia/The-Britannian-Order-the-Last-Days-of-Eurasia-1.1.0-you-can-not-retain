@@ -461,7 +461,7 @@ BUR = {
 }
 
 CUB = {
-	color = { 68, 112, 80 }
+	color = { 68 112 80 }
 
 	country_type = recognized
 	
@@ -482,13 +482,24 @@ GRE = {
 	capital = STATE_ATTICA
 }
 
-SHZ = {
-	color = { 163 6 6 }
+RUS = {
+	color = { 34 103 15 }
 	
 	country_type = recognized
 	
-	tier = hegemony
+	tier = empire
 	
-	cultures = { han manchu }
+	cultures = { russian ukranian byelorussian }
+	capital = STATE_MOSCOW
+}
+
+CHI = {
+	color = { 152 23 59 }
+	
+	country_type = recognized
+	
+	tier = empire
+	
+	cultures = { han manchu mongolian tibetan uighur yue min } 
 	capital = STATE_BEIJING
 }
