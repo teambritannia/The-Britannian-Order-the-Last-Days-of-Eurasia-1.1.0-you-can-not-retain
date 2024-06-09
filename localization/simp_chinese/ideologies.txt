@@ -1,0 +1,4 @@
+l_simp_chinese:
+ ideology_agrarian: "农业主义者"
+ ideology_interventionist: "干涉主义者"
+ ideology_primitivist: "原始主义者"

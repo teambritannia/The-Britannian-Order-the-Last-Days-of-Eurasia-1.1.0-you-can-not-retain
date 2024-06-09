@@ -1,0 +1,238 @@
+namespace = britannian_prosperity
+
+britannian_prosperity.1 = {
+	type = country_event
+	placement = ROOT
+	event_image = {
+		video = "unspecific_military_parade"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+	title = britannian_prosperity.1.t
+	desc = britannian_prosperity.1.d
+	flavor = britannian_prosperity.1.f
+
+	duration = 3
+
+	trigger = {
+		exists = c:GBR
+		THIS = c:GBR
+		NOT = { has_variable = britannian_prosperity_event }
+	}
+	
+	immediate = {
+		set_variable = britannian_prosperity_event
+		set_variable = {
+			name = britannian_prosperity_var
+			value = 0
+		}
+	}
+
+	option = {
+		name = britannian_prosperity.1.a
+		ai_chance = {
+			base = 10
+		}
+		add_journal_entry = {
+			type = je_britannian_prosperity
+		}
+	}
+}
+
+britannian_prosperity.3 = {
+	type = country_event
+	placement = ROOT
+	event_image = {
+		video = "middleeast_battlefield_trenches"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_default.dds"
+
+	title = britannian_prosperity.3.t
+	desc = britannian_prosperity.3.d
+	flavor = britannian_prosperity.3.f
+
+	duration = 3
+
+	trigger = {
+	}
+
+	option = {
+		name = britannian_prosperity.3.a
+		ai_chance = {
+			base = 10
+		}
+		add_modifier = {
+			name = mexican_war_disaster
+			months = short_modifier_time
+		}
+	}
+}
+
+britannian_prosperity.4 = {
+	type = country_event
+	placement = ROOT
+	event_image = {
+		video = "asia_politician_parliament_motion"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_default.dds"
+
+	title = britannian_prosperity.4.t
+	desc = britannian_prosperity.4.d
+	flavor = britannian_prosperity.4.f
+
+	duration = 3
+
+	trigger = {
+		limit = {
+			exists = c:DAI
+			this = c:DAI
+			NOT = { has_variable = vietnam_war }
+		}
+	}
+	
+	immediate = {
+		set_variable = vietnam_war
+	}
+
+	option = {
+		name = britannian_prosperity.4.a
+		ai_chance = {
+			base = 10
+		}
+		default_option = yes
+		c:DAI = {
+			create_diplomatic_play = {
+				name = vietnam_war
+		
+				target_state = s:STATE_BANGKOK.region_state:BNM
+			
+				war = yes
+			
+				type = dp_transfer_subject
+
+				add_war_goal = {
+					holder = c:DAI
+					type = transfer_subject
+				}
+			}	
+		}
+	}
+
+	option = {
+		name = britannian_prosperity.4.b
+		ai_chance = {
+			base = 2
+		}
+	}
+}
+
+britannian_prosperity.5 = {
+	type = country_event
+	placement = ROOT
+	event_image = {
+		video = "unspecific_devastation"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_default.dds"
+
+	title = britannian_prosperity.5.t
+	desc = britannian_prosperity.5.d
+	flavor = britannian_prosperity.5.f
+
+	duration = 3
+
+	trigger = {
+	}
+
+	immediate = {
+	}
+
+	option = {
+		name = britannian_prosperity.5.a
+		ai_chance = {
+			base = 10
+		}
+		add_modifier = {
+			name = mexican_war_disaster
+			months = short_modifier_time
+		}
+	}
+}
+
+britannian_prosperity.6 = {
+	type = country_event
+	placement = ROOT
+	event_image = {
+		video = "unspecific_devastation"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_default.dds"
+
+	title = britannian_prosperity.6.t
+	desc = britannian_prosperity.6.d
+	flavor = britannian_prosperity.6.f
+
+	duration = 3
+
+	trigger = {
+	}
+
+	immediate = {
+	}
+
+	option = {
+		name = britannian_prosperity.6.a
+		ai_chance = {
+			base = 10
+		}
+		add_modifier = {
+			name = mexican_war_disaster
+			months = short_modifier_time
+		}
+	}
+	option = {
+		name = britannian_prosperity.6.b
+		ai_chance = {
+			base = 10
+		}
+		add_modifier = {
+			name = mexican_war_disaster
+			months = short_modifier_time
+		}
+		c:BNA ?= {
+			trigger_event = {
+				id = britannian_prosperity.7
+				days = 3
+			}
+		}
+	}
+	option = {
+		name = britannian_prosperity.6.c
+		ai_chance = {
+			base = 10
+		}
+		add_modifier = {
+			name = mexican_war_disaster
+			months = short_modifier_time
+		}
+		c:BNA ?= {
+			trigger_event = {
+				id = britannian_prosperity.8
+				days = 3
+			}
+		}
+	}
+}

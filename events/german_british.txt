@@ -1,0 +1,164 @@
+namespace = german_british_split
+
+german_british_split.1 = {
+	type = country_event
+	placement = ROOT
+	event_image = {
+		video = "unspecific_military_parade"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+	title = german_british_split.1.t
+	desc = german_british_split.1.d
+	flavor = german_british_split.1.f
+
+	duration = 3
+
+	trigger = {
+		exists = c:GER
+		THIS = c:GER
+	}
+
+	option = {
+		name = german_british_split.1.a
+		ai_chance = {
+			base = 10
+		}
+		add_journal_entry = {
+			type = je_german_british_split
+		}
+		set_variable = {
+			name = german_var
+			value = 0
+		}
+		set_variable = { 
+			name = german_next 
+			value = 0 
+		}
+	}
+}
+
+german_british_split.2 = {
+	type = country_event
+	placement = ROOT
+	event_image = {
+		video = "unspecific_signed_contract"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+	title = german_british_split.2.t
+	desc = german_british_split.2.d
+	flavor = german_british_split.2.f
+
+	duration = 3
+
+	trigger = {
+	}
+
+	option = {
+		name = german_british_split.2.a
+		default_option = yes
+		ai_chance = {
+			base = 6
+		}
+		change_variable = { name = german_var add = 20 }
+		add_modifier = { 
+			name = ger_german_payments
+			months = normal_modifier_time
+		}
+		add_modifier = { 
+			name = ger_german_payments
+			months = normal_modifier_time
+		}
+		c:GBR = {
+			add_modifier = { 
+				name = gbr_german_payments
+				months = normal_modifier_time
+			}
+		}
+	}
+	option = {
+		name = german_british_split.2.b
+		ai_chance = {
+			base = 4
+		}
+		change_variable = { name = german_var add = 0 }
+	}
+}
+
+german_british_split.3 = {
+	type = country_event
+	placement = ROOT
+	event_image = {
+		video = "europenorthamerica_political_extremism"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+	title = german_british_split.3.t
+	desc = german_british_split.3.d
+	flavor = german_british_split.3.f
+
+	duration = 3
+
+	trigger = {
+	}
+	
+	immediate = {
+		random_scope_character = {
+			limit = {
+				has_role = politician
+				interest_group = {
+					is_interest_group_type = ig_armed_forces
+				}
+			}
+			save_scope_as = galeader
+		}
+	}
+
+	option = {
+		name = german_british_split.3.a
+		ai_chance = {
+			base = 3
+		}
+		change_variable = { name = german_var add = 10 }
+		add_modifier = { 
+			name = bolstered_armed_forces
+			months = long_modifier_time
+		}
+	}
+	option = {
+		name = german_british_split.3.b
+		default_option = yes
+		ai_chance = {
+			base = 4
+		}
+		change_variable = { name = german_var add = -10 }
+	}
+	option = {
+		name = german_british_split.3.c
+		trigger = {
+			NOT = { has_law = law_type:law_no_police }
+			ig:ig_armed_forces = {
+				ig_approval < 0
+			}
+		}
+		ai_chance = {
+			base = 3
+		}
+		change_variable = { name = german_var add = -15 }
+		hidden_effect = {
+			scope:galeader = {
+				kill_character = yes
+			}
+		}
+	}
+}

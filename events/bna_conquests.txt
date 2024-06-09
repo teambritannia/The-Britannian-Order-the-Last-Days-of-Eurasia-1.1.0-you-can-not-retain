@@ -1,0 +1,571 @@
+namespace = north_american_path
+
+north_american_path.1 = { # random flavor
+	type = country_event
+	placement = ROOT
+	event_image = {
+		video = "unspecific_military_parade"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+	title = north_american_path.1.t
+	desc = north_american_path.1.d
+	flavor = north_american_path.1.f
+
+	duration = 3
+
+	trigger = {
+	}
+	
+	immediate = {
+	}
+
+	option = {
+		name = north_american_path.1.a
+		ai_chance = {
+			base = 10
+		}
+	}
+}
+
+north_american_path.2 = { # war for states
+	type = country_event
+	placement = ROOT
+	event_image = {
+		video = "middleeast_battlefield_trenches"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_default.dds"
+
+	title = north_american_path.2.t
+	desc = north_american_path.2.d
+	flavor = north_american_path.2.f
+
+	duration = 3
+
+	trigger = {
+	}
+	
+	immediate = {
+		c:BNA = {
+			save_scope_as = bna_scope
+		}
+	}
+
+	option = {
+		name = north_american_path.2.a
+		ai_chance = {
+			base = 10
+		}
+		c:BNA = {
+			create_diplomatic_play = {
+				name = bna_conquest
+		
+				target_state = s:STATE_SASKATCHEWAN.region_state:IRC
+			
+				war = yes
+			
+				type = dp_conquer_state
+
+				add_war_goal = {
+					holder = c:BNA
+					type = conquer_state
+					target_state = s:STATE_MANITOBA.region_state:IRC
+				}
+				add_war_goal = {
+					holder = c:BNA
+					type = conquer_state
+					target_state = s:STATE_MINNESOTA.region_state:IRC
+				}
+			}	
+		}
+	}
+}
+
+north_american_path.3 = { #demands against iron confederacy
+	type = country_event
+	placement = ROOT
+	event_image = {
+		video = "asia_politician_parliament_motion"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_default.dds"
+
+	title = north_american_path.3.t
+	desc = north_american_path.3.d
+	flavor = north_american_path.3.f
+
+	duration = 3
+
+	trigger = {
+	}
+	
+	immediate = {
+		c:IRC = {
+			save_scope_as = bna_target_scope
+		}
+		c:BNA = {
+			save_scope_as = bna_scope
+		}
+	}
+
+	option = { #demand subjugation
+		name = north_american_path.3.a
+		ai_chance = {
+			base = 5
+		}
+		default_option = yes
+		c:IRC ?= {
+			trigger_event = {
+				id = north_american_path.5
+				days = 1
+			}
+		}
+	}
+
+	option = { # demand land
+		name = north_american_path.3.b
+		ai_chance = {
+			base = 5
+		}
+		c:IRC ?= {
+			trigger_event = {
+				id = north_american_path.4
+				days = 3
+			}
+		}
+	}
+}
+
+north_american_path.4 = { # bna demands our states
+	type = country_event
+	placement = ROOT
+	event_image = {
+		video = "unspecific_devastation"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_default.dds"
+
+	title = north_american_path.4.t
+	desc = north_american_path.4.d
+	flavor = north_american_path.4.f
+
+	duration = 3
+
+	trigger = {
+	}
+
+	immediate = {
+	}
+
+	option = {
+		name = north_american_path.4.a
+		default_option = yes
+		ai_chance = {
+			base = 2
+		}
+		random_state = {
+			limit = {
+				state_region = s:STATE_ALBERTA
+			}
+			set_state_owner = c:BNA
+		}
+		random_state = {
+			limit = {
+				state_region = s:STATE_WISCONSIN
+			}
+			set_state_owner = c:BNA
+		}
+	}
+	option = {
+		name = north_american_path.4.b
+		ai_chance = {
+			base = 8
+		}
+		c:BNA ?= {
+			trigger_event = {
+				id = north_american_path.2
+				days = 1
+			}
+		}
+	}
+}
+
+
+north_american_path.5 = { #bna demands us to be a dominion
+	type = country_event
+	placement = ROOT
+	event_image = {
+		video = "unspecific_devastation"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_default.dds"
+
+	title = north_american_path.5.t
+	desc = north_american_path.5.d
+	flavor = north_american_path.5.f
+
+	duration = 3
+
+	trigger = {
+	}
+
+	immediate = {
+	}
+
+	option = {
+		name = north_american_path.5.a
+		default_option = yes
+		ai_chance = {
+			base = 1
+		}
+		c:BNA = {
+			create_diplomatic_pact = {
+				country = scope:bna_target_scope
+				type = dominion
+			}
+		}
+	}
+	option = {
+		name = north_american_path.5.b
+		ai_chance = {
+			base = 9
+		}
+		c:BNA = {
+			trigger_event = {
+				id = north_american_path.6
+				days = 1
+			}
+		}
+	}
+}
+
+north_american_path.6 = { # make irc dominion
+	type = country_event
+	placement = ROOT
+	event_image = {
+		video = "middleeast_battlefield_trenches"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_default.dds"
+
+	title = north_american_path.2.t
+	desc = north_american_path.2.d
+	flavor = north_american_path.2.f
+
+	duration = 3
+
+	trigger = {
+	}
+	
+	immediate = {
+		c:BNA = {
+			save_scope_as = bna_scope
+		}
+	}
+
+	option = {
+		name = north_american_path.2.a
+		ai_chance = {
+			base = 10
+		}
+		c:BNA = {
+			create_diplomatic_play = {
+				name = bna_puppet
+		
+				target_state = s:STATE_ALBERTA.region_state:IRC
+			
+				war = yes
+			
+				type = dp_make_protectorate
+
+				add_war_goal = {
+					holder = c:BNA
+					type = make_protectorate	
+				}
+			}	
+		}
+	}
+}
+
+north_american_path.7 = { #demands against usa
+	type = country_event
+	placement = ROOT
+	event_image = {
+		video = "asia_politician_parliament_motion"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_default.dds"
+
+	title = north_american_path.3.t
+	desc = north_american_path.3.d
+	flavor = north_american_path.3.f
+
+	duration = 3
+
+	trigger = {
+	}
+	
+	immediate = {
+		c:USA = {
+			save_scope_as = bna_target_scope
+		}
+		c:BNA = {
+			save_scope_as = bna_scope
+		}
+	}
+
+	option = { #demand subjugation
+		name = north_american_path.3.a
+		ai_chance = {
+			base = 5
+		}
+		default_option = yes
+		c:USA ?= {
+			trigger_event = {
+				id = north_american_path.8
+				days = 1
+			}
+		}
+	}
+
+	option = { # demand land
+		name = north_american_path.3.b
+		ai_chance = {
+			base = 5
+		}
+		c:USA ?= {
+			trigger_event = {
+				id = north_american_path.9
+				days = 3
+			}
+		}
+	}
+}
+
+north_american_path.8 = { #bna demands us to be a dominion
+	type = country_event
+	placement = ROOT
+	event_image = {
+		video = "unspecific_devastation"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_default.dds"
+
+	title = north_american_path.5.t
+	desc = north_american_path.5.d
+	flavor = north_american_path.5.f
+
+	duration = 3
+
+	trigger = {
+	}
+
+	immediate = {
+	}
+
+	option = {
+		name = north_american_path.5.a
+		default_option = yes
+		ai_chance = {
+			base = 1
+		}
+		c:BNA = {
+			create_diplomatic_pact = {
+				country = scope:bna_target_scope
+				type = dominion
+			}
+		}
+	}
+	option = {
+		name = north_american_path.5.b
+		ai_chance = {
+			base = 9
+		}
+		c:BNA = {
+			trigger_event = {
+				id = north_american_path.10
+				days = 1
+			}
+		}
+	}
+}
+
+north_american_path.9 = { # bna demands our states
+	type = country_event
+	placement = ROOT
+	event_image = {
+		video = "unspecific_devastation"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_default.dds"
+
+	title = north_american_path.4.t
+	desc = north_american_path.4.d
+	flavor = north_american_path.4.f
+
+	duration = 3
+
+	trigger = {
+	}
+
+	immediate = {
+	}
+
+	option = {
+		name = north_american_path.4.a
+		default_option = yes
+		ai_chance = {
+			base = 2
+		}
+		random_state = {
+			limit = {
+				state_region = s:STATE_IOWA
+			}
+			set_state_owner = c:BNA
+		}
+		random_state = {
+			limit = {
+				state_region = s:STATE_MISSOURI
+			}
+			set_state_owner = c:BNA
+		}
+	}
+	option = {
+		name = north_american_path.4.b
+		ai_chance = {
+			base = 8
+		}
+		c:BNA ?= {
+			trigger_event = {
+				id = north_american_path.11
+				days = 1
+			}
+		}
+	}
+}
+
+north_american_path.10 = { # make irc dominion
+	type = country_event
+	placement = ROOT
+	event_image = {
+		video = "middleeast_battlefield_trenches"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_default.dds"
+
+	title = north_american_path.2.t
+	desc = north_american_path.2.d
+	flavor = north_american_path.2.f
+
+	duration = 3
+
+	trigger = {
+	}
+	
+	immediate = {
+		c:BNA = {
+			save_scope_as = bna_scope
+		}
+	}
+
+	option = {
+		name = north_american_path.2.a
+		ai_chance = {
+			base = 10
+		}
+		c:BNA = {
+			create_diplomatic_play = {
+				name = bna_puppet
+		
+				target_state = s:STATE_KANSAS.region_state:USA
+			
+				war = yes
+			
+				type = dp_make_protectorate
+
+				add_war_goal = {
+					holder = c:BNA
+					type = make_protectorate	
+				}
+			}	
+		}
+	}
+}
+
+north_american_path.11 = { # war for states
+	type = country_event
+	placement = ROOT
+	event_image = {
+		video = "middleeast_battlefield_trenches"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_default.dds"
+
+	title = north_american_path.2.t
+	desc = north_american_path.2.d
+	flavor = north_american_path.2.f
+
+	duration = 3
+
+	trigger = {
+	}
+	
+	immediate = {
+		c:BNA = {
+			save_scope_as = bna_scope
+		}
+	}
+
+	option = {
+		name = north_american_path.2.a
+		ai_chance = {
+			base = 10
+		}
+		c:BNA = {
+			create_diplomatic_play = {
+				name = bna_conquest
+		
+				target_state = s:STATE_IOWA.region_state:USA
+			
+				war = yes
+			
+				type = dp_conquer_state
+
+				add_war_goal = {
+					holder = c:BNA
+					type = conquer_state
+					target_state = s:STATE_IOWA.region_state:USA
+				}
+				add_war_goal = {
+					holder = c:BNA
+					type = conquer_state
+					target_state = s:STATE_MISSOURI.region_state:USA
+				}
+			}	
+		}
+	}
+}
