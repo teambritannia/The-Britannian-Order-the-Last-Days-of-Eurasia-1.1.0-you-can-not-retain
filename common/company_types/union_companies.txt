@@ -1,0 +1,95 @@
+#hanyu 
+company_hanyu = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/basic_chemicals.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_heavy.dds"
+	
+	flavored_company = yes
+	
+	building_types = {
+		building_university
+		building_
+	}
+	
+	potential = {
+		country_has_primary_culture = cu:han
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_SOUTHERN_MANCHURIA
+			}
+		}
+	}			
+	
+	possible = { 
+		any_scope_state = {
+			state_region = s:STATE_SOUTHERN_MANCHURIA
+			is_incorporated = yes
+			any_scope_building = {
+				OR = {
+					is_building_type = building_rice_farm
+					is_building_type = building_university
+				}
+				level >= 3
+			}
+		}
+		has_technology_researched = improved_fertilizer
+	}
+	
+	prosperity_modifier = {
+		country_tech_spread_mult = 0.1
+		country_production_tech_research_speed_mult = 0.1
+	}	
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+#fengtian heavy industries
+company_fengtian_heavy = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/basic_metalworks.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_heavy.dds"
+	
+	flavored_company = yes
+	
+	building_types = {
+		building_university
+		building_
+	}
+	
+	potential = {
+		country_has_primary_culture = cu:han
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_NORTHERN_MANCHURIA
+			}
+		}
+	}			
+	
+	possible = { 
+		any_scope_state = {
+			state_region = s:STATE_NORTHERN_MANCHURIA
+			is_incorporated = yes
+			any_scope_building = {
+				OR = {
+					is_building_type = building_steel_mills
+					is_building_type = building_iron_mine
+				}
+				level >= 3
+			}
+		}
+	}
+	
+	prosperity_modifier = {
+		building_motor_industry_throughput_add = 0.1
+	}	
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}

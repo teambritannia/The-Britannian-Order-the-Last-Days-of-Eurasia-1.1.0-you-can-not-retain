@@ -48,6 +48,22 @@ SBR = {
 		}
 	}
 	dynamic_country_name = {
+		name = dyn_c_siberian_anarchy
+		adjective = dyn_c_siberian_anarchy_adj
+
+		is_main_tag_only = yes
+		priority = 10
+		
+		trigger = {
+			exists = scope:actor
+			scope:actor = {
+				OR = {
+					coa_anarchy_trigger = yes
+				}
+			}
+		}
+	}
+	dynamic_country_name = {
 		name = dyn_c_siberian_republic
 		adjective = dyn_c_siberian_republic_adj
 
@@ -189,10 +205,10 @@ TUR = {
 	}
 }
 
-DBR = {
+FGT = {
 	dynamic_country_name = {
-		name = dyn_c_dongbei_republic
-		adjective = dyn_c_dongbei_republic_adj
+		name = dyn_c_fengtian_republic
+		adjective = dyn_c_fengtian_republic_adj
 
 		is_main_tag_only = yes
 		priority = 0
@@ -205,8 +221,8 @@ DBR = {
 		}
 	}
 	dynamic_country_name = {
-		name = dyn_c_dongbei_revolutionary_front
-		adjective = dyn_c_dongbei_revolutionary_front_adj
+		name = dyn_c_fengtian_revolutionary_front
+		adjective = dyn_c_fengtian_revolutionary_front_adj
 
 		is_main_tag_only = yes
 		priority = 10
@@ -662,6 +678,20 @@ SOM = {
 			}
 		}
 	}
+	dynamic_country_name = {
+		name = dyn_c_kingdom_of_somalia
+		adjective = dyn_c_kingdom_of_somalia_adj
+
+		is_main_tag_only = yes
+		priority = 10
+		
+		trigger = {
+			exists = scope:actor
+			scope:actor = {
+				coa_communist_trigger = yes
+			}
+		}
+	}
 }
 
 ETH = {
@@ -798,6 +828,117 @@ JIN = {
 			exists = scope:actor
 			scope:actor = {
 				coa_monarchy_trigger = yes
+			}
+		}
+	}
+}
+
+BNA = {
+	dynamic_country_name = {
+		name = dyn_c_bna_subject
+		adjective = dyn_c_bna_subject_adj
+		use_overlord_prefix = yes
+
+		is_main_tag_only = yes
+		priority = 10
+		
+		trigger = {
+			exists = scope:actor
+			scope:actor = {
+				coa_def_subject_trigger = yes
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = dyn_c_bna_republic
+		adjective = dyn_c_bna_republic_adj
+
+		is_main_tag_only = yes
+		priority = 10
+		
+		trigger = {
+			exists = scope:actor
+			scope:actor = {
+				coa_republic_trigger = yes
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = dyn_c_bna_commune
+		adjective = dyn_c_bna_commune_adj
+
+		is_main_tag_only = yes
+		priority = 6
+		
+		trigger = {
+			exists = scope:actor
+			scope:actor = {
+				coa_communist_trigger = yes
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = dyn_c_bna_empire
+		adjective = dyn_c_bna_empire_adj
+
+		is_main_tag_only = yes
+		priority = 5
+		
+		trigger = {
+			exists = scope:actor
+			scope:actor = {
+				coa_monarchy_trigger = yes
+			}
+		}
+	}
+}
+
+UKR = {
+	dynamic_country_name = {
+		name = dyn_c_reichskommissariat_ukrainien
+		adjective = dyn_c_reichskommissariat_ukrainien_adj
+
+		is_main_tag_only = yes
+		priority = 10
+		
+		trigger = {
+			exists = scope:actor
+			scope:actor = {
+				coa_def_subject_trigger = yes
+			}
+		}
+	}
+}
+
+POL = {
+	dynamic_country_name = {
+		name = dyn_c_reichskommissariat_polen
+		adjective = dyn_c_reichskommissariat_polen_adj
+
+		is_main_tag_only = yes
+		priority = 10
+		
+		trigger = {
+			exists = scope:actor
+			scope:actor = {
+				coa_def_subject_trigger = yes
+			}
+		}
+	}
+}
+
+GRU = {
+	dynamic_country_name = {
+		name = dyn_c_reichskommissariat_russland
+		adjective = dyn_c_reichskommissariat_russland_adj
+
+		is_main_tag_only = yes
+		priority = 10
+		
+		trigger = {
+			exists = scope:actor
+			scope:actor = {
+				coa_def_subject_trigger = yes
 			}
 		}
 	}

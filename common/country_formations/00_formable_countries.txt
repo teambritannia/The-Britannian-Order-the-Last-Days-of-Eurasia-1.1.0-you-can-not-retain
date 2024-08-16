@@ -1,4 +1,3 @@
-
 RUS = {
 	use_culture_states = yes
 
@@ -7,10 +6,10 @@ RUS = {
 	ai_will_do = { always = yes }
 }
 
-CHI = {
+SHZ = {
 	use_culture_states = yes
 	
-	required_states_fraction = 0.6
+	required_states_fraction = 0.8
 	
 	ai_will_do = { always = yes }
 }
