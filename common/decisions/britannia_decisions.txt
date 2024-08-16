@@ -68,9 +68,10 @@ offer_britannia_small_loan = {
 			months = normal_modifier_time
 		}
 		c:GBR = {
-		trigger_event = {
-			id = german_british_split.2
-			days = 7
+			change_variable = {
+				name = small_loan_counter
+				add = 1
+			}
 		}
 	}
 
