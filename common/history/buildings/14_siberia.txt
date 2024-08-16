@@ -1,32 +1,159 @@
-﻿={
+﻿BUILDINGS={
 	s:STATE_URAL={
-		region_state:RUS={
+		region_state:URL={
 			create_building={
 				building="building_iron_mine"
-				level=4
+				add_ownership={
+					building={
+						type="building_financial_district"
+						country="c:URL"
+						levels=2
+						region="STATE_URAL"
+					}
+				}
 				reserves=1
-				activate_production_methods={ "pm_picks_and_shovels_building_iron_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" "pm_merchant_guilds_building_iron_mine" }
+				activate_production_methods={ "pm_picks_and_shovels_building_iron_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts"  }
 			}
 			create_building={
 				building="building_logging_camp"
-				level=2
+				add_ownership={
+					building={
+						type="building_financial_district"
+						country="c:URL"
+						levels=2
+						region="STATE_URAL"
+					}
+				}
 				reserves=1
-				activate_production_methods={ "pm_saw_mills" "pm_hardwood" "pm_no_equipment" "pm_road_carts" "pm_privately_owned_building_logging_camp" }
+				activate_production_methods={ "pm_saw_mills" "pm_hardwood" "pm_no_equipment" "pm_road_carts"  }
 			}
 		}
 	}
 	s:STATE_TOMSK={
-		region_state:SBR={
-		}
-		region_state:QNG={
+		region_state:DVM={
 		}
 	}
 	s:STATE_TUVA={
-		region_state:QNG={
+		region_state:MGB={
 		}
 	}
 	s:STATE_TOBOLSK={
-		region_state:SBR={
+		region_state:TTA={
+			create_building={
+				building="building_iron_mine"
+				add_ownership={
+					building={
+						type="building_financial_district"
+						country="c:TTA"
+						levels=1
+						region="STATE_TOBOLSK"
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_picks_and_shovels_building_iron_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts"  }
+			}
+			create_building={
+				building="building_logging_camp"
+				add_ownership={
+					building={
+						type="building_financial_district"
+						country="c:TTA"
+						levels=2
+						region="STATE_TOBOLSK"
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_saw_mills" "pm_hardwood" "pm_no_equipment" "pm_road_carts"  }
+			}
+			create_building={
+				building="building_arms_industry"
+				add_ownership={
+					country={
+						country="c:TTA"
+						levels=1
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_muskets" "pm_automation_disabled"  }
+			}
+			create_building={
+				building="building_tooling_workshops"
+				add_ownership={
+					building={
+						type="building_financial_district"
+						country="c:TTA"
+						levels=1
+						region="STATE_TOBOLSK"
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_pig_iron" "pm_automation_disabled"  }
+			}
+			create_building={
+				building="building_rye_farm"
+				add_ownership={
+					building={
+						type="building_manor_house"
+						country="c:TTA"
+						levels=1
+						region="STATE_TOBOLSK"
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_simple_farming"  "pm_tools_disabled" "pm_no_secondary" }
+			}
+		}
+		region_state:MSK={
+			create_building={
+				building="building_rye_farm"
+				add_ownership={
+					building={
+						type="building_rye_farm"
+						country="c:MSK"
+						levels=1
+						region="STATE_TOBOLSK"
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_simple_farming" "pm_no_secondary" "pm_tools_disabled"  }
+			}
+			create_building={
+				building="building_iron_mine"
+				add_ownership={
+					building={
+						type="building_financial_district"
+						country="c:MSK"
+						levels=1
+						region="STATE_TOBOLSK"
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_picks_and_shovels_building_iron_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts"  }
+			}
+			create_building={
+				building="building_logging_camp"
+				add_ownership={
+					country={
+						country="c:MSK"
+						levels=1
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_saw_mills" "pm_hardwood" "pm_no_equipment" "pm_road_carts"  }
+			}
+			create_building={
+				building="building_tooling_workshops"
+				add_ownership={
+					building={
+						type="building_tooling_workshops"
+						country="c:MSK"
+						levels=1
+						region="STATE_TOBOLSK"
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_pig_iron" "pm_automation_disabled"  }
+			}
 		}
 	}
 	s:STATE_UPPER_YENISEYSK={
@@ -37,12 +164,8 @@
 		region_state:SBR={
 		}
 	}
-	s:STATE_NENETSIA={
-		region_state:SBR={
-		}
-	}
 	s:STATE_CHUKOTKA={
-		region_state:SBR={
+		region_state:TKK={
 		}
 	}
 	s:STATE_KAMCHATKA={
@@ -53,9 +176,14 @@
 		region_state:TKK={
 			create_building={
 				building="building_port"
-				level=1
+				add_ownership={
+					country={
+						country="c:TKK"
+						levels=1
+					}
+				}
 				reserves=1
-				activate_production_methods={ "pm_basic_port" }
+				activate_production_methods={ "pm_anchorage" }
 			}
 		}
 	}
@@ -64,11 +192,50 @@
 		}
 	}
 	s:STATE_TRANS_BAIKAL={
-		region_state:SBR={
+		region_state:FER={
+			create_building={
+				building="building_rye_farm"
+				add_ownership={
+					building={
+						type="building_manor_house"
+						country="c:FER"
+						levels=2
+						region="STATE_TRANS_BAIKAL"
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_simple_farming" "pm_apple_orchards" "pm_tools_disabled"  }
+			}
+			create_building={
+				building="building_logging_camp"
+				add_ownership={
+					building={
+						type="building_logging_camp"
+						country="c:FER"
+						levels=1
+						region="STATE_TRANS_BAIKAL"
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_saw_mills" "pm_hardwood" "pm_no_equipment" "pm_road_carts"  }
+			}
+			create_building={
+				building="building_food_industry"
+				add_ownership={
+					building={
+						type="building_food_industry"
+						country="c:FER"
+						levels=1
+						region="STATE_TRANS_BAIKAL"
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_bakery" "pm_disabled_canning" "pm_disabled_distillery" "pm_manual_dough_processing"  }
+			}
 		}
 	}
 	s:STATE_IRKUTSK={
-		region_state:SBR={
+		region_state:IRK={
 		}
 	}
 }

@@ -1,0 +1,34 @@
+﻿COUNTRIES = {
+	c:MSK ?= {
+		effect_starting_technology_tier_2_tech = yes
+		
+		set_market_capital = STATE_TOBOLSK
+		
+		activate_law = law_type:law_presidential_republic
+		activate_law = law_type:law_autocracy
+		activate_law = law_type:law_tenant_farmers
+		activate_law = law_type:law_per_capita_based_taxation
+		activate_law = law_type:law_appointed_bureaucrats
+		activate_law = law_type:law_racial_segregation
+		activate_law = law_type:law_interventionism
+		activate_law = law_type:law_professional_army
+		activate_law = law_type:law_censorship
+		activate_law = law_type:law_slavery_banned
+		activate_law = law_type:law_dedicated_police
+		activate_law = law_type:law_women_own_property
+		activate_law = law_type:law_closed_borders
+		activate_law = law_type:law_national_guard
+		
+		set_government_wage_level = medium
+		set_tax_level = medium
+		
+		ig:ig_petty_bourgeoisie = {
+			add_ruling_interest_group = yes
+		}
+
+		ig:ig_devout = {
+			add_ruling_interest_group = yes
+		}
+		
+	}
+}

@@ -302,7 +302,7 @@
 		}
 	}
 	s:STATE_KIRGHIZIA={
-		region_state:KOK={
+		region_state:SRU={
 			create_building={
 				building="building_wheat_farm"
 				level=1
@@ -328,7 +328,7 @@
 				activate_production_methods={ "pm_no_organization" }
 			}
 		}
-		region_state:CHI={
+		region_state:SKB={
 			create_building={
 				building="building_wheat_farm"
 				level=1
