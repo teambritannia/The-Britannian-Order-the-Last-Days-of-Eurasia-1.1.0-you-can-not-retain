@@ -1,0 +1,22 @@
+﻿l_english:
+ ideology_agrarian: "agrarian"
+ ideology_interventionist: "interventionist"
+ ideology_primitivist: "primitivist"
+ 
+ BUND: "Bund"
+ COMMONWEALTH: "Commonwealth"
+ UNION: "Union"
+ SPHERE: "Sphere"
+ 
+ burgsys_appear_progress_bar: "Rise of Burgundianism"
+ burgsys_appear_progress_bar_name: "Burgundian influence"
+ burgsys_appear_progress_bar_desc: "Burgundian influence"
+ burgsys_appear_progress_bar_second_desc: "Anti-Burgundian influence"
+ mod_bgs_burgsys_ig_powerful: "Powerful Burgundian interest group"
+ mod_bgs_burgsys_character: "Burgsys politician"
+ mod_bgs_socialists_powerful: "Powerful socialists"
+ mod_bgs_monetary_woes: "Country in debt"
+ mod_bgs_bankrupt: "Country bankrupt"
+ mod_bgs_suppressing_burgsys: "Government suppression"
+ mod_bgs_rooting_out_burgsys: "Government crackdowns"
+ mod_bgs_funding_burgsys: "Government support"
