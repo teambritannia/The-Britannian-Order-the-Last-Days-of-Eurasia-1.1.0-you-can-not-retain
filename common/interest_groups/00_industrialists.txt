@@ -5,11 +5,11 @@
 	index = 2
 
 	ideologies = {
-		ideology_conservative
-		ideology_deregulationist
-		ideology_social_darwinist
-		ideology_dictatorialist
-		ideology_jingoist
+		ideology_tbo_conservative
+		ideology_tbo_deregulationist
+		ideology_tbo_social_darwinist
+		ideology_tbo_dictatorialist
+		ideology_tbo_jingoist
 	}
 
 	enable = {
@@ -290,10 +290,7 @@
 		}
 		if = {
 			limit = {
-				owner = {
-					exists = c:GDG
-					THIS = c:GDG
-				}
+				owner = { c:TTA ?= this }
 			}
 			add = {
 				value = 1.0
@@ -316,10 +313,7 @@
 		}
 		if = {
 			limit = {
-				owner = {
-					exists = c:GDG
-					THIS = c:GDG
-				}
+				owner = { c:TTA ?= this }
 			}
 			add = {
 				value = 1.0
@@ -332,10 +326,7 @@
 		
 		if = {
 			limit = {
-				owner = {
-					exists = c:GDG
-					THIS = c:GDG
-				}
+				owner = { c:TTA ?= this }
 			}
 			add = {
 				value = 1.0

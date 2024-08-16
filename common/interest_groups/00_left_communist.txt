@@ -1,18 +1,20 @@
-﻿ig_trade_unions = {
+﻿ig_left_communist = {
 	color = hsv{ 0 0.56 0.58 }
-	texture = "gfx/interface/icons/ig_icons/trade_unions.dds"
-	layer = "revolution_dynamic_trade_unions"
-	index = 7
+	texture = "gfx/interface/icons/ig_icons/intelligentsia.dds"
+	layer = "revolutionary_dynamic_intelligentsia"
+	index = 9
 
 	ideologies = {
-		ideology_tbo_progressive
-		ideology_tbo_republican
-		ideology_tbo_interventionist
+		ideology_tbo_radical
+		ideology_tbo_communist
+		ideology_tbo_collectivist
+		ideology_tbo_pacifist
 		ideology_tbo_institutionalist
 	}
 
 	enable = {
-		always = yes
+		owner = { c:FGT ?= this }
+		has_technology_researched = socialism
 	}
 
 	# Deprecated; use on_enable effect to assign traits instead
@@ -23,68 +25,10 @@
 	}
 	
 	on_enable = {
-		ig:ig_trade_unions = {
-			if = {
-				limit = {
-					has_dlc_feature = voice_of_the_people_content
-					owner = { c:FRA ?= this }
-				}
-				set_ig_trait = ig_trait:ig_trait_work_to_rule
-				set_ig_trait = ig_trait:ig_trait_industrial_organizers
-				set_ig_trait = ig_trait:ig_trait_bourse_du_travail
-			}
-			else_if = {
-				limit = {
-					owner = { c:FGT ?= this }
-				}
-				set_ig_trait = ig_trait:ig_trait_work_to_rule
-				set_ig_trait = ig_trait:ig_trait_productive_forces
-				set_ig_trait = ig_trait:ig_trait_solidarity
-				
-				set_interest_group_name = ig_gonghui
-			}
-			else = {
-				set_ig_trait = ig_trait:ig_trait_work_to_rule
-				set_ig_trait = ig_trait:ig_trait_industrial_organizers
-				set_ig_trait = ig_trait:ig_trait_solidarity
-			}
-		}
-		
-		### Socialism
-		if = {
-			limit = {
-				has_technology_researched = socialism
-			}
-			ig:ig_trade_unions = {
-				remove_ideology = ideology_tbo_republican
-				add_ideology = ideology_tbo_communist
-			}
-		}
-		
-		if = {
-			limit = {
-				has_technology_researched = socialism
-				exists = c:FGT
-				THIS = c:FGT
-			}
-			ig:ig_trade_unions = {
-				remove_ideology = ideology_tbo_interventionist
-				add_ideology = ideology_tbo_centralist
-				remove_ideology = ideology_tbo_republican
-				add_ideology = ideology_tbo_militant_socialist
-			}
-		}
-		if = {
-			limit = {
-				has_technology_researched = human_rights
-			}
-			every_interest_group = {
-				limit = {
-					has_ideology = ideology:ideology_tbo_progressive
-				}
-				remove_ideology = ideology_tbo_progressive
-				add_ideology = ideology_tbo_radical
-			}
+		ig:ig_left_communist = {
+			set_ig_trait = ig_trait:ig_trait_work_to_rule
+			set_ig_trait = ig_trait:ig_trait_industrial_organizers
+			set_ig_trait = ig_trait:ig_trait_international_connection
 		}
 	}
 
@@ -95,31 +39,6 @@
 		NOR = {
 			is_pop_type = aristocrats
 			is_pop_type = capitalists
-			is_pop_type = shopkeepers
-			is_pop_type = officers
-		}
-		OR = {
-			AND = {
-				custom_tooltip = {
-					text = owner_has_modern_agriculture_tt
-					owner = {
-						OR = {
-							has_law = law_type:law_commercialized_agriculture
-							has_law = law_type:law_collectivized_agriculture
-						}
-					}
-				}
-				strata = poor
-				NOR = {
-					pop_employment_building_group = bg_subsistence_agriculture
-					pop_employment_building_group = bg_subsistence_ranching
-				}
-			}
-			NOR = {
-				pop_employment_building_group = bg_agriculture
-				pop_employment_building_group = bg_ranching
-				pop_employment_building_group = bg_plantations
-			}
 		}
 	}
 
@@ -127,22 +46,44 @@
 		value = 0
 
 		add = {
-			desc = "URBAN_POP"
+			desc = "EDUCATED_ELITE"
 			if = {
 				limit = {
-					NOR = {
-						pop_employment_building_group = bg_agriculture
-						pop_employment_building_group = bg_ranching
-						pop_employment_building_group = bg_plantations
+					pop_employment_building_group = bg_government
+				}
+				value = 100
+			}
+		}
+
+		add = {
+			desc = "ARMY"
+			if = {
+				limit = {
+					OR = {
+						pop_employment_building_group = bg_military
 					}
 				}
-				value = 50
-				if = {
-					limit = {
-						strata = middle
-					}
-					divide = 2
+				value = 20
+			}
+		}
+
+		add = {
+			desc = "POP_BUREAUCRATS"
+			if = {
+				limit = {
+					is_pop_type = bureaucrats
 				}
+				value = 120
+			}
+		}
+		
+		add = {
+			desc = "POP_ACADEMICS"
+			if = {
+				limit = {
+					is_pop_type = academics
+				}
+				value = 150
 			}
 		}
 
@@ -152,17 +93,20 @@
 				limit = {
 					is_pop_type = machinists
 				}
-				value = 100
+				value = 20
 			}
 		}
 
 		add = {
-			desc = "POP_LABORERS"
+			desc = "SECURED_ARMY_SUPPORT"
 			if = {
 				limit = {
-					is_pop_type = laborers
+					AND = {
+						pop_employment_building_group = bg_military
+						has_variable = secured_army_support
+					}
 				}
-				value = 50
+				value = 40
 			}
 		}
 
@@ -178,49 +122,7 @@
 				}
 			}
 		}
-
-		multiply = {
-			desc = "NO_LABOR_MOVEMENT"
-			value = 1.0
-
-			if = {
-				limit = {
-					owner = {
-						NOT = { has_technology_researched = labor_movement }
-					}
-				}
-				value = 0.5
-			}
-		}
-
-		multiply = {
-			desc = "NO_EGALITARIANISM"
-			value = 1.0
-
-			if = {
-				limit = {
-					owner = {
-						NOT = { has_technology_researched = egalitarianism }
-					}
-				}
-				value = 0.5
-			}
-		}
-
-		multiply = {
-			desc = "decentralized_power"
-			value = 1.0
-
-			if = {
-				limit = {
-					owner = {
-						is_country_type = decentralized
-					}
-				}
-				value = 0.0
-			}
-		}
-	
+		
 		if = {
 			limit = {
 				scope:interest_group = {
@@ -344,10 +246,21 @@
 				value = 0.2
 			}
 		}
+		if = {
+			limit = {
+				owner = {
+					exists = c:GDG
+					THIS = c:GDG
+				}
+			}
+			add = {
+				value = 1.0
+			}
+		}
 	}
 
 	female_politician_chance = {
-		value = 0.0
+		value = 0.2
 
 		if = {
 			limit = {
@@ -356,7 +269,7 @@
 				}
 			}
 			add = {
-				value = 0.2
+				value = 0.3
 			}
 		}
 		if = {
@@ -373,8 +286,19 @@
 	}
 
 	female_agitator_chance = {
-		value = 0.01
+		value = 0.2
 		
+		if = {
+			limit = {
+				owner = {
+					exists = c:GDG
+					THIS = c:GDG
+				}
+			}
+			add = {
+				value = 1.0
+			}
+		}
 		if = {
 			limit = {
 				owner = {

@@ -5,10 +5,10 @@
 	index = 6
 
 	ideologies = {
-		ideology_conservative
-		ideology_agrarian
-		ideology_isolationist
-		ideology_moralist
+		ideology_tbo_conservative
+		ideology_tbo_agrarian
+		ideology_tbo_isolationist
+		ideology_tbo_moralist
 	}
 
 	enable = {
@@ -56,32 +56,17 @@
 				set_ig_trait = ig_trait:ig_trait_farmers_markets
 			}
 		}
-	
-		# Jeffersonian Ideology
-		if = {
-			limit = {
-				OR = {
-					country_has_primary_culture = cu:yankee
-					country_has_primary_culture = cu:dixie
-				}
-			}
-			ig:ig_rural_folk = {
-				remove_ideology = ideology_agrarian
-				add_ideology = ideology_agrarian_jeffersonian
-				set_interest_group_name = ig_yeoman_farmers
-			}
-		}
 		
-		if = { #dongbei prog farmers
+		if = { #fengtian prog farmers
 			limit = {
 				owner = {
-					exists = c:DBR
-					THIS = c:DBR
+					exists = c:FGT
+					THIS = c:FGT
 				}
 			}
 			ig:ig_rural_folk = {
-				remove_ideology = ideology_conservative
-				add_ideology = ideology_progressive
+				remove_ideology = ideology_tbo_conservative
+				add_ideology = ideology_tbo_progressive
 			}
 		}
 
@@ -302,17 +287,6 @@
 				value = 0.2
 			}
 		}
-		if = {
-			limit = {
-				owner = {
-					exists = c:GDG
-					THIS = c:GDG
-				}
-			}
-			add = {
-				value = 1.0
-			}
-		}
 	}
 
 	female_politician_chance = {
@@ -344,17 +318,6 @@
 	female_agitator_chance = {
 		value = 0.01
 		
-		if = {
-			limit = {
-				owner = {
-					exists = c:GDG
-					THIS = c:GDG
-				}
-			}
-			add = {
-				value = 1.0
-			}
-		}
 		if = {
 			limit = {
 				owner = {

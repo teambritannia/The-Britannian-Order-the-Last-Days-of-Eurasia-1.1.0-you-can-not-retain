@@ -5,11 +5,11 @@
 	index = 4
 
 	ideologies = {
-		ideology_reactionary
-		ideology_monarchist
-		ideology_social_darwinist
-		ideology_traditionalist
-		ideology_isolationist
+		ideology_tbo_reactionary
+		ideology_tbo_monarchist
+		ideology_tbo_social_darwinist
+		ideology_tbo_traditionalist
+		ideology_tbo_isolationist
 	}
 
 	enable = {
@@ -115,12 +115,10 @@
 		# Junkers
 		else_if = {
 			limit = {
-				c:PRU ?= this
+				c:GER ?= this
 			}
 			ig:ig_landowners = {
 				set_interest_group_name = ig_junkers
-				remove_ideology = ideology_paternalistic
-				add_ideology = ideology_junker_paternalistic
 			}
 		}
 		# Gentry Assembly
@@ -130,27 +128,6 @@
 			}
 			ig:ig_landowners = {
 				set_interest_group_name = ig_gentry_assembly
-			}
-		}
-		# Roman Landowners
-		else_if = {
-			limit = {
-				c:PAP ?= this
-			}
-			ig:ig_landowners = {
-				set_interest_group_name = ig_roman_landowners
-				remove_ideology = ideology_paternalistic
-				add_ideology = ideology_papal_paternalistic
-			}
-		}
-		# Ali'i
-		else_if = {
-			limit = {
-				country_has_primary_culture = cu:hawaiian
-			}
-			ig:ig_landowners = {
-				set_interest_group_name = ig_alii
-				add_ideology = ideology_loyalist
 			}
 		}
 		# Landed Gentry
@@ -169,26 +146,6 @@
 			}
 			ig:ig_landowners = { 
 				set_interest_group_name = ig_yangban
-			}
-		}
-		# Scholar Officials
-		else_if = {
-			limit = {
-				c:CHI ?= this
-			}
-			ig:ig_landowners = { 
-				set_interest_group_name = ig_scholar_officials
-				remove_ideology = ideology_paternalistic
-				add_ideology = ideology_scholar_paternalistic
-			}
-		}
-		# Pious Spanish Landowners
-		else_if = {
-			limit = {
-				country_has_primary_culture = cu:spanish
-			}
-			ig:ig_landowners = {
-				add_ideology = ideology_pious
 			}
 		}
 		# Aristocracy of Officials
@@ -213,8 +170,8 @@
 			}
 			ig:ig_landowners = {
 				set_interest_group_name = ig_southern_planters
-				remove_ideology = ideology_paternalistic
-				add_ideology = ideology_republican_paternalistic
+				remove_ideology = ideology_tbo_paternalistic
+				add_ideology = ideology_tbo_republican_paternalistic
 			}
 		}
 		# South American Caudillos/republicans
@@ -228,8 +185,8 @@
 				}
 			}
 			ig:ig_landowners = {
-				remove_ideology = ideology_paternalistic
-				add_ideology = ideology_republican_paternalistic
+				remove_ideology = ideology_tbo_monarchist
+				add_ideology = ideology_tbo_dictatorialist
 			}
 		}
 	}
@@ -446,17 +403,6 @@
 				value = 0.2
 			}
 		}
-		if = {
-			limit = {
-				owner = {
-					exists = c:GDG
-					THIS = c:GDG
-				}
-			}
-			add = {
-				value = 1.0
-			}
-		}
 	}
 
 	female_politician_chance = {
@@ -472,33 +418,11 @@
 				value = 0.2
 			}
 		}
-		if = {
-			limit = {
-				owner = {
-					exists = c:GDG
-					THIS = c:GDG
-				}
-			}
-			add = {
-				value = 1.0
-			}
-		}
 	}
 
 	female_agitator_chance = {
 		value = 0.01
 		
-		if = {
-			limit = {
-				owner = {
-					exists = c:GDG
-					THIS = c:GDG
-				}
-			}
-			add = {
-				value = 1.0
-			}
-		}
 		if = {
 			limit = {
 				owner = {

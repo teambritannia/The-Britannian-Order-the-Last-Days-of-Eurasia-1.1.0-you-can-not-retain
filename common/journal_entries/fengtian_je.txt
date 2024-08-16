@@ -1,0 +1,227 @@
+﻿je_fengtian_mongol_uprisings = {	
+	icon = "gfx/interface/icons/event_icons/event_military.dds"
+
+	group = je_group_historical_content
+	
+	scripted_progress_bar = peasants_occupation_progress_bar
+	
+	scripted_progress_bar = peasants_morale_progress_bar
+	
+	scripted_progress_bar = peasants_strength_progress_bar
+	
+	scripted_progress_bar = peasants_popular_support_progress_bar
+	
+	scripted_progress_bar = mgb_morale_progress_bar
+	
+	scripted_progress_bar = mgb_strength_progress_bar
+	
+	scripted_button = mongol_provide_training
+	
+	scripted_button = mongol_provide_equipment
+	
+	scripted_button = mongol_ideological_training
+	
+	scripted_button = mongol_covert_funds
+	
+	scripted_button = mongol_covert_military_operation
+	
+	scripted_button = mongol_enforce_popular_line
+	
+	scripted_button = mongol_burn_suspected_villages
+	
+	scripted_button = mongol_request_qing_support
+	
+	scripted_button = mongol_military_campaign
+	
+	scripted_button = mongol_fan_dissent
+	
+
+	is_shown_when_inactive = {
+		OR = {
+			c:FGT ?= owner
+			c:MGB ?= owner
+		}
+	}
+
+	possible = {
+		exists = c:MGB
+		c:MGB = {
+			is_subject_of = c:QNG
+		}
+	}
+
+	immediate = {
+		set_variable = {
+			name = peasant_strength_equilibrium
+			value = 45
+		}
+		set_variable = {
+			name = peasant_morale_equilibrium
+			value = 70
+		}
+		set_variable = {
+			name = peasant_popular_support_equilibrium
+			value = 65
+		}
+		set_variable = {
+			name = mgb_strength_equilibrium
+			value = 55
+		}
+		set_variable = {
+			name = mgb_morale_equilibrium
+			value = 30
+		}
+	}
+	
+	on_monthly_pulse = {
+		effect = {
+			c:MGB = {
+				random_scope_state = {
+					limit = {
+						NOT = {
+							OR = {
+								has_modifier = mgb_peasant_campaign
+								has_modifier = mgb_covert_operation
+							}
+						}
+					}
+					add_modifier = {
+						name = mgb_peasant_campaign
+						days = 15
+					}
+				}
+			}
+		}
+	}
+	
+	on_weekly_pulse = {
+		effect = {
+			calculate_peasant_morale = yes
+			calculate_peasant_strength = yes
+			calculate_peasant_popular_support = yes
+			calculate_peasant_campaign_chance = yes
+			calculate_mgb_morale = yes
+			calculate_mgb_strength = yes
+			calculate_mgb_total_strength = yes
+		}
+	}
+
+	complete = {
+		OR = {
+			AND = {
+				this = c:FGT
+				scope:journal_entry = {
+					"scripted_bar_progress(peasants_occupation_progress_bar)" >= 100
+				}
+			}
+			AND = {
+				this = c:MGB
+				scope:journal_entry = {
+					"scripted_bar_progress(peasants_occupation_progress_bar)" <= 0
+				}
+			}
+		}
+	}
+	
+	on_complete = {
+		remove_variable = peasant_morale_equilibrium
+		remove_variable = peasant_strength_equilibrium
+		remove_variable = peasant_popular_support_equilibrium
+		remove_global_variable = peasant_strength_current
+		remove_global_variable = peasant_morale_current
+		remove_global_variable = peasant_popular_support_current
+		remove_global_variable = peasant_strength_total
+		remove_global_variable = mgb_strength_current
+		remove_global_variable = mgb_morale_current
+		remove_global_variable = mgb_strength_total
+		remove_variable = strength_scale_progress
+		remove_variable = morale_scale_progress
+		remove_variable = popular_support_scale_progress
+		remove_variable = mgb_strength_equilibrium
+		remove_variable = mgb_morale_equilibrium
+		c:FGT = {
+			trigger_event = {
+				id = fengtian_events.103
+				days = 1
+				popup = yes
+			}
+		}
+	}
+
+	fail = {
+		OR = {
+			AND = {
+				this = c:FGT
+				scope:journal_entry = {
+					"scripted_bar_progress(peasants_occupation_progress_bar)" <= 0
+				}
+			}
+			AND = {
+				this = c:MGB
+				scope:journal_entry = {
+					"scripted_bar_progress(peasants_occupation_progress_bar)" >= 100
+				}
+			}
+		}
+	}
+
+	on_fail = {
+		remove_variable = peasant_morale_equilibrium
+		remove_variable = peasant_strength_equilibrium
+		remove_variable = peasant_popular_support_equilibrium
+		remove_global_variable = peasant_strength_current
+		remove_global_variable = peasant_morale_current
+		remove_global_variable = peasant_popular_support_current
+		remove_global_variable = peasant_strength_total
+		remove_global_variable = mgb_strength_current
+		remove_global_variable = mgb_morale_current
+		remove_global_variable = mgb_strength_total
+		remove_variable = strength_scale_progress
+		remove_variable = morale_scale_progress
+		remove_variable = popular_support_scale_progress
+		remove_variable = mgb_strength_equilibrium
+		remove_variable = mgb_morale_equilibrium
+	}
+
+	weight = 10000
+	should_be_pinned_by_default = yes
+}
+
+je_new_left = {
+
+	group = je_group_historical_content
+	
+	is_shown_when_inactive = {
+		exists = c:FGT
+		this = c:FGT
+	}
+	
+	possible = { 
+		has_technology_researched = socialism
+		any_interest_group = {
+			is_interest_group_type = ig_left_communist
+		}
+		any_interest_group = {
+			is_interest_group_type = ig_center_communist
+		}
+		any_interest_group = {
+			is_interest_group_type = ig_right_communist
+		}
+	}
+	
+	immediate = {
+		trigger_event = {
+			id = fengtian_events.201
+			days = 0
+		}
+	}
+	
+	complete = {
+	}
+	
+	fail = {
+	}
+	
+	on_complete = {
+	}
+}

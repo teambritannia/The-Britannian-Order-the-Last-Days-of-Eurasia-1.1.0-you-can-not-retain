@@ -38,9 +38,9 @@
 						}
 					}
 				}
-			set_variable = mexican_war_started
-			trigger_event = { id = britannian_prosperity.3 }
-			change_variable = { name = britannian_prosperity_var add = 1 }
+				set_variable = mexican_war_started
+				trigger_event = { id = britannian_prosperity.3 }
+				change_variable = { name = britannian_prosperity_var add = 1 }
 			}
 			if = {
 				limit = {
@@ -52,9 +52,19 @@
 						}
 					}
 				}
-			set_variable = vietnam_war_started
-			trigger_event = { id = britannian_prosperity.5 }
-			change_variable = { name = britannian_prosperity_var add = 1 }
+				set_variable = vietnam_war_started
+				trigger_event = { id = britannian_prosperity.5 }
+				change_variable = { name = britannian_prosperity_var add = 1 }
+			}
+			if = {
+				limit = {
+					c:BNA = {
+						is_subject = no
+					}
+				}
+				set_variable = american_war
+				trigger_event = { id = britannian_prosperity.6 }
+				change_variable = { name = britannian_prosperity_var add = 5 }
 			}
 			if = {
 				limit = {
@@ -66,13 +76,77 @@
 						}
 					}
 				}
-			set_variable = american_war
-			trigger_event = { id = britannian_prosperity.6 }
-			change_variable = { name = britannian_prosperity_var add = 1 }
+				set_variable = vietnam_war_started
+				trigger_event = { id = britannian_prosperity.7 }
+				change_variable = { name = britannian_prosperity_var add = 5 }
+			}
+			if = {
+				limit = {
+					AND = {
+						NOT = { has_variable = german_bna_war }
+						any_diplomatic_play = {
+							initiator_is = c:BNA
+							target_is = c:GER	
+						}
+					}
+				}
+				set_variable = german_bna_war
+				trigger_event = { id = britannian_prosperity.8 }
+				change_variable = { name = britannian_prosperity_var add = 1 }
 			}
 		}
 	}
 
 	weight = 10000
+	should_be_pinned_by_default = yes
+}
+
+je_economic_recovery = {
+	icon = "gfx/interface/icons/ig_icons/industrialists.dds"
+
+	group = je_group_historical_content
+	
+	scripted_button = rec_sell_burgundy
+	
+	scripted_button = rec_sell_amazons
+	
+	immediate = {
+		add_modifier = {
+			name = britannia_fall
+		}
+	}
+	
+	scripted_progress_bar = economic_recovery_progress_bar
+	
+	complete = {
+		custom_tooltip = {
+			text = recover_economy
+			scope:journal_entry = {
+				"scripted_bar_progress(economic_recovery_progress_bar)" >= 200
+			}
+		}
+    }
+	
+	fail = {
+		custom_tooltip = {
+			text = recover_economy_fail
+			scope:journal_entry = {
+				"scripted_bar_progress(economic_recovery_progress_bar)" <= 0
+			}
+		}
+    }
+	
+	on_complete = {
+		remove_modifier = britannia_fall
+	}
+	
+	on_fail = {
+		c:GBR = {
+			set_country_type = decentralized	
+		}
+	}
+	
+	weight = 1000
+	can_revolution_inherit = yes
 	should_be_pinned_by_default = yes
 }

@@ -5,10 +5,10 @@
 	index = 0
 
 	ideologies = {
-		ideology_reactionary
-		ideology_jingoist
-		ideology_social_darwinist
-		ideology_dictatorialist
+		ideology_tbo_reactionary
+		ideology_tbo_jingoist
+		ideology_tbo_social_darwinist
+		ideology_tbo_dictatorialist
 	}
 
 	enable = {
@@ -27,17 +27,20 @@
 			if = {
 				limit = {
 					owner = {
-						c:CFD ?= this
+						AND = {
+							country_has_primary_culture = cu:han
+							NOT = { this = c:FGT }
+						}
 					}
 				}
-				add_ideology = ideology_progressive
-				remove_ideology = ideology_reactionary
-				add_ideology = institutionalist
-				remove_ideology = ideology_social_darwinist
+				add_ideology = ideology_tbo_progressive
+				remove_ideology = ideology_tbo_reactionary
+				add_ideology = ideology_tbo_institutionalist
+				remove_ideology = ideology_tbo_social_darwinist
 				set_interest_group_name = ig_patriotic_soldiers
-				set_ig_trait = ig_trait:ig_trait_newly_created_army
-				set_ig_trait = ig_trait:ig_trait_self_strengthening
-				set_ig_trait = ig_trait:ig_trait_parochial_leadership
+				set_ig_trait = ig_trait:ig_trait_veteran_consultation
+				set_ig_trait = ig_trait:ig_trait_patriotic_fervor
+				set_ig_trait = ig_trait:ig_trait_military_disobedience
 			}
 			# Samurai
 			if = {
@@ -47,10 +50,19 @@
 					}
 				}
 				ig:ig_armed_forces = {
-					add_ideology = ideology_laissez_faire
+					add_ideology = ideology_tbo_deregulationist
 					set_interest_group_name = ig_wealthy_officers
+					set_ig_trait = ig_trait:ig_trait_materiel_waste
+					set_ig_trait = ig_trait:ig_trait_veteran_consultation
+					set_ig_trait = ig_trait:ig_trait_patriotic_fervor
 				}
 			}
+			else = {
+				set_ig_trait = ig_trait:ig_trait_materiel_waste
+				set_ig_trait = ig_trait:ig_trait_veteran_consultation
+				set_ig_trait = ig_trait:ig_trait_patriotic_fervor
+			}
+
 		}
 	}
 	on_disable = {}
@@ -368,17 +380,6 @@
 				value = 0.2
 			}
 		}
-		if = {
-			limit = {
-				owner = {
-					exists = c:GDG
-					THIS = c:GDG
-				}
-			}
-			add = {
-				value = 1.0
-			}
-		}
 	}
 
 	female_politician_chance = {
@@ -394,33 +395,11 @@
 				value = 0.2
 			}
 		}
-		if = {
-			limit = {
-				owner = {
-					exists = c:GDG
-					THIS = c:GDG
-				}
-			}
-			add = {
-				value = 1.0
-			}
-		}
 	}
 
 	female_agitator_chance = {
 		value = 0.01
 		
-		if = {
-			limit = {
-				owner = {
-					exists = c:GDG
-					THIS = c:GDG
-				}
-			}
-			add = {
-				value = 1.0
-			}
-		}
 		if = {
 			limit = {
 				owner = {

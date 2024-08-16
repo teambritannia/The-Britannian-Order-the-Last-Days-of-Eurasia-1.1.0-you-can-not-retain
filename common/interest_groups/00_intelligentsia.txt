@@ -5,11 +5,11 @@
 	index = 3
 
 	ideologies = {
-		ideology_progressive
-		ideology_pacifist
-		ideology_republican
-		ideology_interventionist
-		ideology_institutionalist
+		ideology_tbo_progressive
+		ideology_tbo_pacifist
+		ideology_tbo_republican
+		ideology_tbo_interventionist
+		ideology_tbo_institutionalist
 	}
 
 	enable = {
@@ -55,69 +55,16 @@
 				set_ig_trait = ig_trait:ig_trait_avant_garde
 				set_ig_trait = ig_trait:ig_trait_les_beaux_arts
 			}
+			else_if = {
+				limit = {
+					owner = { c:FGT ?= this }
+				}
+				set_interest_group_name = ig_shusheng
+			}
 			else = {
 				set_ig_trait = ig_trait:ig_trait_social_criticism
 				set_ig_trait = ig_trait:ig_trait_avant_garde
 				set_ig_trait = ig_trait:ig_trait_propagandists
-			}
-		}
-		
-		# Papal Intellegentsia
-		if = {
-			limit = {
-				c:PAP ?= this
-			}
-			ig:ig_intelligentsia = {
-				remove_ideology = ideology_anti_clerical
-			}
-		}
-		# Hawaiian Democrats
-		else_if = {
-			limit = {
-				country_has_primary_culture = cu:hawaiian
-			}
-			ig:ig_intelligentsia = {
-				set_interest_group_name = ig_hawaiian_democrats
-			}
-		}
-		# Literati
-		else_if = {
-			limit = {
-				any_primary_culture = {
-					has_discrimination_trait = han_chinese
-				}
-			}
-			ig:ig_intelligentsia = { 
-				set_interest_group_name = ig_literati
-				remove_ideology = ideology_anti_clerical
-			}
-		}
-		# Brazilian Intelligentsia
-		else_if = {
-			limit = {
-				has_dlc_feature = rp1_content
-				c:BRZ ?= THIS
-			}
-			ig:ig_intelligentsia = {
-				set_ig_trait = ig_trait:ig_trait_brasilidade
-				set_ig_trait = ig_trait:ig_trait_bachareis
-				set_ig_trait = ig_trait:ig_trait_social_criticism
-
-				remove_ideology = ideology_republican
-				add_ideology = ideology_constitutionalist
-			}
-		}
-		
-		if = {
-			limit = {
-				has_technology_researched = feminism
-			}
-			every_interest_group = {
-				limit = {
-					has_ideology = ideology:ideology_liberal
-				}
-				remove_ideology = ideology_liberal
-				add_ideology = ideology_liberal_modern
 			}
 		}
 	}
@@ -380,17 +327,6 @@
 				value = 0.2
 			}
 		}
-		if = {
-			limit = {
-				owner = {
-					exists = c:GDG
-					THIS = c:GDG
-				}
-			}
-			add = {
-				value = 1.0
-			}
-		}
 	}
 
 	female_politician_chance = {
@@ -406,33 +342,11 @@
 				value = 0.2
 			}
 		}
-		if = {
-			limit = {
-				owner = {
-					exists = c:GDG
-					THIS = c:GDG
-				}
-			}
-			add = {
-				value = 1.0
-			}
-		}
 	}
 
 	female_agitator_chance = {
 		value = 0.01
 		
-		if = {
-			limit = {
-				owner = {
-					exists = c:GDG
-					THIS = c:GDG
-				}
-			}
-			add = {
-				value = 1.0
-			}
-		}
 		if = {
 			limit = {
 				owner = {

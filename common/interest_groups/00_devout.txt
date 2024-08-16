@@ -5,11 +5,11 @@
 	index = 1
 
 	ideologies = {
-		ideology_conservative
-		ideology_traditionalist
-		ideology_monarchist
-		ideology_moralist
-		ideology_pacifist
+		ideology_tbo_conservative
+		ideology_tbo_traditionalist
+		ideology_tbo_monarchist
+		ideology_tbo_moralist
+		ideology_tbo_pacifist
 	}
 
 	enable = {
@@ -656,17 +656,6 @@
 				value = 0.2
 			}
 		}
-		if = {
-			limit = {
-				owner = {
-					exists = c:GDG
-					THIS = c:GDG
-				}
-			}
-			add = {
-				value = 1.0
-			}
-		}
 	}
 
 	female_politician_chance = {
@@ -682,33 +671,11 @@
 				value = 0.2
 			}
 		}
-		if = {
-			limit = {
-				owner = {
-					exists = c:GDG
-					THIS = c:GDG
-				}
-			}
-			add = {
-				value = 1.0
-			}
-		}
 	}
 
 	female_agitator_chance = {
 		value = 0.01
 		
-		if = {
-			limit = {
-				owner = {
-					exists = c:GDG
-					THIS = c:GDG
-				}
-			}
-			add = {
-				value = 1.0
-			}
-		}
 		if = {
 			limit = {
 				owner = {

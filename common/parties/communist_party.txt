@@ -17,12 +17,12 @@
 			triggered_desc = {
 				desc = party_radical_communist_union
 				trigger = {
-					exists = c:DBR
-					THIS = c:DBR
+					exists = c:FGT
+					THIS = c:FGT
 					any_interest_group = {
 						is_powerful = yes
 						leader = {
-							has_ideology = ideology:ideology_dongbei_center
+							has_ideology = ideology:ideology_fengtian_center
 						}
 					}
 				}
@@ -301,8 +301,8 @@
 			any_interest_group = {
 				leader = {
 					OR = {
-						has_ideology = ideology:ideology_dongbei_left
-						has_ideology = ideology:ideology_dongbei_center
+						has_ideology = ideology:ideology_fengtian_left
+						has_ideology = ideology:ideology_fengtian_center
 						has_ideology = ideology:ideology_communist
 						has_ideology = ideology:ideology_vanguardist
 						has_ideology = ideology:ideology_anarchist
@@ -355,9 +355,9 @@
 						has_ideology = ideology:ideology_communist
 						has_ideology = ideology:ideology_vanguardist
 						has_ideology = ideology:ideology_anarchist
-						has_ideology = ideology:ideology_dongbei_center
-						has_ideology = ideology:ideology_dongbei_left
-						has_ideology = ideology:ideology_dongbei_right
+						has_ideology = ideology:ideology_fengtian_center
+						has_ideology = ideology:ideology_fengtian_left
+						has_ideology = ideology:ideology_fengtian_right
 					}
 				}
 			}
@@ -376,9 +376,9 @@
 						has_ideology = ideology:ideology_communist
 						has_ideology = ideology:ideology_vanguardist
 						has_ideology = ideology:ideology_anarchist
-						has_ideology = ideology:ideology_dongbei_center
-						has_ideology = ideology:ideology_dongbei_left
-						has_ideology = ideology:ideology_dongbei_right						
+						has_ideology = ideology:ideology_fengtian_center
+						has_ideology = ideology:ideology_fengtian_left
+						has_ideology = ideology:ideology_fengtian_right						
 					}
 				}
 			}
@@ -458,157 +458,6 @@
 			add = {
 				value = -3
 				desc = "from_moderate"
-			}
-		}
-		if = { # against land-based taxation
-			limit = {
-				OR = {
-					has_ideology = ideology:ideology_interventionist
-					has_ideology = ideology:ideology_agrarian
-					leader = {
-						has_ideology = ideology:ideology_social_democrat
-					}
-				}
-				owner = {
-					has_law = law_type:law_land_based_taxation
-				}
-			}
-			add = {
-				value = 3
-				desc = "from_land_tax"
-			}
-		}
-		if = { # anticlerical
-			limit = {
-				OR = {
-					has_ideology = ideology:ideology_radical
-					has_ideology = ideology:ideology_progressive
-					leader = {
-						has_ideology = ideology:ideology_atheist
-					}
-				}
-				owner = {
-					has_law = law_type:law_state_religion
-				}
-			}
-			add = {
-				value = 3
-				desc = "from_anticlerical"
-			}
-		}
-		if = { # against free trade - peasant/communist alliance
-			limit = {
-				OR = {
-					has_ideology = ideology:ideology_socialist
-					has_ideology = ideology:ideology_agrarian
-					has_ideology = ideology:ideology_militant_socialist
-				}
-				owner = {
-					has_law = law_type:law_free_trade
-				}
-				NOT = {
-					leader = {
-						has_ideology = ideology:ideology_ancap
-					}
-				}
-			}
-			add = {
-				value = 3
-				desc = "from_anti_free_trade"
-			}
-		}
-		if = { # against laissez-faire - peasant/socialist alliance
-			limit = {
-				OR = {
-					has_ideology = ideology:ideology_socialist
-					has_ideology = ideology:ideology_agrarian
-					has_ideology = ideology:ideology_militant_socialist
-					leader = {
-						has_ideology = ideology:ideology_protectionist
-					}
-				}
-				owner = {
-					has_law = law_type:law_laissez_faire
-				}
-				NOT = {
-					leader = {
-						has_ideology = ideology:ideology_ancap
-					}
-				}
-			}
-			add = {
-				value = 3
-				desc = "from_anti_laissez_faire"
-			}
-		}
-		if = { # loyalist-proletarian alliance for tax reform
-			limit = {
-				OR = {
-					has_ideology = ideology:ideology_proletarian
-					leader = {
-						has_ideology = ideology:ideology_social_democrat
-					}
-					AND = {
-						has_ideology = ideology:ideology_loyalist
-						owner = {
-							NOR = {
-								has_law = law_type:law_proportional_taxation
-								has_law = law_type:law_per_capita_based_taxation
-							}
-						}
-					}
-				}
-				owner = {
-					NOT = {
-						has_law = law_type:law_graduated_taxation
-					}
-				}
-			}
-			add = {
-				value = 3
-				desc = "from_no_graduated_taxation"
-			}
-		}
-		if = { # anti-serfdom
-			limit = {
-				owner = {
-					has_law = law_type:law_serfdom
-				}
-				OR = {
-					has_ideology = ideology:ideology_progressive
-					has_ideology = ideology:ideology_radical
-					has_ideology = ideology:ideology_ancap
-					has_ideology = ideology:ideology_agrarian
-					leader = {
-						has_ideology = ideology:ideology_abolitionist
-						has_ideology = ideology:ideology_social_democrat
-						has_ideology = ideology:ideology_communist
-					}
-				}
-			}
-			add = {
-				value = 5
-				desc = "from_serfdom"
-			}
-		}
-		if = { # general anti-slavery
-			limit = {
-				owner = {
-					OR = {
-						has_law = law_type:law_legacy_slavery
-						has_law = law_type:law_slave_trade
-					}
-				}
-				OR = {
-					has_ideology = ideology:ideology_anti_slavery
-					leader = {
-						has_ideology = ideology:ideology_abolitionist
-					}
-				}
-			}
-			add = {
-				value = 5
-				desc = "from_slavery"
 			}
 		}
 		if = {
@@ -692,13 +541,13 @@
 				desc = "from_only_legal_party"
 			}
 		}
-		if = { # dongbei
+		if = { # fengtian
 			limit = {
 				leader = {
 					OR = {
-						has_ideology = ideology:ideology_dongbei_left
-						has_ideology = ideology:ideology_dongbei_center
-						has_ideology = ideology:ideology_dongbei_right
+						has_ideology = ideology:ideology_fengtian_left
+						has_ideology = ideology:ideology_fengtian_center
+						has_ideology = ideology:ideology_fengtian_right
 					}
 				}
 			}

@@ -5,15 +5,20 @@
 	index = 5
 
 	ideologies = {
-		ideology_reactionary
-		ideology_dictatorialist
-		ideology_social_darwinist
-		ideology_deregulationist
-		ideology_isolationist
+		ideology_tbo_reactionary
+		ideology_tbo_dictatorialist
+		ideology_tbo_social_darwinist
+		ideology_tbo_deregulationist
+		ideology_tbo_isolationist
 	}
 
 	enable = {
 		always = yes
+	}
+	
+	disable = {
+		THIS = c:FGT
+		has_technology_researched = socialism
 	}
 
 	# Deprecated; use on_enable effect to assign traits instead
@@ -357,17 +362,6 @@
 				value = 0.2
 			}
 		}
-		if = {
-			limit = {
-				owner = {
-					exists = c:GDG
-					THIS = c:GDG
-				}
-			}
-			add = {
-				value = 1.0
-			}
-		}
 	}
 
 	female_politician_chance = {
@@ -381,17 +375,6 @@
 			}
 			add = {
 				value = 0.2
-			}
-		}
-		if = {
-			limit = {
-				owner = {
-					exists = c:GDG
-					THIS = c:GDG
-				}
-			}
-			add = {
-				value = 1.0
 			}
 		}
 	}
