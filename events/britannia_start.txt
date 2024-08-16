@@ -42,6 +42,62 @@ britannian_prosperity.1 = {
 	}
 }
 
+britannian_prosperity.2 = {
+	type = country_event
+	placement = ROOT
+	event_image = {
+		video = "unspecific_devastation"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+	title = britannian_prosperity.1.t
+	desc = britannian_prosperity.1.d
+	flavor = britannian_prosperity.1.f
+
+	duration = 3
+
+	trigger = {
+	#triggered by britannian prosperity je
+	}
+	
+	immediate = {
+		add_modifier = {
+			name = britannia_fall
+		}
+		add_journal_entry = {
+			type = je_economic_recovery
+		}
+		remove_variable = britannian_prosperity_event
+		remove_variable = mexican_war_started
+		remove_variable = vietnam_war_started
+		remove_variable = american_war
+		remove_variable = german_bna_war
+	}
+
+	option = {
+		name = britannian_prosperity.1.a
+		ai_chance = {
+			base = 10
+		}
+		every_country = {
+			limit = {
+				AND = {
+					is_subject_of = c:GBR
+					NOT = {
+						is_subject_of = {
+							c:BNA
+						}
+					}
+				}
+			}
+			make_independent = yes
+		}
+	}
+}
+
 britannian_prosperity.3 = {
 	type = country_event
 	placement = ROOT
@@ -117,11 +173,11 @@ britannian_prosperity.4 = {
 			
 				war = yes
 			
-				type = dp_transfer_subject
+				type = dp_make_tributary
 
 				add_war_goal = {
 					holder = c:DAI
-					type = transfer_subject
+					type = make_tributary
 				}
 			}	
 		}
@@ -203,36 +259,74 @@ britannian_prosperity.6 = {
 			months = short_modifier_time
 		}
 	}
+}
+
+britannian_prosperity.7 = { # american war
+	type = country_event
+	placement = ROOT
+	event_image = {
+		video = "unspecific_devastation"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_default.dds"
+
+	title = britannian_prosperity.7.t
+	desc = britannian_prosperity.7.d
+	flavor = britannian_prosperity.7.f
+
+	duration = 3
+
+	trigger = {
+	}
+
+	immediate = {
+	}
+
 	option = {
-		name = britannian_prosperity.6.b
+		name = britannian_prosperity.6.a
 		ai_chance = {
 			base = 10
 		}
 		add_modifier = {
 			name = mexican_war_disaster
 			months = short_modifier_time
-		}
-		c:BNA ?= {
-			trigger_event = {
-				id = britannian_prosperity.7
-				days = 3
-			}
 		}
 	}
+}
+
+britannian_prosperity.8 = { # american war
+	type = country_event
+	placement = ROOT
+	event_image = {
+		video = "unspecific_devastation"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_default.dds"
+
+	title = britannian_prosperity.8.t
+	desc = britannian_prosperity.8.d
+	flavor = britannian_prosperity.8.f
+
+	duration = 3
+
+	trigger = {
+	}
+
+	immediate = {
+	}
+
 	option = {
-		name = britannian_prosperity.6.c
+		name = britannian_prosperity.6.a
 		ai_chance = {
 			base = 10
 		}
 		add_modifier = {
 			name = mexican_war_disaster
 			months = short_modifier_time
-		}
-		c:BNA ?= {
-			trigger_event = {
-				id = britannian_prosperity.8
-				days = 3
-			}
 		}
 	}
 }

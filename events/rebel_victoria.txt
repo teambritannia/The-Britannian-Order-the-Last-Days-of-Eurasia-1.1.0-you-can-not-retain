@@ -244,3 +244,38 @@ rebel_victoria.5 = { # opium addict gives clue
 		default_option = yes
 	}
 }
+
+rebel_victoria.6 = { # at the manor house
+	type = country_event
+
+	title = rebel_victoria.6.t
+	desc = rebel_victoria.6.d
+	flavor = rebel_victoria.6.f
+
+	event_image = {
+		video = "europenorthamerica_opium_smoker"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+	duration = 3
+
+	trigger = {
+		exists = GBR
+		this = GBR
+	}
+
+	immediate = {
+		trigger_event = {
+			id = rebel_victoria.7
+			days = { 40 60 }
+		}
+	}
+
+	option = { 
+		name = rebel_victoria.6.a
+		default_option = yes
+	}
+}
