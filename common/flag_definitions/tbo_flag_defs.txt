@@ -22,3 +22,61 @@ CFD = { #
 		}
 	}	
 }
+
+GER = {
+	flag_definition = {
+		coa = GER
+		subject_canton = GER
+		allow_overlord_canton = no
+		priority = 10
+		trigger = { 
+			or = {
+				coa_def_monarchy_flag_trigger = yes
+				coa_def_dictatorship_flag_trigger = yes
+			}
+		}
+	}
+}
+
+POL = {
+	flag_definition = {
+		coa = POL
+		subject_canton = POL
+		allow_overlord_canton = yes
+		priority = 10
+		trigger = { 
+			coa_def_subject_trigger = yes
+		}
+	}
+}
+
+GRU = {
+	flag_definition = {
+		coa = GRU
+		subject_canton = GRU
+		allow_overlord_canton = yes
+		priority = 10
+		trigger = { 
+			coa_def_subject_trigger = yes
+		}
+	}
+}
+
+FGT = {
+	flag_definition = {
+		coa = FGT
+		subject_canton = FGT
+		allow_overlord_canton = yes
+		priority = 5
+		trigger = { 
+			coa_def_republic_flag_trigger = yes
+		}
+	}
+	flag_definition = {
+		coa = FGT_communist
+		priority = 1000
+		trigger = { 
+			coa_def_communist_flag_trigger = yes
+		}
+	}
+}
