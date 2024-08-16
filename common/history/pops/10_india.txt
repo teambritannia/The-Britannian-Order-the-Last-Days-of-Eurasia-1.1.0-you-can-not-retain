@@ -430,6 +430,24 @@
 				culture = pashtun
 				size = 37727
 			}
+			create_pop = {
+				culture = kho # and Shina
+				size = 30210
+			}
+			create_pop = {
+				culture = kashmiri
+				size = 10111
+			}
+			create_pop = {
+				culture = tibetan
+				religion = mahayana
+				size = 6369
+			}
+			create_pop = {
+				culture = panjabi
+				religion = sunni
+				size = 3127
+			}
 		}
 	}
 	s:STATE_PUNJAB = {
@@ -437,7 +455,7 @@
 			create_pop = {
 				culture = panjabi
 				religion = sunni
-				size = 9033705
+				size = 8833705
 			}
 			create_pop = {
 				culture = avadhi
@@ -455,17 +473,21 @@
 			}
 			create_pop = {
 				culture = nepali
-				size = 405027
+				size = 305027
+			}
+			create_pop = {
+				culture = nepali
+				size = 105027
 			}
 			create_pop = {
 				culture = panjabi
 				religion = sunni
-				size = 33867
+				size = 133867
 			}
 			create_pop = {
 				culture = avadhi
 				religion = hindu
-				size = 326183
+				size = 226183
 			}
 			create_pop = {
 				culture = british
@@ -474,7 +496,7 @@
 			create_pop = {
 				pop_type = slaves
 				culture = nepali
-				size = 21000
+				size = 11000
 			}
 			create_pop = {
 				pop_type = slaves
@@ -487,6 +509,35 @@
 				culture = panjabi
 				religion = hindu
 				size = 30200
+			}
+			create_pop = {
+				culture = panjabi
+				religion = sunni
+				size = 162022
+			}
+			create_pop = {
+				culture = panjabi
+				religion = hindu
+				size = 32012
+			}
+			create_pop = {
+				culture = panjabi
+				religion = hindu
+				pop_type = slaves
+				size = 12012
+			}
+			create_pop = {
+				culture = rajput
+				size = 7120
+			}
+			create_pop = {
+				culture = sindi
+				size = 7120
+			}
+			create_pop = {
+				culture = panjabi
+				religion = sikh
+				size = 9001
 			}
 		}
 	}

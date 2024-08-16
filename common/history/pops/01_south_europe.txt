@@ -127,7 +127,7 @@
 		}
 	}
 	s:STATE_EMILIA = {
-		region_state:FRA = {
+		region_state:GER = {
 			create_pop = {
 				culture = north_italian
 				size = 472004
@@ -135,6 +135,7 @@
 			create_pop = {
 				culture = north_italian
 				size = 108408
+			}
 			create_pop = {
 				culture = north_italian
 				size = 648400
@@ -695,8 +696,6 @@
 				culture = albanian
 				size = 43800
 			}
-		}
-		region_state:GER = {
 			create_pop = {
 				culture = serb
 				size = 34396
@@ -760,7 +759,7 @@
 		}
 	}
 	s:STATE_CRETE = {
-		region_state:EGY = {
+		region_state:GRE = {
 			create_pop = {
 				culture = turkish
 				size = 59992
@@ -911,7 +910,7 @@
 		}
 	}
 	s:STATE_IONIAN_ISLANDS = {
-		region_state:ION = {
+		region_state:GRE = {
 			create_pop = {
 				culture = greek
 				size = 186404

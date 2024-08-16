@@ -1,5 +1,5 @@
 ﻿MILITARY_FORMATIONS = {
-	c:DBR ?= {
+	c:FGT ?= {
 		create_military_formation = {
 			type = army
 			hq_region = sr:region_manchuria
@@ -8,7 +8,7 @@
 			combat_unit = {
 				type = unit_type:combat_unit_type_line_infantry
 				state_region = s:STATE_SOUTHERN_MANCHURIA
-				count = 35
+				count = 20
 			}
 			save_scope_as = first_national_protection_army
 		}
@@ -39,13 +39,13 @@
 			combat_unit = {
 				type = unit_type:combat_unit_type_line_infantry
 				state_region = s:STATE_HINGGAN
-				count = 20
+				count = 15
 			}
 			
 			save_scope_as = second_national_protection_army
 		}
 
-		create_character = { # DBR, general
+		create_character = { # FGT, general
 			is_general = yes
 			first_name = Aotian
 			last_name = Yang
@@ -72,7 +72,7 @@
 			combat_unit = {
 				type = unit_type:combat_unit_type_frigate # War junks, but no modern ships
 				state_region = s:STATE_SHENGJING
-				count = 15
+				count = 5
 			}
 			save_scope_as = shenyang_fleet
 		}
@@ -91,3 +91,68 @@
 			save_scope_as = shenyang_fleet_admiral
 		}
 	}
+	c:CFD ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_north_china
+			name = shandongjun
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_SHANDONG
+				count = 45
+			}
+			save_scope_as = shandongjun
+		}
+
+		create_character = { # CFD, general
+			is_general = yes
+			first_name = 
+			last_name = 
+			historical = yes
+			culture = cu:han
+			interest_group = ig_armed_forces
+			ideology = ideology_jingoist
+			birth_date = 1782.7.20
+			traits = {
+				imperious
+				traditionalist_commander
+			}
+			save_scope_as = shandong_general
+		}
+		scope:shandong_general = {
+			transfer_to_formation = scope:shandongjun
+		}
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_north_china
+			name = huijun
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_NORTHERN_ANHUI
+				count = 50
+			}
+			save_scope_as = huijun
+		}
+
+		create_character = { # CFD, general
+			is_general = yes
+			first_name = 
+			last_name = 
+			historical = yes
+			culture = cu:han
+			interest_group = ig_armed_forces
+			ideology = ideology_jingoist
+			birth_date = 1774.3.8
+			traits = {
+				imperious
+				traditionalist_commander
+			}
+			save_scope_as = huijun_gen
+		}
+		scope:huijun_gen = {
+			transfer_to_formation = scope:huijun
+		}
+	}
+}

@@ -15,7 +15,7 @@
 			}
 		}
 	}
-	s:STATE_GOTALAND = {
+	s:STATE_ALAND = {
 		region_state:SCN = {
 			create_pop = {
 				culture = swedish
@@ -59,7 +59,7 @@
 			}
 		}
 	}
-	s:STATE_GOTLAND = {
+	s:STATE_GOTALAND = {
 		region_state:SCN = {
 			create_pop = {
 				culture = swedish
@@ -154,75 +154,6 @@
 				culture = inuit
 				religion = animist
 				size = 1510
-			}
-		}
-	}
-	s:STATE_SOUTHERN_FINLAND = {
-		region_state:SCN = {
-			create_pop = {
-				culture = swedish
-				size = 154900
-			}
-			create_pop = {
-				culture = finnish
-				size = 690000
-			}
-			create_pop = {
-				culture = ashkenazi
-				size = 400
-			}
-			create_pop = {
-				culture = russian
-				size = 300
-			}
-		}
-	}
-	s:STATE_WEST_KARELIA = {
-		region_state:SCN = {
-			create_pop = {
-				culture = finnish
-				size = 177000
-			}
-			create_pop = {
-				culture = finnish
-				religion = orthodox
-				size = 10000
-			}
-			create_pop = {
-				culture = swedish
-				size = 1200
-			}
-			create_pop = {
-				culture = russian
-				size = 700
-			}
-		}
-	}
-	s:STATE_ALAND = {
-		region_state:SCN = {
-			create_pop = {
-				culture = swedish
-				size = 12000
-			}
-			create_pop = {
-				culture = finnish
-				size = 500
-			}
-		}
-	}
-	s:STATE_OSTROBOTHNIA = {
-		region_state:SCN = {
-			create_pop = {
-				culture = finnish
-				size = 360000
-			}
-			create_pop = {
-				culture = swedish
-				size = 47000
-			}
-			create_pop = {
-				culture = sami
-				size = 18000
 			}
 		}
 	}
@@ -501,7 +432,7 @@
 		}
 	}
 	s:STATE_PROVENCE = {
-		region_state:GER = {
+		region_state:FRA = {
 			create_pop = {
 				culture = north_italian
 				size = 131100
@@ -510,8 +441,6 @@
 				culture = occitan
 				size = 41100
 			}
-		}
-		region_state:FRA = {
 			create_pop = {
 				culture = occitan
 				size = 1038678
@@ -1263,7 +1192,7 @@
 			create_pop = {
 				culture = north_german
 				religion = catholic
-				size = 821321
+				size = 771111
 			}
 			create_pop = {
 				culture = ashkenazi
@@ -1272,6 +1201,11 @@
 			create_pop = {
 				culture = north_german
 				size = 506715
+			}
+			create_pop = {
+				culture = north_german
+				religion = catholic
+				size = 50210
 			}
 			create_pop = {
 				culture = north_german
@@ -1531,6 +1465,8 @@
 				religion = catholic
 				size = 4000
 			}
+		}
+		region_state:BRA = {
 			create_pop = {
 				culture = north_german
 				size = 220400
@@ -1540,6 +1476,8 @@
 				religion = catholic
 				size = 4000
 			}
+		}
+		region_state:GER = {
 			create_pop = {
 				culture = north_german
 				size = 112000

@@ -1,7 +1,7 @@
 ﻿DIPLOMACY = {
 	c:CFD ?= {
 		create_diplomatic_pact = {
-			country = c:DBR
+			country = c:FGT
 			type = rivalry
 		}
 	}		
@@ -13,7 +13,7 @@
 	}
 	c:TKK ?= {
 		create_diplomatic_pact = {
-			country = c:DBR
+			country = c:FGT
 			type = rivalry
 		}
 	}	

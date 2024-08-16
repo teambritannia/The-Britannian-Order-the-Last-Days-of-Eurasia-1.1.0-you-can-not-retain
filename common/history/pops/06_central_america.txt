@@ -17,8 +17,6 @@
 				culture = mayan
 				size = 312000
 			}
-		}
-		region_state:GBR = {
 			create_pop = {
 				culture = afro_caribbean
 				size = 7104
@@ -42,7 +40,7 @@
 		}
 	}
 	s:STATE_NICARAGUA = {
-		region_state:CAM = {
+		region_state:MYA = {
 			create_pop = {
 				culture = central_american
 				size = 284000
@@ -207,7 +205,7 @@
 		}
 	}
 	s:STATE_WEST_INDIES = {
-		region_state:FRA = {
+		region_state:GBR = {
 			create_pop = {
 				culture = french
 				size = 22200
@@ -216,8 +214,6 @@
 				culture = afro_antillean
 				size = 216104
 			}
-		}
-		region_state:DEN = {
 			create_pop = {
 				culture = danish
 				size = 3992
@@ -226,8 +222,6 @@
 				culture = afro_caribbean
 				size = 39996
 			}
-		}
-		region_state:GBR = {
 			create_pop = {
 				culture = british
 				size = 34704

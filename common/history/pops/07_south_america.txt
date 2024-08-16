@@ -250,8 +250,6 @@ POPS = {
 				culture = quechua
 				size = 4004
 			}
-		}
-		region_state:BLV = {
 			create_pop = {
 				culture = amazonian
 				size = 32000
@@ -440,8 +438,6 @@ POPS = {
 				culture = amazonian
 				size = 12000
 			}
-		}
-		region_state:IQU = {
 			create_pop = {
 				culture = quechua
 				size = 55000
@@ -774,7 +770,7 @@ POPS = {
 		}
 	}
 	s:STATE_ARAUCANIA = {
-		region_state:PAT = {
+		region_state:INC = {
 			create_pop = {
 				culture = south_andean
 				size = 52004
@@ -783,12 +779,10 @@ POPS = {
 				culture = patagonian
 				size = 3200
 			}
-		}
-		region_state:INC = {
 			create_pop = {
 				culture = patagonian
 				size = 28200
-			
+			}
 			create_pop = {
 				culture = patagonian
 				size = 12000
@@ -853,7 +847,7 @@ POPS = {
 		}				
 	}
 	s:STATE_MATO_GROSSO = {
-		region_state:PRG = {
+		region_state:BRZ = {
 			create_pop = {
 				culture = guarani
 				size = 20000
@@ -867,8 +861,6 @@ POPS = {
 				culture = platinean
 				size = 4000
 			}
-		}
-		region_state:BRZ = {
 			create_pop = {
 				culture = paulista
 				size = 4278 # 1828 census
@@ -890,8 +882,6 @@ POPS = {
 				culture = amazonian
 				size = 44000
 			}
-		}
-		region_state:BOL = {
 			create_pop = {
 				culture = quechua
 				size = 2300
@@ -1194,7 +1184,7 @@ POPS = {
 	}
 	s:STATE_PARA = { # historical total sum is 143573
 
-		region_state:GBR = {
+		region_state:BRZ = {
 			create_pop = {
 				culture = amazonic
 				size = 111297

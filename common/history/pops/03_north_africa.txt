@@ -164,7 +164,7 @@
 		}
 	}
 	s:STATE_MATRUH = {
-		region_state:EGY = {
+		region_state:BAR = {
 			create_pop = {
 				culture = bedouin
 				size = 7801
@@ -239,7 +239,7 @@
 				size = 4200
 			}
 		}
-		region_state:AWS = {
+		region_state:ARA = {
 			create_pop = {
 				culture = tigray
 				religion = sunni
@@ -810,7 +810,7 @@
 		}
 	}
 	s:STATE_WEST_SAHARA = {
-		region_state:SEN = {
+		region_state:SAH = {
 			create_pop = {
 				culture = berber
 				size = 20000
@@ -858,6 +858,8 @@
 				culture = haratin
 				size = 4000
 			}
+		}
+		region_state:FTR = {
 			create_pop = {
 				culture = fulbe
 				size = 10000
@@ -955,8 +957,7 @@
 				size = 140000
 			}
 			create_pop = {
-				cul
-				e = bambara
+				culture = bambara
 				size = 68000
 			}
 			create_pop = {
@@ -1069,10 +1070,24 @@
 				size = 8000
 			}
 		}
-		region_state:BAF = {
+		region_state:TBI = {
 			create_pop = {
-				culture = british
-				size = 132
+				culture = teda
+				size = 108904
+			}
+			create_pop = {
+				culture = bedouin
+				size = 20000
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = teda
+				size = 5000
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = equatorial_bantu
+				size = 6000
 			}
 		}
 		region_state:BOR = {
@@ -1092,6 +1107,12 @@
 				pop_type = slaves
 				culture = equatorial_bantu
 				size = 7000
+			}
+		}
+		region_state:BAF = {
+			create_pop = {
+				culture = british
+				size = 138
 			}
 		}
 	}

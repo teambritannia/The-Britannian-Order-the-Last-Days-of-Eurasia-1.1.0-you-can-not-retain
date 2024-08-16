@@ -26,6 +26,16 @@
 			country = c:JIN
 			type = puppet
 		}
+		create_diplomatic_pact = {
+			country = c:EKR
+			type = puppet
+		}
+	}
+	c:FGT = {
+		create_diplomatic_pact = {
+			country = c:WKR
+			type = co_governance
+		}
 	}
 	c:GBR ?= {
 		create_diplomatic_pact = {
@@ -98,4 +108,27 @@
 			country = c:AFS
 			type = dominion
 		}
+		create_diplomatic_pact = {
+			country = c:POL
+			type = puppet
+		}
+		create_diplomatic_pact = {
+			country = c:UKR
+			type = puppet
+		}
+		create_diplomatic_pact = {
+			country = c:GRU
+			type = puppet
+		}
 	}
+	c:QNG ?= {
+		create_diplomatic_pact = {
+			country = c:SKB
+			type = dominion
+		}
+		create_diplomatic_pact = {
+			country = c:MGB
+			type = dominion
+		}
+	}
+}

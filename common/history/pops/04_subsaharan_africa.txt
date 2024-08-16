@@ -170,8 +170,6 @@
 				culture = mande
 				size = 8000
 			}
-		}
-		region_state:BND = {
 			create_pop = {
 				culture = mande
 				size = 96000
@@ -189,8 +187,6 @@
 				culture = bambara
 				size = 10000
 			}
-		}
-		region_state:KBU = {
 			create_pop = {
 				culture = mande
 				religion = animist
@@ -725,7 +721,7 @@
 		}
 	}
 	s:STATE_GHANA = {
-		region_state:ASH = {
+		region_state:GBR = {
 			create_pop = {
 				culture = akan
 				size = 40204
@@ -738,6 +734,8 @@
 				culture = ewe
 				size = 6984
 			}
+		}
+		region_state:NET = {
 			create_pop = {
 				culture = akan
 				size = 45572
@@ -746,6 +744,8 @@
 				culture = mossi
 				size = 4220
 			}
+		}
+		region_state:ASH = {
 			create_pop = {
 				culture = akan
 				size = 436308
@@ -1128,8 +1128,6 @@
 				size = 28849
 				pop_type = slaves
 			}
-		}
-		region_state:ETH = {
 			create_pop = {
 				culture = amhara
 				size = 252360
@@ -1724,6 +1722,8 @@
 				culture = portuguese
 				size = 3996
 			}		
+		}
+		region_state:MRV = {
 			create_pop = {
 				culture = makua
 				size = 170000
@@ -2120,8 +2120,6 @@
 				size = 10500
 			}
 		}
-	}
-	s:STATE_EQUATEUR = {
 		region_state:BNG = {
 			create_pop = {
 				culture = mongo

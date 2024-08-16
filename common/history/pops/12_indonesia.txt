@@ -69,8 +69,6 @@
 				culture = british
 				size = 600
 			}
-		}
-		region_state:GBR = {
 			create_pop = {
 				culture = malay
 				size = 40000
@@ -1142,7 +1140,7 @@
 	}
 
 	s:STATE_TAHITI = {
-		region_state:JIN = {
+		region_state:GBR = {
 			create_pop = {
 				culture = polynesian
 				size = 169004

@@ -20,11 +20,22 @@ GLOBAL = {
 			days = 0
 		}
 	}
-	c:DBR ?= {
+	c:FGT ?= {
 		trigger_event = {
-			id = dongbei_events.1 
-			popup = yes
+			id = fengtian_events.200
 			days = 0
+			popup = yes
 		}
+	}
+	c:SBR ?= {
+		add_modifier = {
+			name = siberian_black_army
+		}
+	}
+	every_country = {
+		limit = {
+			exists = yes
+		}
+		add_journal_entry = doctrine_je
 	}
 }
