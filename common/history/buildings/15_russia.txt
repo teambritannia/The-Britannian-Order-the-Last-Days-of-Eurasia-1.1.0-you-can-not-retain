@@ -759,7 +759,7 @@
 						type="building_financial_district"
 						country="c:UKR"
 						levels=6
-						region="STATE_INGRIA"
+						region="STATE_GREATER_POLAND"
 					}
 				}
 				reserves=1
@@ -1882,14 +1882,8 @@
 					building={
 						type="building_financial_district"
 						country="c:GRU"
-						levels=1
+						levels=2
 						region="STATE_VITEBSK"
-					}
-					building={
-						type="building_financial_district"
-						country="c:GRU"
-						levels=1
-						region="STATE_INGRIA"
 					}
 				}
 				reserves=1
