@@ -1,8 +1,0 @@
-l_simp_chinese:
- mexican_war_disaster: "大英危机"
- victoria_unrest: "维多利亚恐惧"
- public_hysteria: "大众慌乱"
- police_investigation: "警方调查"
- gbr_german_payments: "德国上贡"
- ger_german_payments: "向大英上贡"
- bolstered_armed_forces: "军方受鼓舞"
