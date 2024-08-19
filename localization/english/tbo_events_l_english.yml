@@ -22,6 +22,9 @@
  britannian_prosperity.5.f: "The Britannian embassy was woken in the morning by Vietnamese cannons blasting down its walls. The entire city had been overwhelmed quickly, the garrison slaughtered by the quick advance. They had not been expecting an attack, having the full backing of the Britannian Army \n\n Amid crumbling walls the Vietnamese troops advanced through crumbling and scorched walls, confident that they were to bring about a new future for their country."
  britannian_prosperity.5.a: "This is a disaster!"
  
+ je_economic_recovery: "Economic recovery"
+ je_economic_recovery_reason: "Yes, Greater Britannia has suffered a little from the recent fall of the empire, but the [cu:british.GetName] people are quite industrious. Perhaps it will take some austerity and humiliation, but sooner or later the nation will be back in its global dominance, provided the economic recovery proceeds as planned."
+ 
  tt_tribute_cooldown: "Has not demanded tribute from Germany in the past two years"
  
  rebel_victoria.1.t: "The Rebel Victoria"
