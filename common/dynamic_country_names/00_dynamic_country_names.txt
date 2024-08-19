@@ -927,6 +927,23 @@ POL = {
 	}
 }
 
+ITA = {
+	dynamic_country_name = {
+		name = dyn_c_reichskommissariat_italien
+		adjective = dyn_c_reichskommissariat_italien_adj
+
+		is_main_tag_only = yes
+		priority = 10
+		
+		trigger = {
+			exists = scope:actor
+			scope:actor = {
+				coa_def_subject_trigger = yes
+			}
+		}
+	}
+}
+
 GRU = {
 	dynamic_country_name = {
 		name = dyn_c_reichskommissariat_russland
