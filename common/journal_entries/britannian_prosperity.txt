@@ -125,7 +125,7 @@ je_economic_recovery = {
 				"scripted_bar_progress(economic_recovery_progress_bar)" >= 200
 			}
 		}
-    }
+ 	}
 	
 	fail = {
 		custom_tooltip = {
@@ -134,7 +134,7 @@ je_economic_recovery = {
 				"scripted_bar_progress(economic_recovery_progress_bar)" <= 0
 			}
 		}
-    }
+    	}
 	
 	on_complete = {
 		remove_modifier = britannia_fall
@@ -178,10 +178,10 @@ je_occitan_crisis = {
 	}
 	
 	complete = {
-    }
+    	}
 	
 	fail = {
-    }
+    	}
 	
 	on_complete = {
 		remove_modifier = britannia_fall
@@ -226,10 +226,10 @@ je_occitan_republicanism = {
 			text = moved_on
 			has_variable = wrapped_up_operations
 		}
-    }
+    	}
 	
 	fail = {
-    }
+   	}
 	
 	on_weekly_pulse = {
 		scope:journal_entry = {
