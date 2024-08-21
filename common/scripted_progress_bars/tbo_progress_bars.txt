@@ -752,3 +752,21 @@ infiltration_level_progress_bar = {
 		}
 	}
 }
+
+occitan_infiltration_progress = {
+ 	name = "occitan_infiltration_progress"
+ 	desc = "occitan_infiltration_progress_desc"
+	
+	start_value = 0
+	min_value = 0
+	max_value = 100
+	
+	default = yes
+	
+	monthly_progress = {
+		add = {
+			desc = base_decay
+			add = -1
+		}
+	}
+}
