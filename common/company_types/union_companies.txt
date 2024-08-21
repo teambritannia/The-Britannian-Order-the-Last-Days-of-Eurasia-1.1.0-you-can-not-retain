@@ -6,8 +6,6 @@ company_hanyu = {
 	flavored_company = yes
 	
 	building_types = {
-		building_university
-		building_
 	}
 	
 	potential = {
