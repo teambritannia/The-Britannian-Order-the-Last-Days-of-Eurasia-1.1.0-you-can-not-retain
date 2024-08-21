@@ -50,10 +50,10 @@ POL = {
 	}
 }
 
-GRU = {
+RKB = {
 	flag_definition = {
-		coa = GRU
-		subject_canton = GRU
+		coa = RKB
+		subject_canton = RKB
 		allow_overlord_canton = yes
 		priority = 10
 		trigger = { 
