@@ -33,3 +33,114 @@ occitan_crisis.1 = {
 		}
 	}
 }
+
+britannian_prosperity.9 = { # occitan propaganda
+	type = country_event
+	placement = scope:occitan_state
+	event_image = {
+		video = "unspecific_devastation"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_default.dds"
+
+	title = britannian_prosperity.9.t
+	desc = britannian_prosperity.9.d
+	flavor = britannian_prosperity.9.f
+
+	duration = 3
+
+	trigger = {
+	}
+
+	immediate = {
+		scope:occitan_state = {
+			add_modifier = {
+				name = occitan_propaganda_posters
+				months = 1.5
+			}
+		}
+	}
+
+	option = {
+		name = britannian_prosperity.9.a
+		ai_chance = {
+			base = 10
+		}
+	}
+}
+
+britannian_prosperity.10 = { # occitan speech
+	type = country_event
+	placement = scope:occitan_state
+	event_image = {
+		video = "unspecific_devastation"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/placeholder.dds"
+
+	title = britannian_prosperity.10.t
+	desc = britannian_prosperity.10.d
+	flavor = britannian_prosperity.10.f
+
+	duration = 3
+
+	trigger = {
+	}
+
+	immediate = {
+		scope:occitan_state = {
+			add_modifier = {
+				name = republican_flames_fanned
+				months = 2
+			}
+		}
+	}
+
+	option = {
+		name = britannian_prosperity.10.a
+		ai_chance = {
+			base = 10
+		}
+	}
+}
+
+britannian_prosperity.11 = { # occitan speech
+	type = country_event
+	placement = scope:occitan_state
+	event_image = {
+		video = "unspecific_devastation"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/placeholder.dds"
+
+	title = britannian_prosperity.11.t
+	desc = britannian_prosperity.11.d
+	flavor = britannian_prosperity.11.f
+
+	duration = 3
+
+	trigger = {
+	}
+
+	immediate = {
+		scope:occitan_state = {
+			add_modifier = {
+				name = occitan_speech
+				months = 1
+			}
+		}
+	}
+
+	option = {
+		name = britannian_prosperity.11.a
+		ai_chance = {
+			base = 10
+		}
+	}
+}
