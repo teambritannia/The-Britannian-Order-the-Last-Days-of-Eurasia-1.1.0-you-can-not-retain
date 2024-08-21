@@ -944,10 +944,10 @@ ITA = {
 	}
 }
 
-GRU = {
+RKB = {
 	dynamic_country_name = {
-		name = dyn_c_reichskommissariat_russland
-		adjective = dyn_c_reichskommissariat_russland_adj
+		name = dyn_c_reichskommissariat_weissrussland
+		adjective = dyn_c_reichskommissariat_weissrussland_adj
 
 		is_main_tag_only = yes
 		priority = 10
