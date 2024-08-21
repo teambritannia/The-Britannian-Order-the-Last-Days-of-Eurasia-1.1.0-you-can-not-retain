@@ -404,3 +404,40 @@ britannian_prosperity.10 = { # occitan speech
 		}
 	}
 }
+
+britannian_prosperity.11 = { # occitan speech
+	type = country_event
+	placement = scope:occitan_state
+	event_image = {
+		video = "unspecific_devastation"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/placeholder.dds"
+
+	title = britannian_prosperity.11.t
+	desc = britannian_prosperity.11.d
+	flavor = britannian_prosperity.11.f
+
+	duration = 3
+
+	trigger = {
+	}
+
+	immediate = {
+		scope:occitan_state = {
+			add_modifier = {
+				name = occitan_speech
+				months = 1
+			}
+		}
+	}
+
+	option = {
+		name = britannian_prosperity.11.a
+		ai_chance = {
+			base = 10
+		}
+	}
+}
