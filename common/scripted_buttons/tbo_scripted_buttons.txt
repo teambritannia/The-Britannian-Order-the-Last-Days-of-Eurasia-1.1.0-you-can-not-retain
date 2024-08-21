@@ -1714,3 +1714,97 @@ propaganda_posters = {
 		}
 	}
 }
+
+fan_republican_flames = {
+	name = "fan_republican_flames"
+	desc = "fan_republican_flames_desc"
+
+	visible = {
+		always = yes
+	}
+
+	ai_chance = {
+		base = 100
+	}
+
+	possible = {
+		custom_tooltip = {
+			NOT = {
+				desc = fan_republican_flames_occitan_cooldown
+				has_variable = fan_republican_flames_occitan_cooldown
+			}
+		}
+	}
+
+	effect = {
+		custom_tooltip = {
+			text = occitan_influence_increase_20
+			je:je_occitan_republicanism = {
+				add_progress = { value = 20 name = occitan_infiltration_progress }
+			}
+		}
+		custom_tooltip = {
+			text = occitan_propaganda_cooldown
+			set_variable = {
+				name = fan_republican_flames_occitan_cooldown
+				days = 45
+			}
+		}
+		c:FRA = {
+			trigger_event = {
+				id = britannian_prosperity.10
+				days = 1
+			}
+		}
+	}
+}
+
+plan_speech = {
+	name = "plan_speech"
+	desc = "plan_speech_desc"
+
+	visible = {
+		always = yes
+	}
+
+	ai_chance = {
+		base = 100
+	}
+
+	possible = {
+		custom_tooltip = {
+			NOT = {
+				desc = plan_speech_occitan_cooldown
+				has_variable = plan_speech_occitan_cooldown
+			}
+			NOT = {
+				desc = occitan_assassination_cooldown
+				c:FRA = {
+					has_variable = occitan_assassination_cooldown
+				}
+			}
+		}
+	}
+
+	effect = {
+		custom_tooltip = {
+			text = occitan_influence_increase_15
+			je:je_occitan_republicanism = {
+				add_progress = { value = 15 name = occitan_infiltration_progress }
+			}
+		}
+		custom_tooltip = {
+			text = plan_speech_occitan_cooldown
+			set_variable = {
+				name = plan_speech_occitan_cooldown
+				days = 50
+			}
+		}
+		c:FRA = {
+			trigger_event = {
+				id = britannian_prosperity.11
+				days = 1
+			}
+		}
+	}
+}
