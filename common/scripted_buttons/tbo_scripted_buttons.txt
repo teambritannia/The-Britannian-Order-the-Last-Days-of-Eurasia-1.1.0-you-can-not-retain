@@ -1706,10 +1706,10 @@ propaganda_posters = {
 				days = 30
 			}
 		}
-		scope:occitan_state = {
-			add_modifier = {
-				name = occitan_propaganda_posters
-				months  = 1.5
+		c:FRA = {
+			trigger_event = {
+				id = britannian_prosperity.9
+				days = 1
 			}
 		}
 	}
