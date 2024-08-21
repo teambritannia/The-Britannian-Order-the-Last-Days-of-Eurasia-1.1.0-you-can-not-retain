@@ -223,6 +223,10 @@ je_occitan_republicanism = {
 	
 	complete = {
 		custom_tooltip = {
+			text = secured_control
+			has_variable = wrapped_up_operations
+		}
+		custom_tooltip = {
 			text = moved_on
 			has_variable = wrapped_up_operations
 		}
@@ -245,6 +249,9 @@ je_occitan_republicanism = {
 				name = occitan_operations_secured
 				months = normal_modifier_time
 				multiplier = scope:infiltration_prog_scope
+			}
+			scope:journal_entry = {
+				"scripted_bar_progress(occitan_infiltration_progress)" >= 100
 			}
 		}
 		if = {
