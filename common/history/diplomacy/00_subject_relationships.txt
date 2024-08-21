@@ -121,7 +121,7 @@
 			type = puppet
 		}
 		create_diplomatic_pact = {
-			country = c:GRU
+			country = c:RKB
 			type = puppet
 		}
 	}
