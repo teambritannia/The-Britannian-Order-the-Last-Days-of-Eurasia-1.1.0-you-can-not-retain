@@ -134,6 +134,15 @@ economic_recovery_progress_bar = {
  	default_green = yes
 
  	weekly_progress = {
+		if = {
+			limit = {
+				has_modifier = britannia_receive_small_loan
+			}
+			add = {
+				desc = rec_small_loan
+				add = 0.5
+			}	
+		}
 		add = {
 			desc = rec_taking_loans
 			if = {
@@ -674,4 +683,72 @@ mgb_morale_progress_bar = {
 			}
 		}	
  	}
+}
+
+french_alertness_progress_bar = {
+ 	name = "french_alertness_progress_bar"
+ 	desc = "french_alertness_progress_bar_desc"
+	
+	start_value = 10
+	min_value = 0
+	max_value = 100
+	
+	default = yes
+	
+	weekly_progress = {
+		add = {
+			desc = base_decay
+			add = -0.3
+		if = {
+			limit = {
+				any_scope_state = {
+					has_modifier = occitan_speech
+				}
+				add = {
+					desc = occitan_speech_alertness
+					add = 0.8
+				}
+			}
+		}
+		if = {
+			limit = {
+				any_scope_state = {
+					has_modifier = occitan_propaganda_posters
+				}
+				add = {
+					desc = occitan_posters_alertness
+					add = 0.4
+				}
+			}
+		}
+		if = {
+			limit = {
+				any_scope_state = {
+					has_modifier = republican_flames_fanned
+				}
+				add = {
+					desc = republican_flames_alertness
+					add = 0.6
+				}
+			}
+		}
+	}
+}
+
+infiltration_level_progress_bar = {
+ 	name = "infiltration_level_progress_bar"
+ 	desc = "infiltration_level_progress_bar_desc"
+	
+	start_value = 0
+	min_value = 0
+	max_value = 20
+	
+	default = yes
+	
+	monthly_progress = {
+		add = {
+			desc = base_decay
+			add = -1
+		}
+	}
 }

@@ -150,3 +150,126 @@ je_economic_recovery = {
 	can_revolution_inherit = yes
 	should_be_pinned_by_default = yes
 }
+
+je_occitan_crisis = {
+	icon = "gfx/interface/icons/ig_icons/event_protest.dds"
+
+	group = je_group_historical_content
+	
+	scripted_progress_bar = french_alertness_progress_bar
+	
+	scripted_progress_bar = infiltration_level_progress_bar
+	
+	scripted_button = assassinate_occitan_leader
+	
+	scripted_button = discredit_occitan_figures
+	
+	scripted_button = raid_occitan_cells
+	
+	scripted_button = infiltrate_occitan_organizations
+	
+	scripted_button = sabotage_occitan_operations
+	
+	scripted_button = arrest_involved_protesters
+	
+	scripted_button = financial_incentives
+	
+	immediate = {
+	}
+	
+	complete = {
+    }
+	
+	fail = {
+    }
+	
+	on_complete = {
+		remove_modifier = britannia_fall
+	}
+	
+	on_fail = {
+		c:GBR = {
+			set_country_type = decentralized	
+		}
+	}
+	
+	weight = 1000
+	can_revolution_inherit = yes
+	should_be_pinned_by_default = yes
+}
+
+je_occitan_republicanism = {
+	icon = "gfx/interface/icons/ig_icons/event_election.dds"
+
+	group = je_group_historical_content
+	
+	scripted_progress_bar = occitan_infiltration_progress
+	
+	scripted_button = plan_speech
+	
+	scripted_button = fan_republican_flames
+	
+	scripted_button = propaganda_posters
+	
+	scripted_button = infiltrate_low_level_posts
+	
+	scripted_button = operational_wrapup
+
+	
+	immediate = {
+	}
+	
+	scripted_progress_bar = economic_recovery_progress_bar
+	
+	complete = {
+		custom_tooltip = {
+			text = moved_on
+			has_variable = wrapped_up_operations
+		}
+    }
+	
+	fail = {
+    }
+	
+	on_weekly_pulse = {
+		scope:journal_entry = {
+			"scripted_bar_progress(occitan_infiltration_progress)" = {
+				save_scope_as = infiltration_prog_scope
+			}
+		}
+	}
+	
+	on_complete = {
+		scope:occitan_state = {
+			add_modifier = {
+				name = occitan_operations_secured
+				months = normal_modifier_time
+				multiplier = scope:infiltration_prog_scope
+			}
+		}
+		if = {
+			limit = {
+				var:occitan_states_counter < 5
+			}
+			any_scope_state = {
+				limit = {
+					NOT = {
+						has_modifier = occitan_operations_secured
+					}
+					any_neighbouring_state = {
+						is_homeland = cu:occitan
+						has_modifier = occitan_operations_secured
+					}
+				}
+				save_scope_as = occitan_state
+			}
+		}
+	}
+	
+	on_fail = {
+	}
+	
+	weight = 1000
+	can_revolution_inherit = yes
+	should_be_pinned_by_default = yes
+}

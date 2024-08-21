@@ -1670,3 +1670,47 @@ mongol_request_qing_support = {
 		}
 	}
 }
+
+propaganda_posters = {
+	name = "propaganda_posters"
+	desc = "propaganda_posters_desc"
+
+	visible = {
+		always = yes
+	}
+
+	ai_chance = {
+		base = 100
+	}
+
+	possible = {
+		custom_tooltip = {
+			NOT = {
+				desc = propaganda_posters_occitan_cooldown
+				has_variable = propaganda_posters_occitan_cooldown
+			}
+		}
+	}
+
+	effect = {
+		custom_tooltip = {
+			text = occitan_influence_increase_15
+			je:je_occitan_republicanism = {
+				add_progress = { value = 15 name = occitan_infiltration_progress }
+			}
+		}
+		custom_tooltip = {
+			text = occitan_propaganda_cooldown
+			set_variable = {
+				name = propaganda_posters_occitan_cooldown
+				days = 30
+			}
+		}
+		scope:occitan_state = {
+			add_modifier = {
+				name = occitan_propaganda_posters
+				months  = 1.5
+			}
+		}
+	}
+}

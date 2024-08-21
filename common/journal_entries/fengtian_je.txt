@@ -37,9 +37,11 @@
 	
 
 	is_shown_when_inactive = {
-		OR = {
-			c:FGT ?= owner
-			c:MGB ?= owner
+		owner = {
+			OR = {
+				c:FGT ?= this
+				c:MGB ?= this
+			}
 		}
 	}
 
