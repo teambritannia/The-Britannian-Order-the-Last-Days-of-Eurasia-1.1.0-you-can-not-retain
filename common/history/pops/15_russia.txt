@@ -482,7 +482,7 @@
 		}
 	}
 	s:STATE_MINSK = { #DONE
-		region_state:GRU = {
+		region_state:RKB = {
 			create_pop = {
 				culture = polish
 				size = 29910
@@ -502,7 +502,7 @@
 		}
 	}
 	s:STATE_MOGILEV = { #DONE
-		region_state:GRU = {
+		region_state:RKB = {
 			create_pop = {
 				culture = russian
 				size = 23216
@@ -522,7 +522,7 @@
 		}
 	}
 	s:STATE_VITEBSK = { #DONE
-		region_state:GRU = {
+		region_state:RKB = {
 			create_pop = {
 				culture = russian
 				size = 45399
@@ -702,7 +702,7 @@
 		}
 	}
 	s:STATE_CHERNIHIV = { #DONE
-		region_state:GRU = {
+		region_state:RKB = {
 			create_pop = {
 				culture = ukrainian
 				size = 949520
