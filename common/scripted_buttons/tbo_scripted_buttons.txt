@@ -1808,3 +1808,53 @@ plan_speech = {
 		}
 	}
 }
+
+infiltrate_low_level_posts = {
+	name = "infiltrate_low_level_posts"
+	desc = "infiltrate_low_level_posts_desc"
+
+	visible = {
+		always = yes
+	}
+
+	ai_chance = {
+		base = 100
+	}
+
+	possible = {
+		custom_tooltip = {
+			NOT = {
+				desc = infiltrate_low_level_posts_occitan_cooldown
+				has_variable = infiltrate_low_level_posts_occitan_cooldown
+			}
+			NOT = {
+				desc = occitan_assassination_cooldown
+				c:FRA = {
+					has_variable = occitan_assassination_cooldown
+				}
+			}
+		}
+	}
+
+	effect = {
+		custom_tooltip = {
+			text = occitan_influence_increase_30
+			je:je_occitan_republicanism = {
+				add_progress = { value = 30 name = occitan_infiltration_progress }
+			}
+		}
+		custom_tooltip = {
+			text = infiltrate_low_level_posts_occitan_cooldown
+			set_variable = {
+				name = infiltrate_low_level_posts_occitan_cooldown
+				days = 70
+			}
+		}
+		c:FRA = {
+			trigger_event = {
+				id = britannian_prosperity.11
+				days = 1
+			}
+		}
+	}
+}
