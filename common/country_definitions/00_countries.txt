@@ -603,7 +603,7 @@ POL = {
 	capital = STATE_GREATER_POLAND
 }
 
-GRU = {
+RKB = {
 	color = { 131 138 138 }
 	
 	country_type = recognized
@@ -755,4 +755,26 @@ TTA = {
 	
 	cultures = { russian }
 	capital = STATE_TOBOLSK
+}
+
+NVG = {
+	color = { 87 81 130 }
+	
+	country_type = recognized
+	
+	tier = kingdom
+	
+	cultures = { russian ukranian kazakh }
+	capital = STATE_NOVGOROD
+}
+
+vyatka = {
+	color = { 236 189 221 }
+	
+	country_type = unrecognized
+	
+	tier = principality
+	
+	cultures = { russian }
+	capital = STATE_VYATKA
 }
