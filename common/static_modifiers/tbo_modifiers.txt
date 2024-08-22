@@ -302,3 +302,11 @@ assassination_aftermath = {
 	state_tax_waste_add = 0.1
 	state_mortality_mult = 0.1
 }
+
+protestors_arrested = {
+	country_tax_income_add = -500
+	state_radicals_from_sol_change_mult = 0.1
+	country_authority_mult = -0.1
+	state_tax_waste_add = 0.1
+	state_mortality_mult = 0.1
+}
