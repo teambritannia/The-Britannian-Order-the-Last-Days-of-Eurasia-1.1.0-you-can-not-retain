@@ -1,0 +1,19 @@
+﻿DIPLOMATIC_PLAYS = {
+	c:MEX = {
+		create_diplomatic_play = {
+			name = mexican_war
+		
+			target_state = s:STATE_CALIFORNIA.region_state:NMX
+			
+			war = yes
+			
+			type = dp_annex_war
+			
+			add_war_goal = {
+				holder = c:MEX
+				type = conquer_state
+				target_state = s:STATE_CALIFORNIA.region_state:NMX
+			}
+		}
+	}
+}

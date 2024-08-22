@@ -1,0 +1,102 @@
+﻿MILITARY_FORMATIONS = {
+	c:MSK ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_west_siberia
+			name = black_league_funni
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_TOBOLSK
+				count = 15
+			}
+
+		}
+	}
+
+	c:TTA ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_west_siberia
+			name = tobolsk_army
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_TOBOLSK
+				count = 40
+			}
+		}
+	}
+
+	c:URL ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_west_siberia
+			name = ural_army
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_URAL
+				count = 30
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_SURGUT
+				count = 25
+			}
+		}
+	}
+
+	c:FER ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_east_siberia
+			name = fer_army
+
+			combat_unit = { 
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_BURYATIA
+				count = 5
+			}
+			combat_unit = { 
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_CHITA
+				count = 5
+			}
+		}
+	}
+
+	c:DVM ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_east_siberia
+			name = dvm_army
+
+			combat_unit = { 
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_KRASNOYARSK
+				count = 26
+			}
+			combat_unit = { 
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_TOMSK
+				count = 29
+			}
+		}
+	}
+
+	c:IRK ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_east_siberia
+			name = irk_army
+
+			combat_unit = { 
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_IRKUTSK
+				count = 38
+			}
+		}
+	}
+}

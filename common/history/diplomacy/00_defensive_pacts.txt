@@ -1,0 +1,8 @@
+﻿DIPLOMACY = {
+	c:FGT ?= {
+		create_diplomatic_pact = {
+			country = c:FER
+			type = defensive_pact
+		}	
+	}
+}
