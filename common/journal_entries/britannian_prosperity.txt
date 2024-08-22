@@ -172,7 +172,7 @@ je_occitan_crisis = {
 	
 	scripted_button = arrest_involved_protesters
 	
-	scripted_button = financial_incentives
+	scripted_button = provide_financial_incentives
 	
 	is_shown_when_inactive = {
 		owner = {
