@@ -2051,7 +2051,7 @@ raid_occitan_cells = {
 		}
 		custom_tooltip = {
 			text = occitan_inflitration_subtract_7
-			je:je_occitan_republicanism = {
+			je:je_occitan_crisis = {
 				add_progress = { value = -7 name = infiltration_level_progress_bar }
 			}
 		}
@@ -2091,6 +2091,7 @@ arrest_involved_protesters = {
 			}
 		}
 		custom_tooltip = {
+			desc = protest_exist_tt
 			any_scope_state = {
 				has_modifier = republican_flames_fanned
 			}
@@ -2104,29 +2105,29 @@ arrest_involved_protesters = {
 		}
 		custom_tooltip = {
 			text = french_alertness_subtract_10
-			je:je_occitan_republicanism = {
+			je:je_occitan_crisis = {
 				add_progress = { value = -10 name = french_alertness_progress_bar }
 			}
 		}
 		custom_tooltip = {
-			text = raid_occitan_cells_cooldown_tt
+			text = arrest_involved_protesters_cooldown_tt
 			set_variable = {
-				name = raid_occitan_cells_cooldown
+				name = arrest_involved_protesters_cooldown
 				days = 150
 			}
 		}
 		c:OCC = {
 			trigger_event = {
-				id = occitan_crisis.6
+				id = occitan_crisis.7
 				days = 1
 			}
 		}
 	}
 }
 
-arrest_involved_protesters = {
-	name = "arrest_involved_protesters"
-	desc = "arrest_involved_protesters_desc"
+discredit_occitan_leaders = {
+	name = "discredit_occitan_leaders"
+	desc = "discredit_occitan_leaders_desc"
 
 	visible = {
 		always = yes
@@ -2138,39 +2139,43 @@ arrest_involved_protesters = {
 
 	possible = {
 		custom_tooltip = {
-			desc = arrest_involved_protesters_cooldown
+			desc = discredit_occitan_leaders_cooldown
 			NOT = {
-				has_variable = arrest_involved_protesters_cooldown
+				has_variable = discredit_occitan_leaders_cooldown
 			}
 		}
 		custom_tooltip = {
-			any_scope_state = {
-				has_modifier = republican_flames_fanned
+			desc = inflitration_greater_than_2
+				je:je_occitan_crisis = {
+					"scripted_bar_progress(infiltration_level_progress_bar)" >= 2
+				}
 			}
 		}
 	}
 
 	effect = {
-		add_modifier = {
-			name = assassination_aftermath
-			months = 4
-		}
 		custom_tooltip = {
-			text = french_alertness_subtract_10
-			je:je_occitan_republicanism = {
+			text = french_alertness_subtract_5
+			je:je_occitan_crisis = {
 				add_progress = { value = -10 name = french_alertness_progress_bar }
 			}
 		}
 		custom_tooltip = {
-			text = raid_occitan_cells_cooldown_tt
+			text = inflitration_progress_subtract_1
+			je:je_occitan_crisis = {
+				add_progress = { value = -1 name = infiltration_level_progress_bar }
+			}
+		}
+		custom_tooltip = {
+			text = discredit_occitan_leaders_cooldown_tt
 			set_variable = {
-				name = raid_occitan_cells_cooldown
-				days = 150
+				name = discredit_occitan_leaders_cooldown
+				days = 80
 			}
 		}
 		c:OCC = {
 			trigger_event = {
-				id = occitan_crisis.6
+				id = occitan_crisis.8
 				days = 1
 			}
 		}
