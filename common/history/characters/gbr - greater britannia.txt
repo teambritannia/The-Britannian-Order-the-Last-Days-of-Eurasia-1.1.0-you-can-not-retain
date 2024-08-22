@@ -1,7 +1,0 @@
-﻿CHARACTERS = {
-	c:GBR ?= {
-		create_character = {
-			template = gbr_alan_cromwell
-		}	
-	}
-}
