@@ -1933,8 +1933,8 @@ infiltrate_occitan_organizations = {
 
 	possible = {
 		custom_tooltip = {
+			desc = infiltrate_occitan_organizations_cooldown
 			NOT = {
-				desc = infiltrate_occitan_organizations_cooldown
 				has_variable = infiltrate_occitan_organizations_cooldown
 			}
 		}
@@ -1955,6 +1955,61 @@ infiltrate_occitan_organizations = {
 			text = infiltrate_occitan_organizations_cooldown_tt
 			set_variable = {
 				name = infiltrate_occitan_organizations_cooldown
+				days = 100
+			}
+		}
+		c:OCC = {
+			trigger_event = {
+				id = occitan_crisis.5
+				days = 1
+			}
+		}
+	}
+}
+
+sabotage_occitan_operations = {
+	name = "sabotage_occitan_operations"
+	desc = "sabotage_occitan_operations_desc"
+
+	visible = {
+		always = yes
+	}
+
+	ai_chance = {
+		base = 100
+	}
+
+	possible = {
+		custom_tooltip = {
+			desc = sabotage_occitan_operations_cooldown
+			NOT = {
+				has_variable = sabotage_occitan_operations_cooldown
+			}
+		}
+		custom_tooltip = {
+			desc = inflitration_greater_than_6
+				je:je_occitan_crisis = {
+					"scripted_bar_progress(infiltration_level_progress_bar)" >= 6
+				}
+			}
+		}
+	}
+
+	effect = {
+		add_modifier = {
+			name = assassination_aftermath
+			months = 4
+		}
+		custom_tooltip = {
+			text = occitan_inflitration_subtract_3
+			je:je_occitan_republicanism = {
+				add_progress = { value = -3 name = infiltration_level_progress_bar }
+			}
+		}
+		custom_tooltip = {
+			text = sabotage_occitan_operations_cooldown_tt
+			set_variable = {
+				name = sabotage_occitan_operations_cooldown
 				days = 100
 			}
 		}
