@@ -294,3 +294,11 @@ occitan_speech = {
 occitan_operational_funds = {
 	country_tax_income_add = -1000
 }
+
+assassination_aftermath = {
+	country_tax_income_add = -500
+	state_radicals_from_sol_change_mult = 0.1
+	country_authority_mult = -0.1
+	state_tax_waste_add = 0.1
+	state_mortality_mult = 0.1
+}
