@@ -1,0 +1,39 @@
+doctrine_je = {
+	icon = "gfx/interface/icons/ig_icons/armed_forces.dds"
+
+	group = je_group_internal_affairs
+	
+	scripted_button = deep_battle_button
+	
+	scripted_button = grand_battleplan_button
+	
+	scripted_button = guerilla_warfare_button
+	
+	scripted_button = mobile_warfare_button
+	
+	scripted_button = superior_firepower_button
+	
+	
+	is_shown_when_inactive = {
+		has_technology_researched = standing_army
+	}
+	
+	possible = {
+		always = yes
+	}
+
+	complete = {
+	}
+	
+	immediate = {
+	}
+
+	on_complete = {
+	}
+
+	weight = 100
+
+	can_revolution_inherit = yes
+	transferable = yes
+	should_be_pinned_by_default = yes
+}
