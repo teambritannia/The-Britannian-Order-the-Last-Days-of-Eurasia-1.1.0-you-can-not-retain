@@ -49,7 +49,7 @@ occitan_crisis.2 = { # occitan propaganda
 
 	title = occitan_crisis.2.t
 	desc = occitan_crisis.2.d
-	desc = {
+	flavor = {
 		triggered_desc = {
 			flavor = occitan_crisis.2.f_suspicion_low
 			trigger = {
@@ -143,7 +143,33 @@ occitan_crisis.3 = { # republican flames fanned
 
 	title = occitan_crisis.3.t
 	desc = occitan_crisis.3.d
-	flavor = occitan_crisis.3.f
+	flavor = {
+		triggered_desc = {
+			flavor = occitan_crisis.3.f_suspicion_low
+			trigger = {
+				je:je_occitan_crisis = {
+					"scripted_bar_progress(french_alertness_progress_bar)" <= 20
+				}
+			}
+		}
+		triggered_desc = {
+			flavor = occitan_crisis.3.f_suspicion_medium
+			trigger = {
+				je:je_occitan_crisis = {
+					"scripted_bar_progress(french_alertness_progress_bar)" >= 50
+					"scripted_bar_progress(french_alertness_progress_bar)" <= 80
+				}
+			}
+		}
+		triggered_desc = {
+			flavor = occitan_crisis.3.f_suspicion_high
+			trigger = {
+				je:je_occitan_crisis = {
+					"scripted_bar_progress(french_alertness_progress_bar)" >= 80
+				}
+			}
+		}
+	}
 
 	duration = 3
 
@@ -165,7 +191,33 @@ occitan_crisis.3 = { # republican flames fanned
 	}
 
 	option = {
-		name = occitan_crisis.3.a
+		name = {
+			triggered_desc = {
+				flavor = occitan_crisis.3.a_suspicion_low
+				trigger = {
+					je:je_occitan_crisis = {
+						"scripted_bar_progress(french_alertness_progress_bar)" <= 20
+					}
+				}
+			}
+			triggered_desc = {
+				flavor = occitan_crisis.3.a_suspicion_medium
+				trigger = {
+					je:je_occitan_crisis = {
+						"scripted_bar_progress(french_alertness_progress_bar)" >= 50
+						"scripted_bar_progress(french_alertness_progress_bar)" <= 80
+					}
+				}
+			}
+			triggered_desc = {
+				flavor = occitan_crisis.3.a_suspicion_high
+				trigger = {
+					je:je_occitan_crisis = {
+						"scripted_bar_progress(french_alertness_progress_bar)" >= 80
+					}
+				}
+			}
+		}
 		ai_chance = {
 			base = 10
 		}
@@ -185,7 +237,33 @@ occitan_crisis.4 = { # occitan speech
 
 	title = occitan_crisis.4.t
 	desc = occitan_crisis.4.d
-	flavor = occitan_crisis.4.f
+	flavor = {
+		triggered_desc = {
+			flavor = occitan_crisis.4.f_suspicion_low
+			trigger = {
+				je:je_occitan_crisis = {
+					"scripted_bar_progress(french_alertness_progress_bar)" <= 20
+				}
+			}
+		}
+		triggered_desc = {
+			flavor = occitan_crisis.4.f_suspicion_medium
+			trigger = {
+				je:je_occitan_crisis = {
+					"scripted_bar_progress(french_alertness_progress_bar)" >= 50
+					"scripted_bar_progress(french_alertness_progress_bar)" <= 80
+				}
+			}
+		}
+		triggered_desc = {
+			flavor = occitan_crisis.4.f_suspicion_high
+			trigger = {
+				je:je_occitan_crisis = {
+					"scripted_bar_progress(french_alertness_progress_bar)" >= 80
+				}
+			}
+		}
+	}
 
 	duration = 3
 
@@ -207,7 +285,33 @@ occitan_crisis.4 = { # occitan speech
 	}
 
 	option = {
-		name = occitan_crisis.4.a
+		name = {
+			triggered_desc = {
+				flavor = occitan_crisis.4.a_suspicion_low
+				trigger = {
+					je:je_occitan_crisis = {
+						"scripted_bar_progress(french_alertness_progress_bar)" <= 20
+					}
+				}
+			}
+			triggered_desc = {
+				flavor = occitan_crisis.4.a_suspicion_medium
+				trigger = {
+					je:je_occitan_crisis = {
+						"scripted_bar_progress(french_alertness_progress_bar)" >= 50
+						"scripted_bar_progress(french_alertness_progress_bar)" <= 80
+					}
+				}
+			}
+			triggered_desc = {
+				flavor = occitan_crisis.4.a_suspicion_high
+				trigger = {
+					je:je_occitan_crisis = {
+						"scripted_bar_progress(french_alertness_progress_bar)" >= 80
+					}
+				}
+			}
+		}
 		ai_chance = {
 			base = 10
 		}
