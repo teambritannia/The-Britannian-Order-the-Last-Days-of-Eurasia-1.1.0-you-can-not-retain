@@ -38,7 +38,7 @@ occitan_crisis.1 = {
 
 occitan_crisis.2 = { # occitan propaganda
 	type = country_event
-	placement = ROOT
+	placement = scope:occitan_state
 	event_image = {
 		video = "unspecific_devastation"
 	}
