@@ -1712,6 +1712,12 @@ propaganda_posters = {
 			}
 		}
 		c:FRA = {
+			random_scope_state = {
+				limit = {
+					has_modifier = current_operational_state
+				}
+				save_scope_as = occitan_state
+			}
 			trigger_event = {
 				id = occitan_crisis.2
 				days = 1
