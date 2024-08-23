@@ -2153,9 +2153,9 @@ sabotage_occitan_operations = {
 			}
 		}
 		custom_tooltip = {
-			text = occitan_influence_decrease_15
+			text = occitan_influence_decrease_7
 			je:je_occitan_republicanism = {
-				add_progress = { value = -15 name = occitan_infiltration_progress }
+				add_progress = { value = -7 name = occitan_infiltration_progress }
 			}
 		}
 		custom_tooltip = {
@@ -2253,9 +2253,9 @@ raid_occitan_cells = {
 			months = 5
 		}
 		custom_tooltip = {
-			text = occitan_inflitration_subtract_15
+			text = occitan_inflitration_subtract_10
 			je:je_occitan_crisis = {
-				add_progress = { value = -15 name = infiltration_level_progress_bar }
+				add_progress = { value = -10 name = infiltration_level_progress_bar }
 			}
 		}
 		custom_tooltip = {
@@ -2356,9 +2356,9 @@ arrest_involved_protesters = {
 			}
 		}
 		custom_tooltip = {
-			text = occitan_influence_decrease_5
+			text = occitan_influence_decrease_3
 			je:je_occitan_republicanism = {
-				add_progress = { value = -5 name = occitan_infiltration_progress }
+				add_progress = { value = -3 name = occitan_infiltration_progress }
 			}
 		}
 		c:OCC = {
@@ -2442,9 +2442,9 @@ discredit_occitan_leaders = {
 			}
 		}
 		custom_tooltip = {
-			text = occitan_influence_decrease_10
+			text = occitan_influence_decrease_6
 			je:je_occitan_republicanism = {
-				add_progress = { value = -10 name = occitan_infiltration_progress }
+				add_progress = { value = -6 name = occitan_infiltration_progress }
 			}
 		}
 		custom_tooltip = {
@@ -2536,9 +2536,9 @@ provide_financial_incentives = {
 			}
 		}
 		custom_tooltip = {
-			text = occitan_influence_decrease_15
+			text = occitan_influence_decrease_10
 			je:je_occitan_republicanism = {
-				add_progress = { value = -15 name = occitan_infiltration_progress }
+				add_progress = { value = -10 name = occitan_infiltration_progress }
 			}
 		}
 		custom_tooltip = {
