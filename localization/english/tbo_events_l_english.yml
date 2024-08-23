@@ -95,4 +95,6 @@
  occitan_crisis.3.d: "Republican ideals have seen a revival in [placeholder occitan state]"
  occitan_crisis.3.f_suspicion_low: "A very peculiar cult has sprung up in [placeholder occitan state]---the cult of republicanism. This curious little ideology has not seen widespread support since the French Revolution, and it would certainly pose some threat on a larger scale. However, the current level of republican activity is laughably small compared to the strength of the Commonwealth. Let the radicals peddle their ideas in peace, thinking that they can achieve anything. We of the empire know better."
  occitan_crisis.3.a_suspicion_low: "She is tossed, but does not sink."
- occitan_crisis.3.f_suspicion_medium: "Republican ideals, thought to be buried by the sands of history, have seen a revival lately in [placeholder occitan state], even amid the dangerous fractures in Greater Britannian rule worldwide. Their preposterous dema"
+ occitan_crisis.3.f_suspicion_medium: "Republican ideals, thought to be buried by the sands of history, have seen a revival lately in [placeholder occitan state], amid the dangerous fractures in Greater Britannian rule worldwide. The cries of 'Liberté, Egalité, Fraternité' make it quite clear that their preposterous ideology spreads like rot amid the lower classes of society, something which local authorities have been powerfless to stop."
+ occitan_crisis.3.a_suspicion_medium: "Let the past stay in the past!"
+ occitan_crisis.3.f_suspicion_high: "The blasted republican ideals are once again making an appearance in France. "
