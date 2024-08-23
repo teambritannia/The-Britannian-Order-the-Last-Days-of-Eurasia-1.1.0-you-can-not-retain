@@ -83,8 +83,13 @@
  guerilla_warfare: "Guerilla Warfare"
  superior_firepower: "Superior Firepower"
 
+ occitan_crisis.1.t: "Trouble in Occitania"
+ occitan_crisis.1.d: "Republican sentiments, fueled by discontent from widespread poverty and oppression, have once again reared their ugly head in Occitania"
+ occitan_crisis.1.f: "Since the end of of the wars in Europe, France has had to make a compromise: to sell off her riches, her flesh, in exchange for Britannian 'protection'. For some time, this arrangement has been at least somewhat effective, yet now cracks are beginning to appear in what once appeared to be the most solid arrangement in French history.\n\nThe French Revolution, crushed by Britannian intervention, has revived partially in the form of its ideals spread by the fledgeling Occitan republican movement, something no analyst across the Commonwealth could have predicted. Now, an unprecedented threat faces the French State. Will the current status quo survive, contrary to the hundreds of thousands who see no future to it?"
+ occitan_crisis.1.a: "She is tossed, but does not sink."
+ occitan_crisis.1.b: "The fires of revolution returns to France!"
  occitan_crisis.2.t: "Echoes of a firey past"
- occitan_crisis.2.d: "Republican propaganda posters have begun appearing around Occitan operational areas"
+ occitan_crisis.2.d: "Republican propaganda posters have begun appearing around [placeholder occitan state]"
  occitan_crisis.2.f_suspicion_low: "The failure of the French revolution was over half a century ago. However, this seems to not have discouraged the Occitan republicans, who have lately begun yet another campaign of spreading their insidious anti-Britannian propaganda about the streets of [placeholder occitan state]. This has achieved little so far, and is not expected to cause significant unrest. Let the revolution die in obscurity, as good King Cromwell says."
  occitan_crisis.2.a_suspicion_low: "Shadows of shadows."
  occitan_crisis.2.f_suspicion_medium: "More Occitan propaganda has been appearing lately, throughout the dirty alleys, across crumbling walls, and even plastered across various structures near the city centers. Once again the republicans are continuing their legacy of treachery, in the remains of what was once a proud France.\n\nThe old man at the corner, the one with the coat---could he be concealing republican propaganda? Look how he reaches inside, as if to reassure himself that he is not to be discovered. The child with his satchel--does that innocent little bag contain the words to set a nation alight?\n\nThe effects have been seen already; unrest has broken out sporadically at various sites across [placeholder occitan state], with the cries of the jacobins once again shaking France to her core."
@@ -94,7 +99,7 @@
  occitan_crisis.3.t: "Flames of Freedom"
  occitan_crisis.3.d: "Republican ideals have seen a revival in [placeholder occitan state]"
  occitan_crisis.3.f_suspicion_low: "A very peculiar cult has sprung up in [placeholder occitan state]---the cult of republicanism. This curious little ideology has not seen widespread support since the French Revolution, and it would certainly pose some threat on a larger scale. However, the current level of republican activity is laughably small compared to the strength of the Commonwealth. Let the radicals peddle their ideas in peace, thinking that they can achieve anything. We of the empire know better."
- occitan_crisis.3.a_suspicion_low: "She is tossed, but does not sink."
+ occitan_crisis.3.a_suspicion_low: "A curious relic of bygone times."
  occitan_crisis.3.f_suspicion_medium: "Republican ideals, thought to be buried by the sands of history, have seen a revival lately in [placeholder occitan state], amid the dangerous fractures in Greater Britannian rule worldwide. The cries of 'Liberté, Egalité, Fraternité' make it quite clear that their preposterous ideology spreads like rot amid the lower classes of society, something which local authorities have been powerfless to stop."
  occitan_crisis.3.a_suspicion_medium: "Let the past stay in the past!"
  occitan_crisis.3.f_suspicion_high: "The blasted republican ideals are once again making an appearance in France. About the streets the whispers of treachery can be heard; even in minor offices across the French State there is discussion of replacing the monarchy, the true rulers of France.\n\nNo matter how much energy is devoted into stamping out this menace, no matter how many edicts cast, how many arrests, there always seems to be some underground current. It is a grand conspiracy, one that is profoundly anti-french, one that endagers the very fabric of society itself!"
@@ -111,3 +116,4 @@
  occitan_crisis.5.d: "A prominent figure in our midst has been assassinated, presumably by the French State."
  occitan_crisis.5.f: "Once again the forces of reaction in France have attempted to strange the fledgeling ideology of freedom that our brave speakers risk their lives to spread. Time and time again the authority of France has proved they will try to stop us at any cost with nothing short of murder, as their recent actions prove.\n\nIf they believe thei can stop us through mere intimidation, they are sorely mistaken. Freedom *will* return to France, and no amount of killings and arrests will curb the republican tide."
  occitan_crisis.5.a: "We offer a minute of silence to the fallen."
+ occitan_crisis.
