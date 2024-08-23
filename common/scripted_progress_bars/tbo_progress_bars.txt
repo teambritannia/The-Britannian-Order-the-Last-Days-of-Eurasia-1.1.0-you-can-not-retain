@@ -698,7 +698,7 @@ french_alertness_progress_bar = {
 	weekly_progress = {
 		add = {
 			desc = base_decay
-			add = -0.5
+			add = -2
 		}
 		if = {
 			limit = {
@@ -708,7 +708,7 @@ french_alertness_progress_bar = {
 			}
 			add = {
 				desc = occitan_speech_alertness
-				add = 1
+				add = 6
 			}
 		}
 		if = {
@@ -719,7 +719,7 @@ french_alertness_progress_bar = {
 			}
 			add = {
 				desc = occitan_posters_alertness
-				add = 0.9
+				add = 4
 			}
 		}
 		if = {
@@ -730,7 +730,7 @@ french_alertness_progress_bar = {
 			}
 			add = {
 				desc = republican_flames_alertness
-				add = 1.3
+				add = 8
 			}
 		}
 	}
