@@ -82,3 +82,8 @@
  mobile_warfare: "Mobile Warfare"
  guerilla_warfare: "Guerilla Warfare"
  superior_firepower: "Superior Firepower"
+
+ occitan_crisis.2.t: "Echoes of a firey past"
+ occitan_crisis.2.d: "Republican propaganda posters have begun appearing around Occitan operational areas"
+ occitan_crisis.2.f: "The failure of the French revolution was over half a century ago. However, this seems to not have discouraged the Occitan republicans, who have lately begun a campaign of spreading their insidious anti-Britannian propaganda about the streets of [placeholder occitan state]. While these posters have not yet caused significant unrest alone, they have planted the seeds of radical treachery among the populace of [ROOT.GetCountry.GetNameNoFormatting].\n\nAmong their slogans are the complete overthrow of Britannian rule, the absurd demands of the return of Brittany and freeing of the BeNeLux as well as an implementation of republican rule in France.  It is advisable to... discourage these obscene displays of barbaric dissidence."
+ occitan_crisis.2.a: "Have the flames of rebellion truly died?"
