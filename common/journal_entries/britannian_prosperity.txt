@@ -58,16 +58,6 @@
 			}
 			if = {
 				limit = {
-					c:BNA = {
-						is_subject = no
-					}
-				}
-				set_variable = american_war
-				trigger_event = { id = britannian_prosperity.6 }
-				change_variable = { name = britannian_prosperity_var add = 5 }
-			}
-			if = {
-				limit = {
 					AND = {
 						NOT = { has_variable = american_war }
 						any_diplomatic_play = {
@@ -77,7 +67,7 @@
 					}
 				}
 				set_variable = vietnam_war_started
-				trigger_event = { id = britannian_prosperity.7 }
+				trigger_event = { id = britannian_prosperity.6 }
 				change_variable = { name = britannian_prosperity_var add = 5 }
 			}
 			if = {
@@ -91,7 +81,7 @@
 					}
 				}
 				set_variable = german_bna_war
-				trigger_event = { id = britannian_prosperity.8 }
+				trigger_event = { id = britannian_prosperity.7 }
 				change_variable = { name = britannian_prosperity_var add = 1 }
 			}
 		}
