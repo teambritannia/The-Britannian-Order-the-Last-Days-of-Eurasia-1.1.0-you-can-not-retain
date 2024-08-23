@@ -278,24 +278,30 @@ siberian_black_army = {
 }
 
 occitan_propaganda_posters = {
+	icon = gfx/interface/icons/timed_modifier_icons
+	icon = gfx/interface/icons/timed_modifier_icons/unused/modifier_statue_negative.dds/modifier_statue_negative.dds
 	state_radicals_from_sol_change_mult = 0.3
 }
 
 republican_flames_fanned = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_negative.dds
 	state_radicals_from_sol_change_mult = 0.2
 	state_tax_waste_add = 0.05
 	state_market_access_price_impact = -0.1
 }
 
 occitan_speech = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_negative.dds
 	state_radicals_from_sol_change_mult = 0.4
 }
 
 occitan_operational_funds = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_negative.dds
 	country_tax_income_add = -1000
 }
 
 assassination_aftermath = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_negative.dds
 	country_tax_income_add = -500
 	state_radicals_from_sol_change_mult = 0.1
 	country_authority_mult = -0.1
@@ -304,9 +310,20 @@ assassination_aftermath = {
 }
 
 protestors_arrested = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_negative.dds
 	country_tax_income_add = -500
 	state_radicals_from_sol_change_mult = 0.1
 	country_authority_mult = -0.1
 	state_tax_waste_add = 0.1
 	state_mortality_mult = 0.1
+}
+
+occitan_operations_secured = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_negative.dds
+	state_radicals_from_sol_change_mult = 0.3
+}
+
+current_operational_state = {
+	icon = gfx/interface/icons/timed_modifier_icons/unused/modifier_explosion_negative.dds
+	state_radicals_from_sol_change_mult = 0.1
 }

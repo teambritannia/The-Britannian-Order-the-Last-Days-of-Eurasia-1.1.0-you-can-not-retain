@@ -705,10 +705,10 @@ french_alertness_progress_bar = {
 				any_scope_state = {
 					has_modifier = occitan_speech
 				}
-				add = {
-					desc = occitan_speech_alertness
-					add = 1
-				}
+			}
+			add = {
+				desc = occitan_speech_alertness
+				add = 1
 			}
 		}
 		if = {
@@ -716,10 +716,10 @@ french_alertness_progress_bar = {
 				any_scope_state = {
 					has_modifier = occitan_propaganda_posters
 				}
-				add = {
-					desc = occitan_posters_alertness
-					add = 0.9
-				}
+			}
+			add = {
+				desc = occitan_posters_alertness
+				add = 0.9
 			}
 		}
 		if = {
@@ -727,10 +727,10 @@ french_alertness_progress_bar = {
 				any_scope_state = {
 					has_modifier = republican_flames_fanned
 				}
-				add = {
-					desc = republican_flames_alertness
-					add = 1.3
-				}
+			}
+			add = {
+				desc = republican_flames_alertness
+				add = 1.3
 			}
 		}
 	}

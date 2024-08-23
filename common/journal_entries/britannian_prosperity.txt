@@ -232,8 +232,15 @@ je_occitan_republicanism = {
 					has_variable = occitan_states_counter
 				}
 			}
-			s:STATE_AQUITAINE = {
-				save_scope_as = occitan_state
+			c:FRA = {
+				random_scope_state = {
+					limit = {
+						state_region = s:STATE_AQUITAINE
+					}
+					add_modifier = {
+						name = current_operational_state
+					}
+				}
 			}
 		}
 	}
@@ -276,11 +283,15 @@ je_occitan_republicanism = {
 	}
 	
 	on_complete = {
-		scope:occitan_state = {
-			add_modifier = {
-				name = occitan_operations_secured
-				months = normal_modifier_time
-				multiplier = scope:infiltration_prog_scope
+		c:FRA = {
+			random_scope_state = {
+				limit = {
+					has_modifier = current_operational_state
+				}
+				remove_modifier = current_operational_state
+				add_modifier = {
+					name = occitan_operations_secured
+				}
 			}
 		}
 		if = {
@@ -293,6 +304,27 @@ je_occitan_republicanism = {
 				name = occitan_states_counter
 				value = 1
 			}
+			c:OCC = {
+				add_journal_entry = je_occitan_republicanism
+			}
+			c:FRA = {
+				random_scope_state = {
+					limit = {
+						NOT = {
+							has_modifier = occitan_operations_secured
+						}
+						any_neighbouring_state = {
+							has_modifier = occitan_operations_secured
+							owner = {
+								this = c:OCC
+							}
+						}
+					}
+					add_modifier = {
+						name = current_operational_state
+					}
+				}
+			}
 		}
 		else_if = {
 			limit = {
@@ -302,20 +334,31 @@ je_occitan_republicanism = {
 				name = occitan_states_counter
 				add = 1
 			}
-		}
-		random_scope_state = {
-			limit = {
-				NOT = {
-					has_modifier = occitan_operations_secured
-				}
-				any_neighbouring_state = {
-					owner = {
-						this = c:OCC
+			c:OCC = {
+				add_journal_entry = je_occitan_republicanism
+			}
+			c:FRA = {
+				random_scope_state = {
+					limit = {
+						NOT = {
+							has_modifier = current_operational_state
+							has_modifier = occitan_operations_secured
+						}
+						any_neighbouring_state = {
+							has_modifier = occitan_operations_secured
+						}
 					}
-					has_modifier = occitan_operations_secured
+					add_modifier = {
+						name = current_operational_state
+					}
 				}
 			}
-			save_scope_as = occitan_state
+		}
+		else_if = {
+			limit = {
+				occitan_states_counter >= 5
+			}
+			remove_variable = occitan_states_counter
 		}
 	}
 	
