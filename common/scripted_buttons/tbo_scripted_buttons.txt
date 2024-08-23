@@ -1699,9 +1699,9 @@ propaganda_posters = {
 			months = 1
 		}
 		custom_tooltip = {
-			text = occitan_influence_increase_15
+			text = occitan_influence_increase_5
 			je:je_occitan_republicanism = {
-				add_progress = { value = 15 name = occitan_infiltration_progress }
+				add_progress = { value = 5 name = occitan_infiltration_progress }
 			}
 		}
 		custom_tooltip = {
@@ -1748,9 +1748,9 @@ fan_republican_flames = {
 			months = 1.5
 		}
 		custom_tooltip = {
-			text = occitan_influence_increase_20
+			text = occitan_influence_increase_8
 			je:je_occitan_republicanism = {
-				add_progress = { value = 20 name = occitan_infiltration_progress }
+				add_progress = { value = 8 name = occitan_infiltration_progress }
 			}
 		}
 		custom_tooltip = {
@@ -1803,9 +1803,9 @@ plan_speech = {
 			months = 2
 		}
 		custom_tooltip = {
-			text = occitan_influence_increase_15
+			text = occitan_influence_increase_8
 			je:je_occitan_republicanism = {
-				add_progress = { value = 15 name = occitan_infiltration_progress }
+				add_progress = { value = 8 name = occitan_infiltration_progress }
 			}
 		}
 		custom_tooltip = {
@@ -1847,9 +1847,9 @@ infiltrate_low_level_posts = {
 
 	effect = {
 		custom_tooltip = {
-			text = occitan_influence_increase_30
+			text = occitan_influence_increase_10
 			je:je_occitan_republicanism = {
-				add_progress = { value = 30 name = occitan_infiltration_progress }
+				add_progress = { value = 10 name = occitan_infiltration_progress }
 			}
 		}
 		custom_tooltip = {
