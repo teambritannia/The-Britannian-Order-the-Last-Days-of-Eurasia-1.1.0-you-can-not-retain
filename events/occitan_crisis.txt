@@ -34,6 +34,17 @@ occitan_crisis.1 = {
 			state = s:STATE_LANGUEDOC.region_state:FRA
 		}
 	}
+	option = { #play as occ
+		name = occitan_crisis.1.b
+		ai_chance = {
+			base = 0
+		}
+		create_country = {
+			tag = OCC
+			origin = this
+			state = s:STATE_LANGUEDOC.region_state:FRA
+		}
+	}
 }
 
 occitan_crisis.2 = { # occitan propaganda
