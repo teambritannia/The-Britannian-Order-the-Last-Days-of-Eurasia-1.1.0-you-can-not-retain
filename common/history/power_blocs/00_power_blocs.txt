@@ -1,0 +1,82 @@
+﻿POWER_BLOCS = {
+	c:GBR = {
+		create_power_bloc = {
+			name = COMMONWEALTH
+			map_color = { 221 117 183 }
+
+			founding_date = 1769.3.17
+			identity = identity_sovereign_empire
+			principle = principle_vassalization_2
+		}
+		if = {
+			limit = {
+				has_dlc_feature = power_bloc_features
+			}
+			power_bloc = {
+				add_principle = principle_defensive_cooperation_1
+			}
+		}
+	}
+	c:GER = {
+		create_power_bloc = {
+			name = BUND
+			map_color = { 7 7 7 }
+
+			founding_date = 1822.7.4
+			identity = identity_sovereign_empire
+			principle = principle_vassalization_2
+		}
+		if = {
+			limit = {
+				has_dlc_feature = power_bloc_features
+			}
+			power_bloc = {
+				add_principle = principle_police_coordination_1
+			}
+		}
+	}
+	c:TKK = {
+		create_power_bloc = {
+			name = SPHERE
+
+			map_color = { 216 219 204 }
+
+			founding_date = 1824.4.2 # Final agreement of the 1814 Congress of Vienna
+			identity = identity_sovereign_empire
+			principle = principle_vassalization_1
+
+
+			# Habsburg leaders in Italy and Italian states held up by direct Austrian intervention
+		}
+		if = {
+			limit = {
+				has_dlc_feature = power_bloc_features
+			}
+			power_bloc = {
+				add_principle = principle_aggressive_coordination_1
+			}
+		}
+	}
+	c:FGT = {
+		create_power_bloc = {
+			name = UNION
+
+			map_color = { 255 0 0 }
+
+			founding_date = 1835.7.26 # retreat to guanwai
+			identity = identity_ideological_union
+			principle = principle_ideological_truth_2
+
+			member = c:FER
+			member = c:WKR
+		}
+		if = {
+			limit = {
+				has_dlc_feature = power_bloc_features
+			}
+			power_bloc = {
+				add_principle = principle_defensive_cooperation_1
+			}
+		}
+	}
+}
