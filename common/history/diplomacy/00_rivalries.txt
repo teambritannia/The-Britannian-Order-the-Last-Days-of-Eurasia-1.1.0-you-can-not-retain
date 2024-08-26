@@ -1,0 +1,26 @@
+﻿DIPLOMACY = {
+	c:CFD ?= {
+		create_diplomatic_pact = {
+			country = c:FGT
+			type = rivalry
+		}
+	}		
+	c:BYG ?= {
+		create_diplomatic_pact = {
+			country = c:CFD
+			type = rivalry
+		}
+	}
+	c:TKK ?= {
+		create_diplomatic_pact = {
+			country = c:FGT
+			type = rivalry
+		}
+	}	
+	c:SBR ?= {
+		create_diplomatic_pact = {
+			country = c:TKK
+			type = rivalry
+		}
+	}	
+	

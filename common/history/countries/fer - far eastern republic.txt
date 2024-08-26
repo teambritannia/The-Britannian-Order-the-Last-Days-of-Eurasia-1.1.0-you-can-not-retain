@@ -1,0 +1,32 @@
+﻿COUNTRIES = {
+	c:FER ?= {
+		effect_starting_technology_tier_2_tech = yes
+		
+		set_market_capital = STATE_BURYATIA
+		
+		activate_law = law_type:law_presidential_republic
+		activate_law = law_type:law_census_voting
+		activate_law = law_type:law_homesteading
+		activate_law = law_type:law_per_capita_based_taxation
+		activate_law = law_type:law_appointed_bureaucrats
+		activate_law = law_type:law_cultural_exclusion
+		activate_law = law_type:law_interventionism
+		activate_law = law_type:law_national_militia
+		activate_law = law_type:law_censorship
+		activate_law = law_type:law_slavery_banned
+		activate_law = law_type:law_women_own_property
+		activate_law = law_type:law_no_migration_controls
+		
+		set_government_wage_level = medium
+		set_tax_level = medium
+
+		ig:ig_rural_folk = {
+			add_ruling_interest_group = yes
+		}
+
+		ig:ig_intelligentsia = {
+			add_ruling_interest_group = yes
+		}
+
+	}
+}

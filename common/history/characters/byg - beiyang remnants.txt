@@ -1,0 +1,27 @@
+﻿CHARACTERS = {
+	c:BYG ?= {
+		create_character = {
+			template = chi_daoguang_template
+		}
+
+		create_character = {
+			template = chi_xianfeng_template
+		}
+
+		create_character = {
+			# Keying, also known as Qiying and Kiyeng and Ch'i-ying
+			first_name = "Feng"
+			last_name = "Aotian"
+			historical = yes
+			birth_date = 1779.7.25
+			culture = cu:han
+			ig_leader = yes
+			interest_group = ig_armed_forces
+			ideology = ideology_traditionalist
+			traits = {
+				reckless
+				expensive_tastes # INCREDIBLY corrupt
+				basic_diplomat
+			}
+		}
+
