@@ -1,0 +1,144 @@
+suppress_burgsys = {
+	is_shown = {
+		has_journal_entry = je_burgsys_appear
+	}
+
+	possible = {
+		has_journal_entry = je_burgsys_appear
+		NOT = {
+			has_variable = burgsys_cooldown
+		}
+	}
+
+	when_taken = {
+		hidden_effect = {
+			set_variable = {
+				name = burgsys_cooldown
+				value = yes
+				days = 1000
+			}				
+		}
+		add_modifier = {
+			name = suppressing_burgsys
+			months = normal_modifier_time
+		}
+	}
+
+	ai_chance = {
+		base = 30
+		modifier = {
+			trigger = { 
+				any_interest_group = {
+					is_powerful = yes
+					has_ideology = ideology:ideology_progressive
+					has_ideology = ideology:ideology_radical
+					leader = {
+						has_ideology = ideology:ideology_fengtian_left
+						has_ideology = ideology:ideology_fengtian_center
+						has_ideology = ideology:ideology_fengtian_right
+						has_ideology = ideology:ideology_communist
+						has_ideology = ideology:ideology_socialist
+					}
+				}
+			}
+			add = 40
+		}
+	}
+}
+
+root_out_burgsys = {
+	is_shown = {
+		has_journal_entry = je_burgsys_appear
+	}
+
+	possible = {
+		has_journal_entry = je_burgsys_appear
+		NOT = {
+			has_variable = burgsys_cooldown
+		}
+	}
+
+	when_taken = {
+		hidden_effect = {
+			set_variable = {
+				name = burgsys_cooldown
+				value = yes
+				days = 1000
+			}				
+		}
+		add_modifier = {
+			name = root_out_burgsys
+			months = normal_modifier_time
+		}
+	}
+
+	ai_chance = {
+		base = 15
+		modifier = {
+			trigger = { 
+				OR = {
+					any_interest_group = {
+						is_powerful = yes
+						has_ideology = ideology:ideology_progressive
+						has_ideology = ideology:ideology_radical
+						leader = {
+							has_ideology = ideology:ideology_fengtian_left
+							has_ideology = ideology:ideology_fengtian_center
+							has_ideology = ideology:ideology_fengtian_right
+							has_ideology = ideology:ideology_communist
+							has_ideology = ideology:ideology_socialist
+						}
+					}
+				}
+			}
+			add = 60
+		}
+	}
+}
+
+fund_burgsys = {
+	is_shown = {
+		has_journal_entry = je_burgsys_appear
+	}
+
+	possible = {
+		has_journal_entry = je_burgsys_appear
+		NOT = {
+			has_variable = burgsys_cooldown
+		}
+	}
+
+	when_taken = {
+		hidden_effect = {
+			set_variable = {
+				name = burgsys_cooldown
+				value = yes
+				days = 1000
+			}				
+		}
+		add_modifier = {
+			name = funding_burgsys
+			months = normal_modifier_time
+		}
+	}
+
+	ai_chance = {
+		base = 15
+		modifier = {
+			trigger = { 
+				OR = {
+					any_interest_group = {
+						is_powerful = yes
+						has_ideology = ideology:ideology_reactionary
+						has_ideology = ideology:ideology_conservative
+						leader = {
+							has_ideology = ideology:ideology_burgsys
+							has_ideology = ideology:ideology_ancap
+						}
+					}
+				}
+			}
+			add = 70
+		}
+	}
+}

@@ -1,0 +1,337 @@
+german_helen_moment = {
+	set_variable = { name = german_next value = 2 }
+	if = {
+		limit = {
+			ig:ig_armed_forces = {
+				is_powerful = yes
+			}
+		}
+		change_variable = {
+			name = german_next
+			add = 1
+		}
+	}
+	if = {
+		limit = {
+			ig:ig_armed_forces = {
+				is_in_government = yes
+			}
+		}
+		change_variable = {
+			name = german_next
+			add = 1
+		}
+	}
+	if = {
+		limit = {
+			any_scope_character = {
+				has_ideology = ideology:ideology_jingoist_leader
+			}
+		}
+		change_variable = {
+			name = german_next
+			add = 1
+		}
+	}
+	if = {
+		limit = {
+			ig:ig_intelligentsia = {
+				is_in_government = yes
+			}
+		}
+		change_variable = {
+			name = german_next
+			add = -1
+		}
+	}
+}
+
+fengtian_ally_early_setup = {
+	activate_law = law_type:law_universal_suffrage
+	activate_law = law_type:law_presidential_republic
+	activate_law = law_type:law_professional_army
+	activate_law = law_type:law_homesteading
+}
+
+fengtian_ally_late_setup = {
+	activate_law = law_type:law_single_party_state
+	activate_law = law_type:law_council_republic
+	activate_law = law_type:law_professional_army
+	activate_law = law_type:law_collectivized_agriculture
+	activate_law = law_type:law_command_economy
+}
+
+calculate_peasant_morale = {
+	je:je_fengtian_mongol_uprisings = {
+		set_global_variable = {
+			name = peasant_morale_current
+			value = "scripted_bar_progress(peasants_morale_progress_bar)"
+		}
+	}
+	remove_variable = peasant_morale_scale_progress
+	set_variable = {
+		name = peasant_morale_scale_progress
+		value = var:peasant_morale_equilibrium
+	}
+	change_variable = {
+		name = peasant_morale_scale_progress
+		subtract = global_var:peasant_morale_current
+	}
+	change_variable = {
+		name = peasant_morale_scale_progress
+		multiply = 0.1
+	}
+}
+
+calculate_peasant_strength = {
+	je:je_fengtian_mongol_uprisings = {
+		set_global_variable = {
+			name = peasant_strength_current
+			value = "scripted_bar_progress(peasants_strength_progress_bar)"
+		}
+	}
+	remove_variable = peasant_strength_scale_progress
+	set_variable = {
+		name = peasant_strength_scale_progress
+		value = var:peasant_strength_equilibrium
+	}
+	change_variable = {
+		name = peasant_strength_scale_progress
+		subtract = global_var:peasant_strength_current
+	}
+	change_variable = {
+		name = peasant_strength_scale_progress
+		multiply = 0.1
+	}
+}
+
+calculate_peasant_popular_support = {
+	je:je_fengtian_mongol_uprisings = {
+		set_global_variable = {
+			name = peasant_popular_support_current
+			value = "scripted_bar_progress(peasants_popular_support_progress_bar)"
+		}
+	}
+	remove_variable = peasant_popular_support_scale_progress
+	set_variable = {
+		name = peasant_popular_support_scale_progress
+		value = var:peasant_popular_support_equilibrium
+	}
+	change_variable = {
+		name = peasant_popular_support_scale_progress
+		subtract = global_var:peasant_popular_support_current
+	}
+	change_variable = {
+		name = peasant_popular_support_scale_progress
+		multiply = 0.1
+	}
+}
+
+calculate_peasant_campaign_chance = {
+	remove_variable = peasant_campaign_chance
+	remove_variable = peasant_strength_total
+	set_variable = {
+		name = peasant_campaign_chance
+		value = global_var:peasant_strength_current
+	}
+	change_variable = { name = peasant_campaign_chance add = global_var:peasant_morale_current }
+	change_variable = { name = peasant_campaign_chance add = global_var:peasant_strength_current }
+	change_variable = { name = peasant_campaign_chance add = global_var:peasant_popular_support_current }
+	set_global_variable = { name = peasant_strength_total value = var:peasant_campaign_chance }
+	change_variable = { name = peasant_campaign_chance multiply = 2.4 }
+	change_variable = { name = peasant_campaign_chance subtract = var:peasant_strength_equilibrium }
+	change_variable = { name = peasant_campaign_chance subtract = var:peasant_morale_equilibrium }
+	change_variable = { name = peasant_campaign_chance subtract = var:peasant_popular_support_equilibrium }
+	change_variable = { name = peasant_campaign_chance subtract = global_var:mgb_total_strength }
+	if = {
+		limit = {
+			has_variable = cautious_peasant_leader
+		}
+		change_variable = { name = peasant_campaign_chance multiply = 0.8 }
+	}
+	else_if = {
+		limit = {
+			has_variable = reckless_peasant_leader
+		}
+		change_variable = { name = peasant_campaign_chance multiply = 1.2 }
+	}
+	else_if = {
+		limit = {
+			has_variable = conditionally_aggressive_peasant_leader
+		}
+		change_variable = { name = peasant_campaign_chance multiply = 1.2 }
+	}
+}
+
+calculate_mgb_morale = {
+	je:je_fengtian_mongol_uprisings = {
+		set_global_variable = {
+			name = mgb_morale_current
+			value = "scripted_bar_progress(mgb_morale_progress_bar)"
+		}
+	}
+	remove_variable = mgb_morale_scale_progress
+	set_variable = {
+		name = mgb_morale_scale_progress
+		value = var:mgb_morale_equilibrium
+	}
+	change_variable = {
+		name = mgb_morale_scale_progress
+		subtract = global_var:mgb_morale_current
+	}
+	change_variable = {
+		name = mgb_morale_scale_progress
+		multiply = 0.1
+	}
+}
+
+calculate_mgb_strength = {
+	je:je_fengtian_mongol_uprisings = {
+		set_global_variable = {
+			name = mgb_strength_current
+			value = "scripted_bar_progress(mgb_strength_progress_bar)"
+		}
+	}
+	remove_variable = mgb_strength_scale_progress
+	set_variable = {
+		name = mgb_strength_scale_progress
+		value = var:mgb_strength_equilibrium
+	}
+	change_variable = {
+		name = mgb_strength_scale_progress
+		subtract = global_var:mgb_strength_current
+	}
+	change_variable = {
+		name = mgb_strength_scale_progress
+		multiply = 0.1
+	}
+}
+
+calculate_mgb_total_strength = {
+	remove_global_variable = mgb_total_strength
+	set_global_variable = {
+		name = mgb_total_strength
+		value = global_var:mgb_strength_current
+	}
+	change_variable = {
+		name = mgb_total_strength
+		add = global_var:mgb_morale_current
+	}
+	change_global_variable = {
+		name = mgb_total_strength
+		add = 100
+	}
+	change_global_variable = {
+		name = mgb_total_strength
+		subtract = global_var:peasant_popular_support_current
+	}
+}
+
+perform_occitan_checks = {
+	if = {
+		limit = {
+			je:je_occitan_republicanism = {
+				"scripted_bar_progress(occitan_infiltration_progress)" >= 90
+			}
+		}
+		je:je_occitan_republicanism = {
+			set_bar_progress = { value = 10 name = occitan_infiltration_progress }
+			add_progress = { value = 1 name = occitan_chances_progress_bar }
+			set_bar_progress = { value = 200 name = take_state_countdown }
+		}
+		c:FRA = {
+			random_scope_state = {
+				limit = {
+					has_modifier = current_operational_state
+				}
+				remove_modifier = current_operational_state
+				add_modifier = {
+					name = occitan_operations_secured
+				}
+			}
+		}
+		c:FRA = {
+			random_scope_state = {
+				limit = {
+					NOT = {
+						OR = {
+							has_modifier = occitan_operations_secured
+							has_modifier = current_operational_state
+						}
+					}
+					any_neighbouring_state = {
+						OR = {
+							has_modifier = occitan_operations_secured
+							has_modifier = current_operational_state
+						}
+					}
+				}
+				add_modifier = {
+				name = current_operational_state
+				}
+			}
+		}
+	}
+	if = {
+		limit = {
+			je:je_occitan_republicanism = {
+				"scripted_bar_progress(take_state_countdown)" <= 0
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					je:je_occitan_republicanism = {
+						"scripted_bar_progress(occitan_infiltration_progress)" >= 90
+					}
+				}
+			}
+			je:je_occitan_republicanism = {
+				add_progress = { value = 1 name = occitan_chances_progress_bar }
+				set_bar_progress = { value = 10 name = occitan_infiltration_progress }
+				set_bar_progress = { value = 200 name = take_state_countdown }
+			}
+			c:FRA = {
+				random_scope_state = {
+					limit = {
+						has_modifier = current_operational_state
+					}
+					remove_modifier = current_operational_state
+					add_modifier = {
+						name = occtian_failure
+					}
+				}
+			}
+			c:FRA = {
+				random_scope_state = {
+					limit = {
+						NOT = {
+							OR = {
+								has_modifier = occitan_operations_secured
+								has_modifier = current_operational_state
+							}
+						}
+						any_neighbouring_state = {
+							OR = {
+								has_modifier = occitan_operations_secured
+								has_modifier = current_operational_state
+								}
+							}
+						}
+						add_modifier = {
+							name = current_operational_state
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+occitan_setup = {
+	activate_law = law_type:law_census_voting 
+	activate_law = law_type:law_presidential_republic
+	activate_law = law_type:law_right_of_assembly
+	activate_law = law_type:law_national_guard
+	activate_law = law_type:law_cultural_exclusion
+}
