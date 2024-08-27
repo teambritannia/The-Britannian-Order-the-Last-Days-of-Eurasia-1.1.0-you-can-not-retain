@@ -1,1 +1,1147 @@
+propaganda_posters = {
+	name = "propaganda_posters"
+	desc = "propaganda_posters_desc"
 
+	visible = {
+		always = yes
+	}
+
+	ai_chance = {
+		base = 100
+		modifier = {
+			trigger = {
+				c:FRA = {
+					je:je_occitan_crisis = {
+						"scripted_bar_progress(french_alertness_progress_bar)" >= 15
+					}
+				}
+			}
+			subtract = 20
+		}
+		modifier = {
+			trigger = {
+				c:FRA = {
+					je:je_occitan_crisis = {
+						"scripted_bar_progress(french_alertness_progress_bar)" >= 40
+					}
+				}
+			}
+			subtract = 10
+		}
+		modifier = {
+			trigger = {
+				c:FRA = {
+					je:je_occitan_crisis = {
+						"scripted_bar_progress(french_alertness_progress_bar)" >= 60
+					}
+				}
+			}
+			subtract = 40
+		}
+	}
+
+	possible = {
+		custom_tooltip = {
+			text = propaganda_posters_occitan_cooldown
+			NOT = {
+				has_variable = propaganda_posters_occitan_cooldown
+			}
+		}
+		NOT = {	
+			c:FRA = {
+				any_scope_state = {
+					has_modifier = occitan_operations_sabotaged
+				}
+			}
+		}
+		NOT = {
+			taking_loans = yes
+		}
+	}
+
+	effect = {
+		add_modifier = {
+ 			name = occitan_operational_funds
+			multiplier = 4.5
+			months = 1
+		}
+		custom_tooltip = {
+			text = occitan_influence_increase_5
+			je:je_occitan_republicanism = {
+				add_progress = { value = 5 name = occitan_infiltration_progress }
+			}
+		}
+		custom_tooltip = {
+			text = occitan_propaganda_cooldown_tt
+			set_variable = {
+				name = propaganda_posters_occitan_cooldown
+				days = 30
+			}
+		}
+		c:FRA = {
+			random_scope_state = {
+				limit = {
+					has_modifier = current_operational_state
+				}
+				save_scope_as = occitan_state
+			}
+			trigger_event = {
+				id = occitan_crisis.2
+				days = 1
+			}
+		}
+	}
+}
+
+fan_republican_flames = {
+	name = "fan_republican_flames"
+	desc = "fan_republican_flames_desc"
+
+	visible = {
+		always = yes
+	}
+
+	ai_chance = {
+		base = 90
+		modifier = {
+			trigger = {
+				c:FRA = {
+					je:je_occitan_crisis = {
+						"scripted_bar_progress(french_alertness_progress_bar)" >= 15
+					}
+				}
+			}
+			subtract = 15
+		}
+		modifier = {
+			trigger = {
+				c:FRA = {
+					je:je_occitan_crisis = {
+						"scripted_bar_progress(french_alertness_progress_bar)" >= 40
+					}
+				}
+			}
+			subtract = 15
+		}
+		modifier = {
+			trigger = {
+				c:FRA = {
+					je:je_occitan_crisis = {
+						"scripted_bar_progress(french_alertness_progress_bar)" >= 60
+					}
+				}
+			}
+			subtract = 50
+		}
+	}
+
+	possible = {
+		custom_tooltip = {
+			text = fan_republican_flames_occitan_cooldown
+			NOT = {
+				has_variable = fan_republican_flames_occitan_cooldown
+			}
+		}
+		NOT = {	
+			c:FRA = {
+				any_scope_state = {
+					has_modifier = occitan_operations_sabotaged
+				}
+			}
+		}
+		NOT = {
+			taking_loans = yes
+		}
+	}
+
+	effect = {
+		add_modifier = {
+ 			name = occitan_operational_funds
+			multiplier = 12
+			months = 1.5
+		}
+		custom_tooltip = {
+			text = occitan_influence_increase_8
+			je:je_occitan_republicanism = {
+				add_progress = { value = 8 name = occitan_infiltration_progress }
+			}
+		}
+		custom_tooltip = {
+			text = occitan_republican_flames_cooldown_tt
+			set_variable = {
+				name = fan_republican_flames_occitan_cooldown
+				days = 45
+			}
+		}
+		c:FRA = {
+			random_scope_state = {
+				limit = {
+					has_modifier = current_operational_state
+				}
+				save_scope_as = occitan_state
+			}
+			trigger_event = {
+				id = occitan_crisis.3
+				days = 1
+			}
+		}
+	}
+}
+
+plan_speech = {
+	name = "plan_speech"
+	desc = "plan_speech_desc"
+
+	visible = {
+		always = yes
+	}
+
+	ai_chance = {
+		base = 100
+		modifier = {
+			trigger = {
+				c:FRA = {
+					je:je_occitan_crisis = {
+						"scripted_bar_progress(french_alertness_progress_bar)" >= 15
+					}
+				}
+			}
+			subtract = 10
+		}
+		modifier = {
+			trigger = {
+				c:FRA = {
+					je:je_occitan_crisis = {
+						"scripted_bar_progress(french_alertness_progress_bar)" >= 40
+					}
+				}
+			}
+			subtract = 30
+		}
+		modifier = {
+			trigger = {
+				c:FRA = {
+					je:je_occitan_crisis = {
+						"scripted_bar_progress(french_alertness_progress_bar)" >= 60
+					}
+				}
+			}
+			subtract = 60
+		}
+	}
+
+	possible = {
+		custom_tooltip = {
+			text = occitan_assassination_cooldown_occitan
+			NOT = {
+				c:FRA = {
+					has_variable = occitan_assassination_cooldown
+				}
+			}
+		}
+		custom_tooltip = {
+			text = plan_speech_occitan_cooldown
+			NOT = {
+				has_variable = plan_speech_occitan_cooldown
+			}
+		}
+		NOT = {	
+			c:FRA = {
+				any_scope_state = {
+					has_modifier = occitan_operations_sabotaged
+				}
+			}
+		}
+		NOT = {
+			taking_loans = yes
+		}
+	}
+
+	effect = {
+		add_modifier = {
+ 			name = occitan_operational_funds
+			multiplier = 9
+			months = 2
+		}
+		custom_tooltip = {
+			text = occitan_influence_increase_8
+			je:je_occitan_republicanism = {
+				add_progress = { value = 8 name = occitan_infiltration_progress }
+			}
+		}
+		custom_tooltip = {
+			text = plan_speech_occitan_cooldown_tt
+			set_variable = {
+				name = plan_speech_occitan_cooldown
+				days = 60
+			}
+		}
+		c:FRA = {
+			random_scope_state = {
+				limit = {
+					has_modifier = current_operational_state
+				}
+				save_scope_as = occitan_state
+			}
+			trigger_event = {
+				id = occitan_crisis.4
+				days = 1
+			}
+		}
+	}
+}
+
+infiltrate_low_level_posts = {
+	name = "infiltrate_low_level_posts"
+	desc = "infiltrate_low_level_posts_desc"
+
+	visible = {
+		always = yes
+	}
+
+	ai_chance = {
+		base = 100
+	}
+
+	possible = {
+		custom_tooltip = {
+			text = infiltrate_low_level_posts_occitan_cooldown
+			NOT = {
+				has_variable = infiltrate_low_level_posts_occitan_cooldown
+			}
+		}
+		NOT = {	
+			c:FRA = {
+				any_scope_state = {
+					has_modifier = occitan_operations_sabotaged
+				}
+			}
+		}
+		NOT = {
+			taking_loans = yes
+		}
+	}
+
+	effect = {
+		custom_tooltip = {
+			text = occitan_influence_increase_15
+			je:je_occitan_republicanism = {
+				add_progress = { value = 15 name = occitan_infiltration_progress }
+			}
+		}
+		custom_tooltip = {
+			text = infiltrate_low_level_posts_occitan_cooldown_tt
+			set_variable = {
+				name = infiltrate_low_level_posts_occitan_cooldown
+				days = 70
+			}
+		}
+	}
+}
+
+tangle_french_operations = {
+	name = "tangle_french_operations"
+	desc = "tangle_french_operations_desc"
+
+	visible = {
+		always = yes
+	}
+
+	ai_chance = {
+		base = 100
+		modifier = {
+			trigger = {
+				c:FRA = {
+					je:je_occitan_crisis = {
+						"scripted_bar_progress(french_alertness_progress_bar)" >= 15
+					}
+				}
+			}
+			subtract = 10
+		}
+		modifier = {
+			trigger = {
+				c:FRA = {
+					je:je_occitan_crisis = {
+						"scripted_bar_progress(french_alertness_progress_bar)" >= 40
+					}
+				}
+			}
+			subtract = 30
+		}
+		modifier = {
+			trigger = {
+				c:FRA = {
+					je:je_occitan_crisis = {
+						"scripted_bar_progress(french_alertness_progress_bar)" >= 60
+					}
+				}
+			}
+			subtract = 60
+		}
+	}
+
+	possible = {
+		custom_tooltip = {
+			text = tangle_french_operations_cooldown
+			NOT = {
+				has_variable = tangled_french_operations
+			}
+		}
+		NOT = {	
+			c:FRA = {
+				any_scope_state = {
+					has_modifier = occitan_operations_sabotaged
+				}
+			}
+		}
+		NOT = {
+			taking_loans = yes
+		}
+	}
+
+	effect = {
+		add_modifier = {
+ 			name = occitan_operational_funds
+			multiplier = 12
+			days = 50
+		}
+		custom_tooltip = {
+			text = occitan_influence_decrease_7
+			je:je_occitan_republicanism = {
+				add_progress = { value = -7 name = occitan_infiltration_progress }
+			}
+		}
+		custom_tooltip = {
+			text = tangle_french_operations_cooldown_tt
+			set_variable = {
+				name = tangled_french_operations
+				days = 80
+			}
+		}
+		c:FRA = {
+			random_scope_state = {
+				limit = {
+					has_modifier = current_operational_state
+				}
+				save_scope_as = occitan_state
+			}
+			trigger_event = {
+				id = occitan_crisis.6
+				days = 1
+			}
+		}
+	}
+}
+#end of occitan buttons
+
+assassinate_occitan_leader = {
+	name = "assassinate_occitan_leader"
+	desc = "assassinate_occitan_leader_desc"
+
+	visible = {
+		always = yes
+	}
+
+	ai_chance = {
+		base = 0
+		modifier = {
+			trigger = {
+				je:je_occitan_crisis = {
+					"scripted_bar_progress(french_alertness_progress_bar)" >= 20
+				}
+			}
+			add = 10
+		}
+		modifier = {
+			trigger = {
+				je:je_occitan_crisis = {
+					"scripted_bar_progress(french_alertness_progress_bar)" >= 50
+				}
+			}
+			add = 20
+		}
+		modifier = {
+			trigger = {
+				je:je_occitan_crisis = {
+					"scripted_bar_progress(french_alertness_progress_bar)" >= 70
+				}
+			}
+			add = 40
+		}
+		modifier = {
+			trigger = {
+				je:je_occitan_crisis = {
+					"scripted_bar_progress(french_alertness_progress_bar)" >= 80
+				}
+			}
+			add = 35
+		}
+		modifier = {
+			trigger = {
+				taking_loans = yes
+			}
+			add = -40
+		}
+	}
+
+	possible = {
+		custom_tooltip = {
+			text = french_alertness_above_30
+			je:je_occitan_crisis = {
+				"scripted_bar_progress(french_alertness_progress_bar)" >= 30
+			}
+		}
+		any_scope_state = {
+			has_modifier = occitan_speech
+		}
+		custom_tooltip = {
+			text = occitan_assassination_cooldown
+			NOT = {
+				has_variable = occitan_assassination_cooldown
+			}
+		}
+	}
+
+	effect = {
+		add_modifier = {
+			name = assassination_aftermath
+			months = 4
+		}
+		custom_tooltip = {
+			text = occitan_influence_decrease_5
+			c:OCC = {
+				je:je_occitan_republicanism = {
+					add_progress = { value = -5 name = occitan_infiltration_progress }
+				}
+			}
+		}
+		custom_tooltip = {
+			text = french_alertness_decrease_10
+			je:je_occitan_crisis = {
+				add_progress = { value = -10 name = french_alertness_progress_bar }
+			}
+		}
+		custom_tooltip = {
+			text = occitan_assassination_cooldown_tt
+			set_variable = {
+				name = occitan_assassination_cooldown
+				days = 100
+			}
+		}
+		c:OCC = {
+			trigger_event = {
+				id = occitan_crisis.5
+				days = 1
+			}
+		}
+	}
+}
+
+infiltrate_occitan_organizations = {
+	name = "infiltrate_occitan_organizations"
+	desc = "infiltrate_occitan_organizations_desc"
+
+	visible = {
+		always = yes
+	}
+
+	ai_chance = {
+		base = 0
+		modifier = {
+			trigger = {
+				je:je_occitan_crisis = {
+					"scripted_bar_progress(french_alertness_progress_bar)" >= 20
+				}
+			}
+			add = 40
+		}
+		modifier = {
+			trigger = {
+				je:je_occitan_crisis = {
+					"scripted_bar_progress(french_alertness_progress_bar)" >= 50
+				}
+			}
+			add = 30
+		}
+		modifier = {
+			trigger = {
+				je:je_occitan_crisis = {
+					"scripted_bar_progress(french_alertness_progress_bar)" >= 70
+				}
+			}
+			add = 20
+		}
+		modifier = {
+			trigger = {
+				je:je_occitan_crisis = {
+					"scripted_bar_progress(infiltration_level_progress_bar)" >= 85
+				}
+			}
+			add = -40
+		}
+		modifier = {
+			trigger = {
+				taking_loans = yes
+			}
+			add = -40
+		}
+	}
+
+	possible = {
+		custom_tooltip = {
+			text = french_alertness_above_20
+			je:je_occitan_crisis = {
+				"scripted_bar_progress(french_alertness_progress_bar)" >= 20
+			}
+		}
+		custom_tooltip = {
+			text = infiltrate_occitan_organizations_cooldown
+			NOT = {
+				has_variable = infiltrate_occitan_organizations_cooldown
+			}
+		}
+		custom_tooltip = {
+			text = infiltration_less_than_20
+			je:je_occitan_crisis = {
+				"scripted_bar_progress(infiltration_level_progress_bar)" <= 20
+			}
+		}
+	}
+
+	effect = {
+		custom_tooltip = {
+			text = occitan_inflitration_add_6
+			je:je_occitan_crisis = {
+				add_progress = { value = 6 name = infiltration_level_progress_bar }
+			}
+		}
+		add_modifier = {
+ 			name = occitan_operational_funds
+			multiplier = 7.0
+			months = 3
+		}
+		custom_tooltip = {
+			text = infiltrate_occitan_organizations_cooldown_tt
+			set_variable = {
+				name = infiltrate_occitan_organizations_cooldown
+				days = 100
+			}
+		}
+	}
+}
+
+sabotage_occitan_operations = {
+	name = "sabotage_occitan_operations"
+	desc = "sabotage_occitan_operations_desc"
+
+	visible = {
+		always = yes
+	}
+
+	ai_chance = {
+		base = 40
+		modifier = {
+			trigger = {
+				je:je_occitan_crisis = {
+					"scripted_bar_progress(french_alertness_progress_bar)" >= 50
+				}
+			}
+			add = 20
+		}
+		modifier = {
+			trigger = {
+				je:je_occitan_crisis = {
+					"scripted_bar_progress(french_alertness_progress_bar)" >= 70
+				}
+			}
+			add = 20
+		}
+		modifier = {
+			trigger = {
+				je:je_occitan_crisis = {
+					"scripted_bar_progress(french_alertness_progress_bar)" >= 80
+				}
+			}
+			add = 10
+		}
+		modifier = {
+			trigger = {
+				je:je_occitan_crisis = {
+					"scripted_bar_progress(french_alertness_progress_bar)" >= 90
+				}
+			}
+			add = -50
+		}
+		modifier = {
+			trigger = {
+				taking_loans = yes
+			}
+			add = -40
+		}
+	}
+
+	possible = {
+		custom_tooltip = {
+			text = sabotage_occitan_operations_cooldown
+			NOT = {
+				has_variable = sabotage_occitan_operations_cooldown
+			}
+		}
+		custom_tooltip = {
+			text = inflitration_greater_than_10
+				je:je_occitan_crisis = {
+					"scripted_bar_progress(infiltration_level_progress_bar)" >= 10
+				}
+			}
+		}
+		custom_tooltip = {
+			text = french_alertness_above_25
+			je:je_occitan_crisis = {
+				"scripted_bar_progress(french_alertness_progress_bar)" >= 25
+			}
+		}
+	}
+
+	effect = {
+		custom_tooltip = {
+			text = occitan_inflitration_subtract_3
+			je:je_occitan_crisis = {
+				add_progress = { value = -3 name = infiltration_level_progress_bar }
+			}
+		}
+		custom_tooltip = {
+			text = french_alertness_subtract_10
+			je:je_occitan_crisis = {
+				add_progress = { value = -10 name = french_alertness_progress_bar }
+			}
+		}
+		custom_tooltip = {
+			text = occitan_influence_decrease_7
+			c:OCC = {
+				je:je_occitan_republicanism = {
+					add_progress = { value = -7 name = occitan_infiltration_progress }
+				}
+			}
+		}
+		custom_tooltip = {
+			text = sabotage_occitan_operations_cooldown_tt
+			set_variable = {
+				name = sabotage_occitan_operations_cooldown
+				days = 100
+			}
+		}
+		random_scope_state = {
+			limit = {
+				has_modifier = current_operational_state
+			}
+			save_scope_as = occitan_state
+		}
+		c:OCC = {
+			trigger_event = {
+				id = occitan_crisis.8
+				days = 1
+			}
+		}
+	}
+}
+
+raid_occitan_cells = {
+	name = "raid_occitan_cells"
+	desc = "raid_occitan_cells_desc"
+
+	visible = {
+		always = yes
+	}
+
+	ai_chance = {
+		base = 10
+		modifier = {
+			trigger = {
+				je:je_occitan_crisis = {
+					"scripted_bar_progress(french_alertness_progress_bar)" >= 20
+				}
+			}
+			add = 20
+		}
+		modifier = {
+			trigger = {
+				je:je_occitan_crisis = {
+					"scripted_bar_progress(french_alertness_progress_bar)" >= 50
+				}
+			}
+			add = 30
+		}
+		modifier = {
+			trigger = {
+				je:je_occitan_crisis = {
+					"scripted_bar_progress(french_alertness_progress_bar)" >= 70
+				}
+			}
+			add = 40
+		}
+		modifier = {
+			trigger = {
+				je:je_occitan_crisis = {
+					"scripted_bar_progress(french_alertness_progress_bar)" >= 90
+				}
+			}
+			add = 20
+		}
+		modifier = {
+			trigger = {
+				taking_loans = yes
+			}
+			add = -30
+		}
+	}
+
+	possible = {
+		custom_tooltip = {
+			text = raid_occitan_cells_cooldown
+			NOT = {
+				has_variable = raid_occitan_cells_cooldown
+			}
+		}
+		custom_tooltip = {
+			text = inflitration_greater_than_10
+				je:je_occitan_crisis = {
+					"scripted_bar_progress(infiltration_level_progress_bar)" >= 10
+				}
+			}
+		}
+		custom_tooltip = {
+			text = french_alertness_above_30
+			je:je_occitan_crisis = {
+				"scripted_bar_progress(french_alertness_progress_bar)" >= 30
+			}
+		}
+	}
+
+	effect = {
+		custom_tooltip = {
+			text = french_alertness_subtract_20
+			je:je_occitan_crisis = {
+				add_progress = { value = -20 name = french_alertness_progress_bar }
+			}
+		}
+		add_modifier = {
+ 			name = occitan_operational_funds
+			multiplier = 5.0
+			months = 5
+		}
+		custom_tooltip = {
+			text = occitan_inflitration_subtract_10
+			je:je_occitan_crisis = {
+				add_progress = { value = -10 name = infiltration_level_progress_bar }
+			}
+		}
+		custom_tooltip = {
+			text = raid_occitan_cells_cooldown_tt
+			set_variable = {
+				name = raid_occitan_cells_cooldown
+				days = 150
+			}
+		}
+		random_scope_state = {
+			limit = {
+				has_modifier = current_operational_state
+			}
+			save_scope_as = occitan_state
+		}
+		c:OCC = {
+			trigger_event = {
+				id = occitan_crisis.7
+				days = 1
+			}
+		}
+	}
+}
+
+arrest_involved_protesters = {
+	name = "arrest_involved_protesters"
+	desc = "arrest_involved_protesters_desc"
+
+	visible = {
+		always = yes
+	}
+
+	ai_chance = {
+		base = 50
+		modifier = {
+			trigger = {
+				je:je_occitan_crisis = {
+					"scripted_bar_progress(french_alertness_progress_bar)" >= 30
+				}
+			}
+			add = 20
+		}
+		modifier = {
+			trigger = {
+				je:je_occitan_crisis = {
+					"scripted_bar_progress(french_alertness_progress_bar)" >= 60
+				}
+			}
+			add = 30
+		}
+		modifier = {
+			trigger = {
+				je:je_occitan_crisis = {
+					"scripted_bar_progress(french_alertness_progress_bar)" >= 80
+				}
+			}
+			add = 30
+		}
+		modifier = {
+			trigger = {
+				taking_loans = yes
+			}
+			add = -40
+		}
+	}
+
+	possible = {
+		custom_tooltip = {
+			text = arrest_involved_protesters_cooldown
+			NOT = {
+				has_variable = arrest_involved_protesters_cooldown
+			}
+		}
+		custom_tooltip = {
+			text = protest_exist_tt
+			any_scope_state = {
+				has_modifier = republican_flames_fanned
+			}
+		}
+		custom_tooltip = {
+			text = french_alertness_above_15
+			je:je_occitan_crisis = {
+				"scripted_bar_progress(french_alertness_progress_bar)" >= 15
+			}
+		}
+	}
+
+	effect = {
+		add_modifier = {
+			name = protestors_arrested
+			months = 4
+		}
+		custom_tooltip = {
+			text = french_alertness_subtract_13
+			je:je_occitan_crisis = {
+				add_progress = { value = -13 name = french_alertness_progress_bar }
+			}
+		}
+		custom_tooltip = {
+			text = arrest_involved_protesters_cooldown_tt
+			set_variable = {
+				name = arrest_involved_protesters_cooldown
+				days = 150
+			}
+		}
+		custom_tooltip = {
+			text = occitan_influence_decrease_3
+			je:je_occitan_republicanism = {
+				add_progress = { value = -3 name = occitan_infiltration_progress }
+			}
+		}
+		c:OCC = {
+			trigger_event = {
+				id = occitan_crisis.7
+				days = 1
+			}
+		}
+	}
+}
+
+discredit_occitan_leaders = {
+	name = "discredit_occitan_leaders"
+	desc = "discredit_occitan_leaders_desc"
+
+	visible = {
+		always = yes
+	}
+
+	ai_chance = {
+		base = 70
+		modifier = {
+			trigger = {
+				je:je_occitan_crisis = {
+					"scripted_bar_progress(french_alertness_progress_bar)" >= 40
+				}
+			}
+			add = 20
+		}
+		modifier = {
+			trigger = {
+				je:je_occitan_crisis = {
+					"scripted_bar_progress(french_alertness_progress_bar)" >= 70
+				}
+			}
+			add = 20
+		}
+		modifier = {
+			trigger = {
+				je:je_occitan_crisis = {
+					"scripted_bar_progress(french_alertness_progress_bar)" >= 85
+				}
+			}
+			add = 20
+		}
+		modifier = {
+			trigger = {
+				taking_loans = yes
+			}
+			add = -40
+		}
+	}
+
+	possible = {
+		custom_tooltip = {
+			text = french_alertness_above_5
+			je:je_occitan_crisis = {
+				"scripted_bar_progress(french_alertness_progress_bar)" >= 5
+			}
+		}
+		custom_tooltip = {
+			text = discredit_occitan_leaders_cooldown
+			NOT = {
+				has_variable = discredit_occitan_leaders_cooldown
+			}
+		}
+		custom_tooltip = {
+			text = inflitration_greater_than_2
+				je:je_occitan_crisis = {
+					"scripted_bar_progress(infiltration_level_progress_bar)" >= 2
+				}
+			}
+		}
+	}
+
+	effect = {
+		custom_tooltip = {
+			text = french_alertness_subtract_5
+			je:je_occitan_crisis = {
+				add_progress = { value = -10 name = french_alertness_progress_bar }
+			}
+		}
+		custom_tooltip = {
+			text = occitan_influence_decrease_6
+			je:je_occitan_republicanism = {
+				add_progress = { value = -6 name = occitan_infiltration_progress }
+			}
+		}
+		custom_tooltip = {
+			text = inflitration_progress_subtract_1
+			je:je_occitan_crisis = {
+				add_progress = { value = -1 name = infiltration_level_progress_bar }
+			}
+		}
+		custom_tooltip = {
+			text = discredit_occitan_leaders_cooldown_tt
+			set_variable = {
+				name = discredit_occitan_leaders_cooldown
+				days = 80
+			}
+		}
+		c:OCC = {
+			trigger_event = {
+				id = occitan_crisis.8
+				days = 1
+			}
+		}
+	}
+}
+
+provide_financial_incentives = {
+	name = "provide_financial_incentives"
+	desc = "provide_financial_incentives_desc"
+
+	visible = {
+		always = yes
+	}
+
+	ai_chance = {
+		base = 70
+		modifier = {
+			trigger = {
+				je:je_occitan_crisis = {
+					"scripted_bar_progress(french_alertness_progress_bar)" >= 20
+				}
+			}
+			add = 10
+		}
+		modifier = {
+			trigger = {
+				je:je_occitan_crisis = {
+					"scripted_bar_progress(french_alertness_progress_bar)" >= 40
+				}
+			}
+			add = 10
+		}
+		modifier = {
+			trigger = {
+				je:je_occitan_crisis = {
+					"scripted_bar_progress(french_alertness_progress_bar)" >= 70
+				}
+			}
+			add = 10
+		}
+		modifier = {
+			trigger = {
+				je:je_occitan_crisis = {
+					"scripted_bar_progress(french_alertness_progress_bar)" >= 80
+				}
+			}
+			add = 5
+		}
+		modifier = {
+			trigger = {
+				taking_loans = yes
+			}
+			add = -80
+		}
+	}
+
+	possible = {
+		custom_tooltip = {
+			text = provide_financial_incentives_cooldown
+			NOT = {
+				has_variable = provide_financial_incentives_cooldown
+			}
+		}
+	}
+
+	effect = {
+		custom_tooltip = {
+			text = french_alertness_subtract_6
+			je:je_occitan_crisis = {
+				add_progress = { value = -6 name = french_alertness_progress_bar }
+			}
+		}
+		custom_tooltip = {
+			text = occitan_influence_decrease_10
+			je:je_occitan_republicanism = {
+				add_progress = { value = -10 name = occitan_infiltration_progress }
+			}
+		}
+		custom_tooltip = {
+			text = provide_financial_incentives_cooldown_tt
+			set_variable = {
+				name = provide_financial_incentives_cooldown
+				days = 90
+			}
+		}
+		add_modfier = {
+			name = occitan_operational_funds
+			multiplier = 10.0
+			months = 4
+		}
+		c:OCC = {
+			trigger_event = {
+				id = occitan_crisis.9
+				days = 1
+			}
+		}
+	}
+}
