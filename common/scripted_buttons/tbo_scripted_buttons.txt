@@ -1695,7 +1695,7 @@ propaganda_posters = {
 	effect = {
 		add_modifier = {
  			name = occitan_operational_funds
-			multiplier = 1.5
+			multiplier = 4.5
 			months = 1
 		}
 		custom_tooltip = {
@@ -1750,7 +1750,7 @@ fan_republican_flames = {
 	effect = {
 		add_modifier = {
  			name = occitan_operational_funds
-			multiplier = 4.0
+			multiplier = 12
 			months = 1.5
 		}
 		custom_tooltip = {
@@ -1813,7 +1813,7 @@ plan_speech = {
 	effect = {
 		add_modifier = {
  			name = occitan_operational_funds
-			multiplier = 3.0
+			multiplier = 9
 			months = 2
 		}
 		custom_tooltip = {
@@ -1867,9 +1867,9 @@ infiltrate_low_level_posts = {
 
 	effect = {
 		custom_tooltip = {
-			text = occitan_influence_increase_10
+			text = occitan_influence_increase_15
 			je:je_occitan_republicanism = {
-				add_progress = { value = 10 name = occitan_infiltration_progress }
+				add_progress = { value = 15 name = occitan_infiltration_progress }
 			}
 		}
 		custom_tooltip = {
@@ -1956,9 +1956,11 @@ assassinate_occitan_leader = {
 			months = 4
 		}
 		custom_tooltip = {
-			text = occitan_influence_decrease_10
-			je:je_occitan_republicanism = {
-				add_progress = { value = -10 name = occitan_infiltration_progress }
+			text = occitan_influence_decrease_5
+			c:OCC = {
+				je:je_occitan_republicanism = {
+					add_progress = { value = -5 name = occitan_infiltration_progress }
+				}
 			}
 		}
 		custom_tooltip = {
@@ -2073,12 +2075,6 @@ infiltrate_occitan_organizations = {
 				days = 100
 			}
 		}
-		c:OCC = {
-			trigger_event = {
-				id = occitan_crisis.5
-				days = 1
-			}
-		}
 	}
 }
 
@@ -2156,7 +2152,7 @@ sabotage_occitan_operations = {
 
 	effect = {
 		add_modifier = {
-			name = assassination_aftermath
+			name = sabotage_aftermath
 			months = 4
 		}
 		custom_tooltip = {
@@ -2173,8 +2169,10 @@ sabotage_occitan_operations = {
 		}
 		custom_tooltip = {
 			text = occitan_influence_decrease_7
-			je:je_occitan_republicanism = {
-				add_progress = { value = -7 name = occitan_infiltration_progress }
+			c:OCC = {
+				je:je_occitan_republicanism = {
+					add_progress = { value = -7 name = occitan_infiltration_progress }
+				}
 			}
 		}
 		custom_tooltip = {
@@ -2286,7 +2284,7 @@ raid_occitan_cells = {
 		}
 		c:OCC = {
 			trigger_event = {
-				id = occitan_crisis.6
+				id = occitan_crisis.7
 				days = 1
 			}
 		}
