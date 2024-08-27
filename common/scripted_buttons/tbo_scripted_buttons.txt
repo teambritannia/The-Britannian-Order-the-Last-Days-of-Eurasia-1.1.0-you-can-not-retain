@@ -1694,6 +1694,12 @@ propaganda_posters = {
 			c:FRA = {
 				any_scope_state = {
 					has_modifier = occitan_operations_sabotaged
+				}
+			}
+		}
+		NOT = {
+			taking_loans = yes
+		}
 	}
 
 	effect = {
@@ -1748,6 +1754,16 @@ fan_republican_flames = {
 			NOT = {
 				has_variable = fan_republican_flames_occitan_cooldown
 			}
+		}
+		NOT = {	
+			c:FRA = {
+				any_scope_state = {
+					has_modifier = occitan_operations_sabotaged
+				}
+			}
+		}
+		NOT = {
+			taking_loans = yes
 		}
 	}
 
@@ -1812,6 +1828,16 @@ plan_speech = {
 				has_variable = plan_speech_occitan_cooldown
 			}
 		}
+		NOT = {	
+			c:FRA = {
+				any_scope_state = {
+					has_modifier = occitan_operations_sabotaged
+				}
+			}
+		}
+		NOT = {
+			taking_loans = yes
+		}
 	}
 
 	effect = {
@@ -1866,6 +1892,16 @@ infiltrate_low_level_posts = {
 			NOT = {
 				has_variable = infiltrate_low_level_posts_occitan_cooldown
 			}
+		}
+		NOT = {	
+			c:FRA = {
+				any_scope_state = {
+					has_modifier = occitan_operations_sabotaged
+				}
+			}
+		}
+		NOT = {
+			taking_loans = yes
 		}
 	}
 
@@ -2140,9 +2176,9 @@ sabotage_occitan_operations = {
 			}
 		}
 		custom_tooltip = {
-			text = inflitration_greater_than_6
+			text = inflitration_greater_than_10
 				je:je_occitan_crisis = {
-					"scripted_bar_progress(infiltration_level_progress_bar)" >= 6
+					"scripted_bar_progress(infiltration_level_progress_bar)" >= 10
 				}
 			}
 		}
