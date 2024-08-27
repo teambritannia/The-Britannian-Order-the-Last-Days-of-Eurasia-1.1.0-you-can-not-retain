@@ -403,3 +403,40 @@ occitan_crisis.7 = { # occitan cells raided
 		}
 	}
 }
+
+occitan_crisis.8 = { # occitan operations sabotaged
+	type = country_event
+	placement = scope:occitan_state
+	event_image = {
+		video = "unspecific_devastation"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/placeholder.dds"
+
+	title = occitan_crisis.8.t
+	desc = occitan_crisis.8.d
+	flavor = occitan_crisis.8.f
+
+	duration = 3
+
+	trigger = {
+	}
+
+	immediate = {
+		scope:occitan_state = {
+			add_modifier = {
+				name = occitan_operations_sabotages
+				days = 40
+			}
+		}
+	}
+
+	option = {
+		name = occitan_crisis.8.a
+		ai_chance = {
+			base = 10
+		}
+	}
+}
