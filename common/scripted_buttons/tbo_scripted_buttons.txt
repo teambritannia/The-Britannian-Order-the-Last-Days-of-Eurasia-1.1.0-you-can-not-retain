@@ -1690,6 +1690,10 @@ propaganda_posters = {
 				has_variable = propaganda_posters_occitan_cooldown
 			}
 		}
+		NOT = {	
+			c:FRA = {
+				any_scope_state = {
+					has_modifier = occitan_operations_sabotaged
 	}
 
 	effect = {
