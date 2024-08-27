@@ -2151,10 +2151,6 @@ sabotage_occitan_operations = {
 	}
 
 	effect = {
-		add_modifier = {
-			name = sabotage_aftermath
-			months = 4
-		}
 		custom_tooltip = {
 			text = occitan_inflitration_subtract_3
 			je:je_occitan_crisis = {
@@ -2180,6 +2176,18 @@ sabotage_occitan_operations = {
 			set_variable = {
 				name = sabotage_occitan_operations_cooldown
 				days = 100
+			}
+		}
+		random_scope_state = {
+			limit = {
+				has_modifier = current_operational_state
+			}
+			save_scope_as = occitan_state
+		}
+		c:OCC = {
+			trigger_event = {
+				id = occitan_crisis.8
+				days = 1
 			}
 		}
 	}
