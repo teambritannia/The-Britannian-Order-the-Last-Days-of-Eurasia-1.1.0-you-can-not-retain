@@ -220,7 +220,7 @@ je_occitan_republicanism = {
 	
 	scripted_button = infiltrate_low_level_posts
 	
-	scripted_button = operational_wrapup
+	scripted_button = tangle_french_operations
 
 	
 	immediate = {
