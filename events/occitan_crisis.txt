@@ -427,7 +427,7 @@ occitan_crisis.8 = { # occitan operations sabotaged
 	immediate = {
 		scope:occitan_state = {
 			add_modifier = {
-				name = occitan_operations_sabotages
+				name = occitan_operations_sabotaged
 				days = 40
 			}
 		}
