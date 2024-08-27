@@ -344,3 +344,9 @@ occitan_cells_raided = {
 	state_tax_waste_add = 0.1
 	state_mortality_mult = 0.1
 }
+
+french_operations_tangled_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_negative.dds
+	state_tax_waste_add = 0.1
+	state_construction_mult = -0.25
+}
