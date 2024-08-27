@@ -812,6 +812,17 @@ infiltration_level_progress_bar = {
 				add = -1.2
 			}
 		}
+		if = {
+			limit = {
+				c:FRA = {
+					has_modifier = protestors_arrested
+				}
+			}
+			add = {
+				desc = protestors_arrested_decrease_tt
+				add = -0.9
+			}
+		}
 	}
 }
 
