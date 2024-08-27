@@ -7,13 +7,6 @@ GLOBAL = {
 			popup = yes
 		}
 	}
-	c:FRA ?= {
-		trigger_event = {
-			id = occitan_crisis.1 
-			days = 0
-			popup = yes
-		}
-	}
 	c:DAI ?= {
 		trigger_event = {
 			id = britannian_prosperity.4
