@@ -332,3 +332,9 @@ occtian_failure = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_negative.dds
 	state_radicals_from_sol_change_mult = 0.1
 }
+
+sabotage_aftermath = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_negative.dds
+	state_radicals_from_sol_change_mult = 0.1
+	country_authority_mult = -0.1
+}
