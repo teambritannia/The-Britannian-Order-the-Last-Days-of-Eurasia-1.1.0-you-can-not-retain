@@ -2282,6 +2282,12 @@ raid_occitan_cells = {
 				days = 150
 			}
 		}
+		random_scope_state = {
+			limit = {
+				has_modifier = current_operational_state
+			}
+			save_scope_as = occitan_state
+		}
 		c:OCC = {
 			trigger_event = {
 				id = occitan_crisis.7
