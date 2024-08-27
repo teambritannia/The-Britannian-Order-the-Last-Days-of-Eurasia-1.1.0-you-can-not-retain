@@ -823,6 +823,17 @@ infiltration_level_progress_bar = {
 				add = -0.9
 			}
 		}
+		if = {
+			limit = {
+				c:FRA = {
+					has_modifier = occitan_cells_raided
+				}
+			}
+			add = {
+				desc = occitan_cells_raided_decrease_tt
+				add = -1.3
+			}
+		}
 	}
 }
 
