@@ -174,10 +174,14 @@ je_occitan_crisis = {
 		owner = {
 			c:FRA ?= this
 		}
-		exists = c:OCC
+		has_technology_researched = egalitarianism
 	}
 	
 	immediate = {
+		trigger_event = {
+			id = occitan_crisis.1
+			days = 0
+		}
 	}
 	
 	complete = {

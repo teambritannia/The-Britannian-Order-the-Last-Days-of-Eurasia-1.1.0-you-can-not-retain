@@ -315,7 +315,6 @@ perform_occitan_checks = {
 							OR = {
 								has_modifier = occitan_operations_secured
 								has_modifier = current_operational_state
-								}
 							}
 						}
 						add_modifier = {
