@@ -219,8 +219,6 @@ je_occitan_republicanism = {
 	scripted_button = propaganda_posters
 	
 	scripted_button = infiltrate_low_level_posts
-	
-	scripted_button = tangle_french_operations
 
 	
 	immediate = {

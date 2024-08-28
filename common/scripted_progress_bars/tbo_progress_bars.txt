@@ -708,7 +708,7 @@ french_alertness_progress_bar = {
 			}
 			add = {
 				desc = occitan_speech_alertness
-				add = 0.9
+				add = 1.1
 			}
 		}
 		if = {
@@ -719,7 +719,7 @@ french_alertness_progress_bar = {
 			}
 			add = {
 				desc = occitan_posters_alertness
-				add = 0.6
+				add = 0.7
 			}
 		}
 		if = {
@@ -730,7 +730,7 @@ french_alertness_progress_bar = {
 			}
 			add = {
 				desc = republican_flames_alertness
-				add = 1.2
+				add = 1.4
 			}
 		}
 	}
@@ -749,7 +749,7 @@ infiltration_level_progress_bar = {
 	monthly_progress = {
 		add = {
 			desc = base_decay
-			add = -1
+			add = -0.5
 		}
 	}
 }
