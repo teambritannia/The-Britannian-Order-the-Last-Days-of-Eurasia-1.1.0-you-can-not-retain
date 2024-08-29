@@ -730,6 +730,9 @@ sabotage_occitan_operations = {
 				days = 100
 			}
 		}
+		custom_tooltip = {
+			text = occitan_schemings_hampered_tt
+		}
 		random_scope_state = {
 			limit = {
 				has_modifier = current_operational_state
@@ -905,11 +908,8 @@ arrest_involved_protesters = {
 				has_variable = arrest_involved_protesters_cooldown
 			}
 		}
-		custom_tooltip = {
-			text = protest_exist_tt
-			any_scope_state = {
-				has_modifier = republican_flames_fanned
-			}
+		any_scope_state = {
+			has_modifier = republican_flames_fanned
 		}
 		custom_tooltip = {
 			text = french_alertness_above_15
