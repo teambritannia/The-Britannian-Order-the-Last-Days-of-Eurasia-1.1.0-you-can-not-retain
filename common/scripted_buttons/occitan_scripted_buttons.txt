@@ -611,7 +611,7 @@ infiltrate_occitan_organizations = {
 
 	effect = {
 		custom_tooltip = {
-			text = occitan_inflitration_add_6
+			text = occitan_infiltration_add_6
 			je:je_occitan_crisis = {
 				add_progress = { value = 6 name = infiltration_level_progress_bar }
 			}
@@ -689,10 +689,9 @@ sabotage_occitan_operations = {
 			}
 		}
 		custom_tooltip = {
-			text = inflitration_greater_than_10
-				je:je_occitan_crisis = {
-					"scripted_bar_progress(infiltration_level_progress_bar)" >= 10
-				}
+			text = infiltration_greater_than_10
+			je:je_occitan_crisis = {
+				"scripted_bar_progress(infiltration_level_progress_bar)" >= 10
 			}
 		}
 		custom_tooltip = {
@@ -705,7 +704,7 @@ sabotage_occitan_operations = {
 
 	effect = {
 		custom_tooltip = {
-			text = occitan_inflitration_subtract_3
+			text = occitan_infiltration_subtract_3
 			je:je_occitan_crisis = {
 				add_progress = { value = -3 name = infiltration_level_progress_bar }
 			}
@@ -804,10 +803,9 @@ raid_occitan_cells = {
 			}
 		}
 		custom_tooltip = {
-			text = inflitration_greater_than_10
-				je:je_occitan_crisis = {
-					"scripted_bar_progress(infiltration_level_progress_bar)" >= 10
-				}
+			text = infiltration_greater_than_10
+			je:je_occitan_crisis = {
+				"scripted_bar_progress(infiltration_level_progress_bar)" >= 10
 			}
 		}
 		custom_tooltip = {
@@ -831,7 +829,7 @@ raid_occitan_cells = {
 			months = 5
 		}
 		custom_tooltip = {
-			text = occitan_inflitration_subtract_10
+			text = occitan_infiltration_subtract_10
 			je:je_occitan_crisis = {
 				add_progress = { value = -10 name = infiltration_level_progress_bar }
 			}
@@ -1010,7 +1008,7 @@ discredit_occitan_leaders = {
 			}
 		}
 		custom_tooltip = {
-			text = inflitration_greater_than_2
+			text = infiltration_greater_than_2
 				je:je_occitan_crisis = {
 					"scripted_bar_progress(infiltration_level_progress_bar)" >= 2
 				}
@@ -1032,7 +1030,7 @@ discredit_occitan_leaders = {
 			}
 		}
 		custom_tooltip = {
-			text = inflitration_progress_subtract_1
+			text = infiltration_progress_subtract_1
 			je:je_occitan_crisis = {
 				add_progress = { value = -1 name = infiltration_level_progress_bar }
 			}
