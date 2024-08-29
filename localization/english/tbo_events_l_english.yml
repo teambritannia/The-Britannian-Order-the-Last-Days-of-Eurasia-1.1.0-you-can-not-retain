@@ -201,4 +201,7 @@
  arrest_involved_protesters_cooldown_tt: "We will be unable to arrest protestors again for a certain amount of time."
  occitan_influence_decrease_3: "Occitan influence will decrease by 3"
  discredit_occitan_leaders: "Discredit Occitan leaders"
- discredit_occitan_leaders_desc:
+ discredit_occitan_leaders_desc: "With a combination of true and fabricated inside information of the Occitan leaders, we can reduce their public support."
+ french_alertness_above_5: "French alertness is above 5"
+ discredit_occitan_leaders_cooldown: "We have not discredited Occitan leaders lately"
+ infiltration_greater_than_2: "Our infiltration is above 2"
