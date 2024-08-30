@@ -63,7 +63,7 @@
 
 			map_color = { 255 0 0 }
 
-			founding_date = 1835.7.26 # retreat to guanwai
+			founding_date = 1829.7.26 # fengtian established
 			identity = identity_ideological_union
 			principle = principle_ideological_truth_2
 
