@@ -669,7 +669,7 @@ BRG = {
 	capital = STATE_HOLLAND
 }
 
-AST = {
+rkaus = {
 	color = { 255 247 226 }
 	
 	country_type = recognized

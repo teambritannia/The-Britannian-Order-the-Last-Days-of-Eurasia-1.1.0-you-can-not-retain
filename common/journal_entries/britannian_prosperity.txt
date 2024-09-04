@@ -98,6 +98,8 @@ je_economic_recovery = {
 	
 	scripted_button = rec_sell_burgundy
 	
+	scripted_button = rec_sell_brittany
+	
 	scripted_button = rec_sell_amazons
 	
 	immediate = {
@@ -188,6 +190,10 @@ je_occitan_crisis = {
     }
 	
 	fail = {
+		any_diplomatic_play = {
+			initiator_is = c:OCC
+			target_is = c:FRA
+		}
     }
 	
 	on_complete = {
@@ -222,6 +228,12 @@ je_occitan_republicanism = {
 
 	
 	immediate = {
+		c:OCC= {
+			create_bidirectional_truce = {
+				country = c:FRA
+				months = 1188
+			}
+		}
 		c:FRA = {
 			random_scope_state = {
 				limit = {
@@ -268,6 +280,10 @@ je_occitan_republicanism = {
    	}
 	
 	on_complete = {
+		remove_diplomatic_pact = {
+			country = c:FRA
+			type = truce
+		}	
 		c:FRA = {
 			every_scope_state = {
 				limit = {
@@ -275,6 +291,15 @@ je_occitan_republicanism = {
 				}
 				set_state_owner = c:OCC
 				remove_modifier = occitan_operations_secured
+			}
+		}
+		c:FRA = {
+			create_diplomatic_play = {
+				name = annex_war
+				target_country = c:OCC
+				type = dp_annex_war
+				target_state = s:STATE_LANGUEDOC.region_state:OCC
+		
 			}
 		}
 	}

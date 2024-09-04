@@ -981,6 +981,50 @@ rec_sell_burgundy = {
 	}
 }
 
+rec_sell_brittany = {
+	name = "rec_sell_brittany"
+	desc = "rec_sell_brittany_desc"
+
+	visible = {
+		exists = c:GBR
+		c:GBR = {
+			any_scope_state = {
+				is_homeland = cu:french
+			}
+		}
+	}
+
+	ai_chance = {
+		base = 100
+	}
+
+	possible = {
+		custom_tooltip = {
+			text = not_sold_brittany_tt
+		}
+		c:GBR = {
+			any_scope_state = {
+				is_homeland = cu:french
+			}
+		}
+		NOT = {
+			has_modifier = recently_sold_land
+		}
+	}
+
+	effect = {
+		every_scope_state = {
+			limit = {
+				OR = {
+					is_homeland = cu:breton
+					is_homeland = cu:french
+				}
+			}
+			set_state_owner = c:FRA
+		}
+	}
+}
+
 rec_sell_amazons = {
 	name = "rec_sell_amazons"
 	desc = "rec_sell_amazons_desc"

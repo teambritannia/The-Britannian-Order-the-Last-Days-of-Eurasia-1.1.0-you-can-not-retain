@@ -43,39 +43,3 @@ demand_german_tribute = {
 		base = 100
 	}
 }
-
-offer_britannia_small_loan = {
-	is_shown = {
-		exists = c:GBR
-		c:GBR = {
-			has_journal_entry = je_economic_recovery
-		}
-	}
-
-	possible = {
-		country_rank >= rank_value:major_power
-		custom_tooltip = {
-			text = not_current_britannia_small_loan
-			NOT = {
-				has_modifier = britannia_small_loan
-			}
-		}
-	}
-
-	when_taken = {
-		add_modifier = {
-			name = britannia_small_loan
-			months = normal_modifier_time
-		}
-		c:GBR = {
-			change_variable = {
-				name = small_loan_counter
-				add = 1
-			}
-		}
-	}
-
-	ai_chance = {
-		base = 100
-	}
-}
