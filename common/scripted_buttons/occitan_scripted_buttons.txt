@@ -419,18 +419,6 @@ tangle_french_operations = {
 				days = 80
 			}
 		}
-		c:FRA = {
-			random_scope_state = {
-				limit = {
-					has_modifier = current_operational_state
-				}
-				save_scope_as = occitan_state
-			}
-			trigger_event = {
-				id = occitan_crisis.6
-				days = 1
-			}
-		}
 	}
 }
 #end of occitan buttons
