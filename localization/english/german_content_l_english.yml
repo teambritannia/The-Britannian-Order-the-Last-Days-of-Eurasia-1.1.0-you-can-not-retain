@@ -30,3 +30,6 @@
  german_british_split.3.a: "Such is the spirit of a real German!"
  german_british_split.3.b: "These dangerous sentiments must be contained!"
  german_british_split.3.c: "This is unacceptable. Imprison [SCOPE.sCharacter('galeader').GetLastName]!"
+ german_british_split.6.t: "The matter of Austria"
+ german_british_split.6.d: "Germany has completely renounced their ties with us. We must do everything in our power to weaken them before they recover militarily."
+ german_british_split.6.f: "While having far-reaching consequences, the split in relations between [SCOPE.sCountry('ger_scope').GetNameNoFormatting] and [SCOPE.sCountry('gbr_scope').GetNameNoFormatting] was nowhere near unexpected, as tension between the two nations stemming from disputes around specific terms in the Pact of Steel have been raging since near the beginning of the century. The German Military has siezed control of the government, directing their diplomats to renounce the Pact of Steel and the [SCOPE.sCountry('gbr_scope').GetAdjective] protection it entails.\n\nGermany itself is vast even without its subjects, and without the military restrictions placed upon it "
