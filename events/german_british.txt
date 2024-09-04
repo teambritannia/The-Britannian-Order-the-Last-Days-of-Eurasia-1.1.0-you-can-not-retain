@@ -387,7 +387,7 @@ german_british_split.6 = { # demand germany release austria
 	}
 }
 
-german_british_split.7 = { # 
+german_british_split.7 = { # gbr demands us cede austria
 	type = country_event
 	placement = ROOT
 	event_image = {
