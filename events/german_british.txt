@@ -346,6 +346,12 @@ german_british_split.6 = { # demand germany release austria
 	
 	immediate = {
 		end_truce = c:GER
+		c:GER = {
+			save_scope_as = ger_scope
+		}
+		c:GBR = {
+			save_scope_as = gbr_scope
+		}
 	}
 
 	option = {
