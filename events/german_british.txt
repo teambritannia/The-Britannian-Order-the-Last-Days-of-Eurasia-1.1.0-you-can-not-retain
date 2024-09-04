@@ -408,9 +408,8 @@ german_british_split.7 = { # gbr demands us cede austria
 	}
 	
 	immediate = {
-		remove_diplomatic_pact = {
-			country = c:GER
-			type = truce
+		c:GBR = {
+			save_scope_as = gbr_scope
 		}		
 	}
 
