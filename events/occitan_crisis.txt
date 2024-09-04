@@ -50,7 +50,7 @@ occitan_crisis.1 = {
 				occitan_setup = yes
 			}
 		}
-		change_tag = OCC
+		play_as = OCC
 	}
 }
 

@@ -423,27 +423,45 @@ german_british_split.7 = { #
 		}
 		default_option = yes
 		create_country = {
-				tag = AST
+				tag = rkaus
 				origin = this
 				state = s:STATE_AUSTRIA.region_state:GER
 		}
 		every_scope_state = {
 			limit = {
-				state_region = {
-					NOT = {
-						is_homeland = cu:north_german
-					}
-					OR = {
-						is_homeland = cu:south_german
-						is_homeland = cu:hungarian
-						is_homeland = cu:romanian
-						is_homeland = cu:croat
-						is_homeland = cu:north_italian
-						is_homeland = cu:polish
-					}
+				OR = {
+					state_region = s:STATE_EAST_GALICIA
+					state_region = s:STATE_WEST_GALICIA
 				}
 			}
-			set_state_owner = c:AST
+			set_state_owner = c:POL
+		}
+		every_scope_state = {
+			limit = {
+				OR = {
+					state_region = s:STATE_AUSTRIA
+					state_region = s:STATE_MORAVIA
+					state_region = s:STATE_WEST_SLOVAKIA
+					state_region = s:STATE_TRANSDANUBIA
+					state_region = s:STATE_SLAVONIA
+					state_region = s:STATE_STYRIA
+					state_region = s:STATE_EAST_SLOVAKIA
+					state_region = s:STATE_MOLDAVIA
+					state_region = s:STATE_NORTHERN_TRANSYLVANIA
+					state_region = s:STATE_SOUTHERN_TRANSYLVANIA
+					state_region = s:STATE_BEKES
+					state_region = s:STATE_CENTRAL_HUNGARY
+					state_region = s:STATE_DELVIDEK
+					state_region = s:STATE_BANAT
+				}
+			}
+			set_state_owner = c:rkaus
+		}
+		c:GER ?= {
+			create_diplomatic_pact = {
+				country = c:rkaus
+				type = dominion
+			}
 		}
 	}
 	

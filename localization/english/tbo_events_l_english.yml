@@ -31,7 +31,13 @@
  britannian_prosperity.6.a: "The last days of Eurasia are at last at hand."
  
  je_economic_recovery: "Economic recovery"
- je_economic_recovery_reason: "When Greater Britannia fell, so did the pride of the [cu:british.GetName] people. No longer would their monuments dot all corners of the globe; no longer would every imaginable good flow into the busy ports of London. Ahead of them was a long and winding road, one that will lead them to only a fraction of what was once theirs.\n\nFilled by overwhelming pain and longing, the [cu:british.GetName] people continue, under the hostile gazes of all Eurasia, a fate they brought upon themselves. Because what is there to do now, but get up and stumble forward as the blood slowly dries?"
+ je_economic_recovery_reason: "When Greater Britannia fell, so did the pride of the british people. No longer would their monuments dot all corners of the globe; no longer would every imaginable good flow into the busy ports of London. Ahead of them was a long and winding road, one that will lead them to only a fraction of what was once theirs.\n\nFilled by overwhelming pain and longing, the british people continue, under the hostile gazes of all Eurasia, a fate they brought upon themselves. Because what is there to do now, but get up and stumble forward as the blood slowly dries?"
+ recover_economy: "Wealth from any possible source has prevented the complete collapse of the Britannian economy."
+ recover_economy_fail: "The economy has failed to recover from the disastrous effects of the empire's collapse."
+ rec_sell_burgundy: "Sell Burgundy its independence"
+ rec_sell_burgundy_desc: "A local chicken farmer has offered to buy the region of Burgundy from us, at no small price. It would do us no good to hold on to this land; we may as well peddle it off to the highest bidder."
+ rec_sell_brittany: "Sell Britanny to France"
+ rec_sell_brittany_desc: "With the Britannian economy in tatters and a relatively stable France, we cannot afford to hold onto our territory there any longer. We may as well sell it to them lest they try to wrest it from us by force later."
  
  tt_tribute_cooldown: "Has not demanded tribute from Germany in the past two years"
  
