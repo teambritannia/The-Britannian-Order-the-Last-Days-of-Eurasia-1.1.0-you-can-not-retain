@@ -117,7 +117,7 @@ occitan_crisis.2 = { # occitan propaganda
 	option = {
 		name = {
 			triggered_desc = {
-				flavor = occitan_crisis.2.a1
+				name = occitan_crisis.2.a1
 				trigger = {
 					je:je_occitan_crisis = {
 						"scripted_bar_progress(french_alertness_progress_bar)" <= 20
@@ -125,7 +125,7 @@ occitan_crisis.2 = { # occitan propaganda
 				}
 			}
 			triggered_desc = {
-				flavor = occitan_crisis.2.a2
+				name = occitan_crisis.2.a2
 				trigger = {
 					je:je_occitan_crisis = {
 						"scripted_bar_progress(french_alertness_progress_bar)" >= 50
@@ -134,7 +134,7 @@ occitan_crisis.2 = { # occitan propaganda
 				}
 			}
 			triggered_desc = {
-				flavor = occitan_crisis.2.a3
+				name = occitan_crisis.2.a3
 				trigger = {
 					je:je_occitan_crisis = {
 						"scripted_bar_progress(french_alertness_progress_bar)" >= 80
@@ -162,30 +162,28 @@ occitan_crisis.3 = { # republican flames fanned
 	title = occitan_crisis.3.t
 	desc = occitan_crisis.3.d
 	flavor = {
-		first_valid = {
-			triggered_desc = {
-				flavor = occitan_crisis.3.f1
-				trigger = {
-					je:je_occitan_crisis = {
-						"scripted_bar_progress(french_alertness_progress_bar)" <= 20
-					}
+		triggered_desc = {
+			flavor = occitan_crisis.3.f1
+			trigger = {
+				je:je_occitan_crisis = {
+					"scripted_bar_progress(french_alertness_progress_bar)" <= 20
 				}
 			}
-			triggered_desc = {
-				flavor = occitan_crisis.3.f2
-				trigger = {
-					je:je_occitan_crisis = {
-						"scripted_bar_progress(french_alertness_progress_bar)" >= 50
-						"scripted_bar_progress(french_alertness_progress_bar)" <= 80
-					}
+		}
+		triggered_desc = {
+			flavor = occitan_crisis.3.f2
+			trigger = {
+				je:je_occitan_crisis = {
+					"scripted_bar_progress(french_alertness_progress_bar)" >= 50
+					"scripted_bar_progress(french_alertness_progress_bar)" <= 80
 				}
 			}
-			triggered_desc = {
-				flavor = occitan_crisis.3.f3
-				trigger = {
-					je:je_occitan_crisis = {
-						"scripted_bar_progress(french_alertness_progress_bar)" >= 80
-					}
+		}
+		triggered_desc = {
+			flavor = occitan_crisis.3.f3
+			trigger = {
+				je:je_occitan_crisis = {
+					"scripted_bar_progress(french_alertness_progress_bar)" >= 80
 				}
 			}
 		}
@@ -212,30 +210,28 @@ occitan_crisis.3 = { # republican flames fanned
 
 	option = {
 		name = {
-			first_valid = {
-				triggered_desc = {
-					flavor = occitan_crisis.3.a1
-					trigger = {
-						je:je_occitan_crisis = {
-							"scripted_bar_progress(french_alertness_progress_bar)" <= 20
-						}
+			triggered_desc = {
+				name = occitan_crisis.3.a1
+				trigger = {
+					je:je_occitan_crisis = {
+						"scripted_bar_progress(french_alertness_progress_bar)" <= 20
 					}
 				}
-				triggered_desc = {
-					flavor = occitan_crisis.3.a2
-					trigger = {
-						je:je_occitan_crisis = {
-							"scripted_bar_progress(french_alertness_progress_bar)" >= 50
-							"scripted_bar_progress(french_alertness_progress_bar)" <= 80
-						}
+			}
+			triggered_desc = {
+				name = occitan_crisis.3.a2
+				trigger = {
+					je:je_occitan_crisis = {
+						"scripted_bar_progress(french_alertness_progress_bar)" >= 50
+						"scripted_bar_progress(french_alertness_progress_bar)" <= 80
 					}
 				}
-				triggered_desc = {
-					flavor = occitan_crisis.3.a3
-					trigger = {
-						je:je_occitan_crisis = {
-							"scripted_bar_progress(french_alertness_progress_bar)" >= 80
-						}
+			}
+			triggered_desc = {
+				name = occitan_crisis.3.a3
+				trigger = {
+					je:je_occitan_crisis = {
+						"scripted_bar_progress(french_alertness_progress_bar)" >= 80
 					}
 				}
 			}
@@ -260,30 +256,28 @@ occitan_crisis.4 = { # occitan speech
 	title = occitan_crisis.4.t
 	desc = occitan_crisis.4.d
 	flavor = {
-		first_valid = {
-			triggered_desc = {
-				flavor = occitan_crisis.4.f1
-				trigger = {
-					je:je_occitan_crisis = {
-						"scripted_bar_progress(french_alertness_progress_bar)" <= 20
-					}
+		triggered_desc = {
+			flavor = occitan_crisis.4.f1
+			trigger = {
+				je:je_occitan_crisis = {
+					"scripted_bar_progress(french_alertness_progress_bar)" <= 20
 				}
 			}
-			triggered_desc = {
-				flavor = occitan_crisis.4.f2
-				trigger = {
-					je:je_occitan_crisis = {
-						"scripted_bar_progress(french_alertness_progress_bar)" >= 50
-						"scripted_bar_progress(french_alertness_progress_bar)" <= 80
-					}
+		}
+		triggered_desc = {
+			flavor = occitan_crisis.4.f2
+			trigger = {
+				je:je_occitan_crisis = {
+					"scripted_bar_progress(french_alertness_progress_bar)" >= 50
+					"scripted_bar_progress(french_alertness_progress_bar)" <= 80
 				}
 			}
-			triggered_desc = {
-				flavor = occitan_crisis.4.f3
-				trigger = {
-					je:je_occitan_crisis = {
-						"scripted_bar_progress(french_alertness_progress_bar)" >= 80
-					}
+		}
+		triggered_desc = {
+			flavor = occitan_crisis.4.f3
+			trigger = {
+				je:je_occitan_crisis = {
+					"scripted_bar_progress(french_alertness_progress_bar)" >= 80
 				}
 			}
 		}
@@ -310,30 +304,28 @@ occitan_crisis.4 = { # occitan speech
 
 	option = {
 		name = {
-			first_valid = {
-				triggered_desc = {
-					flavor = occitan_crisis.4.a1
-					trigger = {
-						je:je_occitan_crisis = {
-							"scripted_bar_progress(french_alertness_progress_bar)" <= 20
-						}
+			triggered_desc = {
+				name = occitan_crisis.4.a1
+				trigger = {
+					je:je_occitan_crisis = {
+						"scripted_bar_progress(french_alertness_progress_bar)" <= 20
 					}
 				}
-				triggered_desc = {
-					flavor = occitan_crisis.4.a2
-					trigger = {
-						je:je_occitan_crisis = {
-							"scripted_bar_progress(french_alertness_progress_bar)" >= 50
-							"scripted_bar_progress(french_alertness_progress_bar)" <= 80
-						}
+			}
+			triggered_desc = {
+				name = occitan_crisis.4.a2
+				name = {
+					je:je_occitan_crisis = {
+						"scripted_bar_progress(french_alertness_progress_bar)" >= 50
+						"scripted_bar_progress(french_alertness_progress_bar)" <= 80
 					}
 				}
-				triggered_desc = {
-					flavor = occitan_crisis.4.a3
-					trigger = {
-						je:je_occitan_crisis = {
-							"scripted_bar_progress(french_alertness_progress_bar)" >= 80
-						}
+			}
+			triggered_desc = {
+				name = occitan_crisis.4.a3
+				trigger = {
+					je:je_occitan_crisis = {
+						"scripted_bar_progress(french_alertness_progress_bar)" >= 80
 					}
 				}
 			}
