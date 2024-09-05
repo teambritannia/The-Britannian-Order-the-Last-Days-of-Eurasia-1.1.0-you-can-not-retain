@@ -235,7 +235,10 @@ german_british_split.4 = {
 		ai_chance = {
 			base = 3
 		}
-		change_variable = { name = german_var add = -5 }
+		custom_tooltip = {
+			text = german_var_subtract_5_tt
+			change_variable = { name = german_var add = -5 }
+		}
 		add_modifier = { 
 			name = hunting_dissidents
 			months = long_modifier_time
@@ -247,7 +250,10 @@ german_british_split.4 = {
 		ai_chance = {
 			base = 4
 		}
-		change_variable = { name = german_var add = 10 }
+		custom_tooltip = {
+			text = german_var_add_10_tt
+			change_variable = { name = german_var add = 10 }
+		}
 	}
 }
 
@@ -271,11 +277,20 @@ german_british_split.5 = {
 	trigger = {
 		any_scope_building = {
 			is_building_type = building_barracks
-				level >= 10
+			level >= 10
 		}
 	}
 	
 	immediate = {
+		random_scope_state = {
+			limit = {
+				any_scope_building = {
+					is_building_type = building_barracks
+					level >= 10
+				}
+			}
+			save_scope_as = army_state
+		}
 	}
 
 	option = {
@@ -294,17 +309,10 @@ german_british_split.5 = {
 				add = 4
 			}
 		}
+		scope:army_state = {
+			remove_building = building_barracks
+		}
 		change_variable = { name = german_var add = -10 }
-		add_modifier = { 
-			name = funding_britannian_army
-			months = normal_modifier_time
-		}
-		c:GBR = {
-			add_modifer = {
-				name = german_army_funds
-				months = normal_modifier_time
-			}
-		}
 	}
 	option = {
 		name = german_british_split.5.b
@@ -320,7 +328,20 @@ german_british_split.5 = {
 				add = 6
 			}
 		}
-		change_variable = { name = german_var add = 5 }
+		custom_tooltip = {
+			text = german_var_add_5_tt
+			change_variable = { name = german_var add = 5 }
+		}
+		add_modifier = { 
+			name = funding_britannian_army
+			months = normal_modifier_time
+		}
+		c:GBR = {
+			add_modifer = {
+				name = german_army_funds
+				months = normal_modifier_time
+			}
+		}
 	}
 }
 
