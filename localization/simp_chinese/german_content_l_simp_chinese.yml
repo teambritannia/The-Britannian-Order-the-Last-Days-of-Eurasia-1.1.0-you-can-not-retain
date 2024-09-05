@@ -5,15 +5,6 @@
  
  german_army_limits: "德国军事限制"
  german_army_limits_reason: "德国在两次欧洲战争中帮SCOPE.sCountry('gbr_scope').GetNameNoFormatting赢得了天下，换来的是不信任与冷漠。更糟糕的是，英国强行限制了德国军队：[SCOPE.sCountry('gbr_scope').GetAdjective]陆军的百分之六十，不多也不少。"
- train_polish_battalions: "训练波兰营"
- train_polish_battalions_desc: "我们的军队被限制到了SCOPE.sCountry('gbr_scope').GetNameNoFormatting的百分之六十，但这种限制并未对我们的傀儡起效。我们应该充分利用这个漏洞，以增强波兰自卫能力为由增加我们的力量。"
- train_ukrainian_battalions: "训练乌克兰营"
- train_ukrainian_battalions_desc: "我们的军队被限制到了SCOPE.sCountry('gbr_scope').GetNameNoFormatting的百分之六十，但这种限制并未对我们的傀儡起效。我们应该充分利用这个漏洞，以增强乌克兰自卫能力为由增加我们的力量。"
- train_russian_battalions: "训练俄罗斯营"
- train_russian_battalions_desc: "我们的军队被限制到了SCOPE.sCountry('gbr_scope').GetNameNoFormatting的百分之六十，但这种限制并未对我们的傀儡起效。我们应该充分利用这个漏洞，以增强俄罗斯自卫能力为由增加我们的力量。"
- polish_battalions_tt: "未在训练波兰军队"
- ukrainian_battalions_tt: "未在训练乌克兰军队"
- russian_battalions_tt: "未在训练俄罗斯军队"
  
  german_british_split.1.t: "永恒的德意志"
  german_british_split.1.d: "德国目前形势"
