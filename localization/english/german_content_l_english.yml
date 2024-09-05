@@ -5,15 +5,6 @@
  
  german_army_limits: "Limits on the [SCOPE.sCountry('ger_scope').GetAdjective] Army"
  german_army_limits_reason: "[SCOPE.sCountry('ger_scope').GetNameNoFormatting] helped [SCOPE.sCountry('gbr_scope').GetNameNoFormatting] succeed in her first wars across Europe, but it has become quite evident that the Empire of the Sun does not intend to share its glory with a relatively new competitor in the international stage, going as far as to forcefully impose a limit on the size of the [SCOPE.sCountry('ger_scope').GetAdjective] army:sixty percent of the [SCOPE.sCountry('gbr_scope').GetAdjective] army. No more, no less."
- train_polish_battalions: "Train Polish battalions"
- train_polish_battalions_desc: "While the limits imposed upon us restrict our army to sixty percent of Britannia's, there is a considerable gray area concerning our most loyal subjects. A small fund to aid Poland in developing its military capabilities would be a perfectly harmless method in bypassing this nuisiance of a restriction."
- train_ukrainian_battalions: "Train Ukrainian battalions"
- train_ukrainian_battalions_desc: "While the limits imposed upon us restrict our army to sixty percent of Britannia's, there is a considerable gray area concerning our most loyal subjects. A small fund to aid Ukraine in developing its military capabilities would be a perfectly harmless method in bypassing this nuisiance of a restriction."
- train_russian_battalions: "Train Russian battalions"
- train_russian_battalions_desc: "While the limits imposed upon us restrict our army to sixty percent of Britannia's, there is a considerable gray area concerning our most loyal subjects. A small fund to aid Russia in developing its military capabilities would be a perfectly harmless method in bypassing this nuisiance of a restriction."
- polish_battalions_tt: "Not training Polish battalions"
- ukrainian_battalions_tt: "Not training Ukrainian battalions"
- russian_battalions_tt: "Not training Russian battalions"
  
  german_british_split.1.t: "Germany, forever"
  german_british_split.1.d: "Starting situation of Germany"
