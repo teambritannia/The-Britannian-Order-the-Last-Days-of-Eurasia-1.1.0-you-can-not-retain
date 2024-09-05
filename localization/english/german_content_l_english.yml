@@ -30,7 +30,7 @@
  german_var_add_10_tt: "Progress of the German-British split will increase by 10"
  german_british_split.5.t: "Demilitarization controls"
  german_british_split.5.d: "In response to our perceived militarization in [SCOPE.sState('army_state').GetName], Greater Britannia has offered to overlook our activities in exchange for our providing of military goods to them."
- german_british_split.5.f: ""
+ german_british_split.5.f: "The presence of our barracks at [SCOPE.sState('army_state').GetName] have "
  german_british_split.6.t: "The matter of Austria"
  german_british_split.6.d: "Germany has completely renounced their ties with us. We must do everything in our power to weaken them before they recover militarily."
  german_british_split.6.f: "While having far-reaching consequences, the split in relations between [SCOPE.sCountry('ger_scope').GetNameNoFormatting] and [SCOPE.sCountry('gbr_scope').GetNameNoFormatting] was nowhere near unexpected, as tension between the two nations stemming from disputes around specific terms in the Pact of Steel have been raging since near the beginning of the century. The German Military has siezed control of the government, directing their diplomats to renounce the Pact of Steel and the [SCOPE.sCountry('gbr_scope').GetAdjective] protection it entails.\n\nGermany itself is vast even without its subjects, and without the military restrictions placed upon it the nation is expected to develop a powerful military in the coming years. One particular enticing proposal is to force the Germans to cede more land to Poland, as well as to release its southern regions to a new subject in Austria."
