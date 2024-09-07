@@ -1,0 +1,261 @@
+﻿COM_clothes = {
+	usage = game
+	selection_behavior = weighted_random
+
+    #fengtian clothes
+    FGT_politician_clothes = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = outfits
+                template = chinese_outfits_agitator
+                range = { 0 1 } # For the randomness to work correctly
+            }
+            accessory = {
+                mode = add
+                gene = headgear
+                template = russian_military_headgear
+                range = { 0.8 1 } # For the randomness to work correctly
+            }
+            accessory = {
+                mode = add
+                gene = medals
+                template = generic_medals
+                range = { 0 1 } # For the randomness to work correctly
+            }
+
+            accessory = {
+                mode = add
+                gene = coats
+                template = no_coat	
+                range = { 0 0.27 } # limiting the set to single-breasted coats, so aiguillettes work
+            }
+            accessory = {
+                mode = add
+                gene = aiguillettes
+                template = no_aiguillettes
+                range = { 0 1 } # For the randomness to work correctly
+            }
+            accessory = {
+                mode = add
+                gene = epaulettes
+                template = no_epaulette
+                range = { 0 1 }
+            }
+            accessory = {
+                mode = add
+                gene = top_layer
+                template = no_top_layer
+                range = { 0 1 } # For the randomness to work correctly
+            }
+            accessory = {
+                mode = add
+                gene = legwear
+                template = no_legwear
+                range = { 0 1 } # For the randomness to work correctly
+            }
+            accessory = {
+                mode = add
+                gene = sashes
+                template = no_sash
+                range = { 0 1 }
+            }            
+			accessory = {	
+                mode = add
+                gene = belts
+                template = no_belt
+                range = { 0 1 } 
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 1000
+                exists = scope:character
+                scope:character = {
+					NOT = {
+						OR = {
+							is_interest_group_type = ig_landowners
+							is_interest_group_type = ig_armed_forces
+							is_interest_group_type = ig_devout
+							is_interest_group_type = ig_industrialists
+						}
+					}
+                    owner ?= {
+                        OR = {
+                            c:FGT ?= this
+                            was_formed_from = FGT
+                        }
+						NOT = {
+							has_technology_researched = socialism
+						}
+                    }
+                }
+            }
+        }
+    }
+    FGT_military_politician_clothes = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = outfits
+                template = no_outfit
+                range = { 0 1 } # For the randomness to work correctly
+            }
+            accessory = {
+                mode = add
+                gene = legwear
+                template = reza_shah_pahlavi_legwear
+                range = { 0 1 }
+            }
+            accessory = {
+                mode = add
+                gene = headgear
+                template = russian_military_headgear
+                range = { 0.8 1 } # For the randomness to work correctly
+            }
+            accessory = {
+                mode = add
+                gene = coats
+                template = russian_coats	
+                range = { 0 1 }
+            }
+            accessory = {
+                mode = add
+                gene = aiguillettes
+                template = no_aiguillettes
+                range = { 0 1 } # For the randomness to work correctly
+            }
+            accessory = {
+                mode = add
+                gene = epaulettes
+                template = no_epaulette
+                range = { 0 1 }
+            }
+            accessory = {
+                mode = add
+                gene = top_layer
+                template = no_top_layer
+                range = { 0 1 } # For the randomness to work correctly
+            }
+            accessory = {
+                mode = add
+                gene = sashes
+                template = no_sash
+                range = { 0 1 }
+            }            
+			accessory = {	
+                mode = add
+                gene = belts
+                template = no_belt
+                range = { 0 1 } 
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 1000
+                exists = scope:character
+                scope:character = {
+					OR = {
+						is_interest_group_type = ig_trade_unions
+						is_interest_group_type = ig_armed_forces
+						is_interest_group_type = ig_rural_folk
+					}
+                    owner ?= {
+                        OR = {
+                            c:FGT ?= this
+                            was_formed_from = FGT
+                        }
+						NOT = {
+							has_technology_researched = socialism
+						}
+                    }
+                }
+            }
+        }
+    }
+
+    FGT_socialist_politician_clothes = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = outfits
+                template = no_outfit
+                range = { 0 1 } # For the randomness to work correctly
+            }
+            accessory = {
+                mode = add
+                gene = legwear
+                template = european_late_military_legwear
+                range = { 0 1 }
+            }
+            accessory = {
+                mode = add
+                gene = headgear
+                template = russian_military_headgear
+                range = { 0.8 1 } # For the randomness to work correctly
+            }
+            accessory = {
+                mode = add
+                gene = coats
+                template = european_late_military_coats	
+                range = { 0 1 }
+            }
+            accessory = {
+                mode = add
+                gene = aiguillettes
+                template = no_aiguillettes
+                range = { 0 1 } # For the randomness to work correctly
+            }
+            accessory = {
+                mode = add
+                gene = epaulettes
+                template = no_epaulette
+                range = { 0 1 }
+            }
+            accessory = {
+                mode = add
+                gene = top_layer
+                template = no_top_layer
+                range = { 0 1 } # For the randomness to work correctly
+            }
+            accessory = {
+                mode = add
+                gene = sashes
+                template = no_sash
+                range = { 0 1 }
+            }            
+			accessory = {	
+                mode = add
+                gene = belts
+                template = no_belt
+                range = { 0 1 } 
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 1000
+                exists = scope:character
+                scope:character = {
+					NOT = {
+						OR = {
+							is_interest_group_type = ig_landowners
+							is_interest_group_type = ig_industrialists
+							is_interest_group_type = ig_devout
+							is_interest_group_type = ig_petty_bourgeois
+						}
+					}
+                    owner ?= {
+                        OR = {
+                            c:FGT ?= this
+                            was_formed_from = FGT
+                        }
+						has_technology_researched = socialism
+                    }
+                }
+            }
+        }
+    }
+}

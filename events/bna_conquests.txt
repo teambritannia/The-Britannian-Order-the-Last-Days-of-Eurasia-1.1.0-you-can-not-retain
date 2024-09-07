@@ -1,0 +1,1211 @@
+namespace = north_american_path
+
+north_american_path.1 = { # random flavor
+	type = country_event
+	placement = ROOT
+	event_image = {
+		video = "unspecific_military_parade"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+	title = north_american_path.1.t
+	desc = north_american_path.1.d
+	flavor = north_american_path.1.f
+
+	duration = 3
+
+	trigger = {
+	}
+	
+	immediate = {
+	}
+
+	option = {
+		name = north_american_path.1.a
+		ai_chance = {
+			base = 10
+		}
+	}
+}
+
+north_american_path.2 = { # demand IRC northern buffer border
+	type = country_event
+	placement = ROOT
+	event_image = {
+		video = "middleeast_battlefield_trenches"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_default.dds"
+
+	title = north_american_path.2.t
+	desc = north_american_path.2.d
+	flavor = north_american_path.2.f
+
+	duration = 3
+
+	trigger = {
+	}
+	
+	immediate = {
+		c:BNA = {
+			save_scope_as = bna_scope
+		}
+		c:IRC = {
+			save_scope_as = irc_scope
+		}
+	}
+
+	option = {
+		name = north_american_path.2.a
+		ai_chance = {
+			base = 3
+			modifier = {
+				limit = {
+					c:IRC = {
+						army_size > root.army_size
+					}
+				}
+				add = 8
+			}	
+		}
+		random_state = {
+			limit = {
+				state_region = s:STATE_SASKATCHEWAN
+				owner = c:IRC
+			}
+			set_state_owner = c:BNA
+		}
+		random_state = {
+			limit = {
+				state_region = s:STATE_MANITOBA
+				owner = c:IRC
+			}
+			set_state_owner = c:BNA
+		}
+		random_state = {
+			limit = {
+				state_region = s:STATE_ALBERTA
+				owner = c:IRC
+			}
+			set_state_owner = c:BNA
+		}
+	}
+	option = {
+		name = north_american_path.2.b
+		ai_chance = {
+			base = 5
+			modifier = {
+				limit = {
+					c:IRC = {
+						army_size > root.army_size
+					}
+				}
+				add = 8
+			}	
+		}
+		c:BNA = {
+			trigger_event = {
+				id = north_american_path.3
+				days = 1
+			}
+		}
+	}
+}
+
+north_american_path.3 = { #irc refuses demand for northern buffer
+	type = country_event
+	placement = ROOT
+	event_image = {
+		video = "asia_politician_parliament_motion"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_default.dds"
+
+	title = north_american_path.3.t
+	desc = north_american_path.3.d
+	flavor = north_american_path.3.f
+
+	duration = 3
+
+	trigger = {
+	}
+	
+	immediate = {
+		c:IRC = {
+			save_scope_as = irc_scope
+		}
+		c:BNA = {
+			save_scope_as = bna_scope
+		}
+	}
+
+	option = { #this means war!
+		name = north_american_path.3.a
+		ai_chance = {
+			base = 8
+			modifier = {
+				limit = {
+					c:IRC = {
+						army_size < root.army_size
+					}
+				}
+				add = 10
+			}	
+		}
+		default_option = yes
+		c:BNA = {
+			create_diplomatic_play = {
+				name = bna_conquest
+			
+				target_state = s:STATE_ALBERTA.region_state:IRC
+				
+				war = yes
+				
+				type = dp_conquer_state
+
+				add_war_goal = {
+					holder = c:BNA
+					type = conquer_state
+					target_state = s:STATE_SASKATCHEWAN.region_state:IRC
+				}
+				add_war_goal = {
+					holder = c:BNA
+					type = conquer_state
+					target_state = s:STATE_MANITOBA.region_state:IRC
+				}	
+			}
+		}
+	}
+	option = { # let them keep the land.
+		name = north_american_path.3.b
+		ai_chance = {
+		
+			base = 3
+			modifier = {
+				limit = {
+					c:IRC = {
+						army_size > root.army_size
+					}
+				}
+				add = 12
+			}	
+		}
+	}
+}
+
+north_american_path.4 = { # demand southern buffer state with IRC
+	type = country_event
+	placement = ROOT
+	event_image = {
+		video = "unspecific_signed_contract"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_default.dds"
+
+	title = north_american_path.4.t
+	desc = north_american_path.4.d
+	flavor = north_american_path.4.f
+
+	duration = 3
+
+	trigger = {
+	}
+
+	immediate = {
+		c:BNA = {
+			save_scope_as = bna_scope
+		}
+		c:IRC = {
+			save_scope_as = irc_scope
+		}
+	}
+
+	option = {
+		name = north_american_path.4.a
+		default_option = yes
+		ai_chance = {
+			base = 4
+		}
+		create_country = {
+			tag = MID
+			origin = this
+			state = s:STATE_MINNESOTA.region_state:IRC
+		}
+		random_state = {
+			limit = {
+				state_region = s:STATE_NORTH_DAKOTA
+			}
+			set_state_owner = c:MID
+		}
+		random_state = {
+			limit = {
+				state_region = s:STATE_SOUTH_DAKOTA
+			}
+			set_state_owner = c:MID
+		}
+		c:BNA = {
+			create_diplomatic_pact = {
+				country = c:MID
+				type = puppet
+			}
+		}
+	}
+	option = {
+		name = north_american_path.4.b
+		ai_chance = {
+			base = 6
+		}
+		c:BNA ?= {
+			trigger_event = {
+				id = north_american_path.5
+				days = 1
+			}
+		}
+	}
+}
+
+
+north_american_path.5 = { #irc refuses demand for southern buffer
+	type = country_event
+	placement = ROOT
+	event_image = {
+		video = "unspecific_devastation"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_default.dds"
+
+	title = north_american_path.5.t
+	desc = north_american_path.5.d
+	flavor = north_american_path.5.f
+
+	duration = 3
+
+	trigger = {
+	}
+
+	immediate = {
+		c:BNA = {
+			save_scope_as = bna_scope
+		}
+		c:IRC = {
+			save_scope_as = irc_scope
+		}
+	}
+
+	option = {
+		name = north_american_path.5.a
+		default_option = yes
+		ai_chance = {
+			base = 3
+		}
+		c:BNA = {
+			create_diplomatic_play = {
+				name = bna_conquest
+			
+				target_state = s:STATE_MINNESOTA.region_state:IRC
+				
+				war = yes
+				
+				type = dp_conquer_state
+
+				add_war_goal = {
+					holder = c:BNA
+					type = conquer_state
+					target_state = s:STATE_NORTH_DAKOTA.region_state:IRC
+				}
+				add_war_goal = {
+					holder = c:BNA
+					type = conquer_state
+					target_state = s:STATE_SOUTH_DAKOTA.region_state:IRC
+				}	
+			}
+		}
+	}
+	option = {
+		name = north_american_path.5.b
+		ai_chance = {
+			base = 7
+		}
+	}
+}
+
+north_american_path.6 = { # usa conference
+	type = country_event
+	placement = ROOT
+	event_image = {
+		video = "middleeast_battlefield_trenches"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_default.dds"
+
+	title = north_american_path.6.t
+	desc = north_american_path.6.d
+	flavor = north_american_path.6.f
+
+	duration = 3
+
+	trigger = {
+	}
+	
+	immediate = {
+		c:USA = {
+			save_scope_as = usa_scope
+		}
+		c:BNA = {
+			save_scope_as = bna_scope
+		}
+	}
+
+	option = {
+		name = north_american_path.6.a #complete annexation
+		ai_chance = {
+			base = 10
+			modifier = {
+				trigger = {
+					infamy >= infamy_threshold:infamous
+				}
+				add = -5
+			}
+		}
+		c:USA = {
+			set_variable = conference_annexation
+			trigger_event = {
+				id = north_american_path.7
+				days = 1
+			}
+		}
+	}
+	option = {
+		name = north_american_path.6.b #make subject
+		ai_chance = {
+			base = 10
+			modifier = {
+				trigger = {
+					any_country = {
+						is_subject_of = {
+							c:BNA
+						}
+					}
+				}
+				add = -5
+			}
+		}
+		c:USA = {
+			set_variable = conference_make_subject
+			trigger_event = {
+				id = north_american_path.7
+				days = 1
+			}
+		}
+	}
+	option = {
+		name = north_american_path.6.c #dissolve into loose confederation
+		ai_chance = {
+			base = 10
+			modifier = {
+				trigger = {
+					infamy >= infamy_threshold:infamous
+				}
+				add = 10
+			}
+		}
+		c:USA = {
+			set_variable = conference_loosen_coalition
+			trigger_event = {
+				id = north_american_path.7
+				days = 1
+			}
+		}
+	}
+}
+
+north_american_path.7 = { #demands against usa
+	type = country_event
+	placement = ROOT
+	event_image = {
+		video = "asia_politician_parliament_motion"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_default.dds"
+
+	title = north_american_path.7.t
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				desc = north_american_path.7.d
+				trigger = {
+					has_variable = conference_annexation
+				}
+			}
+			triggered_desc = {
+				desc = north_american_path.7.d2
+				trigger = {
+					has_variable = conference_make_subject
+				}
+			}
+			triggered_desc = {
+				desc = north_american_path.7.d3
+				trigger = {
+					has_variable = conference_loosen_coalition
+				}
+			}
+		}
+	}
+	flavor = north_american_path.7.f
+
+	duration = 3
+
+	trigger = {
+	}
+	
+	immediate = {
+		c:USA = {
+			save_scope_as = usa_scope
+		}
+		c:BNA = {
+			save_scope_as = bna_scope
+		}
+	}
+
+	option = { #accept demands
+		name = north_american_path.7.a
+		ai_chance = {
+			base = 5
+			modifier = {
+				trigger = {
+					has_variable = conference_annexation
+				}
+				add = -3
+			}
+			modifier = {
+				trigger = {
+					has_variable = conference_loosen_coalition
+				}
+				add = 1
+			}
+			modifier = {
+				trigger = {
+					bna.gdp>root.gdp
+				}
+				add = 3
+			}
+		}
+		default_option = yes
+		if = {
+			limit = {
+				has_variable = conference_annexation
+			}
+			remove_variable = conference_annexation
+			c:BNA = {
+				annex = c:USA
+			}
+		}
+		else_if = {
+			limit = {
+				has_variable = conference_make_subject
+			}
+			remove_variable = conference_make_subject
+			c:BNA = {
+				create_diplomatic_pact = {
+					country = c:USA
+					type = dominion
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				has_variable = conference_loosen_coalition
+			}
+			remove_variable = conference_loosen_coalition
+			create_country = {
+				tag = FWE
+				origin = this
+				state = s:STATE_KANSAS.region_state:USA
+				on_created = {
+					add_primary_culture = cu:anglo_canadian
+				}
+			}
+			random_state = {
+				limit = {
+					state_region = s:STATE_OKLAHOMA
+					owner = c:USA
+				}
+				set_state_owner = c:FWE
+			}
+			random_state = {
+				limit = {
+					state_region = s:STATE_COLORADO
+					owner = c:USA
+				}
+				set_state_owner = c:FWE
+			}
+			create_country = {
+				tag = FNO
+				origin = this
+				state = s:STATE_MISSOURI.region_state:USA
+				on_created = {
+					add_primary_culture = cu:anglo_canadian
+				}
+			}
+			random_state = {
+				limit = {
+					state_region = s:STATE_IOWA
+					owner = c:USA
+				}
+				set_state_owner = c:FNO
+			}
+			create_country = {
+				tag = FSO
+				origin = this
+				state = s:STATE_LOUISIANA.region_state:USA
+				on_created = {
+					add_primary_culture = cu:anglo_canadian
+				}
+			}
+			random_state = {
+				limit = {
+					state_region = s:STATE_ARKANSAS
+					owner = c:USA
+				}
+				set_state_owner = c:FSO
+			}
+		}
+	}
+
+	option = { # refuse demands
+		name = north_american_path.7.b
+		ai_chance = {
+			base = 5
+		}
+		c:BNA ?= {
+			trigger_event = {
+				id = north_american_path.8
+				days = 0
+			}
+		}
+	}
+}
+
+north_american_path.8 = { #usa refuses demands
+	type = country_event
+	placement = ROOT
+	event_image = {
+		video = "unspecific_devastation"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_default.dds"
+
+	title = north_american_path.8.t
+	desc = north_american_path.8.d
+	flavor = north_american_path.8.f
+
+	duration = 3
+
+	trigger = {
+	}
+
+	immediate = {
+	}
+
+	option = {
+		name = north_american_path.8.a
+		default_option = yes
+		ai_chance = {
+			base = 8
+			modifier = {
+				trigger = {
+					c:USA = {
+						army_size > root.army_size
+					}
+				}
+				add = 5
+			}
+		}
+		c:BNA = {
+			if = {
+				limit = {
+					c:USA = {
+						has_variable = conference_annexation
+					}
+				}
+				create_diplomatic_play = {
+					name = attack_usa
+					target_state = s:STATE.region_state:USA
+					type = dp_annex_war	
+					escalation = 80
+				}
+			}
+			if = {
+				limit = {
+					c:USA = {
+						has_variable = conference_make_subject
+					}
+				}
+				remove_variable = conference_make_subject
+				create_diplomatic_play = {
+					name = attack_usa
+					target_state = s:STATE.region_state:USA
+					type = dp_make_protectorate	
+					escalation = 80
+				}
+			}
+			if = {
+				limit = {
+					c:USA = {
+						has_variable = conference_loosen_coalition
+					}
+				}
+				create_diplomatic_play = {
+					name = attack_usa
+					target_state = s:STATE_KANSAS.region_state:USA
+					type = dp_annex_war	
+					war = yes
+				}
+				add_journal_entry = { type = je_split_usa }
+			}
+		}
+	}
+	option = {
+		name = north_american_path.8.b
+		ai_chance = {
+			base = 2
+		}
+	}
+}
+
+north_american_path.9 = { # demand for gna to become our subject
+	type = country_event
+	placement = ROOT
+	event_image = {
+		video = "unspecific_devastation"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_default.dds"
+
+	title = north_american_path.9.t
+	desc = north_american_path.9.d
+	flavor = north_american_path.9.f
+
+	duration = 3
+
+	trigger = {
+	}
+
+	immediate = {
+		c:GNA = {
+			save_scope_as = gna_scope
+		}
+	}
+
+	option = {
+		name = north_american_path.9.a
+		default_option = yes
+		ai_chance = {
+			base = 8
+		}
+		c:GER = {
+			trigger_event = {
+				id = north_american_path.10
+				days = 7
+			}
+		}
+	}
+	option = {
+		name = north_american_path.9.b
+		ai_chance = {
+			base = 2
+		}
+		c:BNA = {
+			create_diplomatic_play = {
+				name = transfer_subject
+				type = dp_transfer_subject
+
+				target_country = c:GNA
+			}
+		}
+	}
+	option = {
+		name = north_american_path.9.c
+		ai_chance = {
+			base = 1
+		}
+		c:BNA = {
+			create_diplomatic_pact = {
+				country = c:GNA
+				type = dominion
+			}
+		}
+	}
+}
+
+north_american_path.10 = { # gna defers to germany
+	type = country_event
+	placement = ROOT
+	event_image = {
+		video = "middleeast_battlefield_trenches"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_default.dds"
+
+	title = north_american_path.10.t
+	desc = north_american_path.10.d
+	flavor = north_american_path.10.f
+
+	duration = 3
+
+	trigger = {
+	}
+	
+	immediate = {
+		c:BNA = {
+			save_scope_as = bna_scope
+		}
+		c:GER = {
+			save_scope_as = ger_scope
+		}
+	}
+
+	option = { # opportunity to undermine britannian dominance
+		name = north_american_path.10.a
+		trigger = {
+			NOT = {
+			}
+		}
+		ai_chance = {
+			base = 10
+		}
+		c:GER = {
+			trigger_event = {
+				id = north_american_path.11
+				days = 4
+			}
+		}
+	}
+	option = { # let bna have gna
+		name = north_american_path.10.b
+		trigger = {
+		}
+		ai_chance = {
+			base = 2
+			modifier = {
+				trigger = {
+					has_journal_entry = je_german_british_split
+				}
+				add = -2
+			}
+			modifier = {
+				trigger = {
+					c:GBR = {
+						army size > root.army_size
+					}
+				}
+				add = 3
+			}
+		}
+		c:BNA = {
+			create_diplomatic_play = {
+				name = transfer_subject
+				type = dp_transfer_subject
+
+				target_country = c:GNA
+			}
+		}
+	}
+}
+
+north_american_path.11 = { # expand gna northward?
+	type = country_event
+	placement = ROOT
+	event_image = {
+		video = "middleeast_battlefield_trenches"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_default.dds"
+
+	title = north_american_path.11.t
+	desc = north_american_path.11.d
+	flavor = north_american_path.11.f
+
+	duration = 3
+
+	trigger = {
+	}
+	
+	immediate = {
+		c:BNA = {
+			save_scope_as = bna_scope
+		}
+	}
+
+	option = {
+		name = north_american_path.11.a #yes
+		ai_chance = {
+			base = 10
+		}
+		default_option = yes
+		set_variable = take_north_states
+		change_infamy = 10
+		c:GER = {
+			trigger_event = {
+				id = north_american_path.12
+				days = 0
+			}
+		}
+	}
+	
+	option = {
+		name = north_american_path.11.b #no
+		ai_chance = {
+			base = 0
+			modifier = {
+				trigger = {
+					infamy >= infamy_threshold:infamous
+				}
+				add = 5
+			}
+		}
+		c:GER = {
+			trigger_event = {
+				id = north_american_path.12
+				days = 0
+			}
+		}
+	}
+}
+
+north_american_path.12 = { #demand release of burgundy
+	type = country_event
+	placement = ROOT
+	event_image = {
+		video = "asia_politician_parliament_motion"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_default.dds"
+
+	title = north_american_path.12.t
+	desc = north_american_path.12.d
+	flavor = north_american_path.12.f
+
+	duration = 3
+
+	trigger = {
+	}
+	
+	immediate = {
+		c:GBR = {
+			save_scope_as = gbr_scope
+		}
+	}
+
+	option = {
+		name = north_american_path.12.a #yes
+		ai_chance = {
+			base = 10
+		}
+		default_option = yes
+		set_variable = burgundy_release
+		change_infamy = 15
+		c:GER = {
+			trigger_event = {
+				id = north_american_path.13
+				days = 0
+			}
+		}
+	}
+	
+	option = {
+		name = north_american_path.11.b #no
+		ai_chance = {
+			base = 0
+			modifier = {
+				trigger = {
+					infamy >= infamy_threshold:infamous
+				}
+				add = 10
+			}
+		}
+		c:GER = {
+			trigger_event = {
+				id = north_american_path.13
+				days = 0
+			}
+		}
+	}
+}
+
+north_american_path.13 = { #french southeast
+	type = country_event
+	placement = ROOT
+	event_image = {
+		video = "unspecific_devastation"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_default.dds"
+
+	title = north_american_path.13.t
+	desc = north_american_path.13.d
+	flavor = north_american_path.13.f
+
+	duration = 3
+
+	trigger = {
+	}
+
+	immediate = {
+	}
+	option = {
+		name = north_american_path.13.a #yes
+		ai_chance = {
+			base = 10
+		}
+		default_option = yes
+		set_variable = french_southeast
+		change_infamy = 20
+		c:GER = {
+			trigger_event = {
+				id = north_american_path.14
+				days = 0
+			}
+		}
+	}
+	
+	option = {
+		name = north_american_path.13.b #no
+		ai_chance = {
+			base = 0
+			modifier = {
+				trigger = {
+					infamy >= infamy_threshold:infamous
+				}
+				add = 9
+			}
+		}
+		c:GER = {
+			trigger_event = {
+				id = north_american_path.14
+				days = 0
+			}
+		}
+	}
+}
+
+north_american_path.14 = { # war against bna
+	type = country_event
+	placement = ROOT
+	event_image = {
+		video = "middleeast_battlefield_trenches"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_default.dds"
+
+	title = north_american_path.14.t
+	desc = north_american_path.14.d
+	flavor = north_american_path.14.f
+
+	duration = 3
+
+	trigger = {
+	}
+	
+	immediate = {
+		c:BNA = {
+			save_scope_as = bna_scope
+		}
+	}
+
+	option = {
+		name = north_american_path.14.a
+		c:BNA = {
+			create_diplomatic_play = {
+				name = conquer_bna
+				target_country = c:GNA
+				type = dp_transfer_subject
+				
+				escalation = 80
+			}
+		}
+		if = {
+			limit = {
+				c:GER = {
+					has_variable = take_north_states
+				}
+			}
+			random_diplomatic_play = {
+				limit = {
+					any_scope_play_involved = {
+						c:GER = this
+					}
+				}		
+				add_war_goal = { holder = c:GNA target_state = s:STATE_VIRGINIA.region_state:BNA type = conquer_state }
+				add_war_goal = { holder = c:GNA target_state = s:STATE_WEST_VIRGINIA.region_state:BNA type = conquer_state }
+				add_war_goal = { holder = c:GNA target_state = s:STATE_MARYLAND.region_state:BNA type = conquer_state }			
+				add_war_goal = { holder = c:GNA target_state = s:STATE_KENTUCKY.region_state:BNA type = conquer_state }			
+			}
+			remove_variable = take_north_states
+		}
+		if = {
+			limit = {
+				c:GER = {
+					has_variable = burgundy_release
+				}
+			}
+			random_diplomatic_play = {
+				limit = {
+					any_scope_play_involved = {
+						c:GER = this
+					}
+				}	
+				add_war_goal = { holder = c:GER target_country = c:BRG type = liberate_country }	
+			}
+			remove_variable = burgundy_release
+		}
+		if = {
+			limit = {
+				c:GER = {
+					has_variable = french_southeast
+				}
+			}
+			random_diplomatic_play = {
+				limit = {
+					any_scope_play_involved = {
+						c:GER = this
+					}
+				}	
+				add_war_goal = { holder = c:GER target_state = s:STATE_WEST_SWITZERLAND.region_state:FRA type = conquer_state }
+				add_war_goal = { holder = c:GER target_state = s:STATE_EAST_SWITZERLAND.region_state:FRA type = conquer_state }
+				add_war_goal = { holder = c:GER target_state = s:STATE_ALSACE_LORRAINE.region_state:FRA type = conquer_state }
+				add_war_goal = { holder = c:GER target_state = s:STATE_LOMBARDY.region_state:FRA type = conquer_state }
+				add_war_goal = { holder = c:GER target_state = s:STATE_PIEDMONT.region_state:FRA type = conquer_state }
+				remove_variable = french_southeast
+			}
+		}
+		c:GER = {
+			capital = {
+				save_scope_as = superevent_placement_scope
+			}
+		}
+		hidden_effect = {
+			every_country = {
+				limit = {
+					exists = yes
+				}
+				trigger_event = {
+					id = superevent_german_british_war
+					days = 0
+					popup = yes
+				}
+			}
+		}
+	}
+}
+
+north_american_path.15 = { # war for independence
+	type = country_event
+	placement = ROOT
+	event_image = {
+		video = "middleeast_battlefield_trenches"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_default.dds"
+
+	title = north_american_path.15.t
+	desc = north_american_path.15.d
+	flavor = north_american_path.15.f
+
+	duration = 3
+
+	trigger = {
+	}
+	
+	immediate = {
+		c:BNA = {
+			save_scope_as = bna_scope
+		}
+	}
+
+	option = {
+		name = north_american_path.15.a
+		ai_chance = {
+			base = 10
+		}
+		c:BNA = {
+			create_diplomatic_play = {
+				name = bna_conquest
+		
+				target_state = s:STATE_HOME_COUNTIES.region_state:GBR
+			
+				war = yes
+			
+				type = dp_independence
+
+				add_war_goal = {
+					holder = c:BNA
+					type = independence
+				}
+			}	
+		}
+	}
+}
+
+north_american_path.16 = { # greater north america
+	type = country_event
+	placement = ROOT
+	event_image = {
+		video = "unspecific_military_parade"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_default.dds"
+
+	title = north_american_path.16.t
+	desc = north_american_path.16.d
+	flavor = north_american_path.16.f
+
+	duration = 3
+
+	trigger = {
+	}
+	
+	immediate = {
+	}
+
+	option = {
+		name = north_american_path.16.a
+		ai_chance = {
+			base = 10
+		}
+		default_option = yes
+	}
+}
