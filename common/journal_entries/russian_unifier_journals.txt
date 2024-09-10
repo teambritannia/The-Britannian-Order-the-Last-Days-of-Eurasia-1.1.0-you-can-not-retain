@@ -18,9 +18,34 @@ je_star_in_the_wastes = {
 	}
 
 	complete = {
-		
+		custom_tooltip = reclaimed_siberia_tt
+		has_variable = var_reclaimed_siberia
 	}
 }
 
 je_the_east_russian_war = {
+	icon = "gfx/interface/icons/event_icons/event_map.dds"
+
+	group = je_group_historical_content
+
+	is_shown_when_inactive = {
+		c:TKK = {
+			any_scope_state = {
+				has_claim = c:FER
+			}
+		}
+	}
+
+	possible = {
+		any_scope_state = [
+			any_neighboring_state = {
+				owner = c:TKK
+				has_claim = c:FER
+			}
+		}
+	}
+
+	complete = {
+		every_scope_st
+	}
 }
