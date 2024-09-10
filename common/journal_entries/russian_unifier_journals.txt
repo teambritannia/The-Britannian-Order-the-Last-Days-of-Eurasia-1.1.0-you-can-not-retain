@@ -57,10 +57,10 @@ je_the_east_russian_war = {
 
 	fail = {
 		any_scope_country = {
-			has_primary_culture = cu:russian
-			any_scope_state = {
-				has_claim = c:FER
+			NOT = {
+				this ?= c:FER
 			}
+			has_modifier = reclaimed_siberia
 		}
 	}
 }
