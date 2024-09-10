@@ -1025,3 +1025,34 @@ OCC = {
 		}
 	}
 }
+
+FER = {
+	dynamic_country_name = {
+		name = dyn_c_far_eastern_republic
+		adjective = dyn_c_far_eastern_republic_adj
+
+		is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			exists = scope:actor
+			scope:actor = {
+				coa_republic_trigger = yes
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = dyn_c_far_eastern_socialist_republic
+		adjective = dyn_c_far_eastern_socialist_republic_adj
+
+		is_main_tag_only = yes
+		priority = 10
+		
+		trigger = {
+			exists = scope:actor
+			scope:actor = {
+				coa_communist_trigger = yes
+			}
+		}
+	}
+}

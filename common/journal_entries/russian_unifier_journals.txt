@@ -1,0 +1,26 @@
+je_star_in_the_wastes = {	
+	icon = "gfx/interface/icons/event_icons/event_star_in_the_wastes.dds"
+
+	group = je_group_historical_content
+
+	is_shown_when_inactive = {
+		owner = {
+			this ?= c:FER
+		}
+	}
+	
+	possible = {
+		this ?= c:FER
+	}
+	
+	immediate = {
+		trigger_event = russia.100
+	}
+
+	complete = {
+		
+	}
+}
+
+je_the_east_russian_war = {
+}
