@@ -5321,6 +5321,11 @@ STATES = {
 		
 		add_homeland = cu:inuit
 		add_homeland = cu:siberian
+		add_claim = c:IRK
+		add_claim = c:FER
+		add_claim = c:DVM
+		add_claim = c:MSK
+		add_claim = c:TTA
 	}
 	s:STATE_NENETSIA = {
 		create_state = {
@@ -5471,7 +5476,11 @@ STATES = {
 		}
 		
 		add_homeland = cu:siberian
-		add_claim = c:SBR
+		add_claim = c:IRK
+		add_claim = c:FER
+		add_claim = c:DVM
+		add_claim = c:MSK
+		add_claim = c:TTA
 	}
 	
 	
@@ -5484,7 +5493,11 @@ STATES = {
 		
 		add_homeland = cu:siberian
 		add_homeland = cu:russian
-		add_claim = c:SBR
+		add_claim = c:IRK
+		add_claim = c:FER
+		add_claim = c:DVM
+		add_claim = c:MSK
+		add_claim = c:TTA
 	}
 	
 	s:STATE_YAKUTSK = {
