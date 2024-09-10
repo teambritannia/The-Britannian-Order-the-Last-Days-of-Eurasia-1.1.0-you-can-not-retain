@@ -76,7 +76,7 @@ je_burgsys_appear = {
 				"scripted_bar_progress(burgsys_appear_progress_bar)" >= 170
 			}
 		}
-    }
+    	}
 
 	on_complete = {
 		scope:burgsys_ig = {
