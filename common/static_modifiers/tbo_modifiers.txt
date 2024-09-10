@@ -350,3 +350,19 @@ french_operations_tangled_modifier = {
 	state_tax_waste_add = 0.1
 	state_construction_mult = -0.25
 }
+
+economic_hardship = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_negative.dds
+	building_throughput_add = -0.08
+	country_tax_income_add = -0.15
+}
+
+weakened_military = {
+	unit_offense_mult = -0.12
+	unit_defense_mult = -0.07
+}
+
+political_turmoil = {
+	country_bureaucracy_mult = -0.05
+	country_authority_mult = -0.08
+}
