@@ -1,0 +1,20 @@
+﻿COUNTRIES = {
+	c:CON ?= {
+		effect_starting_technology_tier_3_tech = yes
+		
+		set_market_capital = STATE_KATANGA
+		
+		activate_law = law_type:law_presidential_republic
+		activate_law = law_type:law_wealth_voting
+		activate_law = law_type:law_serfdom
+		activate_law = law_type:law_land_based_taxation
+		activate_law = law_type:law_hereditary_bureaucrats
+		activate_law = law_type:law_peasant_levies
+		activate_law = law_type:law_cultural_exclusion
+		activate_law = law_type:law_agrarianism
+		activate_law = law_type:law_censorship	
+		
+		set_government_wage_level = medium
+		set_tax_level = medium
+	}
+}

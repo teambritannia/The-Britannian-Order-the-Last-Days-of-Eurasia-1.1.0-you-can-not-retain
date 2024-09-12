@@ -1,0 +1,107 @@
+je_burgsys_appear = {
+	icon = "gfx/interface/icons/event_icons/waving_flag.dds"
+	
+	group = je_group_internal_affairs
+	
+	scripted_progress_bar = burgsys_appear_progress_bar
+
+	is_shown_when_inactive = {
+		has_technology_researched = political_agitation
+	}
+
+	possible = {
+		any_interest_group = {
+			OR = {
+				has_ideology = ideology:ideology_tbo_conservative
+				has_ideology = ideology:ideology_tbo_reactionary
+			}
+		}
+		NOT = {
+			any_interest_group = {
+				has_variable = burgsys_var
+			}
+		}
+		recently_lost_war = yes
+		country_rank >= rank_value:major_power
+		has_technology_researched = political_agitation
+	}
+	
+	immediate = {
+		random_interest_group = {
+			limit = {
+				OR = {
+					has_ideology = ideology:ideology_tbo_conservative
+					has_ideology = ideology:ideology_tbo_reactionary
+				}
+			}
+			save_scope_as = burgsys_ig
+		}
+	}
+
+	on_monthly_pulse = {
+		if = {
+			limit = {
+				"scripted_bar_progress(burgsys_appear_progress_bar)" >= 80
+				scope:burgsys_ig = {
+					NOT = {
+						has_ideology = ideology:ideology_tbo_jingoist
+					}
+				}	
+			}
+			trigger_event = { id = burgsys.4 popup = yes }	
+		}
+		if = {
+			limit = {
+				"scripted_bar_progress(burgsys_appear_progress_bar)" >= 120
+				scope:burgsys_ig = {
+					NOT = {
+						leader = {
+							has_ideology = ideology:ideology_burgsys
+						}
+					}
+				}	
+			}
+			trigger_event = { id = burgsys.5 popup = yes }	
+		}
+		random_events = {
+			80 = 0 
+			5 = burgsys.3
+		}
+	}
+
+	complete = {
+		custom_tooltip = {
+			text = burgsys_complete
+			scope:journal_entry = {
+				"scripted_bar_progress(burgsys_appear_progress_bar)" >= 170
+			}
+		}
+    }
+
+	on_complete = {
+		scope:burgsys_ig = {
+			remove_ideology = ideology_tbo_conservative
+			add_ideology = ideology_tbo_reactionary
+			set_variable = {
+				name = burgsys_var
+				value = yes
+			}
+		}
+		trigger_event = { id = burgsys.1 popup = yes }
+	}
+	
+	fail = {
+		custom_tooltip = {
+			text = burgsys_fail_tt
+			scope:journal_entry = {
+				"scripted_bar_progress(burgsys_appear_progress_bar)" <= 0
+			}
+		}
+	}
+
+	on_fail = {
+		trigger_event = { id = burgsys.2 popup = yes }
+	}
+	
+	weight = 100
+}
