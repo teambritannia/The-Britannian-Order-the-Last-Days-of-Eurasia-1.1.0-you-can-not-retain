@@ -1,0 +1,370 @@
+mexican_war_disaster = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_negative.dds
+	country_prestige_mult = -0.2
+	state_radicals_from_sol_change_mult = 0.2
+	country_authority_mult = -0.15
+	building_throughput_add = -0.2
+}
+
+victoria_unrest = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_negative.dds
+	state_radicals_from_sol_change_mult = 0.3
+	country_authority_mult = -0.1
+}
+
+public_hysteria = {
+	icon = gfx/interface/icons/timed_modifier_icons/modilocafier_flag_negative.dds
+	country_legitimacy_base_add = -10
+	country_authority_mult = -0.1
+}
+
+police_investigation = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_negative.dds
+	country_tax_income_add = -3000
+	country_authority_add = -25
+}
+
+gbr_german_payments = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds
+	country_tax_income_add = 10000
+}
+
+ger_german_payments = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_negative.dds
+	country_expenses_add = 10000
+}
+
+bolstered_armed_forces = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_negative.dds
+	interest_group_ig_armed_forces_pop_attraction_mult = 0.1
+	interest_group_ig_armed_forces_pol_str_mult = 0.1
+}
+
+britannia_fall = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_negative.dds
+	state_market_access_price_impact = -0.7
+	country_prestige_mult = -0.8
+	state_radicals_from_sol_change_mult = 2.0
+	country_authority_mult = -0.8
+	building_throughput_add = -0.5
+	country_bureaucracy_mult = -0.5
+	unit_offense_mult = -0.9
+	unit_defense_mult = -0.9
+	country_tax_income_add = -1.0
+}
+
+suppressing_burgsys = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_negative.dds
+	tax_income_add = -0.05
+	country_authority_mult = -0.05
+}
+
+root_out_burgsys = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_negative.dds
+	country_authority_mult = -0.1
+	country_bureaucracy_mult = 0.08
+}
+
+funding_burgsys = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_negative.dds
+	tax_income_add = -0.05
+}
+
+funding_britannian_army = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_negative.dds
+	country_military_goods_cost_mult = 0.4
+}
+
+german_army_funds = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds
+	country_military_goods_cost_mult = -0.25
+}
+
+hunting_dissidents = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_negative.dds
+	country_authority_mult = -0.15
+}
+
+grand_battleplan_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds
+	unit_offense_mult = 0.05
+	unit_defense_mult = 0.05
+	unit_morale_loss_mult = -0.1
+	unit_advancement_speed_mult = -0.15
+}
+
+deep_battle_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds
+	unit_offense_mult = 0.1
+	unit_advancement_speed_mult = 0.05
+	unit_morale_loss_mult = 0.05
+	unit_morale_damage_mult = 0.1
+}
+
+mobile_warfare_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds
+	unit_offense_mult = 0.1
+	unit_defense_mult = -0.1
+	unit_advancement_speed_mult = 0.15
+	unit_morale_loss_mult = -0.1
+	unit_morale_damage_mult = 0.07
+}
+
+guerilla_warfare_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds
+	unit_offense_mult = -0.8
+	unit_defense_mult = 2
+	unit_morale_loss_mult = -0.4
+	unit_morale_damage_mult = 0.4
+}
+
+superior_firepower_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds
+	unit_offense_mult = 0.15
+	unit_morale_damage_mult = 0.1
+	unit_advancement_speed_mult = -0.05
+	unit_morale_loss_mult = -0.1
+}
+
+mod_polish_battalions = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_negative.dds
+	country_military_goods_cost_mult = 0.50
+	country_tax_income_add = -20000
+}
+
+mod_ukrainian_battalions = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_negative.dds
+	country_military_goods_cost_mult = 0.50
+	country_tax_income_add = -20000
+}
+
+mod_russian_battalions = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_negative.dds
+	country_military_goods_cost_mult = 0.50
+	country_tax_income_add = -20000
+}
+
+oversought_bureaucracy = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_negative.dds
+	country_bureaucracy_mult = -0.15
+	country_tax_income_add = -20000
+}
+
+oversought_military = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_negative.dds
+	country_military_goods_cost_mult = 0.25
+	country_tax_income_add = -20000
+}
+
+instilled_loyalty = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_negative.dds
+	country_bureaucracy_mult = -0.15
+	country_tax_income_add = -40000
+}
+
+foreign_constructions = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_negative.dds
+	building_construction_sector_throughput_add = -0.1
+	country_tax_income_add = -30000
+}
+
+# fengtian modifiers
+
+promoting_peasant_sentiments = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+	tax_income_add = -0.05
+	country_influence_mult = -0.1
+}
+
+training_guerillas = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_negative.dds
+	country_military_goods_cost_mult = 0.1
+	country_tax_income_add = -4000
+}
+
+peasant_uprisings = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_negative.dds
+	state_market_access_price_impact = -0.3
+	building_throughput_add = -0.5
+	state_tax_waste_add = 0.2
+}
+
+fengtian_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+	interest_group_ig_trade_unions_pop_attraction_mult = 5.0
+	interest_group_ig_trade_unions_pol_str_mult = 20.0
+}
+
+fengtian_communist_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+	interest_group_pop_attraction_mult = 5.0
+	interest_group_pol_str_mult = 10.0
+}
+
+mgb_training_peasants = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_negative.dds
+	country_tax_income_add = -4000
+}
+
+mgb_ideological_training = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	country_tax_income_add = -2000
+	country_influence_mult = -0.1
+}
+
+mgb_enforcing_popular_line = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_positive.dds
+	country_tax_income_add = -4500
+	country_bureaucracy_mult = -0.1
+}
+
+mgb_burning_villages = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fire_negative.dds
+	country_tax_income_add = -3000
+	country_legitimacy_base_add = -10
+}
+
+mgb_qing_support = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds
+	country_tax_income_add = 1000
+}
+
+qing_supporting_mgb = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_negative.dds
+	country_tax_income_add = -3000
+	country_bureaucracy_mult = -0.05
+}
+
+mgb_fanning_dissent = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_negative.dds
+	country_tax_income_add = -5000
+	country_bureaucracy_mult = -0.1
+	country_influence_mult = -0.15
+}
+
+mgb_counter_campaign = {
+	icon = gfx/interface/icons/timed_modifier_icons/unused/modifier_explosion_negative.dds
+	state_tax_waste_add = 0.5
+	state_migration_pull_mult = -0.95
+	state_construction_mult = -0.70
+	state_mortality_mult = 0.3
+	state_standard_of_living_add = -2
+}
+
+mgb_peasant_campaign = {
+	icon = gfx/interface/icons/timed_modifier_icons/unused/modifier_explosion_negative.dds
+	state_tax_waste_add = 0.8
+	state_migration_pull_mult = -0.95
+	state_construction_mult = -0.9
+	state_mortality_mult = 0.1
+	state_standard_of_living_add = -0.5
+}
+
+mgb_covert_operation = {
+	icon = gfx/interface/icons/timed_modifier_icons/unused/modifier_explosion_negative.dds
+	state_tax_waste_add = 1.0
+	state_migration_pull_mult = -0.95
+	state_construction_mult = -1.0
+	state_mortality_mult = 0.05
+	state_standard_of_living_add = -0.3
+}
+
+siberian_black_army = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds
+	state_conscription_rate_add = 5.0
+	building_training_rate_add = 5000
+	unit_army_offense_mult = 10.0
+	unit_army_defense_mult = 15.0
+}
+
+occitan_propaganda_posters = {
+	icon = gfx/interface/icons/timed_modifier_icons
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_negative.dds
+	state_radicals_from_sol_change_mult = 0.3
+}
+
+republican_flames_fanned = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_negative.dds
+	state_radicals_from_sol_change_mult = 0.2
+	state_tax_waste_add = 0.05
+	state_market_access_price_impact = -0.1
+}
+
+occitan_speech = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_negative.dds
+	state_radicals_from_sol_change_mult = 0.4
+}
+
+occitan_operational_funds = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_negative.dds
+	country_tax_income_add = -1000
+}
+
+assassination_aftermath = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_negative.dds
+	country_tax_income_add = -500
+	state_radicals_from_sol_change_mult = 0.1
+	country_authority_mult = -0.1
+	state_tax_waste_add = 0.1
+	state_mortality_mult = 0.1
+}
+
+protestors_arrested = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_negative.dds
+	country_tax_income_add = -500
+	state_radicals_from_sol_change_mult = 0.1
+	country_authority_mult = -0.1
+	state_tax_waste_add = 0.1
+	state_mortality_mult = 0.1
+}
+
+occitan_operations_secured = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_negative.dds
+	state_radicals_from_sol_change_mult = 0.3
+}
+
+current_operational_state = {
+	icon = gfx/interface/icons/timed_modifier_icons/unused/modifier_explosion_negative.dds
+	state_radicals_from_sol_change_mult = 0.1
+}
+
+occtian_failure = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_negative.dds
+	state_radicals_from_sol_change_mult = 0.1
+}
+
+sabotage_aftermath = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_negative.dds
+	state_radicals_from_sol_change_mult = 0.1
+	country_authority_mult = -0.1
+}
+
+occitan_cells_raided = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_negative.dds
+	state_tax_waste_add = 0.1
+	state_mortality_mult = 0.1
+}
+
+french_operations_tangled_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_negative.dds
+	state_tax_waste_add = 0.1
+	state_construction_mult = -0.25
+}
+
+economic_hardship = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_negative.dds
+	building_throughput_add = -0.08
+	tax_income_add = -0.15
+}
+
+weakened_military = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_negative.dds
+	unit_offense_mult = -0.12
+	unit_defense_mult = -0.07
+}
+
+political_turmoil = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_negative.dds
+	country_bureaucracy_mult = -0.05
+	country_authority_mult = -0.08
+}
