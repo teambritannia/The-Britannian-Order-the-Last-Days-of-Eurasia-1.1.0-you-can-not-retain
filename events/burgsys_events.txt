@@ -1,0 +1,223 @@
+namespace = burgsys
+
+burgsys.1 = {
+	type = country_event
+	placement = ROOT
+	event_image = {
+		video = "unspecific_military_parade"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+	title = burgsys.1.t
+	desc = burgsys.1.d
+	flavor = burgsys.1.f
+
+	duration = 3
+
+	trigger = {
+	}
+
+	option = {
+		name = burgsys.1.a
+}
+
+burgsys.2 = {
+	type = country_event
+	placement = ROOT
+	event_image = {
+		video = "unspecific_signed_contract"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+	title = burgsys.2.t
+	desc = burgsys.2.d
+	flavor = burgsys.2.f
+
+	duration = 3
+
+	trigger = {
+	}
+
+	option = {
+		name = burgsys.2.a
+	}
+}
+
+burgsys.3 = {
+	type = country_event
+	placement = ROOT
+	event_image = {
+		video = "unspecific_vandalized_storefront"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+	title = burgsys.3.t
+	desc = burgsys.3.d
+	flavor = burgsys.3.f
+
+	duration = 3
+
+	trigger = {
+	}
+	
+	immediate = {
+		random_scope_state = {
+			limit = {
+				any_scope_pop = { pop_is_discriminated = yes }
+			}
+			random_scope_pop = {
+				limit = { pop_is_discriminated = yes }
+				save_scope_as = non_accepted_culture_pop_scope
+				culture = {
+					save_scope_as = non_accepted_culture_scope
+				}
+			}
+			save_scope_as = minority_state_scope
+		}
+	}
+
+	option = {
+		name = burgsys.3.a
+		ai_chance = {
+			base = 2
+			modifier = {
+				trigger = { 
+					OR = {
+						any_interest_group = {
+							is_powerful = yes
+							has_ideology = ideology:ideology_reactionary
+							has_ideology = ideology:ideology_conservative
+							leader = {
+								has_ideology = ideology:ideology_burgsys
+								has_ideology = ideology:ideology_ancap
+							}
+						}
+					}
+				}
+				add = 8
+			}
+		}
+		burgsys_appear_progress_bar = {
+			add = 20
+		}
+	    scope:minority_state_scope = {
+			add_radicals_in_state = {
+				value = small_radicals
+				culture = scope:non_accepted_culture_pop_scope.culture
+			}
+		}
+	}
+	
+	option = {
+		name = burgsys.3.b
+		ai_chance = {
+			base = 6
+			modifier = {
+				trigger = { 
+					any_interest_group = {
+						is_powerful = yes
+						has_ideology = ideology:ideology_progressive
+						has_ideology = ideology:ideology_radical
+						leader = {
+							has_ideology = ideology:ideology_fengtian_left
+							has_ideology = ideology:ideology_fengtian_center
+							has_ideology = ideology:ideology_fengtian_right
+							has_ideology = ideology:ideology_communist
+							has_ideology = ideology:ideology_socialist
+						}
+					}
+				}
+				add = 4
+			}
+		}
+		burgsys_appear_progress_bar = {
+			add = -10
+		}
+	}
+}
+
+burgsys.4 = { #jingoism 
+	type = country_event
+	placement = ROOT
+	event_image = {
+		video = "unspecific_military_parade"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+	title = burgsys.4.t
+	desc = burgsys.4.d
+	flavor = burgsys.4.f
+
+	duration = 3
+
+	trigger = {
+	}
+	option = {
+		name = burgsys.4.a
+		default_option = yes
+		ai_chance = {
+			base = 10
+		}
+		scope:burgsys_ig = {
+			remove_ideology = ideology:ideology_pacifist
+			remove_ideology = ideology:ideology_isolationist
+			add_ideology = ideology:ideology_jingoist
+		}
+	}
+}
+
+burgsys.5 = { #burgsys leader
+	type = country_event
+	placement = ROOT
+	event_image = {
+		video = "unspecific_military_parade"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+	title = burgsys.5.t
+	desc = burgsys.5.d
+	flavor = burgsys.5.f
+
+	duration = 3
+
+	trigger = {
+	}
+	option = {
+		name = burgsys.5.a
+		default_option = yes
+		ai_chance = {
+			base = 10
+		}
+		scope:burgsys_ig = {
+			create_character = {
+				ig_leader = yes
+				interest_group = scope:burgsys_ig
+				ideology = ideology_burgsys
+			}
+		}
+	}
+	option = {
+		name = burgsys.5.b
+		ai_chance = {
+			base = 4
+		}
+		burgsys_appear_progress_bar = {
+			add = -10
+		}
+	}
+}
