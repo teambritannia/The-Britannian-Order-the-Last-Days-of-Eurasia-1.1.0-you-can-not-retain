@@ -1,0 +1,20 @@
+﻿COUNTRIES = {
+	c:FSO ?= {
+		effect_starting_technology_tier_1_tech = yes
+		
+		set_market_capital = STATE_LOUISIANA
+		
+		activate_law = law_type:law_presidential_republic
+		activate_law = law_type:law_census_voting
+		activate_law = law_type:law_homesteading
+		activate_law = law_type:law_per_capita_based_taxation
+		activate_law = law_type:law_appointed_bureaucrats
+		activate_law = law_type:law_racial_segregation
+		activate_law = law_type:law_agrarianism
+		activate_law = law_type:law_professional_army
+		activate_law = law_type:law_censorship	
+		
+		set_government_wage_level = medium
+		set_tax_level = medium
+	}
+}
