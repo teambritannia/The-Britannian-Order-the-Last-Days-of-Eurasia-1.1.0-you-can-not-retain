@@ -1,0 +1,22 @@
+DIPLOMACY = {
+	c:CFD ?= {
+		set_relations = {country = c:FGT value = -50}
+		set_relations = {country = c:QNG value = -50}
+	}
+	c:FGT ?= {
+		set_relations = {country = c:FER value = 50 }
+		set_relations = {country = c:TKK value = -50 }
+		set_relations = {country = c:WKR value = 50 }
+	}
+	c:SLR ?= {
+		set_relations = {country = c:GRU value = -50
+		set_relations = {country = c:SRU value = -30
+	}
+	c:DAG ?= {
+		set_relations = {country = c:SRU value = -30}
+	}
+	c:BRZ ?= {
+		set_relations = {country = c:INC value = -50}
+		set_relations = {country = c:BLV value = -30}
+	}
+}

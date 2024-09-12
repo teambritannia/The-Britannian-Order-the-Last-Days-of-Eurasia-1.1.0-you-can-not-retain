@@ -1,0 +1,41 @@
+GLOBAL = {
+
+	c:GBR ?= {
+		trigger_event = {
+			id = britannian_prosperity.1 
+			days = 0
+			popup = yes
+		}
+	}
+	c:DAI ?= {
+		trigger_event = {
+			id = britannian_prosperity.4
+			days = 21
+		}
+	}
+	c:GER ?= {
+		trigger_event = {
+			id = german_british_split.1 
+			days = 0
+			popup = yes
+		}
+	}
+	c:FGT ?= {
+		trigger_event = {
+			id = fengtian_events.200
+			days = 0
+			popup = yes
+		}
+	}
+	c:SBR ?= {
+		add_modifier = {
+			name = siberian_black_army
+		}
+	}
+	every_country = {
+		limit = {
+			exists = yes
+		}
+		add_journal_entry = doctrine_je
+	}
+}
