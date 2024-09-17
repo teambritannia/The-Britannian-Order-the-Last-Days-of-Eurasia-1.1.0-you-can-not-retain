@@ -10,7 +10,14 @@
     "multiplayer_synchronized" : true,
 	"replace_paths" : [
 		"common/country_definitions",
-		"common/history",
+		"common/history/countries",
+		"common/history/buildings",
+		"common/history/pops",
+		"common/history/global",
+		"common/history/population",
+		"common/history/buildings",
+		"common/history/states",
+		"common/history/trade_routes",
 	]
   }
 }
