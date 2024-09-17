@@ -10,6 +10,17 @@ siberian_planning_progress_bar = {
 	
 }
 
+fer_economic_recovery_progress_bar = {
+	name = "fer_economic_recovery_progress_bar"
+	desc = "fer_economic_recovery_progress_bar_desc"
+	
+	start_value = 0
+	min_value = 0
+	max_value = var:goal_gdp
+	
+	default_green = yes
+}
+
 contacting_indonesian_resistance = {
 	name = "contacting_indonesian_resistance_progress_bar"
 	desc = "contacting_indonesian_resistance_progress_bar_desc"

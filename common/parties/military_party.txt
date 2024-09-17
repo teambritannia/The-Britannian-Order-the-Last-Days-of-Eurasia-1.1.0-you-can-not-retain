@@ -163,45 +163,6 @@ military_party = {
 				desc = "from_more_than_three_prior_members"
 			}
 		}
-		# alliance for stricter internal security
-		if = {
-			limit = {
-				OR = {
-					has_ideology = ideology:ideology_jingoist
-					leader = { has_ideology = ideology:ideology_authoritarian }
-				}
-				owner = {
-					NOR = {
-						has_law = law_type:law_no_home_affairs
-						has_law = law_type:law_guaranteed_liberties
-					}
-				}
-			}
-			add = {
-				value = 3
-				desc = "from_liberty"
-			}
-		}
-		if = { # conservatives like censorship
-			limit = {
-				owner = {
-					has_technology_researched = law_enforcement
-					OR = { 
-						has_law = law_type:law_right_of_assembly
-						has_law = law_type:law_protected_speech
-					}
-				}
-				OR = {
-					has_ideology = ideology:ideology_patriarchal
-					has_ideology = ideology:ideology_patriotic
-					leader = { has_ideology = ideology:ideology_authoritarian }
-				}
-			}
-			add = {
-				value = 3
-				desc = "from_no_censorship"
-			}
-		}
 		if = { # authoritarians like militarism
 			limit = {
 				leader = {
@@ -211,84 +172,6 @@ military_party = {
 			add = {
 				value = 5
 				desc = from_authoritarian
-			}
-		}
-		if = { # anti-orleanist
-			limit = {
-				leader = {
-					OR = {
-						has_ideology = ideology:ideology_bonapartist
-						has_ideology = ideology:ideology_legitimist
-					}
-				}
-				owner = {
-					any_interest_group = {
-						has_party = yes
-						party = {
-							is_party_type = military_party
-						}
-						is_powerful = yes
-						leader = {
-							has_ideology = ideology:ideology_orleanist
-						}
-					}
-				}
-			}
-			add = {
-				value = -5
-				desc = "from_french_monarchist_rival"
-			}
-		}
-		if = { # anti-legitimist
-			limit = {
-				leader = {
-					OR = {
-						has_ideology = ideology:ideology_bonapartist
-						has_ideology = ideology:ideology_orleanist
-					}
-				}
-				owner = {
-					any_interest_group = {
-						has_party = yes
-						party = {
-							is_party_type = military_party
-						}
-						is_powerful = yes
-						leader = {
-							has_ideology = ideology:ideology_legitimist
-						}
-					}
-				}
-			}
-			add = {
-				value = -5
-				desc = "from_french_monarchist_rival"
-			}
-		}
-		if = { # anti-bonapartist
-			limit = {
-				leader = {
-					OR = {
-						has_ideology = ideology:ideology_legitimist
-						has_ideology = ideology:ideology_orleanist
-					}
-				}
-				owner = {
-					any_interest_group = {
-						has_party = yes
-						party = {
-							is_party_type = military_party
-						}
-						is_powerful = yes
-						leader = {
-							has_ideology = ideology:ideology_bonapartist
-						}
-					}
-				}
-			}
-			add = {
-				value = -5
-				desc = "from_french_monarchist_rival"
 			}
 		}
 		if = {

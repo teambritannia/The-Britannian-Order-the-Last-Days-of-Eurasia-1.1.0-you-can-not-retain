@@ -55,7 +55,7 @@ britannia_fall = {
 
 suppressing_burgsys = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_negative.dds
-	tax_income_add = -0.05
+	state_tax_waste_add = -0.05
 	country_authority_mult = -0.05
 }
 
@@ -67,7 +67,7 @@ root_out_burgsys = {
 
 funding_burgsys = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_negative.dds
-	tax_income_add = -0.05
+	state_tax_waste_add = -0.05
 }
 
 funding_britannian_army = {
@@ -172,7 +172,7 @@ foreign_constructions = {
 
 promoting_peasant_sentiments = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
-	tax_income_add = -0.05
+	state_tax_waste_add = -0.05
 	country_influence_mult = -0.1
 }
 
@@ -353,8 +353,8 @@ french_operations_tangled_modifier = {
 
 economic_hardship = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_negative.dds
-	building_throughput_add = -0.08
-	tax_income_add = -0.15
+	building_throughput_add = -0.1
+	state_tax_waste_add = 0.15
 }
 
 weakened_military = {
@@ -365,14 +365,26 @@ weakened_military = {
 
 political_turmoil = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_negative.dds
-	country_bureaucracy_mult = -0.05
-	country_authority_mult = -0.08
+	country_bureaucracy_mult = -0.1
+	country_authority_mult = -0.15
+	country_legitimacy_base_add = -20
 }
 
-arming_the_nation = {
-	country_military_goods_cost_mult = -0.15
-	unit_offense_mult = 0.05
-	unit_defense_mult = 0.1
-	unit_morale_loss_mult = -0.2
-	unit_morale_damage_mult = 0.25
+political_strife = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_negative.dds
+	country_bureaucracy_mult = -0.06
+	country_authority_mult = -0.1
+	country_legitimacy_base_add = -12
+}
+
+recovering_military = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_negative.dds
+	unit_offense_mult = -0.06
+	unit_defense_mult = -0.04
+}
+
+economic_rebuilding = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_negative.dds
+	building_throughput_add = -0.05
+	state_tax_waste_add = 0.1
 }

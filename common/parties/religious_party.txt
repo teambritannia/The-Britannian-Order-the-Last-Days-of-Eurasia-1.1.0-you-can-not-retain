@@ -169,7 +169,7 @@ religious_party = {
 		if = { # Corporatism
 			limit = {
 				OR = {
-					has_ideology = ideology:ideology_moralist
+					has_ideology = ideology:ideology_tbo_moralist
 					leader = {
 						has_ideology = ideology:ideology_corporatist_leader
 					}

@@ -14,12 +14,93 @@ je_star_in_the_wastes = {
 	}
 	
 	immediate = {
+		add_journal_entry = {
+			type = je_internal_stabilization
+		}
+		add_journal_entry = {
+			type = je_military_recovery
+		}
 		trigger_event = russia.100
 	}
 
 	complete = {
 		custom_tooltip = reclaimed_siberia_tt
 		has_variable = var_reclaimed_siberia
+	}
+}
+
+je_internal_stabilization = {
+	icon = "gfx/interface/icons/event_icons/event_election.dds"
+
+	group = je_group_historical_content
+	
+	scripted_button = revitalize_bureaucracy_button
+	
+	immediate = {
+	}
+	
+	current_value = {
+		value = root.gdp
+	}
+	
+	complete = {
+		NOT = {
+			has_modifier = political_turmoil
+		}
+		scope:journal_entry = {
+			is_goal_complete = yes
+		}
+	}
+	
+	on_complete = {
+		remove_modifier = economic_hardship
+		add_modifier = {
+			name = economic_rebuilding
+			months = normal_modifier_time
+			is_decaying = yes
+		}
+	}
+	
+	progressbar = yes
+
+	goal_add_value = {
+		value = root.gdp
+		multiply = 0.15
+	}
+}
+
+je_military_recovery = {
+	icon = "gfx/interface/icons/event_icons/event_military.dds"
+
+	group = je_group_historical_content
+	
+	immediate = {
+	}
+	
+	current_value = {
+		value = root.army_power_projection
+	}
+	
+	complete = {
+		scope:journal_entry = {
+			is_goal_complete = yes
+		}
+	}
+	
+	on_complete = {
+		remove_modifier = weakened_military
+		add_modifier = {
+			name = recovering_military
+			months = normal_modifier_time
+			is_decaying = yes
+		}
+	}
+	
+	progressbar = yes
+
+	goal_add_value = {
+		value = root.army_power_projection
+		multiply = 0.15
 	}
 }
 
@@ -31,11 +112,6 @@ je_the_east_russian_war = {
 	scripted_progress_bar = siberian_planning_progress_bar
 
 	is_shown_when_inactive = {
-		c:TKK = {
-			any_scope_state = {
-				has_claim_by = c:FER
-			}
-		}
 	}
 
 	possible = {

@@ -1,0 +1,26 @@
+revitalize_bureaucracy_button = {
+	name = "revitalize_bureaucracy_button"
+	desc = "revitalize_bureaucracy_button_desc"
+
+	visible = {
+		always = yes
+	}
+
+	ai_chance = {
+		base = 100
+	}
+
+	possible = {
+		bureaucracy >= 0 
+		has_modifier = political_turmoil
+	}
+
+	effect = {
+		remove_modifier = political_turmoil
+		add_modifier = {
+			name = political_strife
+			months = normal_modifier_time
+			is_decaying = yes
+		}
+	}
+}
