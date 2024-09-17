@@ -90,3 +90,5 @@ je_contact_indonesia = {
 		}
 	}
 }
+
+#end of FER journals
