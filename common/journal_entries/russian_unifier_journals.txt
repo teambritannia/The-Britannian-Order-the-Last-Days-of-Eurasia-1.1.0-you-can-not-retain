@@ -92,3 +92,69 @@ je_contact_indonesia = {
 }
 
 #end of FER journals
+#beginning of Omsk journals
+
+je_a_life_for_nunally = {
+	icon = "gfx/interface/icons/event_icons/event_map.dds"
+	group = je_group_historical_content
+
+	immediate = {
+		add_journal_entry = {
+			type = je_through_fiery_steel
+		}
+		add_journal_entry = {
+			type = je_built_of_our_hand
+		}
+		add_journal_entry = {
+			type = je_where_no_cannons_thunder
+		}
+	}
+}
+#branch 1
+
+je_through_fiery_steel = {
+	on_complete = {
+		add_journal_entry = {
+			type = je_what_russians_built
+		}
+	}
+}
+
+je_what_russians_built = {
+}
+
+je_for_teutons_killed = {
+}
+#branch 2
+je_built_of_our_hand = {
+	icon = "gfx/interface/icons/event_icons/event_map.dds"
+	group = je_group_historical_content
+
+	scripted_button = reorganize_agriculture
+
+	on_complete = {
+		add_journal_entry = {
+			type = je_russian_boots_once_more
+		}
+	}
+}
+
+je_russian_boots_once_more = {
+}
+
+je_on_teuton_sand = {
+}
+#branch 3
+je_where_no_cannons_thunder = {
+	on_complete = {
+		add_journal_entry = {
+			type = je_russia_whole_again
+		}
+	}
+}
+
+je_russia_whole_once_more = {
+}
+
+je_ends_teuton_plunder = {
+}
