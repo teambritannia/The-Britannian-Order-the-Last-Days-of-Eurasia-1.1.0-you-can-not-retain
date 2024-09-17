@@ -174,7 +174,7 @@ je_where_no_cannons_thunder = {
 	}
 }
 
-je_russia_whole_once_more = {
+je_russia_whole_again = {
 }
 
 je_ends_teuton_plunder = {
