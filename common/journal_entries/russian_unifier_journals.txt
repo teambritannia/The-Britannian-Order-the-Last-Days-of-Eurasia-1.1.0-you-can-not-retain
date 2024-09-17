@@ -109,6 +109,18 @@ je_a_life_for_nunally = {
 			type = je_where_no_cannons_thunder
 		}
 	}
+
+	complete = {
+		has_variable = var_war_industry
+		has_variable = var_lifted_morale
+		has_variable = var_preparing_for_war
+	}
+
+	on_complete = {
+		remove_variable = var_war_industry
+		remove_variable = var_lifted_morale
+		remove_variable = var_preparing_for_war
+	}
 }
 #branch 1
 
@@ -124,6 +136,9 @@ je_what_russians_built = {
 }
 
 je_for_teutons_killed = {
+	on_complete = {
+		add_varialbe = var_war_industry
+	}
 }
 #branch 2
 je_built_of_our_hand = {
@@ -143,9 +158,15 @@ je_russian_boots_once_more = {
 }
 
 je_on_teuton_sand = {
+	on_complete = {
+		add_varialbe = var_lifted_morale
+	}
 }
 #branch 3
 je_where_no_cannons_thunder = {
+	icon = "gfx/interface/icons/event_icons/event_map.dds"
+	group = je_group_historical_content
+
 	on_complete = {
 		add_journal_entry = {
 			type = je_russia_whole_again
@@ -157,4 +178,8 @@ je_russia_whole_once_more = {
 }
 
 je_ends_teuton_plunder = {
+	
+	on_complete = {
+		add_varialbe = var_preparing_for_war
+	}
 }
