@@ -1,0 +1,8 @@
+l_english:
+ mexican_war_disaster: "Britannian Disaster"
+ victoria_unrest: "Fears over Victoria"
+ public_hysteria: "Public hysteria"
+ police_investigation: "Police investigation"
+ gbr_german_payments: "German tribute"
+ ger_german_payments: "Payments to Greater Britannia"
+ bolstered_armed_forces: "Bolstered Armed Forces"
