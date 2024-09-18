@@ -393,3 +393,16 @@ literacy_drive_expenses = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_negative.dds
 	
 }
+
+#modifier dump
+
+	state_poor_standard_of_living_add = 2
+	building_group_bg_agriculture_throughput_add = 0.1
+	state_mortality_mult = 0.5
+	state_birth_rate_mult = -0.4
+	building_group_bg_manufacturing_throughput_add = 0.1
+	state_migration_pull_mult = 0.25
+	state_construction_mult = 0.10
+	state_education_access_add = 0.33
+	state_radicals_from_sol_change_mult = 0.2
+	state_loyalists_from_sol_change_mult = 0.25
