@@ -20,7 +20,7 @@ russia.100 = { #far eastern republic status
 	trigger = {
 	}
 
-	option = { # no support
+	option = {
 		ai_chance = {
 			base = 5
 		}
@@ -29,5 +29,59 @@ russia.100 = { #far eastern republic status
 		add_modifier = economic_hardship
 		add_modifier = weakened_military
 		add_modifier = political_turmoil
+	}
+}
+
+russia.110 = {
+	type = country_event
+
+	title = russia.110.t
+	desc = russia.110.d
+	flavor = russia.110.f
+
+	event_image = {
+		#placeholder
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_gear.dds"
+
+	duration = 3
+
+	option = { #remain focused on agriculture
+		ai_chance = {
+			base = 3
+			modifier = {
+				trigger = {
+					owner = {
+						leader = {
+							has_ideology = ideology_land_reformer
+						}
+					}
+				}
+			}
+		}
+		default_option = yes
+		name = russia.110.a
+		add_journal_entry = {
+			type = je_agricultural_improvements
+		}
+		add_journal_entry = {
+			type = je_developing_the_nation
+		}
+	}
+	option = { #focus on industry
+		ai_chance = {
+			base = 7
+		}
+		default_option = yes
+		name = russia.110.b
+		add_journal_entry = {
+			type = je_industrializing_the_country
+		}
+		add_journal_entry = {
+			type = je_developing_the_nation
+		}
 	}
 }
