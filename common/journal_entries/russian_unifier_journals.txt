@@ -29,12 +29,10 @@ je_star_in_the_wastes = {
 	}
 }
 
-je_internal_stabilization = {
+je_economic_recovery = {
 	icon = "gfx/interface/icons/event_icons/event_election.dds"
 
 	group = je_group_historical_content
-	
-	scripted_button = revitalize_bureaucracy_button
 	
 	immediate = {
 	}
@@ -44,9 +42,6 @@ je_internal_stabilization = {
 	}
 	
 	complete = {
-		NOT = {
-			has_modifier = political_turmoil
-		}
 		scope:journal_entry = {
 			is_goal_complete = yes
 		}
@@ -55,9 +50,14 @@ je_internal_stabilization = {
 	on_complete = {
 		remove_modifier = economic_hardship
 		add_modifier = {
-			name = economic_rebuilding
+			name = economic_hardship
 			months = normal_modifier_time
+			multiplier = 0.8
 			is_decaying = yes
+		}
+		trigger_event = {
+			id = russia_events.110
+			days = 3
 		}
 	}
 	
