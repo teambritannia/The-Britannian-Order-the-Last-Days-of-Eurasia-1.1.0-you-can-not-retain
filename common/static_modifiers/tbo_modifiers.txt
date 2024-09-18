@@ -388,3 +388,8 @@ economic_rebuilding = {
 	building_throughput_add = -0.05
 	state_tax_waste_add = 0.1
 }
+
+literacy_drive_expenses = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_negative.dds
+	
+}
