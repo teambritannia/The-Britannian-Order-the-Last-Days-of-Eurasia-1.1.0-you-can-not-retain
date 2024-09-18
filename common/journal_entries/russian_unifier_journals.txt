@@ -30,7 +30,7 @@ je_star_in_the_wastes = {
 }
 
 je_economic_recovery = {
-	icon = "gfx/interface/icons/event_icons/event_election.dds"
+	icon = "gfx/interface/icons/event_icons/event_star_in_the_wastes.dds"
 
 	group = je_group_historical_content
 	
@@ -70,7 +70,7 @@ je_economic_recovery = {
 }
 
 je_military_recovery = {
-	icon = "gfx/interface/icons/event_icons/event_military.dds"
+	icon = "gfx/interface/icons/event_icons/event_star_in_the_wastes.dds"
 
 	group = je_group_historical_content
 	
@@ -105,7 +105,7 @@ je_military_recovery = {
 }
 
 je_the_east_russian_war = {
-	icon = "gfx/interface/icons/event_icons/event_map.dds"
+	icon = "gfx/interface/icons/event_icons/event_star_in_the_wastes.dds"
 
 	group = je_group_historical_content
 
@@ -144,7 +144,7 @@ je_the_east_russian_war = {
 }
 
 je_contact_indonesia = {
-	icon = "gfx/interface/icons/event_icons/event_election.dds"
+	icon = "gfx/interface/icons/event_icons/event_star_in_the_wastes.dds"
 
 	group = je_group_historical_content
 
@@ -164,6 +164,23 @@ je_contact_indonesia = {
 			}
 			has_modifier = reclaimed_siberia
 		}
+	}
+}
+
+je_developing_the_nation = {
+	icon = "gfx/interface/icons/event_icons/event_star_in_the_wastes.dds"
+
+	group = je_group_historical_content
+
+	scripted_button = literacy_drive
+	scripted_button = encourage_immigration
+	scripted_button = boost_birth_rates
+	scripted_button = lower_rural_mortality
+
+	complete = {
+	}
+
+	fail = {
 	}
 }
 
