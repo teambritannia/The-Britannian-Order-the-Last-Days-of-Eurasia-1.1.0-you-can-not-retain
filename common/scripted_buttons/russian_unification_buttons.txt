@@ -51,12 +51,12 @@ literacy_drive_button = {
 
 	possible = {
 		NOT = {
-			has_variable = literacy_drive_var
+			has_variable = var_literacy_drive
 		}
 	}
 
 	effect = {
-		set_variable = var_improving_healthcare
+		set_variable = var_literacy_drive
 		add_modifier = {
 			name = national_improvement_expenses
 			months = normal_modifier_time
@@ -64,6 +64,12 @@ literacy_drive_button = {
 		add_modifier = {
 			name = literacy_drive_modifier
 			months = normal_modifier_time
+		}
+		remove_modifier = widespread_poverty_modifier
+		add_modifier = {
+			name - widespread_poverty_modifier
+			months = short_modifier_time
+			is_decaying = yes
 		}
 	}
 }
@@ -116,10 +122,16 @@ improving_healthcare_button = {
 			name = improving_healthcare_modifier 
 			months = normal_modifier_time
 		}
+		remove_modifier = underdeveloped_healthcare_modifier
+		add_modifier = {
+			name - underdeveloped_healthcare_modifier
+			months = short_modifier_time
+			is_decaying = yes
+		}
 	}
 }
 
-improving_healthcare_button = {
+increasing_population_button = {
 	name = "increasing_population_button"
 	desc = "increasing_population_button_desc"
 
@@ -158,6 +170,12 @@ improving_healthcare_button = {
 		add_modifier = {
 			name = increasing_population_modifier 
 			months = normal_modifier_time
+		}
+		remove_modifier = desolate_wasteland_modifier
+		add_modifier = {
+			name - desolate_wasteland_modifier
+			months = short_modifier_time
+			is_decaying = yes
 		}
 	}
 }
@@ -201,6 +219,12 @@ alleviating_poverty_button = {
 		add_modifier = {
 			name = alleviating_poverty_modifier 
 			months = normal_modifier_time
+		}
+		remove_modifier = widespread_poverty_modifier
+		add_modifier = {
+			name - widespread_poverty_modifier
+			months = short_modifier_time
+			is_decaying = yes
 		}
 	}
 }
