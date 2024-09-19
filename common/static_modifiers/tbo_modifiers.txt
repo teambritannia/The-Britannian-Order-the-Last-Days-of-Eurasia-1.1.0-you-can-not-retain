@@ -415,13 +415,21 @@ increasing_population_modifier = {
 improvements_in_agriculture_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_gears_positive.dds
 	building_group_bg_agriculture_throughput_add = 0.1
+	state_construction_mult = 0.05
 }
 
 expanding_industry_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_gears_positive.dds
 	building_group_bg_manufacturing_throughput_add = 0.1
+	state_construction_mult = 0.05
 }
 
+alleviating_poverty_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+	state_poor_standard_of_living_add = 2
+	state_radicals_from_sol_change_mult = -0.2
+	state_loyalists_from_sol_change_mult = 0.1
+}
 #modifier dump
 
 	state_poor_standard_of_living_add = 2
