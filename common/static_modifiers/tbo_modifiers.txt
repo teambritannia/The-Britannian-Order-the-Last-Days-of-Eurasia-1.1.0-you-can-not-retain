@@ -389,9 +389,37 @@ economic_rebuilding = {
 	state_tax_waste_add = 0.1
 }
 
-literacy_drive_expenses = {
+national_improvement_expenses = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_negative.dds
-	
+	state_tax_waste_add = 0.1
+	country_authority_mult = -0.1
+}
+
+literacy_drive_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	state_education_access_add = 0.40
+}
+
+improving_healthcare_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+	state_poor_standard_of_living_add = 1.5
+	state_mortality_mult = 0.2
+}
+
+increasing_population_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+	state_migration_pull_mult = 0.2
+	state_birth_rate_mult = 0.15
+}
+
+improvements_in_agriculture_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_gears_positive.dds
+	building_group_bg_agriculture_throughput_add = 0.1
+}
+
+expanding_industry_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_gears_positive.dds
+	building_group_bg_manufacturing_throughput_add = 0.1
 }
 
 #modifier dump
