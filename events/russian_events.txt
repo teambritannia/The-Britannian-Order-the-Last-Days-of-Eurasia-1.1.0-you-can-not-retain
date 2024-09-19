@@ -51,6 +51,33 @@ russia.110 = {
 
 	option = { #remain focused on agriculture
 		ai_chance = {
+			base = 10
+		}
+		add_journal_entry = {
+			type = je_developing_the_nation
+		}
+	}
+}
+
+russia.111 = {
+	type = country_event
+
+	title = russia.111.t
+	desc = russia.111.d
+	flavor = russia.111.f
+
+	event_image = {
+		#placeholder
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_gear.dds"
+
+	duration = 3
+
+	option = { #remain focused on agriculture
+		ai_chance = {
 			base = 3
 			modifier = {
 				trigger = {
@@ -63,12 +90,9 @@ russia.110 = {
 			}
 		}
 		default_option = yes
-		name = russia.110.a
+		name = russia.111.a
 		add_journal_entry = {
 			type = je_agricultural_improvements
-		}
-		add_journal_entry = {
-			type = je_developing_the_nation
 		}
 	}
 	option = { #focus on industry
@@ -76,12 +100,9 @@ russia.110 = {
 			base = 7
 		}
 		default_option = yes
-		name = russia.110.b
+		name = russia.111.b
 		add_journal_entry = {
 			type = je_industrializing_the_country
-		}
-		add_journal_entry = {
-			type = je_developing_the_nation
 		}
 	}
 }
