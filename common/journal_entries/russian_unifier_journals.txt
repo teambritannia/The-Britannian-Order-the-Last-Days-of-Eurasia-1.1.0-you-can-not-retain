@@ -208,16 +208,15 @@ je_expanding_industry = {
 
 	group = je_group_historical_content
 
-	scripted_button = develop_infrastructure_technology
-	scripted_button = reorganize_industrial_practices
-	scripted_button = the_buryatia_steel_plant
+	scripted_button = develop_infrastructure_technology_button
+	scripted_button = reorganize_industrial_practices_button
+	scripted_button = the_buryatia_steel_plant_button
 
 	complete = {
 		has_technology_researched = railways
 		custom_tooltip = {
 			text = developed_modern_industry
-			has_v
-			has_variable = var_improving_healthcare
+			has_variable = var_expanded_industry
 		}
 	}
 
