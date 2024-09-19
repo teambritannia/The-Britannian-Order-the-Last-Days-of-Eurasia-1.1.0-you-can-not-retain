@@ -32,7 +32,7 @@ russia.100 = { #far eastern republic status
 	}
 }
 
-russia.110 = {
+russia.110 = { # begin improving standard of living
 	type = country_event
 
 	title = russia.110.t
