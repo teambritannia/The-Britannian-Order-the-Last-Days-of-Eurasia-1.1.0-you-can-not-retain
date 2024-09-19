@@ -192,6 +192,11 @@ je_developing_the_nation = {
 		remove_variable = var_improving_healthcare
 		remove_variable = var_increasing_population
 		remove_variable = var_alleviating_poverty
+		trigger_event = {
+			id = russian_events.111
+			days = 3
+			popup = yes
+		}
 	}
 
 	fail = {
