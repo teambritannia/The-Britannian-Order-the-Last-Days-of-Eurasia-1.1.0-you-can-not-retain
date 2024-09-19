@@ -56,12 +56,150 @@ literacy_drive_button = {
 	}
 
 	effect = {
+		set_variable = var_improving_healthcare
 		add_modifier = {
 			name = national_improvement_expenses
 			months = normal_modifier_time
 		}
 		add_modifier = {
 			name = literacy_drive_modifier
+			months = normal_modifier_time
+		}
+	}
+}
+
+improving_healthcare_button = {
+	name = "improving_healthcare_button"
+	desc = "improving_healthcare_button_desc"
+
+	visible = {
+		always = yes
+	}
+
+	ai_chance = {
+		base = 100
+		modifier = {
+			trigger = {
+				taking_loans = yes
+			}
+			add = -40
+		}
+		modifier = {
+			trigger = {
+				approaching_bureaucracy_shortage
+			}
+			add = -30
+		}
+		modifier = {
+			trigger = {
+				NOT = {
+					has_law = law_type:law_no_hospitals
+				}
+			}
+			add = -20
+		}
+	}
+
+	possible = {
+		NOT = {
+			has_variable = var_improving_healthcare
+		}
+	}
+
+	effect = {
+		set_variable = var_improving_healthcare
+		add_modifier = {
+			name = national_improvement_expenses
+			months = normal_modifier_time
+		}
+		add_modifier = {
+			name = improving_healthcare_modifier 
+			months = normal_modifier_time
+		}
+	}
+}
+
+improving_healthcare_button = {
+	name = "increasing_population_button"
+	desc = "increasing_population_button_desc"
+
+	visible = {
+		always = yes
+	}
+
+	ai_chance = {
+		base = 100
+		modifier = {
+			trigger = {
+				taking_loans = yes
+			}
+			add = -40
+		}
+		modifier = {
+			trigger = {
+				approaching_bureaucracy_shortage
+			}
+			add = -30
+		}
+	}
+
+	possible = {
+		NOT = {
+			has_variable = var_increasing_population
+		}
+	}
+
+	effect = {
+		set_variable = var_increasing_population
+		add_modifier = {
+			name = national_improvement_expenses
+			months = normal_modifier_time
+		}
+		add_modifier = {
+			name = increasing_population_modifier 
+			months = normal_modifier_time
+		}
+	}
+}
+
+alleviating_poverty_button = {
+	name = "alleviating_poverty_button"
+	desc = "alleviating_poverty_button_desc"
+
+	visible = {
+		always = yes
+	}
+
+	ai_chance = {
+		base = 100
+		modifier = {
+			trigger = {
+				taking_loans = yes
+			}
+			add = -40
+		}
+		modifier = {
+			trigger = {
+				approaching_bureaucracy_shortage
+			}
+			add = -30
+		}
+	}
+
+	possible = {
+		NOT = {
+			has_variable = var_alleviating_poverty
+		}
+	}
+
+	effect = {
+		set_variable = var_alleviating_poverty
+		add_modifier = {
+			name = national_improvement_expenses
+			months = normal_modifier_time
+		}
+		add_modifier = {
+			name = alleviating_poverty_modifier 
 			months = normal_modifier_time
 		}
 	}
