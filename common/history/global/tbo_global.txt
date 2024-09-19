@@ -32,10 +32,26 @@ GLOBAL = {
 			name = siberian_black_army
 		}
 	}
+	c:FER = {
+		add_modifier = {
+			name = widespread_poverty_modifier
+		}
+		add_modifier = {
+			name = low_literacy_modifier
+		}
+		add_modifier = {
+			name = underdeveloped_healthcare_modifier
+		}
+		add_modifier = {
+			name = desolate_wasteland_modifier
+		}
+	}
 	every_country = {
 		limit = {
 			exists = yes
 		}
-		add_journal_entry = doctrine_je
+		add_journal_entry = {
+			type = doctrine_je
+		}
 	}
 }
