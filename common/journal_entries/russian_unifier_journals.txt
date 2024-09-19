@@ -173,9 +173,9 @@ je_developing_the_nation = {
 	group = je_group_historical_content
 
 	scripted_button = literacy_drive
-	scripted_button = encourage_immigration
-	scripted_button = boost_birth_rates
+	scripted_button = boost_population
 	scripted_button = lower_rural_mortality
+	scripted_button = alleviate_poverty
 
 	complete = {
 	}
