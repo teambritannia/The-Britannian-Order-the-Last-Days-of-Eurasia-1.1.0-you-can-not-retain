@@ -57,12 +57,12 @@ literacy_drive_button = {
 
 	effect = {
 		add_modifier = {
-			name = literacy_drive_expenses
+			name = national_improvement_expenses
 			months = normal_modifier_time
 		}
 		add_modifier = {
-			name = literacy_drive_effects
-			months = literacy_drive_effects
+			name = literacy_drive_modifier
+			months = normal_modifier_time
 		}
 	}
 }
