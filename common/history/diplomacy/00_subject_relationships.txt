@@ -88,7 +88,7 @@
 		}
 		create_diplomatic_pact = {
 			country  = c:SPA
-			type = protectorate
+			type = dominion
 		}
 		create_diplomatic_pact = {
 			country  = c:NMX
