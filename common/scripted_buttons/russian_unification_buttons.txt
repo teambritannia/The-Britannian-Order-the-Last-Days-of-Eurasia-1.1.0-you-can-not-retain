@@ -316,3 +316,158 @@ expanding_industry_button = {
 		}
 	}
 }
+
+alleviating_poverty_button = {
+	name = "alleviating_poverty_button"
+	desc = "alleviating_poverty_button_desc"
+
+	visible = {
+		always = yes
+	}
+
+	ai_chance = {
+		base = 100
+		modifier = {
+			trigger = {
+				taking_loans = yes
+			}
+			add = -40
+		}
+		modifier = {
+			trigger = {
+				approaching_bureaucracy_shortage
+			}
+			add = -30
+		}
+	}
+
+	possible = {
+		NOT = {
+			has_variable = var_alleviating_poverty
+		}
+	}
+
+	effect = {
+		set_variable = var_alleviating_poverty
+		add_modifier = {
+			name = national_improvement_expenses
+			months = normal_modifier_time
+		}
+		add_modifier = {
+			name = alleviating_poverty_modifier 
+			months = normal_modifier_time
+		}
+		remove_modifier = widespread_poverty_modifier
+		add_modifier = {
+			name - widespread_poverty_modifier
+			months = short_modifier_time
+			is_decaying = yes
+		}
+	}
+}
+
+improving_agriculture_button = {
+	name = "improving_agriculture_button"
+	desc = "improving_agriculture_button_desc"
+
+	visible = {
+		always = yes
+	}
+
+	ai_chance = {
+		base = 100
+		modifier = {
+			trigger = {
+				taking_loans = yes
+			}
+			add = -30
+		}
+		modifier = {
+			trigger = {
+				approaching_bureaucracy_shortage
+			}
+			add = -30
+		}
+	}
+
+	possible = {
+		NOT = {
+			has_variable = var_improved_agriculture
+		}
+	}
+
+	effect = {
+		set_variable = var_improved_agriculture
+		add_modifier = {
+			name = national_improvement_expenses
+			multiplier = 1.5
+			months = normal_modifier_time
+		}
+		add_modifier = {
+			name = improvements_in_agriculture_modifier 
+			months = normal_modifier_time
+		}
+	}
+}
+
+develop_infrastructure_technology_button = {
+	name = "develop_infrastructure_technology_button"
+	desc = "develop_infrastructure_technology_button_desc"
+
+	visible = {
+		always = yes
+	}
+
+	ai_chance = {
+		base = 100
+		modifier = {
+			trigger = {
+				taking_loans = yes
+			}
+			add = -50
+		}
+		modifier = {
+			trigger = {
+				approaching_bureaucracy_shortage
+			}
+			add = -30
+		}
+	}
+
+	possible = {
+		NOT = {
+			has_variable = var_developed_infra_tech
+		}
+	}
+
+	effect = {
+		set_variable = var_developed_infra_tech
+		add_modifier = {
+			name = national_improvement_expenses
+			multiplier = 1.5
+			months = normal_modifier_time
+		}
+		if = {
+			limit = {
+				NOT = {	
+					has_technology_researched = atmospheric_engine
+					has_technology_researched = machine_tools
+				}
+			}
+			add_technology_progress = { progress = 2000 technology = railways }
+			add_technology_progress = { progress = 2000 technology = machine_tools }
+		}
+		if = {
+			limit = {
+				can_research = railways
+			}
+			add_technology_progress = { progress = 3000 technology = railways }
+		}
+		if = {
+			limit = {
+				can_research = steel_railway_cars
+			}
+			add_technology_progress = { progress = 4000 technology = railways }
+		}
+	}
+}
