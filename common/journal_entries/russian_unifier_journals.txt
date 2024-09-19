@@ -203,6 +203,33 @@ je_developing_the_nation = {
 	}
 }
 
+je_expanding_industry = {
+	icon = "gfx/interface/icons/event_icons/event_star_in_the_wastes.dds"
+
+	group = je_group_historical_content
+
+	scripted_button = develop_infrastructure_technology
+	scripted_button = reorganize_industrial_practices
+	scripted_button = the_buryatia_steel_plant
+
+	complete = {
+		has_technology_researched = railways
+		custom_tooltip = {
+			text = developed_modern_industry
+			has_v
+			has_variable = var_improving_healthcare
+		}
+	}
+
+	on_complete = {
+		trigger_event = {
+			id = russian_events.112
+			days = 3
+			popup = yes
+		}
+	}
+}
+
 #end of FER journals
 #beginning of Omsk journals
 
