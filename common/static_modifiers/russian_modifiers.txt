@@ -106,3 +106,11 @@ reorganizing_industrial_practices = {
 	building_group_bg_manufacturing_throughput_add = 0.1
 	state_construction_mult = 0.05
 }
+
+#war preparations
+
+fer_irk_war_preparations = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_negative.dds
+	state_tax_waste_add = 0.1
+	country_bureaucracy_mult = -0.1
+}
