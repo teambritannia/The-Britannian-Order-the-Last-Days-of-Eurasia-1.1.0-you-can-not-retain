@@ -450,6 +450,56 @@ fer_improving_agriculture_button = {
 	}
 }
 
+fer_develop_agricultural_technology_button = {
+	name = "fer_develop_agricultural_technology_button"
+	desc = "fer_develop_agricultural_technology_button_desc"
+
+	visible = {
+		always = yes
+	}
+
+	ai_chance = {
+		base = 100
+		modifier = {
+			trigger = {
+				taking_loans = yes
+			}
+			add = -30
+		}
+		modifier = {
+			trigger = {
+				approaching_bureaucracy_shortage = yes
+			}
+			add = -30
+		}
+	}
+
+	possible = {
+		NOT = {
+			bureaucracy < 0
+		}
+		NOT = {
+			has_variable = var_agriculture_tech
+		}
+	}
+
+	effect = {
+		set_variable = {
+			name = var_agriculture_tech
+		}
+		add_modifier = {
+			name = national_improvement_expenses
+			multiplier = 1.5
+			months = normal_modifier_time
+		}
+		if = {
+			limit = {
+				can_research = 
+			}
+		}
+	}
+}
+
 fer_develop_infrastructure_technology_button = {
 	name = "develop_infrastructure_technology_button"
 	desc = "develop_infrastructure_technology_button_desc"
