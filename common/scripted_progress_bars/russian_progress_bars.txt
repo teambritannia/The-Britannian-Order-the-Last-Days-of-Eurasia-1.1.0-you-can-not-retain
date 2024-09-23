@@ -10,15 +10,30 @@ siberian_planning_progress_bar = {
 	
 }
 
-fer_economic_recovery_progress_bar = {
-	name = "fer_economic_recovery_progress_bar"
-	desc = "fer_economic_recovery_progress_bar_desc"
+fer_irkutsk_war_planning_progress_bar = {
+	name = "fer_irkutsk_war_planning_progress_bar"
+	desc = "fer_irkutsk_war_planning_progress_bar_desc"
 	
 	start_value = 0
 	min_value = 0
-	max_value = var:goal_gdp
+	max_value = 100
 	
-	default_green = yes
+	default_bad = yes
+	on_weekly_pulse = {
+		add = {
+			desc = base_decay
+			add = -0.1
+		}
+		if = {
+			limit = {
+				has_modifier = fer_irk_war_preparations
+			}
+			add = {
+				desc = war_planning
+				add = 0.5
+			}
+		}
+	}
 }
 
 contacting_indonesian_resistance = {
