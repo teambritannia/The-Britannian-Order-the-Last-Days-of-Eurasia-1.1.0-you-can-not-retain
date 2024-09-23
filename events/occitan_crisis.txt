@@ -1,0 +1,479 @@
+namespace = occitan_crisis
+
+occitan_crisis.1 = {
+	type = country_event
+	placement = ROOT
+	event_image = {
+		video = "unspecific_military_parade"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+	title = occitan_crisis.1.t
+	desc = occitan_crisis.1.d
+	flavor = occitan_crisis.1.f
+
+	duration = 3
+
+	trigger = {
+	}
+	
+	immediate = {
+	}
+
+	option = {
+		name = occitan_crisis.1.a
+		ai_chance = {
+			base = 10
+		}
+		create_country = {
+			tag = OCC
+			origin = this
+			state = s:STATE_LANGUEDOC.region_state:FRA
+			on_created = {
+				occitan_setup = yes
+			}
+		}
+	}
+	option = { #play as occ
+		name = occitan_crisis.1.b
+		ai_chance = {
+			base = 0
+		}
+		create_country = {
+			tag = OCC
+			origin = this
+			state = s:STATE_LANGUEDOC.region_state:FRA
+			on_created = {
+				occitan_setup = yes
+			}
+		}
+		play_as = OCC
+	}
+}
+
+occitan_crisis.2 = { # occitan propaganda
+	type = country_event
+	placement = scope:occitan_state
+	event_image = {
+		video = "unspecific_devastation"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_default.dds"
+
+	title = occitan_crisis.2.t
+	desc = occitan_crisis.2.d
+	flavor = {
+		triggered_desc = {
+			flavor = occitan_crisis.2.f1
+			trigger = {
+				je:je_occitan_crisis = {
+					"scripted_bar_progress(french_alertness_progress_bar)" <= 20
+				}
+			}
+		}
+		triggered_desc = {
+			flavor = occitan_crisis.2.f2
+			trigger = {
+				je:je_occitan_crisis = {
+					"scripted_bar_progress(french_alertness_progress_bar)" >= 50
+					"scripted_bar_progress(french_alertness_progress_bar)" <= 80
+				}
+			}
+		}
+		triggered_desc = {
+			flavor = occitan_crisis.2.f3
+			trigger = {
+				je:je_occitan_crisis = {
+					"scripted_bar_progress(french_alertness_progress_bar)" >= 80
+				}
+			}
+		}
+	}
+
+	duration = 3
+
+	trigger = {
+	}
+
+	immediate = {
+		c:FRA = {
+			random_scope_state = {
+				limit = {
+					has_modifier = current_operational_state
+				}
+				add_modifier = {
+					name = occitan_propaganda_posters
+					months = 1.5
+				}
+			}
+		}
+	}
+
+	option = {
+		name = {
+			triggered_desc = {
+				name = occitan_crisis.2.a1
+				trigger = {
+					je:je_occitan_crisis = {
+						"scripted_bar_progress(french_alertness_progress_bar)" <= 20
+					}
+				}
+			}
+			triggered_desc = {
+				name = occitan_crisis.2.a2
+				trigger = {
+					je:je_occitan_crisis = {
+						"scripted_bar_progress(french_alertness_progress_bar)" >= 50
+						"scripted_bar_progress(french_alertness_progress_bar)" <= 80
+					}
+				}
+			}
+			triggered_desc = {
+				name = occitan_crisis.2.a3
+				trigger = {
+					je:je_occitan_crisis = {
+						"scripted_bar_progress(french_alertness_progress_bar)" >= 80
+					}
+				}
+			}
+		}
+		ai_chance = {
+			base = 10
+		}
+	}
+}
+
+occitan_crisis.3 = { # republican flames fanned
+	type = country_event
+	placement = scope:occitan_state
+	event_image = {
+		video = "unspecific_devastation"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/placeholder.dds"
+
+	title = occitan_crisis.3.t
+	desc = occitan_crisis.3.d
+	flavor = {
+		triggered_desc = {
+			flavor = occitan_crisis.3.f1
+			trigger = {
+				je:je_occitan_crisis = {
+					"scripted_bar_progress(french_alertness_progress_bar)" <= 20
+				}
+			}
+		}
+		triggered_desc = {
+			flavor = occitan_crisis.3.f2
+			trigger = {
+				je:je_occitan_crisis = {
+					"scripted_bar_progress(french_alertness_progress_bar)" >= 50
+					"scripted_bar_progress(french_alertness_progress_bar)" <= 80
+				}
+			}
+		}
+		triggered_desc = {
+			flavor = occitan_crisis.3.f3
+			trigger = {
+				je:je_occitan_crisis = {
+					"scripted_bar_progress(french_alertness_progress_bar)" >= 80
+				}
+			}
+		}
+	}
+
+	duration = 3
+
+	trigger = {
+	}
+
+	immediate = {
+		c:FRA = {
+			random_scope_state = {
+				limit = {
+					has_modifier = current_operational_state
+				}
+				add_modifier = {
+					name = republican_flames_fanned
+					months = 2
+				}
+			}
+		}
+	}
+
+	option = {
+		name = {
+			triggered_desc = {
+				name = occitan_crisis.3.a1
+				trigger = {
+					je:je_occitan_crisis = {
+						"scripted_bar_progress(french_alertness_progress_bar)" <= 20
+					}
+				}
+			}
+			triggered_desc = {
+				name = occitan_crisis.3.a2
+				trigger = {
+					je:je_occitan_crisis = {
+						"scripted_bar_progress(french_alertness_progress_bar)" >= 50
+						"scripted_bar_progress(french_alertness_progress_bar)" <= 80
+					}
+				}
+			}
+			triggered_desc = {
+				name = occitan_crisis.3.a3
+				trigger = {
+					je:je_occitan_crisis = {
+						"scripted_bar_progress(french_alertness_progress_bar)" >= 80
+					}
+				}
+			}
+		}
+		ai_chance = {
+			base = 10
+		}
+	}
+}
+
+occitan_crisis.4 = { # occitan speech
+	type = country_event
+	placement = scope:occitan_state
+	event_image = {
+		video = "unspecific_devastation"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/placeholder.dds"
+
+	title = occitan_crisis.4.t
+	desc = occitan_crisis.4.d
+	flavor = {
+		triggered_desc = {
+			flavor = occitan_crisis.4.f1
+			trigger = {
+				je:je_occitan_crisis = {
+					"scripted_bar_progress(french_alertness_progress_bar)" <= 20
+				}
+			}
+		}
+		triggered_desc = {
+			flavor = occitan_crisis.4.f2
+			trigger = {
+				je:je_occitan_crisis = {
+					"scripted_bar_progress(french_alertness_progress_bar)" >= 50
+					"scripted_bar_progress(french_alertness_progress_bar)" <= 80
+				}
+			}
+		}
+		triggered_desc = {
+			flavor = occitan_crisis.4.f3
+			trigger = {
+				je:je_occitan_crisis = {
+					"scripted_bar_progress(french_alertness_progress_bar)" >= 80
+				}
+			}
+		}
+	}
+
+	duration = 3
+
+	trigger = {
+	}
+
+	immediate = {
+		c:FRA = {
+			random_scope_state = {
+				limit = {
+					has_modifier = current_operational_state
+				}
+				add_modifier = {
+					name = occitan_speech
+					months = 1
+				}
+			}
+		}
+	}
+
+	option = {
+		name = {
+			triggered_desc = {
+				name = occitan_crisis.4.a1
+				trigger = {
+					je:je_occitan_crisis = {
+						"scripted_bar_progress(french_alertness_progress_bar)" <= 20
+					}
+				}
+			}
+			triggered_desc = {
+				name = occitan_crisis.4.a2
+				name = {
+					je:je_occitan_crisis = {
+						"scripted_bar_progress(french_alertness_progress_bar)" >= 50
+						"scripted_bar_progress(french_alertness_progress_bar)" <= 80
+					}
+				}
+			}
+			triggered_desc = {
+				name = occitan_crisis.4.a3
+				trigger = {
+					je:je_occitan_crisis = {
+						"scripted_bar_progress(french_alertness_progress_bar)" >= 80
+					}
+				}
+			}
+		}
+		ai_chance = {
+			base = 10
+		}
+	}
+}
+
+occitan_crisis.5 = { # occitan leader assassinated
+	type = country_event
+	placement = scope:occitan_state
+	event_image = {
+		video = "unspecific_devastation"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/placeholder.dds"
+
+	title = occitan_crisis.5.t
+	desc = occitan_crisis.5.d
+	flavor = occitan_crisis.5.f
+
+	duration = 3
+
+	trigger = {
+	}
+
+	immediate = {
+	}
+
+	option = {
+		name = occitan_crisis.5.a
+		ai_chance = {
+			base = 10
+		}
+	}
+}
+
+occitan_crisis.6 = { # french operations tangled
+	type = country_event
+	placement = scope:occitan_state
+	event_image = {
+		video = "unspecific_devastation"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/placeholder.dds"
+
+	title = occitan_crisis.6.t
+	desc = occitan_crisis.6.d
+	flavor = occitan_crisis.6.f
+
+	duration = 3
+
+	trigger = {
+	}
+
+	immediate = {
+		scope:occitan_state = {
+			add_modifier = {
+				name = french_operations_tangled_modifier
+				months = 1
+			}
+		}
+	}
+
+	option = {
+		name = occitan_crisis.6.a
+		ai_chance = {
+			base = 10
+		}
+	}
+}
+
+occitan_crisis.7 = { # occitan cells raided
+	type = country_event
+	placement = scope:occitan_state
+	event_image = {
+		video = "unspecific_devastation"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/placeholder.dds"
+
+	title = occitan_crisis.7.t
+	desc = occitan_crisis.7.d
+	flavor = occitan_crisis.7.f
+
+	duration = 3
+
+	trigger = {
+	}
+
+	immediate = {
+		scope:occitan_state = {
+			add_modifier = {
+				name = occitan_cells_raided
+				months = 1
+			}
+		}
+	}
+
+	option = {
+		name = occitan_crisis.7.a
+		ai_chance = {
+			base = 10
+		}
+	}
+}
+
+occitan_crisis.8 = { # occitan operations sabotaged
+	type = country_event
+	placement = scope:occitan_state
+	event_image = {
+		video = "unspecific_devastation"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/placeholder.dds"
+
+	title = occitan_crisis.8.t
+	desc = occitan_crisis.8.d
+	flavor = occitan_crisis.8.f
+
+	duration = 3
+
+	trigger = {
+	}
+
+	immediate = {
+		scope:occitan_state = {
+			add_modifier = {
+				name = occitan_operations_sabotaged
+				days = 40
+			}
+		}
+	}
+
+	option = {
+		name = occitan_crisis.8.a
+		ai_chance = {
+			base = 10
+		}
+	}
+}

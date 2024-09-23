@@ -1,0 +1,281 @@
+﻿namespace = rebel_victoria
+
+rebel_victoria.1 = { 
+	type = country_event
+
+	title = rebel_victoria.1.t
+	desc = rebel_victoria.1.d
+	flavor = rebel_victoria.1.f
+
+	event_image = {
+		video = "middleeast_police_breaking_door"	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+	duration = 3
+
+	trigger = {
+		exists = GBR
+		this = GBR
+	}
+
+	option = {
+		name = rebel_victoria.1.a
+		trigger_event = {
+			id = rebel_victoria.2
+			days = { 100 140 }
+		}
+	}
+}
+
+
+rebel_victoria.2 = { #bigwig shot
+	type = country_event
+
+	title = rebel_victoria.2.t
+	desc = rebel_victoria.2.d
+	flavor = rebel_victoria.2.f
+
+	event_image = {
+		video = "southamerica_public_figure_assassination"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+	duration = 3
+	
+	trigger = {
+		exists = GBR
+		this = GBR
+	}
+
+	immediate = {
+		random_scope_character = {
+			limit = {
+				has_role = politician
+				not = {
+					interest_group = {
+						is_interest_group_type = ig_trade_unions
+					}
+				}
+			}
+			save_scope_as = deadguy_scope
+		}
+	}
+
+	option = {
+		name = rebel_victoria.2.a
+		default_option = yes
+		add_modifier = {
+			name = victoria_unrest
+			months = normal_modifier_time
+		}
+		scope:deadguy_scope = {
+			kill_character = yes
+		}
+		trigger_event = {
+			id = rebel_victoria.3
+			days = { 100 140 }
+		}
+	}
+	
+	option = {
+		name = rebel_victoria.2.b
+		add_modifier = {
+			name = victoria_unrest
+			months = short_modifier_time
+		}
+		set_variable = victoria_coverup
+		scope:deadguy_scope = {
+			kill_character = yes
+		}
+		trigger_event = {
+			id = rebel_victoria.3
+			days = { 100 140 }
+		}
+	}
+}
+
+rebel_victoria.3 = { # public bombing
+	type = country_event
+
+	title = rebel_victoria.3.t
+	desc = rebel_victoria.3.d
+	flavor = rebel_victoria.3.f
+
+	event_image = {
+		video = "unspecific_vandalized_storefront"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+	duration = 3
+
+	trigger = {
+		exists = GBR
+		this = GBR
+	}
+
+	immediate = {
+	}
+
+	option = { # public shocked
+		name = rebel_victoria.3.a
+		default_option = yes
+		trigger = {
+			has_variable = victoria_coverup
+		}
+		add_modifier = { # authority cost
+			name = public_hysteria
+			months = short_modifier_time
+			remove_variable = victoria_coverup
+		}
+	}
+
+	option = { # nothing we can do
+		name = rebel_victoria.3.b
+		remove_variable = victoria_coverup
+		trigger = {
+			NOT = { has_variable = victoria_coverup }
+		}
+		
+		add_modifier = { # authority cost
+			name = public_hysteria
+			multiplier = 0.7
+			months = short_modifier_time
+		}
+	}
+	
+	option = { # police!11!!1!!
+		name = rebel_victoria.3.c
+		trigger = {
+			NOT = { has_law = law_type:law_no_police }
+		}
+		remove_variable = victoria_coverup
+		add_modifier = { # hysteria
+			name = public_hysteria
+			multiplier = 0.5
+			months = short_modifier_time
+		}
+		add_modifier = { # more police
+			name = police_investigation
+			months = normal_modifier_time
+		trigger_event = {
+			id = rebel_victoria.4
+			days = { 20 30 }
+		}
+	}
+}
+
+
+rebel_victoria.4 = { # conan recruited
+	type = country_event
+
+	title = rebel_victoria.4.t
+	desc = rebel_victoria.4.d
+	flavor = rebel_victoria.4.f
+
+	event_image = {
+		video = "europenorthamerica_rich_and_poor"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+	duration = 3
+
+	trigger = {
+		exists = GBR
+		this = GBR
+	}
+
+	immediate = {
+		trigger_event = {
+			id = rebel_victoria.5
+			days = { 40 60 }
+		}
+	}
+
+	option = { # buy a drink and head to the scene
+		name = rebel_victoria.4.a
+		default_option = yes
+		country_expenses_add = 1
+	}
+}
+
+rebel_victoria.5 = { # opium addict gives clue
+	type = country_event
+
+	title = rebel_victoria.5.t
+	desc = rebel_victoria.5.d
+	flavor = rebel_victoria.5.f
+
+	event_image = {
+		video = "europenorthamerica_opium_smoker"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+	duration = 3
+
+	trigger = {
+		exists = GBR
+		this = GBR
+	}
+
+	immediate = {
+		trigger_event = {
+			id = rebel_victoria.6
+			days = { 40 60 }
+		}
+	}
+
+	option = { # opium man clue
+		name = rebel_victoria.5.a
+		default_option = yes
+	}
+}
+
+rebel_victoria.6 = { # at the manor house
+	type = country_event
+
+	title = rebel_victoria.6.t
+	desc = rebel_victoria.6.d
+	flavor = rebel_victoria.6.f
+
+	event_image = {
+		video = "europenorthamerica_opium_smoker"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+	duration = 3
+
+	trigger = {
+		exists = GBR
+		this = GBR
+	}
+
+	immediate = {
+		trigger_event = {
+			id = rebel_victoria.7
+			days = { 40 60 }
+		}
+	}
+
+	option = { 
+		name = rebel_victoria.6.a
+		default_option = yes
+	}
+}
