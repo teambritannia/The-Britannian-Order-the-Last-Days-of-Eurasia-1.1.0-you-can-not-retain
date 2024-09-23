@@ -1,0 +1,20 @@
+﻿COUNTRIES = {
+	c:BAF ?= {
+		effect_starting_technology_tier_1_tech = yes
+		
+		set_market_capital = STATE_CHAD	
+		
+		activate_law = law_type:law_presidential_republic
+		activate_law = law_type:law_wealth_voting
+		activate_law = law_type:law_tenant_farmers
+		activate_law = law_type:law_per_capita_based_taxation
+		activate_law = law_type:law_appointed_bureaucrats
+		activate_law = law_type:law_national_supremacy
+		activate_law = law_type:law_laissez_faire
+		activate_law = law_type:law_censorship
+		activate_law = law_type:law_no_migration_controls
+		activate_law = law_type:law_professional_army
+		set_government_wage_level = medium
+		set_tax_level = medium
+	}
+}

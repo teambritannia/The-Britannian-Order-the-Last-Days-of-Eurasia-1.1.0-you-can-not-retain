@@ -1,0 +1,22 @@
+﻿COUNTRIES = {
+	c:TKK ?= {
+		effect_starting_technology_tier_3_tech = yes
+		
+		set_market_capital = STATE_KANSAI
+		
+		activate_law = law_type:law_monarchy
+		activate_law = law_type:law_autocracy
+		activate_law = law_type:law_serfdom
+		activate_law = law_type:law_land_based_taxation
+		activate_law = law_type:law_hereditary_bureaucrats
+		activate_law = law_type:law_national_supremacy
+		activate_law = law_type:law_traditionalism
+		activate_law = law_type:law_censorship	
+		activate_law = law_type:law_closed_borders
+		activate_law = law_type:law_peasant_levies
+		activate_law = law_type:law_debt_slavery
+		
+		set_government_wage_level = high
+		set_tax_level = medium
+	}
+}
