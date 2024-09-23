@@ -246,6 +246,9 @@ je_agricultural_improvements = {
 	}
 
 	on_complete = {
+		remove_variable = var_improved_agriculture
+		remove_variable = var_agriculture_tech
+		remove_variable = var_developed_infra_tech
 		trigger_event = {
 			id = russia.113
 			days = 3
@@ -274,6 +277,9 @@ je_expanding_industry = {
 	}
 
 	on_complete = {
+		remove_variable = var_reorganized_industrial_practices
+		remove_variable = var_buryatian_railway
+		remove_variable = var_developed_infra_tech
 		trigger_event = {
 			id = russia.112
 			days = 3
