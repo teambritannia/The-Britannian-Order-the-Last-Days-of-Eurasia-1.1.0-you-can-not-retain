@@ -206,13 +206,16 @@ je_agricultural_improvements = {
 
 	group = je_group_historical_content
 
-	scripted_button = develop_infrastructure_technology_button
-	scripted_button = fer_reorganizing_agriculture
+	scripted_button = fer_develop_infrastructure_technology_button
+	scripted_button = fer_improving_agriculture_button
+	scripted_button = fer_develop_agricultural_technology_button
 
 	complete = {
 		custom_tooltip = {
 			text = developed_agriculture
-			has_variable = var_expanded_industry
+			has_variable = var_improved_agriculture
+			has_variable = var_agriculture_tech
+			has_variable = var_developed_infra_tech
 		}
 	}
 
@@ -237,8 +240,10 @@ je_expanding_industry = {
 	complete = {
 		has_technology_researched = railways
 		custom_tooltip = {
-			text = developed_modern_industry
-			has_variable = var_expanded_industry
+			text = fer_completed_industry_development_initiatives
+			has_variable = var_reorganized_industrial_practices
+			has_variable = var_developed_infra_tech
+			has_variable = var_buryatian_railway
 		}
 	}
 
