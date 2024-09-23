@@ -172,8 +172,8 @@ je_the_irkutsk_war = { # war with irkutsk to sieze some infra-rich land
 	icon = "gfx/interface/icons/event_icons/event_star_in_the_wastes.dds"
 	group = je_group_historical_content
 
-	scripted_button = fer_irkutsk_war_cease_preparations
-	scripted_button = fer_irkutsk_war_resume_preparations
+	scripted_button = fer_irkutsk_war_cease_preparations_button
+	scripted_button = fer_irkutsk_war_resume_preparations_button
 	scripted_button = fer_begin_irkutsk_war
 
 	scripted_progress_bar = fer_irkutsk_war_planning_progress_bar
