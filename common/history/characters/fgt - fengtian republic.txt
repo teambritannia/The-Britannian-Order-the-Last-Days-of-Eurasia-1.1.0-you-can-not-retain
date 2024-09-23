@@ -1,0 +1,35 @@
+﻿CHARACTERS = {
+	c:FGT ?= {
+		create_character = {
+			template = fgt_lu_anjiang
+		}	
+		create_character = {
+			first_name = song
+			last_name = jiang
+			historical = yes
+			birth_date = 1782.8.14
+			culture = cu:han
+			ig_leader = yes
+			interest_group = ig_rural_folk
+			ideology = ideology_fengtian_civicalist
+			traits = {
+				imperious
+				firebrand
+			}
+		}
+		create_character = {
+			first_name = 
+			last_name = 
+			historical = yes
+			birth_date = 1786.3.9
+			culture = cu:han
+			ig_leader = yes
+			interest_group = ig_intelligentsia
+			ideology = ideology_fengtian_civicalist
+			traits = {
+				imperious
+				firebrand
+			}
+		}
+	}
+}
