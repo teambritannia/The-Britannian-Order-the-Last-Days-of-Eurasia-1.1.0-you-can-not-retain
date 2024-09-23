@@ -1,0 +1,71 @@
+GLOBAL = {
+
+	c:GBR ?= {
+		trigger_event = {
+			id = britannian_prosperity.1 
+			days = 0
+			popup = yes
+		}
+	}
+	c:DAI ?= {
+		trigger_event = {
+			id = britannian_prosperity.4
+			days = 21
+		}
+	}
+	c:GER ?= {
+		trigger_event = {
+			id = german_british_split.1 
+			days = 0
+			popup = yes
+		}
+	}
+	c:FGT ?= {
+		trigger_event = {
+			id = fengtian_events.200
+			days = 0
+			popup = yes
+		}
+	}
+	c:SBR ?= {
+		add_modifier = {
+			name = siberian_black_army
+		}
+	}
+	c:FER = {
+		add_modifier = {
+			name = widespread_poverty_modifier
+		}
+		add_modifier = {
+			name = low_literacy_modifier
+		}
+		add_modifier = {
+			name = underdeveloped_healthcare_modifier
+		}
+		add_modifier = {
+			name = desolate_wasteland_modifier
+		}
+		add_modifier = {
+			name = economic_hardship
+		}
+		add_modifier = {
+			name = weakened_military
+		}
+		add_modifier = {
+			name = political_turmoil
+		}
+		trigger_event = {
+			id = russia.100
+			days = 14
+			popup = yes
+		}
+	}
+	every_country = {
+		limit = {
+			exists = yes
+		}
+		add_journal_entry = {
+			type = doctrine_je
+		}
+	}
+}

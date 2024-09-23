@@ -1,0 +1,5 @@
+﻿INTERESTS = {
+	c:FER ?= {
+		add_declared_interest = region_manchuria
+	}
+}
