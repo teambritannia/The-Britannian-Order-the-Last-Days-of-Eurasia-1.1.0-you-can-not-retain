@@ -114,3 +114,12 @@ fer_irk_war_preparations = {
 	state_tax_waste_add = 0.1
 	country_bureaucracy_mult = -0.1
 }
+
+fer_irk_war_planning_bonus = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds
+	unit_offense_mult = 0.001
+	unit_defense_mult = -0.001
+	unit_advancement_speed_mult = 0.001
+	unit_morale_loss_mult = -0.0005
+	unit_morale_damage_mult = 0.0005
+}
