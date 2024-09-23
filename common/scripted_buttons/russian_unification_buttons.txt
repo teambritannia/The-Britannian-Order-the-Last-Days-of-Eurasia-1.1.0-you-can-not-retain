@@ -656,9 +656,22 @@ fer_irkutsk_war_resume_preparations_button = {
 		}
 	}
 
+	possible = {
+		NOT = {
+			has_modifier = fer_irk_war_preparations
+		}
+	}
+
 	effect = {
-		add_modifier = {
-			name = fer_irk_war_preparations
+		if = {
+			limit = {
+				NOT = {
+					has_modifier = fer_irk_war_preparations
+				}
+			}
+			add_modifier = {
+				name = fer_irk_war_preparations
+			}
 		}
 	}
 }
@@ -668,24 +681,31 @@ fer_irkutsk_war_cease_preparations_button = {
 	desc = "fer_irkutsk_war_cease_preparations_button_desc"
 
 	ai_chance = {
-		base = 100
+		base = 0
 		modifier = {
 			trigger = {
 				taking_loans = yes
 			}
-			add = -70
+			add = 70
 		}
 		modifier = {
 			trigger = {
 				approaching_bureaucracy_shortage = yes
 			}
-			add = -50
+			add = 50
 		}
 	}
 
+	possible = {
+		has_modifier = fer_irk_war_preparations
+	}
+
 	effect = {
-		add_modifier = {
-			name = fer_irk_war_preparations
+		if = {
+			limit = {
+				has_modifier = fer_irk_war_preparations
+			}
+			remove_modifier = fer_irk_war_preparations
 		}
 	}
 }
