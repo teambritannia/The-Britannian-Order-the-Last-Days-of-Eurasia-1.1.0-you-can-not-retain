@@ -249,55 +249,6 @@ fer_alleviating_poverty_button = {
 	}
 }
 
-fer_improving_agriculture_button = {
-	name = "improving_agriculture_button"
-	desc = "improving_agriculture_button_desc"
-
-	visible = {
-		always = yes
-	}
-
-	ai_chance = {
-		base = 100
-		modifier = {
-			trigger = {
-				taking_loans = yes
-			}
-			add = -30
-		}
-		modifier = {
-			trigger = {
-				approaching_bureaucracy_shortage = yes
-			}
-			add = -30
-		}
-	}
-
-	possible = {
-		NOT = {
-			bureaucracy < 0
-		}
-		NOT = {
-			has_variable = var_improved_agriculture
-		}
-	}
-
-	effect = {
-		set_variable = {
-			name = var_improved_agriculture
-		}
-		add_modifier = {
-			name = national_improvement_expenses
-			multiplier = 1.5
-			months = normal_modifier_time
-		}
-		add_modifier = {
-			name = improvements_in_agriculture_modifier 
-			months = normal_modifier_time
-		}
-	}
-}
-
 fer_expanding_industry_button = {
 	name = "expanding_industry_button"
 	desc = "expanding_industry_button_desc"
