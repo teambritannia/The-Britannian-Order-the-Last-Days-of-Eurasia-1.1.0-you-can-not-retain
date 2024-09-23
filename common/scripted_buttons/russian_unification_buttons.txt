@@ -618,7 +618,7 @@ fer_buryatian_railway_button = {
 				}
 			}
 			create_building = {
-				building = building_motor_industries
+				building = building_motor_industry
 				add_ownership={
 					country={
 						country="c:FER"
