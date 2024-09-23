@@ -90,7 +90,6 @@ russia.111 = {
 				}
 			}
 		}
-		default_option = yes
 		name = russia.111.a
 		add_journal_entry = {
 			type = je_agricultural_improvements
@@ -104,6 +103,55 @@ russia.111 = {
 		name = russia.111.b
 		add_journal_entry = {
 			type = je_expanding_industry
+		}
+	}
+}
+
+russia.120 = {
+	type = country_event
+
+	title = russia.120.t
+	desc = russia.120.d
+	flavor = russia.120.f
+
+	event_image = {
+		#placeholder
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_fire.dds"
+
+	duration = 3
+
+	option = { #focus on integration of the region
+		ai_chance = {
+			base = 10
+			modifier = {
+				trigger = {
+					in_default = yes
+				}
+				add = -5
+			}
+		}
+		default_option = yes
+		name = russia.120.a
+		#incorporate state
+	}
+	option = { #dismantle local buildings for money because you're broke lmao
+		ai_chance = {
+			base = 0
+			modifier = {
+				trigger = {
+					in_default = yes
+				}
+				add = 10
+			}
+		}
+		name = russia.120.b
+		add_modifier = {
+			name = plundered_irkutsk
+			months = short_modifier_time
 		}
 	}
 }
