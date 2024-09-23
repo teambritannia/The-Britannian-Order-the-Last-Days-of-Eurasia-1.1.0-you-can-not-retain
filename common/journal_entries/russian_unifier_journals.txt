@@ -211,6 +211,17 @@ je_the_irkutsk_war = { # war with irkutsk to sieze some infra-rich land
 	}
 
 	on_complete = {
+		trigger_event = {
+			id = russia.120
+			days = 3
+			popup = yes
+		}
+	}
+
+	fail = {
+		NOT = {
+			exists = c:IRK
+		}
 	}
 }
 
