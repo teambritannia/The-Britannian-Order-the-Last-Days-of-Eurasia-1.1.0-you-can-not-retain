@@ -669,9 +669,19 @@ fer_irkutsk_war_resume_preparations_button = {
 					has_modifier = fer_irk_war_preparations
 				}
 			}
+			set_variable = {
+				name = preparations_temp 
+				value = root.army_power_projection
+			}
+			change_variable = {
+				name = preparations_temp
+				divide = irk.army_power_projection
+			}
 			add_modifier = {
 				name = fer_irk_war_preparations
+				multiplier = var:preparations_temp
 			}
+			remove_variable = preparations_temp
 		}
 	}
 }
