@@ -778,11 +778,20 @@ fer_irkutsk_war_cease_preparations_button = {
 	}
 
 	effect = {
+		je:je_the_irkutsk_war = {
+			"scripted_bar_progress(fer_irkutsk_war_planning_progress_bar)" = {
+				save_scope_as = planning_amount
+			}
+		}
 		if = {
 			limit = {
 				has_modifier = fer_irk_war_preparations
 			}
 			remove_modifier = fer_irk_war_preparations
+		}
+		add_modifier = {
+			name = fer_irk_war_planning_bonus
+			multiplier = scope:planning_amount
 		}
 		c:FER = {
 			create_diplomatic_play = {
