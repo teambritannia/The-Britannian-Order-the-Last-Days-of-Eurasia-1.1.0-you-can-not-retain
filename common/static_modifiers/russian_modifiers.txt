@@ -40,9 +40,9 @@ economic_rebuilding = {
 
 national_improvement_expenses = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_negative.dds
-	state_tax_waste_add = 0.1
+	state_tax_waste_add = 0.05
 	country_authority_mult = -0.1
-	country_bureaucracy_mult = -0.15
+	country_bureaucracy_mult = -0.1
 }
 
 literacy_drive_modifier = {
