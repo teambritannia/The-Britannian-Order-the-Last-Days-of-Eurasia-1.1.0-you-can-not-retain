@@ -675,6 +675,7 @@ fer_irkutsk_war_resume_preparations_button = {
 			}
 			change_variable = {
 				name = preparations_temp
+				multiply = root.army_power_projection
 				divide = irk.army_power_projection
 			}
 			add_modifier = {
