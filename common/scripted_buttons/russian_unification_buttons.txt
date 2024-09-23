@@ -720,3 +720,85 @@ fer_irkutsk_war_cease_preparations_button = {
 		}
 	}
 }
+
+fer_irkutsk_war_cease_preparations_button = {
+	name = "fer_irkutsk_war_cease_preparations_button"
+	desc = "fer_irkutsk_war_cease_preparations_button_desc"
+
+	ai_chance = {
+		base = 40
+		modifier = {
+			trigger = {
+				taking_loans = yes
+			}
+			add = -40
+		}
+		modifier = {
+			trigger = {
+				approaching_bureaucracy_shortage = yes
+			}
+			add = -30
+		}
+		modifier = {
+			trigger = {
+				this.army_power_projection < irk.army_power_projection
+			}
+			add = -20
+		}
+		modifier = {
+			trigger = {
+				je:je_the_irkutsk_war = {
+					"scripted_bar_progress(fer_irkutsk_war_planning_progress_bar)" >= 60
+				}
+			}
+			add = 30
+		}
+		modifier = {
+			trigger = {
+				je:je_the_irkutsk_war = {
+					"scripted_bar_progress(fer_irkutsk_war_planning_progress_bar)" >= 80
+				}
+			}
+			add = 30
+		}
+		modifier = {
+			trigger = {
+				je:je_the_irkutsk_war = {
+					"scripted_bar_progress(fer_irkutsk_war_planning_progress_bar)" >= 100
+				}
+			}
+			add = 100
+		}
+	}
+
+	possible = {
+		je:je_the_irkutsk_war = {
+			"scripted_bar_progress(fer_irkutsk_war_planning_progress_bar)" >= 30
+		}
+	}
+
+	effect = {
+		if = {
+			limit = {
+				has_modifier = fer_irk_war_preparations
+			}
+			remove_modifier = fer_irk_war_preparations
+		}
+		c:FER = {
+			create_diplomatic_play = {
+				name = fer_irk_war
+		
+				target_state = s:STATE_IRKUTSK.region_state:IRK
+			
+				war = yes
+			
+				type = dp_annex
+
+				add_war_goal = {
+					holder = c:FER
+					type = annex
+				}
+			}	
+		}
+	}
+}
