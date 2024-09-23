@@ -183,6 +183,7 @@ je_the_irkutsk_war = { # war with irkutsk to sieze some infra-rich land
 			limit = {
 				has_modifier = fer_irk_war_preparations
 			}
+			remove_variable = fer_irk_war_preparatons
 			set_variable = {
 				name = preparations_temp 
 				value = root.army_power_projection
