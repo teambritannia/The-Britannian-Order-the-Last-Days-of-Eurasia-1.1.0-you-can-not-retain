@@ -178,6 +178,28 @@ je_the_irkutsk_war = { # war with irkutsk to sieze some infra-rich land
 
 	scripted_progress_bar = fer_irkutsk_war_planning_progress_bar
 
+	on_weekly_pulse = {
+		if = {
+			limit = {
+				has_modifier = fer_irk_war_preparations
+			}
+			set_variable = {
+				name = preparations_temp 
+				value = root.army_power_projection
+			}
+			change_variable = {
+				name = preparations_temp
+				multiply = root.army_power_projection
+				divide = irk.army_power_projection
+			}
+			add_modifier = {
+				name = fer_irk_war_preparations
+				multiplier = var:preparations_temp
+			}
+			remove_variable = preparations_temp
+		}
+	}
+
 	complete = {
 		any_scope_state = {
 			limit = {
