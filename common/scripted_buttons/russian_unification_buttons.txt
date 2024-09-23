@@ -635,3 +635,57 @@ fer_buryatian_railway_button = {
 		}
 	}
 }
+
+fer_irkutsk_war_resume_preparations_button = {
+	name = "fer_irkutsk_war_resume_preparations_button"
+	desc = "fer_irkutsk_war_resume_preparations_button_desc"
+
+	ai_chance = {
+		base = 100
+		modifier = {
+			trigger = {
+				taking_loans = yes
+			}
+			add = -70
+		}
+		modifier = {
+			trigger = {
+				approaching_bureaucracy_shortage = yes
+			}
+			add = -50
+		}
+	}
+
+	effect = {
+		add_modifier = {
+			name = fer_irk_war_preparations
+		}
+	}
+}
+
+fer_irkutsk_war_cease_preparations_button = {
+	name = "fer_irkutsk_war_cease_preparations_button"
+	desc = "fer_irkutsk_war_cease_preparations_button_desc"
+
+	ai_chance = {
+		base = 100
+		modifier = {
+			trigger = {
+				taking_loans = yes
+			}
+			add = -70
+		}
+		modifier = {
+			trigger = {
+				approaching_bureaucracy_shortage = yes
+			}
+			add = -50
+		}
+	}
+
+	effect = {
+		add_modifier = {
+			name = fer_irk_war_preparations
+		}
+	}
+}
