@@ -1,0 +1,24 @@
+﻿COUNTRIES = {
+	c:STATE_URAL ?= {
+		effect_starting_technology_tier_3_tech = yes
+		
+		set_market_capital = STATE_NOVGOROD	
+		
+		activate_law = law_type:law_presidential_republic
+		activate_law = law_type:law_autocracy
+		activate_law = law_type:law_serfdom
+		activate_law = law_type:law_per_capita_based_taxation
+		activate_law = law_type:law_appointed_bureaucrats
+		activate_law = law_type:law_racial_segregation
+		activate_law = law_type:law_traditionalism
+		activate_law = law_type:law_censorship
+		activate_law = law_type:law_slavery_banned
+		activate_law = law_type:law_migration_controls
+		
+		set_government_wage_level = medium
+		set_tax_level = low
+		ig:ig_landowners = {
+			add_ruling_interest_group = yes
+		}
+	}
+}

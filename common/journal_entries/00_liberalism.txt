@@ -1,0 +1,22 @@
+je_corruption = {
+	icon = "gfx/interface/icons/event_icons/waving_flag.dds"
+	
+	group = je_group_internal_affairs
+	
+	scripted_progress_bar = corruption_progress_bar
+
+	is_shown_when_inactive = {
+		has_technology_researched = tech_bureaucracy
+	}
+
+	possible = {
+		always = yes
+	}
+
+
+	on_monthly_pulse = {
+
+	}
+	
+	weight = 100
+}

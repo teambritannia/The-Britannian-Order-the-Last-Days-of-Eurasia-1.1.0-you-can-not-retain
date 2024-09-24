@@ -1,0 +1,45 @@
+demand_german_tribute = {
+	is_shown = {
+		exists = c:GBR
+		ROOT = c:GBR
+		exists = c:GER
+		c:GER = {
+			has_journal_entry = je_german_british_split
+		}
+	}
+
+	possible = {
+		exists = c:GBR
+		ROOT = c:GBR
+		exists = c:GER
+		c:GER = {
+			has_journal_entry = je_german_british_split
+		}
+		custom_tooltip = {
+			text = tt_tribute_cooldown
+			NOT = {
+				has_variable = demand_german_tribute_cooldown
+			}
+		}
+	}
+
+	when_taken = {
+		hidden_effect = {
+			set_variable = {
+				name = demand_german_tribute_cooldown
+				value = yes
+				days = 730
+			}		
+		}
+		c:GER = {
+			trigger_event = {
+				id = german_british_split.2
+				days = 7
+			}
+		}
+	}
+
+	ai_chance = {
+		base = 100
+	}
+}
