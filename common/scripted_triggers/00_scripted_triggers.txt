@@ -1106,9 +1106,9 @@ is_in_civil_war = {
 # IG scope
 has_paternalist_ideology = {
 	OR = {
-		has_ideology = ideology:ideology_conservative
-		has_ideology = ideology:ideology_reactionary
-		has_ideology = ideology:ideology_burgundian
+		has_ideology = ideology:ideology_tbo_conservative
+		has_ideology = ideology:ideology_tbo_reactionary
+		has_ideology = ideology:ideology_tbo_dictatorialist
 	}
 }
 
@@ -1322,10 +1322,11 @@ reactionary_revolution_ongoing = {
 
 ig_is_socialist = {
 	OR = {
-		has_ideology = ideology:ideology_socialist
-		has_ideology = ideology:ideology_militant_socialist
+		has_ideology = ideology:ideology_tbo_socialist
+		has_ideology = ideology:ideology_tbo_radical
+		has_ideology = ideology:ideology_tbo_militant_socialist
 		leader = {
-			has_ideology = ideology:ideology_socialist
+			has_ideology = ideology:ideology_vanguardist
 		}
 		leader = {
 			has_ideology = ideology:ideology_fengtian_left
@@ -1345,9 +1346,8 @@ ig_is_socialist = {
 
 ig_is_liberal = {
 	OR = {
-		has_ideology = ideology:ideology_republican
-		has_ideology = ideology:ideology_liberal
-		has_ideology = ideology:ideology_liberal_modern
+		has_ideology = ideology:ideology_tbo_republican
+		has_ideology = ideology:ideology_tbo_progressive
 		leader = {
 			has_ideology = ideology:ideology_radical
 		}
@@ -1372,8 +1372,9 @@ ig_is_liberal = {
 
 ig_is_reactionary = {
 	OR = {
-		has_ideology = ideology:ideology_reactionary
-		has_ideology = ideology:ideology_pro_slavery
+		has_ideology = ideology:ideology_tbo_reactionary
+		has_ideology = ideology:ideology_tbo_conservative
+		has_ideology = ideology:ideology_tbo_dictatorialist
 		leader = {
 			OR = {
 				has_ideology = ideology:ideology_slaver
@@ -1562,6 +1563,7 @@ ig_type_matches_former = { #Temporary Workaround
 	}
 }
 
+
 #It is intended that some of these categories overlap.
 interest_group_has_liberal_ideology = {
 	OR = {
@@ -1607,10 +1609,12 @@ has_liberal_ideology = {
 
 has_progressive_ideology = {
 	OR = {
+		has_ideology = ideology:ideology_atheist
 		has_ideology = ideology:ideology_radical
 		has_ideology = ideology:ideology_feminist
 		has_ideology = ideology:ideology_social_democrat
-		has_ideology = ideology:ideology_tbo_progressive
+		has_ideology = ideology:ideology_humanitarian
+		has_ideology = ideology:ideology_humanitarian_royalist
 	}
 }
 
@@ -1619,33 +1623,42 @@ has_socialist_ideology = {
 		has_ideology = ideology:ideology_communist
 		has_ideology = ideology:ideology_vanguardist
 		has_ideology = ideology:ideology_anarchist
-		has_ideology = ideology_fengtian_left
-		has_ideology = ideology_fengtian_center
+		has_ideology = ideology:ideology_fengtian_center
+		has_ideology = ideology:ideology_fengtian_left
 	}
 }
 
 has_reactionary_ideology = {
 	OR = {
 		has_ideology = ideology:ideology_traditionalist
-		has_ideology = ideology:ideology_burgsys
+		has_ideology = ideology:ideology_fascist
+		has_ideology = ideology:ideology_integralist
+		has_ideology = ideology:ideology_ethno_nationalist
 		has_ideology = ideology:ideology_theocrat
-		has_ideology = ideology:ideology_anprim
-		has_ideology = ideology:ideology_tbo_reactionary
+		has_ideology = ideology:ideology_legitimist
+		has_ideology = ideology:ideology_luddite
+		has_ideology = ideology:ideology_corporatist_leader
 	}
 }
 
 has_conservative_ideology = {
 	OR = {
 		has_ideology = ideology:ideology_traditionalist
-		has_ideology = ideology:ideology_tbo_conservative
+		has_ideology = ideology:ideology_slaver
 		has_ideology = ideology:ideology_royalist
+		has_ideology = ideology:ideology_orleanist
+		has_ideology = ideology:ideology_bonapartist
 		has_ideology = ideology:ideology_theocrat
+		has_ideology = ideology:ideology_corporatist_leader
 	}
 }
 
 has_monarchist_ideology = {
 	OR = {
 		has_ideology = ideology:ideology_royalist
+		has_ideology = ideology:ideology_orleanist
+		has_ideology = ideology:ideology_bonapartist
+		has_ideology = ideology:ideology_legitimist	
 	}
 }
 
@@ -1705,6 +1718,25 @@ is_major_unifier = {
 		AND = {
 			exists = c:FND # Federation
 			this = c:FND
+		}
+	}
+}
+
+wants_to_solve_schleswig_holstein = {
+	has_journal_entry = je_schleswig_holstein_question 
+	has_technology_researched = nationalism 
+	country_rank >= rank_value:great_power
+}
+
+is_oppressor_of_schleswig_holstein = {
+	NOR = {
+		country_has_primary_culture = cu:north_german
+		country_has_primary_culture = cu:south_german						
+	}
+	OR = {
+		any_scope_state = { state_region = s:STATE_SCHLESWIG_HOLSTEIN }
+		any_subject_or_below = {
+			any_scope_state = { state_region = s:STATE_SCHLESWIG_HOLSTEIN }
 		}
 	}
 }
