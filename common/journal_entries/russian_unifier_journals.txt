@@ -420,6 +420,15 @@ je_ends_teuton_plunder = {
 je_dvm_purify_tomsk_krasnoyarsk_zone = { #genocide
 	icon = "gfx/interface/icons/event_icons/event_a_divine_russia.dds"
 	group = je_group_historical_content
+	
+	is_shown_when_inactive = {
+		exists = c:DVM
+		this = c:DVM
+	}
 
+	possible = {
+		exists = c:DVM
+		this = c:DVM
+	}
 	
 }
