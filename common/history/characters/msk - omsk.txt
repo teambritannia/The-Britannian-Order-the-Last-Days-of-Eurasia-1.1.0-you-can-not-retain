@@ -1,0 +1,11 @@
+﻿CHARACTERS = {
+	c:MSK ?= {
+		create_character = {
+			template = msk_lelouch
+		}
+
+		create_character = {
+			template = msk_taboritsky
+		}
+	}
+}
