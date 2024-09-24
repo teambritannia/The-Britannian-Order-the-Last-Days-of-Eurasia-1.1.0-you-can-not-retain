@@ -136,7 +136,12 @@ russia.120 = {
 		}
 		default_option = yes
 		name = russia.120.a
-		#incorporate state
+		random_scope_state = {
+			limit = {
+				state_region = s:IRKUTSK
+			}
+			set_state_type = incorporated
+		}
 	}
 	option = { #dismantle local buildings for money because you're broke lmao
 		ai_chance = {
@@ -149,6 +154,12 @@ russia.120 = {
 			}
 		}
 		name = russia.120.b
+		random_scope_state = {
+			limit = {
+				state_region = s:IRKUTSK
+			}
+			add_devastation = 20
+		}
 		add_modifier = {
 			name = plundered_irkutsk
 			months = short_modifier_time
