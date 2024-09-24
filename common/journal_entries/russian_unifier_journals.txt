@@ -414,3 +414,12 @@ je_ends_teuton_plunder = {
 		add_varialbe = var_preparing_for_war
 	}
 }
+
+# Divine Mandate jes
+
+je_dvm_purify_tomsk_krasnoyarsk_zone = { #genocide
+	icon = "gfx/interface/icons/event_icons/event_a_divine_russia.dds"
+	group = je_group_historical_content
+
+	
+}
