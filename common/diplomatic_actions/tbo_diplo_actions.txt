@@ -75,7 +75,7 @@ warlord = {
 		relations_progress_per_day = 0
 		relations_improvement_max = 20
 
-		subject_type = subject_type_co_governance
+		subject_type = subject_type_warlord
 		
 		second_modifier = {
 			country_convoy_contribution_to_market_owner_add = 0.1
