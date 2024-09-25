@@ -721,9 +721,9 @@ fer_irkutsk_war_cease_preparations_button = {
 	}
 }
 
-fer_irkutsk_war_cease_preparations_button = {
-	name = "fer_irkutsk_war_cease_preparations_button"
-	desc = "fer_irkutsk_war_cease_preparations_button_desc"
+fer_begin_irkutsk_war = {
+	name = "fer_begin_irkutsk_war"
+	desc = "fer_begin_irkutsk_war_desc"
 
 	ai_chance = {
 		base = 40
@@ -808,6 +808,69 @@ fer_irkutsk_war_cease_preparations_button = {
 					type = annex
 				}
 			}	
+		}
+	}
+}
+
+fer_irkutsk_war_cease_preparations_button = {
+	name = "fer_irkutsk_war_cease_preparations_button"
+	desc = "fer_irkutsk_war_cease_preparations_button_desc"
+
+	ai_chance = {
+		base = 0
+		modifier = {
+			trigger = {
+				taking_loans = yes
+			}
+			add = 70
+		}
+		modifier = {
+			trigger = {
+				approaching_bureaucracy_shortage = yes
+			}
+			add = 50
+		}
+	}
+
+	possible = {
+		has_modifier = fer_irk_war_preparations
+	}
+
+	effect = {
+		if = {
+			limit = {
+				has_modifier = fer_irk_war_preparations
+			}
+			remove_modifier = fer_irk_war_preparations
+		}
+	}
+}
+
+dvm_purify_heretics = {
+	name = "dvm_purify_heretics"
+	desc = "dvm_purify_heretics_desc"
+
+	ai_chance = {
+		base = 40
+	}
+
+	possible = {
+		NOT = {
+			has_variable = purification_ongoing
+		}
+	}
+
+	effect = {
+		kill_population_percent_in_state = {
+			percent = 0.05
+		}
+		add_modifier = {
+			name = dvm_purification_ongoing
+			months = 10
+		}
+		set_variable = {
+			name = purification_ongoing
+			months  = 12
 		}
 	}
 }

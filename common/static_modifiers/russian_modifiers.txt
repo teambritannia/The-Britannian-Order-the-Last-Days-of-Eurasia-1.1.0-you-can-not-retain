@@ -118,8 +118,14 @@ fer_irk_war_preparations = {
 fer_irk_war_planning_bonus = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds
 	unit_offense_mult = 0.001
-	unit_defense_mult = -0.001
+	unit_defense_mult = 0.001
 	unit_advancement_speed_mult = 0.001
 	unit_morale_loss_mult = -0.0005
 	unit_morale_damage_mult = 0.0005
+}
+
+dvm_purification_ongoing = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_negative.dds
+	state_mortality_mult = 0.2
+	state_poor_standard_of_living_add = -1
 }

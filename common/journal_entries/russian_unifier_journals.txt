@@ -183,15 +183,15 @@ je_the_irkutsk_war = { # war with irkutsk to sieze some infra-rich land
 			limit = {
 				has_modifier = fer_irk_war_preparations
 			}
-			remove_variable = fer_irk_war_preparatons
+			remove_modifier = fer_irk_war_preparatons
 			set_variable = {
-				name = preparations_temp 
-				value = root.army_power_projection
+				name = preparations_temp
+				value = irk.army_power_projection
 			}
 			change_variable = {
 				name = preparations_temp
 				multiply = root.army_power_projection
-				divide = irk.army_power_projection
+				divide = root.army_power_projection
 			}
 			add_modifier = {
 				name = fer_irk_war_preparations
@@ -202,12 +202,9 @@ je_the_irkutsk_war = { # war with irkutsk to sieze some infra-rich land
 	}
 
 	complete = {
-		any_scope_state = {
-			limit = {
-				s:STATE_IRKUTSK
-			}
+		NOT = {
+			exists = c:IRK
 		}
-		owner = c:FER
 	}
 
 	on_complete = {

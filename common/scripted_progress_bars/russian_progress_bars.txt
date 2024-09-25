@@ -19,7 +19,7 @@ fer_irkutsk_war_planning_progress_bar = {
 	max_value = 100
 	
 	default_bad = yes
-	on_weekly_pulse = {
+	weekly_progress = {
 		add = {
 			desc = base_decay
 			add = -0.1
