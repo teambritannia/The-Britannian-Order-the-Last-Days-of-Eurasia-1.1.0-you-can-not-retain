@@ -138,7 +138,7 @@ russia.120 = {
 		name = russia.120.a
 		random_scope_state = {
 			limit = {
-				state_region = s:IRKUTSK
+				state_region = s:STATE_IRKUTSK
 			}
 			set_state_type = incorporated
 		}
@@ -156,7 +156,7 @@ russia.120 = {
 		name = russia.120.b
 		random_scope_state = {
 			limit = {
-				state_region = s:IRKUTSK
+				state_region = s:STATE_IRKUTSK
 			}
 			add_devastation = 20
 		}
