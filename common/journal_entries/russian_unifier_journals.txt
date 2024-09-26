@@ -418,6 +418,8 @@ je_dvm_purify_tomsk_krasnoyarsk_zone = { #genocide
 	icon = "gfx/interface/icons/event_icons/event_a_divine_russia.dds"
 	group = je_group_historical_content
 
+	scripted_progress_bar = dvm_denomination_influence_bar
+
 	#purification-inherent villainy branch
 	scripted_button = dvm_purify_heretics
 	scripted_button = dvm_burn_heretical_villages
