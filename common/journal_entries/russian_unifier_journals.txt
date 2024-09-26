@@ -417,9 +417,15 @@ je_ends_teuton_plunder = {
 je_dvm_purify_tomsk_krasnoyarsk_zone = { #genocide
 	icon = "gfx/interface/icons/event_icons/event_a_divine_russia.dds"
 	group = je_group_historical_content
-	
+
+	#purification-inherent villainy branch
 	scripted_button = dvm_purify_heretics
 	scripted_button = dvm_burn_heretical_villages
+	scripted_button = dvm_grant_inquisition_priveleges
+	#purification-inherent goodness branch
+	scripted_button = dvm_preach_divine_teachings
+	scripted_button = dvm_institute_divine_schooling
+	scripted_button = dvm_institute_heretical_repetance
 	
 	is_shown_when_inactive = {
 		exists = c:DVM
