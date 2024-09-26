@@ -851,7 +851,7 @@ dvm_purify_heretics = {
 	desc = "dvm_purify_heretics_desc"
 
 	ai_chance = {
-		base = 40
+		base = 100
 	}
 
 	possible = {
@@ -871,6 +871,34 @@ dvm_purify_heretics = {
 		set_variable = {
 			name = purification_ongoing
 			months  = 12
+		}
+	}
+}
+
+dvm_burn_heretical_villages = {
+	name = "dvm_burn_heretical_villages"
+	desc = "dvm_burn_heretical_villages_desc"
+
+	ai_chance = {
+		base = 100
+	}
+
+	possible = {
+		NOT = {
+			has_variable = burning_heretical_villages_var
+		}
+	}
+
+	effect = {
+		random_scope_state = {
+			limit = {
+				owner = c:IRK
+			}
+			add_devastation = 10
+		}
+		set_variable = {
+			name = burning_heretical_villages_var
+			months  = 6
 		}
 	}
 }
