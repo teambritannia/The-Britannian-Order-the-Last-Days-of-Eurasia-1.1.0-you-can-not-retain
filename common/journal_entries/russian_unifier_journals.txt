@@ -202,9 +202,7 @@ je_the_irkutsk_war = { # war with irkutsk to sieze some infra-rich land
 	}
 
 	complete = {
-		NOT = {
-			exists = c:IRK
-		}
+		exists = s:STATE_IRKUTSK.region_state:FER
 	}
 
 	on_complete = {
@@ -217,7 +215,11 @@ je_the_irkutsk_war = { # war with irkutsk to sieze some infra-rich land
 
 	fail = {
 		NOT = {
-			exists = c:IRK
+			AND = {
+				exists = c:IRK
+				exists = s:STATE_IRKUTSK.region_state:FER
+			}
+			
 		}
 	}
 }
