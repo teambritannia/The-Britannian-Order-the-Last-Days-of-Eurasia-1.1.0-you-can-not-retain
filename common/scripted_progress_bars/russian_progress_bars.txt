@@ -104,3 +104,41 @@ indonesian_materiel_support = {
 		}
 	}
 }
+
+#beginning of DVM progress bars
+
+dvm_denomination_influence_bar = {
+	name = "dvm_denomination_influence_bar"
+	desc = "dvm_denomination_influence_bar_desc"
+
+	start_value = 60
+	min_value = 0
+	max_value = 100
+
+	double_sided_bad = yes
+
+	monthly_progress = {
+		if = {
+			limit = {
+				any_scope_state = {
+					has_modifier = inquisition_terror_modifier
+				}
+			}
+			add = {
+				desc = inquisition_terror_modifier
+				add = -5
+			}
+		}
+		if = {
+			limit = {
+				any_scope_state = {
+					has_modifier = divine_schooling_modifier
+				}
+			}
+			add = {
+				desc = divine_schooling_modifier
+				add = 5
+			}
+		}
+	}
+}
