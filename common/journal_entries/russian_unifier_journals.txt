@@ -421,11 +421,12 @@ je_dvm_purify_tomsk_krasnoyarsk_zone = { #genocide
 	group = je_group_historical_content
 
 	scripted_progress_bar = dvm_denomination_influence_bar
+	scripted_progress_bar = mandate_authority_progress_bar
 
 	#purification-inherent villainy branch
 	scripted_button = dvm_purify_heretics
 	scripted_button = dvm_burn_heretical_villages
-	scripted_button = dvm_grant_inquisition_priveleges
+	scripted_button = dvm_establish_divine_inquisition
 	#purification-inherent goodness branch
 	scripted_button = dvm_preach_divine_teachings
 	scripted_button = dvm_institute_divine_schooling
@@ -441,4 +442,26 @@ je_dvm_purify_tomsk_krasnoyarsk_zone = { #genocide
 		this = c:DVM
 	}
 	
+}
+
+je_divine_inquisition = { 
+	icon = "gfx/interface/icons/event_icons/event_a_divine_russia.dds"
+	group = je_group_historical_content
+
+	scripted_progress_bar = inquisition_holiness_progress_bar
+
+	scripted_button = dvm_hold_tribunals
+	scripted_button = dvm_execute_heretics
+	scripted_button = dvm_strengthen_local_informant_networks
+	scripted_button = dvm_purge_corrupting_devilry
+
+	is_shown_when_inactive = {
+		exists = c:DVM
+		this = c:DVM
+		has_modifier = divine_inquisition_modifier
+	}
+
+	possible = {
+		has_modifier = divine_inquisition_modifier
+	}
 }
