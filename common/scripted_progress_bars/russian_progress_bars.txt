@@ -246,7 +246,7 @@ inquisition_holiness_progress_bar = {
 	name = "inquisition_holiness_progress_bar"
 	desc = "inquisition_holiness_progress_bar_desc"
 
-	start_value = 80
+	start_value = 60
 	min_value = 0
 	max_value = 100
 
@@ -267,50 +267,39 @@ inquisition_holiness_progress_bar = {
 			}
 		}
 		if = {
-			limit = {
-				any_scope_state = {	
-					has_modifier = dvm_purification_ongoing
-				}
+			limit = {	
+				has_modifier = dvm_devilry_purged
 			}
 			add = {
-				desc = inherent_evil_purification
-				add = 0.3
+				desc = inquisition_devilry_purged
+				add = 1.5
 			}
 		}
 		if = {
 			limit = {
-				has_modifier = dvm_established_inquisition
+				has_modifier = dvm_tribunals_held
 			}
 			add = {
-				desc = inherent_evil_burnings
-				add = 0.2
+				desc = inquisition_held_tribunals
+				add = -0.5
 			}
 		}
 		if = {
 			limit = {
-				has_variable = divine_teachings_var
+				has_modifier = dvm_executing_heretics
 			}
 			add = {
-				desc = inherent_good_preaching
-				add = -0.8
+				desc = executing_heretics
+				add = -0.7
 			}
 		}
 		if = {
 			limit = {
-				has_variable = divine_repetance_var
+				has_modifier = dvm_strengthen_local_informant_networks
 			}
 			add = {
-				desc = inherent_good_repetance
-				add = -1
-			}
-		}
-		if = {
-			limit = {
-				has_variable = divine_schooling_var
-			}
-			add = {
-				desc = inherent_good_schooling
-				add = -1.2
+				desc = strengthening_informant_networks
+				add = -0.9
 			}
 		}
 	}
