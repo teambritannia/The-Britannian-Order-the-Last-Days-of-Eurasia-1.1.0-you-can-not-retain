@@ -26,6 +26,7 @@
 	
 	on_enable = {
 		ig:ig_right_communist = {
+			set_variable = special_ideology
 			set_ig_trait = ig_trait:ig_trait_foreign_moon
 			set_ig_trait = ig_trait:ig_trait_industrial_organizers
 			set_ig_trait = ig_trait:ig_trait_solidarity

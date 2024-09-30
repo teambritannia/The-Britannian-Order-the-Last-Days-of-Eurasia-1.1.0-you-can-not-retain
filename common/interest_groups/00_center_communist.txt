@@ -23,6 +23,7 @@
 	
 	on_enable = {
 		ig:ig_center_communist = {
+			set_variable = special_ideology
 			set_ig_trait = ig_trait:ig_trait_strikes
 			set_ig_trait = ig_trait:ig_trait_industrial_organizers
 			set_ig_trait = ig_trait:ig_trait_streamlining_production
