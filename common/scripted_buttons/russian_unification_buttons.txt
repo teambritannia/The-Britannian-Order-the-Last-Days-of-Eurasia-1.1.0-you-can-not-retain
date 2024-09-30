@@ -883,6 +883,8 @@ fer_begin_irkutsk_war = {
 				add_war_goal = {
 					holder = c:IRK
 					type = annex
+					target_country = c:FER
+					target_state = s:STATE_BURYATIA.region_state:FER
 				}
 			}
 		}
