@@ -1,0 +1,11 @@
+﻿CHARACTERS = {
+	c:DAG ?= {
+		create_character = {
+			template = dag_lelouch
+		}
+
+		create_character = {
+			template = dag_taboritsky
+		}
+	}
+}

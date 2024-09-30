@@ -1,0 +1,14 @@
+﻿DIPLOMACY = {
+	c:CFD= {
+		create_bidirectional_truce = {
+			country = c:FGT
+			months = 26
+		}
+	}
+	c:GER= {
+		create_bidirectional_truce = {
+			country = c:GBR
+			months = 1188
+		}
+	}
+}

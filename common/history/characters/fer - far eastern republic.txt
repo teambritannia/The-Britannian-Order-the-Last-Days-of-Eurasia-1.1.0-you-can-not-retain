@@ -1,0 +1,7 @@
+﻿CHARACTERS = {
+	c:fer ?= {
+		create_character = {
+			template = fer_oleg_antonov
+		}
+	}
+}
