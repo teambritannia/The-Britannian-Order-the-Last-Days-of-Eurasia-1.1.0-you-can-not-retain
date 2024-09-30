@@ -506,13 +506,5 @@ je_divine_inquisition = {
 	scripted_button = dvm_strengthen_local_informant_networks
 	scripted_button = dvm_purge_corrupting_devilry
 
-	is_shown_when_inactive = {
-		exists = c:DVM
-		this = c:DVM
-		has_modifier = divine_inquisition_modifier
-	}
 
-	possible = {
-		has_modifier = divine_inquisition_modifier
-	}
 }
