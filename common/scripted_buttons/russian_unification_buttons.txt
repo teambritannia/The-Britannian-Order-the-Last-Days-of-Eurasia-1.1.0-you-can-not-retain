@@ -558,25 +558,27 @@ fer_develop_infrastructure_technology_button = {
 		}
 		if = {
 			limit = {
-				NOT = {	
-					has_technology_researched = atmospheric_engine
-					has_technology_researched = machine_tools
-				}
+				can_research = atmospheric_engine
 			}
-			add_technology_progress = { progress = 2000 technology = railways }
-			add_technology_progress = { progress = 2000 technology = mechanical_tools }
+			add_technology_progress = { progress = 3500 technology = atmospheric_engine }
+		}
+		if = {
+			limit = {
+				can_research = mechanical_tools
+			}
+			add_technology_progress = { progress = 3500 technology = mechanical_tools }
 		}
 		if = {
 			limit = {
 				can_research = railways
 			}
-			add_technology_progress = { progress = 3000 technology = railways }
+			add_technology_progress = { progress = 4500 technology = railways }
 		}
 		if = {
 			limit = {
 				can_research = steel_railway_cars
 			}
-			add_technology_progress = { progress = 4000 technology = railways }
+			add_technology_progress = { progress = 4500 technology = steel_railway_cars }
 		}
 	}
 }
