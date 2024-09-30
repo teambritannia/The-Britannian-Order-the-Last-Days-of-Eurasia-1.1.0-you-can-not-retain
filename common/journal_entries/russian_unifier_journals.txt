@@ -506,5 +506,15 @@ je_divine_inquisition = {
 	scripted_button = dvm_strengthen_local_informant_networks
 	scripted_button = dvm_purge_corrupting_devilry
 
-
+	on_monthly_pulse = {
+		effect = {
+			scope:journal_entry = {
+				save_scope_value_as = {
+					name = inquisition_holiness_scope
+					value = "scripted_bar_progress(inquisition_holiness_progress_bar)"
+				}
+			}
+			recalculate_inquisition_maintenance = yes
+		}
+	}
 }
