@@ -205,6 +205,18 @@ dvm_executing_heretics = {
 	state_tax_waste_add = 0.15
 }
 
+dvm_strengthening_informant_network_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
+	country_authority_mult = 0.3
+}
+
+dvm_purging_devilry_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
+	country_authority_mult = -0.2
+	state_tax_waste_add = 0.1
+	country_legitimacy_base_add = -15
+}
+
 inquisition_cost_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_modifier.dds
 	country_tax_income_add = -2000
