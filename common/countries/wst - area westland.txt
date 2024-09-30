@@ -1,23 +1,24 @@
 ﻿COUNTRIES = {
-	c:JIN ?= {
-		effect_starting_technology_tier_4_tech = yes
-		add_technology_researched = urban_planning
-		add_technology_researched = academia
-		add_technology_researched = law_enforcement
+	c:WST ?= {
+		effect_starting_technology_tier_2_tech = yes
 		
-		set_market_capital = STATE_NORTH_BORNEO
+		set_market_capital = STATE_ILE_DE_FRANCE	
 		
 		activate_law = law_type:law_monarchy
 		activate_law = law_type:law_autocracy
-		activate_law = law_type:law_tenant_farmers
+		activate_law = law_type:law_serfdom
 		activate_law = law_type:law_land_based_taxation
 		activate_law = law_type:law_hereditary_bureaucrats
+		activate_law = law_type:law_professional_army
 		activate_law = law_type:law_racial_segregation
+		activate_law = law_type:law_national_guard
 		activate_law = law_type:law_traditionalism
 		activate_law = law_type:law_censorship	
-		activate_law = law_type:law_closed_borders
+		activate_law = law_type:law_debt_slavery
 		
 		set_government_wage_level = high
 		set_tax_level = medium
+		
+		add_journal_entry = { type = french_army_limits }
 	}
 }

@@ -12,7 +12,7 @@
 		activate_law = law_type:law_secret_police
 		activate_law = law_type:law_professional_army
 		activate_law = law_type:law_national_supremacy
-		activate_law = law_type:law_laissez_faire
+		activate_law = law_type:law_laissez_fiare
 		activate_law = law_type:law_censorship	
 		
 		set_institution_investment_level = {

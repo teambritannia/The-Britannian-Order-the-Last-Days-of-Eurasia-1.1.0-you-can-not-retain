@@ -1,0 +1,20 @@
+﻿COUNTRIES = {
+	c:SBR ?= {
+		effect_starting_technology_tier_3_tech = yes
+		
+		set_market_capital = STATE_YAKUTSK
+		
+		activate_law = law_type:law_presidential_republic
+		activate_law = law_type:law_anarchy
+		activate_law = law_type:law_homesteading
+		activate_law = law_type:law_consumption_based_taxation
+		activate_law = law_type:law_appointed_bureaucrats
+		activate_law = law_type:law_cultural_exclusion
+		activate_law = law_type:law_interventionism
+		activate_law = law_type:law_national_militia
+		activate_law = law_type:law_right_of_assembly
+		
+		set_government_wage_level = medium
+		set_tax_level = medium
+	}
+}
