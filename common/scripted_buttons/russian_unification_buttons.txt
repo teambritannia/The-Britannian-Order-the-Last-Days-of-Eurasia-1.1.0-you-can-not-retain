@@ -1113,7 +1113,17 @@ dvm_hold_tribunals = {
 	desc = "dvm_hold_tribunals_desc"
 
 	ai_chance = {
-		base = 100
+		base = 10
+		modifier = {
+			add = scope:inquisition_holiness_scope
+			multiply = 0.7
+		}
+		modifier = {
+			trigger = {
+				authority < 100
+			}
+			add = 20
+		}
 	}
 
 	possible = {
@@ -1138,7 +1148,17 @@ dvm_execute_heretics = {
 	desc = "dvm_execute_heretics_desc"
 
 	ai_chance = {
-		base = 100
+		base = 10
+		modifier = {
+			add = scope:inquisition_holiness_scope
+			multiply = 0.5
+		}
+		modifier = {
+			trigger = {
+				authority < 100
+			}
+			add = 20
+		}
 	}
 
 	possible = {
@@ -1163,7 +1183,18 @@ dvm_purge_corrupting_devilry = {
 	desc = "dvm_purge_corrupting_devilry_desc"
 
 	ai_chance = {
-		base = 100
+		base = 0
+		modifier = {
+			add = 100
+			subtract = scope:inquisition_holiness_scope
+			multiply = 0.6
+		}
+		modifier = {
+			trigger = {
+				authority < 60
+			}
+			add = -20
+		}
 	}
 
 	possible = {
@@ -1177,7 +1208,7 @@ dvm_purge_corrupting_devilry = {
 			months = 14
 		}
 		add_modifier = {
-			name = 
+			name = dvm_purging_devilry_modifier
 			months = 12
 		}
 	}
@@ -1188,7 +1219,17 @@ dvm_strengthen_local_informant_networks = {
 	desc = "dvm_strengthen_local_informant_networks_desc"
 
 	ai_chance = {
-		base = 100
+		base = 20
+		modifier = {
+			add = scope:inquisition_holiness_scope
+			multiply = 0.5
+		}
+		modifier = {
+			trigger = {
+				authority < 100
+			}
+			add = 20
+		}
 	}
 
 	possible = {
@@ -1202,7 +1243,7 @@ dvm_strengthen_local_informant_networks = {
 			months = 10
 		}
 		add_modifier = {
-			name = 
+			name = dvm_strengthening_informant_network_modifier
 			months = 8
 		}
 	}
