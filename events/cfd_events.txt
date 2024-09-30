@@ -1,0 +1,197 @@
+namespace = cfd_events
+
+cfd_events.1 = {
+	type = country_event
+	placement = ROOT
+	duration = 3
+	
+	title = cfd_events.1.t
+	desc = cfd_events.1.d
+	flavor = cfd_events.1.f
+	
+	event_image = {
+		video = "unspecific_armored_train"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	
+	icon = "gfx/interface/icons/event_icons/event_fire.dds"
+	
+	trigger = {
+		exists = c:CFD
+		this = c:CFD
+		has_technology_researched = nationalism
+	}
+	
+	immediate = {
+		if = {
+			limit = { exists = s:STATE_SHANDONG.region_state:CFD }
+			create_country = {
+				tag = WQI
+				origin = this
+				state = s:STATE_SHANDONG.region_state:CFD
+				on_created = {
+					warlord_setup_effect = yes
+					c:CFD ?= {	
+						create_diplomatic_pact = {
+							country = c:WQI
+							type = warlord
+						}
+					}
+				}
+			}
+			c:WQI = { save_scope_as = scope_WQI }
+		}
+	}
+	
+	option = {
+		name = cfd_events.1.a
+		default_option = yes
+		ai_chance = {
+			base = 4
+		}
+		random_state = {
+			limit = {
+				state_region = s:STATE_ZHILI
+			}
+			set_state_owner = c:WQI
+		}
+		if = {
+			limit = { exists = s:STATE_NORTHERN_ANHUI.region_state:CFD }
+			create_country = {
+				tag = ANH
+				origin = this
+				state = s:STATE_NORTHERN_ANHUI.region_state:CFD
+				on_created = {
+					warlord_setup_effect = yes
+				}
+			}
+			c:ANH = { save_scope_as = scope_ANH }
+			c:CFD ?= {	
+				create_diplomatic_pact = {
+					country = c:ANH
+					type = warlord
+				}
+			}
+		}
+	}
+	option = {
+		name = cfd_events.1.b
+		ai_chance = {
+			base = 6
+		}
+		if = {
+			limit = { exists = s:STATE_NORTHERN_ANHUI.region_state:CFD }
+			create_country = {
+				tag = ANH
+				origin = this
+				state = s:STATE_NORTHERN_ANHUI.region_state:CFD
+				on_created = {
+					warlord_setup_effect = yes
+				}
+			}
+			c:ANH = { save_scope_as = scope_ANH }
+			random_state = {
+				limit = {
+					state_region = s:STATE_SOUTHERN_ANHUI
+				}
+				set_state_owner = c:ANH
+			}
+			random_state = {
+				limit = {
+					state_region = s:STATE_HENAN
+				}
+				set_state_owner = c:ANH
+			}
+			c:CFD ?= {	
+				create_diplomatic_pact = {
+					country = c:ANH
+					type = warlord
+				}
+			}
+		}
+	}
+}
+
+cfd_events.2 = {
+	type = country_event
+	placement = ROOT
+	duration = 3
+	
+	title = cfd_events.2.t
+	desc = cfd_events.2.d
+	flavor = cfd_events.2.f
+	
+	event_image = {
+		video = "unspecific_armored_train"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	
+	icon = "gfx/interface/icons/event_icons/event_fire.dds"
+	
+	immediate = {
+		if = {
+			limit = { exists = s:STATE_JIANGXI.region_state:CFD }
+			create_country = {
+				tag = JXI
+				origin = this
+				state = s:STATE_JIANGXI.region_state:CFD
+				on_created = {
+					warlord_setup_effect = yes
+				}
+			}
+			c:JXI = { save_scope_as = scope_JXI }
+			c:CFD ?= {	
+				create_diplomatic_pact = {
+					country = c:JXI
+					type = warlord
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = cfd_events.2.a
+		default_option = yes
+		ai_chance = {
+			base = 4
+		}
+		if = {
+			limit = { exists = s:STATE_EASTERN_HUBEI.region_state:CFD }
+			create_country = {
+				tag = HUB
+				origin = this
+				state = s:STATE_EASTERN_HUBEI.region_state:CFD
+				on_created = {
+					warlord_setup_effect = yes
+				}
+			}
+			c:HUB = { save_scope_as = scope_HUB }
+			c:CFD ?= {	
+				create_diplomatic_pact = {
+					country = c:HUB
+					type = warlord
+				}
+			}
+		}
+		if = {
+			limit = { exists = s:STATE_HUNAN.region_state:CFD }
+			create_country = {
+				tag = HNA
+				origin = this
+				state = s:STATE_HUNAN.region_state:CFD
+				on_created = {
+					warlord_setup_effect = yes
+				}
+			}
+			c:HNA = { save_scope_as = scope_HNA }
+			c:CFD ?= {	
+				create_diplomatic_pact = {
+					country = c:HNA
+					type = warlord
+				}
+			}
+		}
+	}
+}
