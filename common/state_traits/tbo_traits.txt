@@ -1,0 +1,13 @@
+﻿state_trait_britannian_terror_shelling = {
+	icon = "gfx/interface/icons/state_trait_icons/unused/disaster_zone.dds"
+	 
+	modifier = {
+        building_group_bg_ranching_throughput_add = -0.9
+		building_group_bg_agriculture_throughput_add = -0.9
+		building_group_bg_plantations_throughput_add = -0.9
+		state_construction_mult = -0.95
+		state_infrastructure_mult = -0.8
+		state_colony_growth_speed_mult = -0.99
+		state_mortality_mult = 5.0
+    }
+}
