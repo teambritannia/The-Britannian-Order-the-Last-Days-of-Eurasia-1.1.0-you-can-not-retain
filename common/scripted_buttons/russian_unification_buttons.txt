@@ -1158,3 +1158,52 @@ dvm_execute_heretics = {
 	}
 }
 
+dvm_purge_corrupting_devilry = {
+	name = "dvm_purge_corrupting_devilry"
+	desc = "dvm_purge_corrupting_devilry_desc"
+
+	ai_chance = {
+		base = 100
+	}
+
+	possible = {
+		NOT = {
+			has_variable = purge_devilry_variable
+		}
+	}
+	effect = {
+		set_variable = {
+			name = purge_devilry_variable
+			months = 14
+		}
+		add_modifier = {
+			name = 
+			months = 12
+		}
+	}
+}
+
+dvm_strengthen_local_informant_networks = {
+	name = "dvm_strengthen_local_informant_networks"
+	desc = "dvm_strengthen_local_informant_networks_desc"
+
+	ai_chance = {
+		base = 100
+	}
+
+	possible = {
+		NOT = {
+			has_variable = strengthen_informants_var
+		}
+	}
+	effect = {
+		set_variable = {
+			name = strengthen_informants_var
+			months = 10
+		}
+		add_modifier = {
+			name = 
+			months = 8
+		}
+	}
+}
