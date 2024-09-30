@@ -166,13 +166,13 @@ je_occitan_crisis = {
 	
 	is_shown_when_inactive = {
 		owner = {
-			c:FRA ?= this
+			c:WST ?= this
 		}
 	}
 	
 	possible = {
 		owner = {
-			c:FRA ?= this
+			c:WST ?= this
 		}
 		has_technology_researched = egalitarianism
 	}
@@ -190,7 +190,7 @@ je_occitan_crisis = {
 	fail = {
 		any_diplomatic_play = {
 			initiator_is = c:OCC
-			target_is = c:FRA
+			target_is = c:WST
 		}
     }
 	
@@ -228,11 +228,11 @@ je_occitan_republicanism = {
 	immediate = {
 		c:OCC= {
 			create_bidirectional_truce = {
-				country = c:FRA
+				country = c:WST
 				months = 1188
 			}
 		}
-		c:FRA = {
+		c:WST = {
 			random_scope_state = {
 				limit = {
 					any_neighbouring_state = {
@@ -279,10 +279,10 @@ je_occitan_republicanism = {
 	
 	on_complete = {
 		remove_diplomatic_pact = {
-			country = c:FRA
+			country = c:WST
 			type = truce
 		}	
-		c:FRA = {
+		c:WST = {
 			every_scope_state = {
 				limit = {
 					has_modifier = occitan_operations_secured
@@ -291,7 +291,7 @@ je_occitan_republicanism = {
 				remove_modifier = occitan_operations_secured
 			}
 		}
-		c:FRA = {
+		c:WST = {
 			create_diplomatic_play = {
 				name = annex_war
 				target_country = c:OCC
