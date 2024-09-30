@@ -425,3 +425,22 @@ dvm_check_modifiers = {
 		}
 	}
 }
+
+recalculate_inquisition_maintenance = {
+	if = {
+		limit = {
+			has_modifier = inquisition_maintenance_cost
+		}
+		remove_modifier = inquisition_maintenance_cost
+	}
+	set_variable = {
+		name = inquisition_processing_temp
+		value = 200
+		subtract = scope:inquisition_holiness_scope
+		multiply = 0.01
+	}
+	add_modifier = {
+		name = inquisition_maintenance_cost
+		value = var:inquisition_processing_temp
+	}
+}
