@@ -1000,6 +1000,9 @@ dvm_establish_divine_inquisition = {
 		add_modifier = {
 			name = dvm_established_inquisition
 		}
+		add_journal_entry = {
+			type = je_divine_inquisition
+		}
 	}
 }
 
