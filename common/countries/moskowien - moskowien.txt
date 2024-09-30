@@ -1,0 +1,22 @@
+﻿COUNTRIES = {
+	c:moskowien ?= {
+		effect_starting_technology_tier_1_tech = yes
+		
+		set_market_capital = STATE_MOSCOW	
+		
+		activate_law = law_type:law_monarchy
+		activate_law = law_type:law_autocracy
+		activate_law = law_type:law_serfdom
+		activate_law = law_type:law_per_capita_based_taxation
+		activate_law = law_type:law_appointed_bureaucrats
+		activate_law = law_type:law_national_supremacy
+		activate_law = law_type:law_laissez_faire
+		activate_law = law_type:law_censorship
+		activate_law = law_type:law_dedicated_police
+		activate_law = law_type:law_closed_borders
+		activate_law = law_type:law_professional_army
+		activate_law = law_type:law_debt_slavery
+		set_government_wage_level = medium
+		set_tax_level = medium
+	}
+}

@@ -1,0 +1,153 @@
+﻿SOK = {
+	color = { 0 135 81 }
+	
+	country_type = unrecognized
+	
+	tier = kingdom
+	
+	cultures = { hausa fulbe }
+	capital = STATE_HAUSALAND
+}
+
+ASH = {
+	color = { 97 98 195 }
+	
+	country_type = unrecognized
+	
+	tier = kingdom
+	
+	cultures = { akan }
+	capital = STATE_GHANA
+}
+
+AFA = {
+	color = { 0 0 0 }
+	
+	country_type = unrecognized
+	
+	tier = empire
+	
+	cultures = { }
+	capital = STATE_NIGER
+}
+
+BAF = {
+	color = { 80 81 66 }
+	
+	country_type = recognized
+	
+	tier = principality
+	
+	cultures = { british }
+	capital = STATE_CHAD
+}
+
+BAR = {
+	color = { 210 213 139 }
+	
+	country_type = recognized
+	
+	tier = kingdom
+	
+	cultures = { maghrebi amazigh }
+	capital = STATE_ORAN
+}
+
+MOR = {
+	color = { 178 185 30 }
+	
+	country_type = unrecognized
+	
+	tier = kingdom
+	
+	cultures = { maghrebi amazigh }
+	capital = STATE_FEZ
+}
+
+SEN = {
+	color = { 176 180 77 }
+	
+	country_type = unrecognized
+	
+	tier = kingdom
+	
+	cultures = { bambara fulbe wolof mande }
+	capital = STATE_SENEGAL
+}
+
+ZUL = {
+	color = { 193 193 190 }
+	
+	country_type = unrecognized
+	
+	tier = kingdom
+	
+	cultures = { zulu }
+	capital = STATE_ZULULAND
+}
+
+CON = {
+	color = { 49 108 40 }
+	
+	country_type = unrecognized
+	
+	tier = empire
+	
+	cultures = { bakongo }
+	capital = STATE_KASAI
+}
+
+AFS = {
+	color = { 39 34 33 }
+	
+	country_type = recognized
+	
+	tier = kingdom
+	
+	cultures = { north_german south_german }
+	capital = STATE_CAPE_COLONY
+}
+
+RFT = {
+	color = { 58 81 120 }
+	
+	country_type = unrecognized
+	
+	tier = empire
+	
+	cultures = { baganda }
+	capital = STATE_RIFT_VALLEY
+}
+
+EGY = {
+	color = { 181 180 108 }
+	
+	country_type = unrecognized
+	
+	tier = kingdom
+	
+	cultures = { misri }
+	capital = STATE_MIDDLE_EGYPT
+}
+
+SOM = {
+	color = { 29 158 119 }
+	
+	country_type = unrecognized
+	
+	tier = kingdom
+	
+	cultures = { somali }
+	capital = STATE_SOMALILAND
+}
+
+ETH = {
+	color = { 193 139 213 }
+	
+	country_type = unrecognized
+	
+	tier = empire
+	
+	cultures = { amhara omoro tigray }
+	capital = STATE_OROMIA
+}

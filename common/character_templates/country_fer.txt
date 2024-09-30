@@ -1,0 +1,15 @@
+fer_oleg_antonov = { #oleg antonov
+	first_name = oleg
+	last_name = antonov
+	historical = yes
+	interest_group = ig_rural_folk 
+	ideology = ideology_radical
+	ig_leader = yes
+	ruler = yes
+	culture = cu:russian
+	birth_date = 1816.12.5
+	dna = dna_lelouch
+	traits = {
+	}
+	trait_generation = { }
+}

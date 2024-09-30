@@ -1,0 +1,16 @@
+gbr_alan_cromwell = {
+	first_name = alan
+	last_name = cromwell
+	historical = yes
+	interest_group = ig_landowners 
+	ideology = ideology_jongoist
+	ruler = yes
+	ig_leader = yes
+	culture = cu:british #how disgusting
+	birth_date = 1783.2.7
+	traits = {
+		cruel
+		ambitious
+	}
+	trait_generation = { }
+}
