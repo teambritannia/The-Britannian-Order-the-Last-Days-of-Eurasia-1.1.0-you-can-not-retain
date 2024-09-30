@@ -192,15 +192,21 @@ mandate_very_high_authority_modifier = {
 	state_mortality_mult = 0.6
 }
 
-held_tribunals_modifier = {
+dvm_tribunals_held = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_negative.dds
 	country_authority_mult = 0.1
 	state_mortality_mult = 0.1
 }
 
-executing_heretics_modifier = {
+dvm_executing_heretics = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_negative.dds
 	country_authority_mult = 0.1
 	state_mortality_mult = 0.15
 	state_tax_waste_add = 0.15
+}
+
+inquisition_cost_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_modifier.dds
+	country_tax_income_add = -2000
+	country_authority_mult = -0.15
 }
