@@ -179,19 +179,16 @@ fengtian_events.201 = {  #fengtian super communist
 		ig:ig_center_communist = {
 			add_modifier = { 
 				name = fengtian_communist_modifier
-				months = long_modifier_time
 			}
 		}
 		ig:ig_right_communist = {
 			add_modifier = { 
 				name = fengtian_communist_modifier
-				months = long_modifier_time
 			}
 		}
 		ig:ig_left_communist = {
 			add_modifier = { 
 				name = fengtian_communist_modifier
-				months = long_modifier_time
 			}
 		}
 		remove_modifier = fengtian_modifier
