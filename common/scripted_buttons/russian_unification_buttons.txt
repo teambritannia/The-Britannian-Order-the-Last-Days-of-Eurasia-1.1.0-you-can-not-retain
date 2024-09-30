@@ -877,22 +877,14 @@ fer_begin_irkutsk_war = {
 		c:FER = {
 			create_diplomatic_play = {
 				name = fer_irk_war
-		
+				target_country = c:IRK
+				type = dp_annex_war
 				target_state = s:STATE_IRKUTSK.region_state:IRK
-			
-				war = yes
-			
-				type = dp_annex
-
-				add_war_goal = {
-					holder = c:FER
-					type = annex
-				}
 				add_war_goal = {
 					holder = c:IRK
 					type = annex
 				}
-			}	
+			}
 		}
 	}
 }
