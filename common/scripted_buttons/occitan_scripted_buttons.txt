@@ -10,7 +10,7 @@ propaganda_posters = {
 		base = 100
 		modifier = {
 			trigger = {
-				c:FRA = {
+				c:WST = {
 					je:je_occitan_crisis = {
 						"scripted_bar_progress(french_alertness_progress_bar)" >= 15
 					}
@@ -20,7 +20,7 @@ propaganda_posters = {
 		}
 		modifier = {
 			trigger = {
-				c:FRA = {
+				c:WST = {
 					je:je_occitan_crisis = {
 						"scripted_bar_progress(french_alertness_progress_bar)" >= 40
 					}
@@ -30,7 +30,7 @@ propaganda_posters = {
 		}
 		modifier = {
 			trigger = {
-				c:FRA = {
+				c:WST = {
 					je:je_occitan_crisis = {
 						"scripted_bar_progress(french_alertness_progress_bar)" >= 60
 					}
@@ -48,7 +48,7 @@ propaganda_posters = {
 			}
 		}
 		NOT = {	
-			c:FRA = {
+			c:WST = {
 				any_scope_state = {
 					has_modifier = occitan_operations_sabotaged
 				}
@@ -78,7 +78,7 @@ propaganda_posters = {
 				days = 30
 			}
 		}
-		c:FRA = {
+		c:WST = {
 			random_scope_state = {
 				limit = {
 					has_modifier = current_operational_state
@@ -105,7 +105,7 @@ fan_republican_flames = {
 		base = 90
 		modifier = {
 			trigger = {
-				c:FRA = {
+				c:WST = {
 					je:je_occitan_crisis = {
 						"scripted_bar_progress(french_alertness_progress_bar)" >= 15
 					}
@@ -115,7 +115,7 @@ fan_republican_flames = {
 		}
 		modifier = {
 			trigger = {
-				c:FRA = {
+				c:WST = {
 					je:je_occitan_crisis = {
 						"scripted_bar_progress(french_alertness_progress_bar)" >= 40
 					}
@@ -125,7 +125,7 @@ fan_republican_flames = {
 		}
 		modifier = {
 			trigger = {
-				c:FRA = {
+				c:WST = {
 					je:je_occitan_crisis = {
 						"scripted_bar_progress(french_alertness_progress_bar)" >= 60
 					}
@@ -143,7 +143,7 @@ fan_republican_flames = {
 			}
 		}
 		NOT = {	
-			c:FRA = {
+			c:WST = {
 				any_scope_state = {
 					has_modifier = occitan_operations_sabotaged
 				}
@@ -173,7 +173,7 @@ fan_republican_flames = {
 				days = 45
 			}
 		}
-		c:FRA = {
+		c:WST = {
 			random_scope_state = {
 				limit = {
 					has_modifier = current_operational_state
@@ -200,7 +200,7 @@ plan_speech = {
 		base = 100
 		modifier = {
 			trigger = {
-				c:FRA = {
+				c:WST = {
 					je:je_occitan_crisis = {
 						"scripted_bar_progress(french_alertness_progress_bar)" >= 15
 					}
@@ -210,7 +210,7 @@ plan_speech = {
 		}
 		modifier = {
 			trigger = {
-				c:FRA = {
+				c:WST = {
 					je:je_occitan_crisis = {
 						"scripted_bar_progress(french_alertness_progress_bar)" >= 40
 					}
@@ -220,7 +220,7 @@ plan_speech = {
 		}
 		modifier = {
 			trigger = {
-				c:FRA = {
+				c:WST = {
 					je:je_occitan_crisis = {
 						"scripted_bar_progress(french_alertness_progress_bar)" >= 60
 					}
@@ -234,7 +234,7 @@ plan_speech = {
 		custom_tooltip = {
 			text = occitan_assassination_cooldown_occitan
 			NOT = {
-				c:FRA = {
+				c:WST = {
 					has_variable = occitan_assassination_cooldown
 				}
 			}
@@ -246,7 +246,7 @@ plan_speech = {
 			}
 		}
 		NOT = {	
-			c:FRA = {
+			c:WST = {
 				any_scope_state = {
 					has_modifier = occitan_operations_sabotaged
 				}
@@ -276,7 +276,7 @@ plan_speech = {
 				days = 60
 			}
 		}
-		c:FRA = {
+		c:WST = {
 			random_scope_state = {
 				limit = {
 					has_modifier = current_operational_state
@@ -311,7 +311,7 @@ infiltrate_low_level_posts = {
 			}
 		}
 		NOT = {	
-			c:FRA = {
+			c:WST = {
 				any_scope_state = {
 					has_modifier = occitan_operations_sabotaged
 				}
@@ -351,7 +351,7 @@ tangle_french_operations = {
 		base = 100
 		modifier = {
 			trigger = {
-				c:FRA = {
+				c:WST = {
 					je:je_occitan_crisis = {
 						"scripted_bar_progress(french_alertness_progress_bar)" >= 15
 					}
@@ -361,7 +361,7 @@ tangle_french_operations = {
 		}
 		modifier = {
 			trigger = {
-				c:FRA = {
+				c:WST = {
 					je:je_occitan_crisis = {
 						"scripted_bar_progress(french_alertness_progress_bar)" >= 40
 					}
@@ -371,7 +371,7 @@ tangle_french_operations = {
 		}
 		modifier = {
 			trigger = {
-				c:FRA = {
+				c:WST = {
 					je:je_occitan_crisis = {
 						"scripted_bar_progress(french_alertness_progress_bar)" >= 60
 					}
@@ -389,7 +389,7 @@ tangle_french_operations = {
 			}
 		}
 		NOT = {	
-			c:FRA = {
+			c:WST = {
 				any_scope_state = {
 					has_modifier = occitan_operations_sabotaged
 				}
