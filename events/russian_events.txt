@@ -287,11 +287,13 @@ russia.220 = { #inquisition uprising
 		ai_chance = {
 			base = 100
 		}
+		name = russia.220.a
 	}
 	option = { #play as rebels
 		ai_chance = {
 			base = 0
 		}
+		name = russia.220.b
 		if = {
 			limit = {
 				exists = c:TOMSK
@@ -422,11 +424,13 @@ russia.221 = { #inquisition uprising
 		ai_chance = {
 			base = 100
 		}
+		name = russia.221.a
 	}
 	option = { #play as rebels
 		ai_chance = {
 			base = 0
 		}
+		name = russia.221.b
 		play_as = c:INQ
 	}
 }
@@ -509,7 +513,7 @@ russia.222 = { #DVM purist uprising
 						origin = this
 						state = s:STATE_KRASNOYARSK.region_state:DVM
 					}
-					c:KRASNOYARSK = {
+					c:MHD = {
 						create_diplomatic_play = {
 							name = inquisition_insurgency
 							target_country = c:DVM
@@ -531,7 +535,7 @@ russia.222 = { #DVM purist uprising
 						origin = this
 						state = s:STATE_TOMSK.region_state:DVM
 					}
-					c:TOMSK = {
+					c:MHD = {
 						create_diplomatic_play = {
 							name = inquisition_insurgency
 							target_country = c:DVM
@@ -559,11 +563,13 @@ russia.222 = { #DVM purist uprising
 		ai_chance = {
 			base = 100
 		}
+		name = russia.222.a
 	}
 	option = { #play as rebels
 		ai_chance = {
 			base = 0
 		}
+		name = russia.222.b
 		play_as = c:MHD
 	}
 }
