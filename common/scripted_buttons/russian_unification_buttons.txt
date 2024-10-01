@@ -1046,6 +1046,12 @@ dvm_institute_heretical_repetance = {
 	name = "dvm_institute_heretical_repetance"
 	desc = "dvm_institute_heretical_repetance_desc"
 
+	visible = {
+		owner = {
+			this ?= DVM
+		}
+	}
+
 	ai_chance = {
 		base = 50
 		modifier = {
@@ -1080,6 +1086,12 @@ dvm_institute_divine_schooling = {
 	name = "dvm_institute_divine_schooling"
 	desc = "dvm_institute_divine_schooling_desc"
 
+	visible = {
+		owner = {
+			this ?= DVM
+		}
+	}
+
 	ai_chance = {
 		base = 50
 		modifier = {
@@ -1113,6 +1125,12 @@ dvm_institute_divine_schooling = {
 dvm_hold_tribunals = {
 	name = "dvm_hold_tribunals"
 	desc = "dvm_hold_tribunals_desc"
+
+	visible = {
+		owner = {
+			this ?= DVM
+		}
+	}
 
 	ai_chance = {
 		base = 10
