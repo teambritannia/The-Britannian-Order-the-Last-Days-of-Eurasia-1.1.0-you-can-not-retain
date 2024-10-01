@@ -519,6 +519,16 @@ je_divine_inquisition = {
 				}
 			}
 			recalculate_inquisition_maintenance = yes
+			if = {
+				limit = {
+					scope:inquisition_holiness_scope <20
+				}
+				trigger_event = {
+					id = russia.221
+					days = 3
+					popup = yes
+				}
+			}
 		}
 	}
 }
