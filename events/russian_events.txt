@@ -166,13 +166,13 @@ russia.120 = {
 		}
 	}
 }
-#dvm events
-russia.220 = {
+
+russia.221 = { #inquisition uprising
 	type = country_event
 
-	title = russia.220.t
-	desc = russia.220.d
-	flavor = russia.220.f
+	title = russia.221.t
+	desc = russia.221.d
+	flavor = russia.221.f
 
 	event_image = {
 		#placeholder
@@ -193,20 +193,20 @@ russia.220 = {
 				if = {
 					limit = { exists = s:STATE_TOMSK.region_state:DVM }
 					create_country = {
-						tag = TOMSK
+						tag = INQ
 						origin = this
 						state = s:STATE_TOMSK.region_state:DVM
 					}
 					c:TOMSK = {
 						create_diplomatic_play = {
-							name = tomsk_insurgency
+							name = inquisition_insurgency
 							target_country = c:DVM
 							type = dp_annex_war
 							war = yes
 							target_state = s:STATE_KRASNOYARSK.region_state:DVM
 							add_war_goal = {
 								holder = c:DVM
-								target_country = c:TOMSK
+								target_country = c:INQ
 								type = annex
 							}
 						}
@@ -215,20 +215,20 @@ russia.220 = {
 				else_if = {
 					limit = { exists = s:STATE_KRASNOYARSK.region_state:DVM }
 					create_country = {
-						tag = KRAS
+						tag = INQ
 						origin = this
 						state = s:STATE_KRASNOYARSK.region_state:DVM
 					}
 					c:KRASNOYARSK = {
 						create_diplomatic_play = {
-							name = krasnoyarsk_insurgency
+							name = inquisition_insurgency
 							target_country = c:DVM
 							type = dp_annex_war
 							war = yes
 							target_state = s:STATE_TOMSK.region_state:DVM
 							add_war_goal = {
 								holder = c:DVM
-								target_country = c:KRASNOYARSK
+								target_country = c:INQ
 								type = annex
 							}
 						}
@@ -239,20 +239,20 @@ russia.220 = {
 				if = {
 					limit = { exists = s:STATE_KRASNOYARSK.region_state:DVM }
 					create_country = {
-						tag = KRAS
+						tag = INQ
 						origin = this
 						state = s:STATE_KRASNOYARSK.region_state:DVM
 					}
 					c:KRASNOYARSK = {
 						create_diplomatic_play = {
-							name = krasnoyarsk_insurgency
+							name = inquisition_insurgency
 							target_country = c:DVM
 							type = dp_annex_war
 							war = yes
 							target_state = s:STATE_TOMSK.region_state:DVM
 							add_war_goal = {
 								holder = c:DVM
-								target_country = c:KRASNOYARSK
+								target_country = c:INQ
 								type = annex
 							}
 						}
@@ -261,20 +261,20 @@ russia.220 = {
 				else_if = {
 					limit = { exists = s:STATE_TOMSK.region_state:DVM }
 					create_country = {
-						tag = TOMSK
+						tag = INQ
 						origin = this
 						state = s:STATE_TOMSK.region_state:DVM
 					}
 					c:TOMSK = {
 						create_diplomatic_play = {
-							name = tomsk_insurgency
+							name = inquisition_insurgency
 							target_country = c:DVM
 							type = dp_annex_war
 							war = yes
 							target_state = s:STATE_KRASNOYARSK.region_state:DVM
 							add_war_goal = {
 								holder = c:DVM
-								target_country = c:TOMSK
+								target_country = c:INQ
 								type = annex
 							}
 						}
@@ -290,3 +290,4 @@ russia.220 = {
 		play_as = c:TOMSK
 	}
 }
+
