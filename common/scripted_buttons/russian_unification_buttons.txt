@@ -1011,6 +1011,12 @@ dvm_establish_divine_inquisition = {
 dvm_preach_divine_teachings = {
 	name = "dvm_preach_divine_teachings"
 	desc = "dvm_preach_divine_teachings_desc"
+	
+	visible = {
+		owner = {
+			this ?= c:DVM
+		}
+	}
 
 	ai_chance = {
 		base = 50
@@ -1048,7 +1054,7 @@ dvm_institute_heretical_repetance = {
 
 	visible = {
 		owner = {
-			this ?= DVM
+			this ?= c:DVM
 		}
 	}
 
@@ -1088,7 +1094,7 @@ dvm_institute_divine_schooling = {
 
 	visible = {
 		owner = {
-			this ?= DVM
+			this ?= c:DVM
 		}
 	}
 
@@ -1128,7 +1134,7 @@ dvm_hold_tribunals = {
 
 	visible = {
 		owner = {
-			this ?= DVM
+			this ?= c:DVM
 		}
 	}
 
