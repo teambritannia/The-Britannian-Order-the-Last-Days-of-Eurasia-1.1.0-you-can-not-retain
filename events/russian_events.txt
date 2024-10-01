@@ -430,3 +430,130 @@ russia.221 = { #inquisition uprising
 		play_as = c:INQ
 	}
 }
+
+russia.222 = { #DVM purist uprising 
+	type = country_event
+
+	title = russia.222.t
+	desc = russia.222.d
+	flavor = russia.222.f
+
+	event_image = {
+		#placeholder
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_fire.dds"
+
+	duration = 3
+
+	immediate = {
+		random_list = {
+			50 = {
+				if = {
+					limit = { exists = s:STATE_TOMSK.region_state:DVM }
+					create_country = {
+						tag = MHD
+						origin = this
+						state = s:STATE_TOMSK.region_state:DVM
+					}
+					c:TOMSK = {
+						create_diplomatic_play = {
+							name = hardliner_insurgency
+							target_country = c:DVM
+							type = dp_annex_war
+							war = yes
+							target_state = s:STATE_KRASNOYARSK.region_state:DVM
+							add_war_goal = {
+								holder = c:DVM
+								target_country = c:MHD
+								type = annex
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = { exists = s:STATE_KRASNOYARSK.region_state:DVM }
+					create_country = {
+						tag = MHD
+						origin = this
+						state = s:STATE_KRASNOYARSK.region_state:DVM
+					}
+					c:KRASNOYARSK = {
+						create_diplomatic_play = {
+							name = inquisition_insurgency
+							target_country = c:MHD
+							type = dp_annex_war
+							war = yes
+							target_state = s:STATE_TOMSK.region_state:DVM
+							add_war_goal = {
+								holder = c:DVM
+								target_country = c:MHD
+								type = annex
+							}
+						}
+					}
+				}
+			}
+			50 = {
+				if = {
+					limit = { exists = s:STATE_KRASNOYARSK.region_state:DVM }
+					create_country = {
+						tag = MHD
+						origin = this
+						state = s:STATE_KRASNOYARSK.region_state:DVM
+					}
+					c:KRASNOYARSK = {
+						create_diplomatic_play = {
+							name = inquisition_insurgency
+							target_country = c:DVM
+							type = dp_annex_war
+							war = yes
+							target_state = s:STATE_TOMSK.region_state:DVM
+							add_war_goal = {
+								holder = c:DVM
+								target_country = c:MHD
+								type = annex
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = { exists = s:STATE_TOMSK.region_state:DVM }
+					create_country = {
+						tag = MHD
+						origin = this
+						state = s:STATE_TOMSK.region_state:DVM
+					}
+					c:TOMSK = {
+						create_diplomatic_play = {
+							name = inquisition_insurgency
+							target_country = c:DVM
+							type = dp_annex_war
+							war = yes
+							target_state = s:STATE_KRASNOYARSK.region_state:DVM
+							add_war_goal = {
+								holder = c:DVM
+								target_country = c:MHD
+								type = annex
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	option = { #uh oh
+		ai_chance = {
+			base = 100
+		}
+	}
+	option = { #play as rebels
+		ai_chance = {
+			base = 0
+		}
+		play_as = c:MHD
+	}
+}
