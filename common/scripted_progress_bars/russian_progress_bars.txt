@@ -181,7 +181,7 @@ mandate_authority_progress_bar = {
 	monthly_progress = {
 		add = {
 			desc = base_decay
-			add = -0.5
+			add = -1
 		}
 		if = {
 			limit = {
@@ -205,11 +205,38 @@ mandate_authority_progress_bar = {
 		}
 		if = {
 			limit = {
-				has_modifier = dvm_established_inquisition
+				has_modifier = dvm_strengthening_informant_network_modifier
 			}
 			add = {
-				desc = inherent_evil_burnings
-				add = 0.2
+				desc = informant_network
+				add = 0.3
+			}
+		}
+		if = {
+			limit = {
+				has_modifier = dvm_purging_devilry_modifier
+			}
+			add = {
+				desc = purging_devilry
+				add = 0.4
+			}
+		}
+		if = {
+			limit = {
+				has_modifier = executing_heretics_modifier
+			}
+			add = {
+				desc = executing_heretics
+				add = 0.3
+			}
+		}
+		if = {
+			limit = {
+				has_modifier = held_tribunals_modifier
+			}
+			add = {
+				desc = holding_tribunals
+				add = 0.4
 			}
 		}
 		if = {
