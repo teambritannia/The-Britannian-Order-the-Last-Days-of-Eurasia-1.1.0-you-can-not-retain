@@ -184,10 +184,7 @@ russia.221 = { #inquisition uprising
 
 	duration = 3
 
-	option = { #uh oh
-		ai_chance = {
-			base = 100
-		}
+	immediate = {
 		random_list = {
 			50 = {
 				if = {
@@ -283,11 +280,25 @@ russia.221 = { #inquisition uprising
 			}
 		}
 	}
+
+	option = { #uh oh
+		ai_chance = {
+			base = 100
+		}
+	}
 	option = { #play as rebels
 		ai_chance = {
 			base = 0
 		}
-		play_as = c:TOMSK
+		if = {
+			limit = {
+				exists = c:TOMSK
+			}
+			play_as = c:TOMSK
+		}
+		else = {
+			play_as = c:KRASNOYARSK
+		}
 	}
 }
 
