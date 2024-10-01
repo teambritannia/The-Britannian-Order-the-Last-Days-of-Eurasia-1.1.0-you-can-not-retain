@@ -495,6 +495,11 @@ russia.222 = { #DVM purist uprising
 						}
 					}
 				}
+				c:MHD = {
+					add_journal_entry = {
+						type = je_dvm_purify_tomsk_krasnoyarsk_zone
+					}
+				}
 			}
 			50 = {
 				if = {
@@ -539,6 +544,11 @@ russia.222 = { #DVM purist uprising
 								type = annex
 							}
 						}
+					}
+				}
+				c:MHD = {
+					add_journal_entry = {
+						type = je_dvm_purify_tomsk_krasnoyarsk_zone
 					}
 				}
 			}
