@@ -194,7 +194,7 @@ DVM = {
 	tier = kingdom
 	
 	cultures = { russian }
-	capital = STATE_MINSK
+	capital = STATE_TOMSK
 }
 
 DAG = {
@@ -822,4 +822,48 @@ moskowien = {
 	
 	cultures = { north_german south_german }
 	capital = STATE_MOSCOW
+}
+
+INQ = {
+	color = { 31 6 2 }
+	
+	country_type = unrecognized
+	
+	tier = kingdom
+	
+	cultures = { russian }
+	capital = STATE_TOMSK
+}
+
+TOMSK = {
+	color = { 106 125 1 }
+	
+	country_type = unrecognized
+	
+	tier = kingdom
+	
+	cultures = { russian }
+	capital = STATE_TOMSK
+}
+
+KRASNOYARSK = {
+	color = { 111 122 49 }
+	
+	country_type = unrecognized
+	
+	tier = kingdom
+	
+	cultures = { russian }
+	capital = STATE_KRASNOYARSK
+}
+
+MHD = {
+	color = { 0 0 0 }
+	
+	country_type = unrecognized
+	
+	tier = kingdom
+	
+	cultures = { russian }
+	capital = STATE_TOMSK
 }
