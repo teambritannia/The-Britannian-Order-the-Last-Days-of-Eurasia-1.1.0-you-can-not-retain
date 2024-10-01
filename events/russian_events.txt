@@ -197,6 +197,20 @@ russia.220 = {
 						origin = this
 						state = s:STATE_TOMSK.region_state:DVM
 					}
+					c:TOMSK = {
+						create_diplomatic_play = {
+							name = tomsk_insurgency
+							target_country = c:DVM
+							type = dp_annex_war
+							war = yes
+							target_state = s:STATE_KRASNOYARSK.region_state:DVM
+							add_war_goal = {
+								holder = c:DVM
+								target_country = c:TOMSK
+								type = annex
+							}
+						}
+					}
 				}
 				else_if = {
 					limit = { exists = s:STATE_KRASNOYARSK.region_state:DVM }
@@ -204,6 +218,20 @@ russia.220 = {
 						tag = KRAS
 						origin = this
 						state = s:STATE_KRASNOYARSK.region_state:DVM
+					}
+					c:KRASNOYARSK = {
+						create_diplomatic_play = {
+							name = krasnoyarsk_insurgency
+							target_country = c:DVM
+							type = dp_annex_war
+							war = yes
+							target_state = s:STATE_TOMSK.region_state:DVM
+							add_war_goal = {
+								holder = c:DVM
+								target_country = c:KRASNOYARSK
+								type = annex
+							}
+						}
 					}
 				}
 			}
@@ -215,6 +243,20 @@ russia.220 = {
 						origin = this
 						state = s:STATE_KRASNOYARSK.region_state:DVM
 					}
+					c:KRASNOYARSK = {
+						create_diplomatic_play = {
+							name = krasnoyarsk_insurgency
+							target_country = c:DVM
+							type = dp_annex_war
+							war = yes
+							target_state = s:STATE_TOMSK.region_state:DVM
+							add_war_goal = {
+								holder = c:DVM
+								target_country = c:KRASNOYARSK
+								type = annex
+							}
+						}
+					}
 				}
 				else_if = {
 					limit = { exists = s:STATE_TOMSK.region_state:DVM }
@@ -222,6 +264,20 @@ russia.220 = {
 						tag = TOMSK
 						origin = this
 						state = s:STATE_TOMSK.region_state:DVM
+					}
+					c:TOMSK = {
+						create_diplomatic_play = {
+							name = tomsk_insurgency
+							target_country = c:DVM
+							type = dp_annex_war
+							war = yes
+							target_state = s:STATE_KRASNOYARSK.region_state:DVM
+							add_war_goal = {
+								holder = c:DVM
+								target_country = c:TOMSK
+								type = annex
+							}
+						}
 					}
 				}
 			}
