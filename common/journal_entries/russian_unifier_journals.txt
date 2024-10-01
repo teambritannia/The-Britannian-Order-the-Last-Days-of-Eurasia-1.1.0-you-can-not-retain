@@ -483,7 +483,11 @@ je_dvm_purify_tomsk_krasnoyarsk_zone = { #genocide
 				limit = {
 					has_modifier = mandate_very_low_authority_modifier
 				}
-				trigger_event = 
+				trigger_event = {
+					id = russia.220
+					days = 3
+					popup = yes
+				}
 			}
 		}
 	}
