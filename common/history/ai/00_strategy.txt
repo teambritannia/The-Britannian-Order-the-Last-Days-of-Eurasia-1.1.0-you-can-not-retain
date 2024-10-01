@@ -2,7 +2,6 @@ AI = {
 	c:FGT ?= {		
 		set_strategy = ai_strategy_egalitarian_agenda
 		set_strategy = ai_strategy_industrial_expansion
-		set_startegy = ai_strategy_maintain_power_balance
 	}		
 	c:GBR ?= {		
 		set_strategy = ai_strategy_territorial_expansion
