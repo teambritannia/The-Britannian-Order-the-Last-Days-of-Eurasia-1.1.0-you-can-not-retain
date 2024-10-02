@@ -462,9 +462,6 @@ je_dvm_purify_tomsk_krasnoyarsk_zone = { #genocide
 				}
 			}
 		}
-	}
-	
-	immediate = {
 		add_modifier = {
 			name = mandate_medium_authority_modifier
 		}
@@ -543,4 +540,11 @@ je_divine_inquisition = {
 			}
 		}
 	}
+}
+
+je_glove_and_fist = { 
+	icon = "gfx/interface/icons/event_icons/event_glove_and_fist.dds"
+	group = je_group_historical_content
+
+
 }
