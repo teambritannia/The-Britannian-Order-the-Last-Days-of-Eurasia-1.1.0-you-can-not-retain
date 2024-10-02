@@ -1132,12 +1132,6 @@ dvm_hold_tribunals = {
 	name = "dvm_hold_tribunals"
 	desc = "dvm_hold_tribunals_desc"
 
-	visible = {
-		owner = {
-			this ?= c:DVM
-		}
-	}
-
 	ai_chance = {
 		base = 10
 		modifier = {
