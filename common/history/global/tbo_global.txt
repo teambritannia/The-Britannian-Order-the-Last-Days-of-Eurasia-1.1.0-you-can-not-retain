@@ -13,6 +13,11 @@ GLOBAL = {
 			days = 21
 		}
 	}
+	c:TTA ?= {
+		add_journal_entry = {
+			type = je_glove_and_fist
+		}
+	}
 	c:GER ?= {
 		trigger_event = {
 			id = german_british_split.1 
