@@ -481,17 +481,9 @@ je_dvm_purify_tomsk_krasnoyarsk_zone = { #genocide
 			}
 			if = {
 				limit = {
-					has_modifier = mandate_very_low_authority_modifier
-				}
-				trigger_event = {
-					id = russia.220
-					days = 3
-					popup = yes
-				}
-			}
-			if = {
-				scope:journal_entry = {
-					"scripted_bar_progress(mandate_authority_progress_bar)" < 20
+					scope:journal_entry = {
+						"scripted_bar_progress(mandate_authority_progress_bar)" < 20
+					}
 				}
 				trigger_event = {
 					id = russia.222
