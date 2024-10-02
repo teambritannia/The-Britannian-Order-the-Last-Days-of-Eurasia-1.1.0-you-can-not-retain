@@ -481,8 +481,13 @@ je_dvm_purify_tomsk_krasnoyarsk_zone = { #genocide
 			}
 			if = {
 				limit = {
-					scope:journal_entry = {
-						"scripted_bar_progress(mandate_authority_progress_bar)" < 20
+					AND = {
+						scope:journal_entry = {
+							"scripted_bar_progress(mandate_authority_progress_bar)" < 20
+						}
+						NOT = {
+							is_at_war = yes
+						}
 					}
 				}
 				trigger_event = {
@@ -523,7 +528,12 @@ je_divine_inquisition = {
 			recalculate_inquisition_maintenance = yes
 			if = {
 				limit = {
-					scope:inquisition_holiness_scope <20
+					AND = {
+						scope:inquisition_holiness_scope <20
+						NOT = {
+							is_at_war = yes
+						}
+					}
 				}
 				trigger_event = {
 					id = russia.221
