@@ -333,7 +333,7 @@ russia.221 = { #inquisition uprising
 						origin = this
 						state = s:STATE_TOMSK.region_state:DVM
 					}
-					c:TOMSK = {
+					c:INQ = {
 						create_diplomatic_play = {
 							name = inquisition_insurgency
 							target_country = c:DVM
@@ -346,6 +346,9 @@ russia.221 = { #inquisition uprising
 								type = annex
 							}
 						}
+						add_journal_entry = {
+							type = je_divine_inquisition
+						}
 					}
 				}
 				else_if = {
@@ -355,7 +358,7 @@ russia.221 = { #inquisition uprising
 						origin = this
 						state = s:STATE_KRASNOYARSK.region_state:DVM
 					}
-					c:KRASNOYARSK = {
+					c:INQ = {
 						create_diplomatic_play = {
 							name = inquisition_insurgency
 							target_country = c:DVM
@@ -367,6 +370,9 @@ russia.221 = { #inquisition uprising
 								target_country = c:INQ
 								type = annex
 							}
+						}
+						add_journal_entry = {
+							type = je_divine_inquisition
 						}
 					}
 				}
@@ -392,6 +398,9 @@ russia.221 = { #inquisition uprising
 								type = annex
 							}
 						}
+						add_journal_entry = {
+							type = je_divine_inquisition
+						}
 					}
 				}
 				else_if = {
@@ -413,6 +422,9 @@ russia.221 = { #inquisition uprising
 								target_country = c:INQ
 								type = annex
 							}
+						}
+						add_journal_entry = {
+							type = je_divine_inquisition
 						}
 					}
 				}
@@ -475,6 +487,9 @@ russia.222 = { #DVM purist uprising
 								type = annex
 							}
 						}
+						add_journal_entry = {
+							type = je_dvm_purify_tomsk_krasnoyarsk_zone
+						}
 					}
 				}
 				else_if = {
@@ -484,7 +499,7 @@ russia.222 = { #DVM purist uprising
 						origin = this
 						state = s:STATE_KRASNOYARSK.region_state:DVM
 					}
-					c:KRASNOYARSK = {
+					c:MHD = {
 						create_diplomatic_play = {
 							name = inquisition_insurgency
 							target_country = c:MHD
@@ -497,11 +512,9 @@ russia.222 = { #DVM purist uprising
 								type = annex
 							}
 						}
-					}
-				}
-				c:MHD = {
-					add_journal_entry = {
-						type = je_dvm_purify_tomsk_krasnoyarsk_zone
+						add_journal_entry = {
+							type = je_dvm_purify_tomsk_krasnoyarsk_zone
+						}
 					}
 				}
 			}
@@ -526,6 +539,9 @@ russia.222 = { #DVM purist uprising
 								type = annex
 							}
 						}
+						add_journal_entry = {
+							type = je_dvm_purify_tomsk_krasnoyarsk_zone
+						}
 					}
 				}
 				else_if = {
@@ -548,11 +564,9 @@ russia.222 = { #DVM purist uprising
 								type = annex
 							}
 						}
-					}
-				}
-				c:MHD = {
-					add_journal_entry = {
-						type = je_dvm_purify_tomsk_krasnoyarsk_zone
+						add_journal_entry = {
+							type = je_dvm_purify_tomsk_krasnoyarsk_zone
+						}
 					}
 				}
 			}
