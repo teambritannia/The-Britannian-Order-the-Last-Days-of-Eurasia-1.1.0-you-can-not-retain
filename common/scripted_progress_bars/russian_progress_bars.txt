@@ -295,7 +295,7 @@ inquisition_holiness_progress_bar = {
 		}
 		if = {
 			limit = {	
-				has_modifier = dvm_devilry_purged
+				has_modifier = dvm_purging_devilry_modifier
 			}
 			add = {
 				desc = inquisition_devilry_purged
